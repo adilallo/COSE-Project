@@ -69,7 +69,7 @@ crashlytics-build.properties
 
 # Temporary auto-generated Android Assets
 
-# Video files
+# Video files (comment out .mp4 to see needed video files)
 *.mp4
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
