@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 116261452}
   - component: {fileID: 116261451}
   - component: {fileID: 116261450}
+  - component: {fileID: 116261453}
   m_Layer: 0
   m_Name: RED_SPHERE_4_HYPOTHESIS_4
   m_TagString: Untagged
@@ -259,7 +260,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &116261451
 MeshRenderer:
@@ -311,6 +312,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116261448}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &116261453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116261448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 4
 --- !u!1 &118466737
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +338,7 @@ GameObject:
   - component: {fileID: 118466741}
   - component: {fileID: 118466740}
   - component: {fileID: 118466739}
+  - component: {fileID: 118466742}
   m_Layer: 0
   m_Name: RED_SPHERE_0_ENTRY_TEXT
   m_TagString: Untagged
@@ -416,6 +432,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118466737}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &118466742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118466737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 0
 --- !u!1 &233551324
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +706,7 @@ Transform:
   m_GameObject: {fileID: 347758298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -72.06611, y: -1.8349824, z: 19.364756}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -701,9 +731,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db98067ff2e169248ba1f7bdd205094d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hypothesis1: {fileID: 7013566575659583885}
-  targetYPosition1: 10.8
-  speed: 1
+  hypothesisModel: {fileID: 7013566575659583885}
+  movementStates:
+  - targetPosition: {x: -76, y: 25, z: 10}
+    targetRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+  - targetPosition: {x: -76, y: 10, z: 10}
+    targetRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+  - targetPosition: {x: -85, y: 10, z: -10}
+    targetRotation: {x: 0, y: 0, z: 0, w: 1}
+  - targetPosition: {x: -61, y: 10, z: -25}
+    targetRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
+  - targetPosition: {x: -56, y: 16, z: -14}
+    targetRotation: {x: 0, y: -1, z: 0, w: -0.00000004371139}
+  - targetPosition: {x: -79, y: 16, z: 1}
+    targetRotation: {x: 0, y: -0.70710677, z: 0, w: -0.70710677}
+  - targetPosition: {x: -80, y: 16.75, z: -8}
+    targetRotation: {x: 0, y: 0.00000008742278, z: 0, w: -1}
+  movementSpeed: 2.5
+  rotationSpeed: 9
 --- !u!1 &388389213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1583,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &928079818
 MeshRenderer:
@@ -1603,6 +1648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 1
 --- !u!1 &1059723640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,6 +1661,7 @@ GameObject:
   - component: {fileID: 1059723644}
   - component: {fileID: 1059723643}
   - component: {fileID: 1059723642}
+  - component: {fileID: 1059723645}
   m_Layer: 0
   m_Name: RED_SPHERE_9_HYPOTHESIS_9
   m_TagString: Untagged
@@ -1708,6 +1755,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059723640}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1059723645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059723640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 9
 --- !u!1 &1092444262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,6 +1848,7 @@ GameObject:
   - component: {fileID: 1152743141}
   - component: {fileID: 1152743140}
   - component: {fileID: 1152743139}
+  - component: {fileID: 1152743142}
   m_Layer: 0
   m_Name: RED_SPHERE_2_HYPOTHESIS_2
   m_TagString: Untagged
@@ -1828,7 +1890,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1152743140
 MeshRenderer:
@@ -1880,6 +1942,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152743137}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1152743142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152743137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 2
 --- !u!1 &1214356473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,6 +2067,7 @@ GameObject:
   - component: {fileID: 1388175685}
   - component: {fileID: 1388175684}
   - component: {fileID: 1388175683}
+  - component: {fileID: 1388175686}
   m_Layer: 0
   m_Name: RED_SPHERE_8_HYPOTHESIS_8
   m_TagString: Untagged
@@ -2084,6 +2161,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388175681}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1388175686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388175681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 8
 --- !u!1 &1400839000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,7 +2403,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70951885, z: -0, w: 0.7046865}
   m_LocalPosition: {x: -121.9, y: 2.44, z: -15.06}
-  m_LocalScale: {x: 1.6325608, y: 1.6325608, z: 1.6325608}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 437057183}
@@ -2365,6 +2456,7 @@ GameObject:
   - component: {fileID: 1685119870}
   - component: {fileID: 1685119869}
   - component: {fileID: 1685119868}
+  - component: {fileID: 1685119871}
   m_Layer: 0
   m_Name: RED_SPHERE_3_HYPOTHESIS_3
   m_TagString: Untagged
@@ -2406,7 +2498,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1685119869
 MeshRenderer:
@@ -2458,6 +2550,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685119866}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1685119871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685119866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 3
 --- !u!1 &1685595314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,6 +2576,7 @@ GameObject:
   - component: {fileID: 1685595318}
   - component: {fileID: 1685595317}
   - component: {fileID: 1685595316}
+  - component: {fileID: 1685595319}
   m_Layer: 0
   m_Name: RED_SPHERE_7_HYPOTHESIS_7
   m_TagString: Untagged
@@ -2563,6 +2670,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685595314}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1685595319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685595314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 7
 --- !u!1 &1765067142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +2696,7 @@ GameObject:
   - component: {fileID: 1765067146}
   - component: {fileID: 1765067145}
   - component: {fileID: 1765067144}
+  - component: {fileID: 1765067147}
   m_Layer: 0
   m_Name: RED_SPHERE_5_HYPOTHESIS_5
   m_TagString: Untagged
@@ -2616,7 +2738,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1765067145
 MeshRenderer:
@@ -2668,6 +2790,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765067142}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1765067147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765067142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 5
 --- !u!1 &1820958874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2747,6 +2883,7 @@ GameObject:
   - component: {fileID: 2011881344}
   - component: {fileID: 2011881343}
   - component: {fileID: 2011881342}
+  - component: {fileID: 2011881345}
   m_Layer: 0
   m_Name: RED_SPHERE_6_HYPOTHESIS_6
   m_TagString: Untagged
@@ -2788,7 +2925,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2011881343
 MeshRenderer:
@@ -2840,6 +2977,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011881340}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2011881345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011881340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereInteraction: {fileID: 1214356475}
+  sphereIndex: 6
 --- !u!1 &2114585394
 GameObject:
   m_ObjectHideFlags: 0
@@ -25144,6 +25295,7 @@ GameObject:
   - component: {fileID: 8660345983817830184}
   - component: {fileID: 4848164521382446881}
   - component: {fileID: 7480635113692525368}
+  - component: {fileID: 8660345983817830185}
   m_Layer: 0
   m_Name: stairstart
   m_TagString: Untagged
@@ -28476,7 +28628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &7020796310052390025
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30522,8 +30674,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7013566575659583885}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.71382153, z: -0, w: 0.7003277}
-  m_LocalPosition: {x: -2.6738892, y: 26.45, z: -11.4847555}
+  m_LocalRotation: {x: 0, y: 0, z: -0, w: -1}
+  m_LocalPosition: {x: -80, y: 16.75, z: -8}
   m_LocalScale: {x: 70.09988, y: 70.09988, z: 70.09988}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30535,7 +30687,7 @@ Transform:
   - {fileID: 5487964432755879373}
   - {fileID: 7893173445828809832}
   m_Father: {fileID: 347758299}
-  m_LocalEulerAnglesHint: {x: 0, y: 91.093, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -360, z: 0}
 --- !u!95 &7646796644013200184
 Animator:
   serializedVersion: 5
@@ -33799,6 +33951,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8176663455562046500}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &8660345983817830185
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105517437663402597}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6328148693720117124, guid: e426abce0ce5a514a9f0b93b524be73a, type: 3}
 --- !u!4 &8661032960429829607
 Transform:
   m_ObjectHideFlags: 0

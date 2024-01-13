@@ -1,37 +1,65 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace COSE.Interactions
 {
+    [System.Serializable]
+    public class MovementState
+    {
+        public Vector3 targetPosition;
+        public Quaternion targetRotation;
+    }
+
     public class HypothesisInteraction : MonoBehaviour
     {
-        [SerializeField] private GameObject hypothesis1;
-        [SerializeField] private float targetYPosition1; // Assign a Transform to mark the target position
-        [SerializeField] private float speed = 2f;
-        private bool isActive1 = false;
+        [SerializeField] private GameObject hypothesisModel;
+        [SerializeField] private List<MovementState> movementStates;
+        [SerializeField] private float movementSpeed = 2f;
+        [SerializeField] private float rotationSpeed = 2f;
+        private int currentStateIndex = -1;
 
-        void Update()
+        void Start()
         {
-            if (isActive1)
+            if (movementStates.Count > 0)
             {
-                hypothesis1.SetActive(true);
-                float step = speed * Time.deltaTime;
-                Vector3 currentPosition = hypothesis1.transform.position;
-                Vector3 targetPosition = new Vector3(currentPosition.x, targetYPosition1, currentPosition.z);
-
-                Vector3 newPosition = Vector3.MoveTowards(currentPosition, targetPosition, step);
-                hypothesis1.transform.position = newPosition;
-
-                // Check if the movement along Y is complete
-                if (Mathf.Abs(newPosition.y - targetYPosition1) < 0.001f)
-                {
-                    isActive1 = false;
-                }
+                hypothesisModel.transform.position = movementStates[0].targetPosition;
+                hypothesisModel.transform.rotation = movementStates[0].targetRotation;
             }
         }
 
-        public void ActivateMovement1()
+        void Update()
         {
-            isActive1 = true;
+            if (currentStateIndex >= 0)
+            {
+                MoveAndRotateHypothesis();
+            }
+        }
+
+        public void ActivateState(int stateIndex)
+        {
+            if (stateIndex >= 0 && stateIndex < movementStates.Count)
+            {
+                currentStateIndex = stateIndex;
+            }
+        }
+
+        private void MoveAndRotateHypothesis()
+        {
+            MovementState currentState = movementStates[currentStateIndex];
+
+            // Move
+            Vector3 newPosition = Vector3.MoveTowards(
+                hypothesisModel.transform.position,
+                currentState.targetPosition,
+                movementSpeed * Time.deltaTime);
+            hypothesisModel.transform.position = newPosition;
+
+            // Rotate
+            Quaternion newRotation = Quaternion.RotateTowards(
+                hypothesisModel.transform.rotation,
+                currentState.targetRotation,
+                rotationSpeed * Time.deltaTime);
+            hypothesisModel.transform.rotation = newRotation;
         }
     }
 }

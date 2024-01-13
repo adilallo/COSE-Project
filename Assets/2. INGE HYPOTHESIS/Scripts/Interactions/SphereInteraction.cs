@@ -7,18 +7,21 @@ namespace COSE.Interactions
         [SerializeField] private GameObject[] inactiveSpheres;
         [SerializeField] private HypothesisInteraction hypothesisMovement;
 
-        public void OnSphere1Triggered()
+        public void OnSphereTriggered(int sphereIndex)
         {
-            foreach (GameObject sphere in inactiveSpheres)
+            if (sphereIndex == 1)
             {
-                if (sphere != null)
+                foreach (GameObject sphere in inactiveSpheres)
                 {
-                    sphere.SetActive(true);
+                    if (sphere != null)
+                    {
+                        sphere.SetActive(true);
+                    }
                 }
             }
 
-            // Activate Hypothesis 1 movement
-            hypothesisMovement.ActivateMovement1();
+            // Activate corresponding Hypothesis movement state
+            hypothesisMovement.ActivateState(sphereIndex);
         }
     }
 }
