@@ -6,6 +6,7 @@ namespace COSE.Interactions
     {
         [SerializeField] private GameObject[] inactiveSpheres;
         [SerializeField] private HypothesisInteraction hypothesisMovement;
+        [SerializeField] private TextInteraction textInteraction;
 
         public void OnSphereTriggered(int sphereIndex)
         {
@@ -22,6 +23,7 @@ namespace COSE.Interactions
 
             // Activate corresponding Hypothesis movement state
             hypothesisMovement.ActivateState(sphereIndex);
+            textInteraction.ActivateText(sphereIndex);
         }
     }
 }
