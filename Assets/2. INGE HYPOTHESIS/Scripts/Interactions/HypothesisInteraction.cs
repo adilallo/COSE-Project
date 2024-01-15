@@ -10,12 +10,22 @@ namespace COSE.Interactions
         public Quaternion targetRotation;
     }
 
+    [System.Serializable]
+    public class LayerInteraction
+    {
+        public GameObject layerObject; 
+        public int textIndex; 
+    }
+
     public class HypothesisInteraction : MonoBehaviour
     {
         [SerializeField] private GameObject hypothesisModel;
+        [SerializeField] private TextInteraction textInteraction;
         [SerializeField] private List<MovementState> movementStates;
         [SerializeField] private float movementSpeed = 2f;
         [SerializeField] private float rotationSpeed = 2f;
+
+        [SerializeField] private List<LayerInteraction> firstHypothesisText;
         private int currentStateIndex = -1;
 
         void Start()
@@ -29,6 +39,8 @@ namespace COSE.Interactions
 
         void Update()
         {
+            CheckHoverInteraction();
+
             if (currentStateIndex >= 0)
             {
                 MoveAndRotateHypothesis();
@@ -42,6 +54,28 @@ namespace COSE.Interactions
                 currentStateIndex = stateIndex;
             }
         }
+
+        // Update or a suitable method
+        private void CheckHoverInteraction()
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            foreach (var layer in firstHypothesisText)
+            {
+                if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.gameObject == layer.layerObject)
+                {
+                    // Hover detected, notify TextInteraction script
+                    NotifyTextInteraction(layer.textIndex);
+                    break;
+                }
+            }
+        }
+
+        void NotifyTextInteraction(int textIndex)
+        {
+            textInteraction.ActivateHypothesisText(textIndex);
+        }
+
 
         private void MoveAndRotateHypothesis()
         {
