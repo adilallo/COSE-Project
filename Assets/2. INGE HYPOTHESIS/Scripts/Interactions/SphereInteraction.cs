@@ -21,6 +21,11 @@ namespace COSE.Interactions
                 }
             }
 
+            if (sphereIndex == 1)
+            {
+                hypothesisMovement.isSphereOneTriggered = true; // Set the flag when Sphere 1 is triggered
+            }
+
             // Activate corresponding Hypothesis movement state
             hypothesisMovement.ActivateState(sphereIndex);
             textInteraction.ActivateText(sphereIndex);

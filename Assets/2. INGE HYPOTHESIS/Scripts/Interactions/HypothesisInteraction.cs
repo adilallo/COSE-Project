@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace COSE.Interactions
 {
@@ -13,8 +14,16 @@ namespace COSE.Interactions
     [System.Serializable]
     public class LayerInteraction
     {
-        public GameObject layerObject; 
-        public int textIndex; 
+        public GameObject layerObject;
+        public int textIndex;
+        [HideInInspector] public Vector3 initialLocalPosition;
+        [HideInInspector] public Quaternion initialLocalRotation;
+
+        public void Initialize()
+        {
+            initialLocalPosition = layerObject.transform.localPosition;
+            initialLocalRotation = layerObject.transform.localRotation;
+        }
     }
 
     public class HypothesisInteraction : MonoBehaviour
@@ -27,9 +36,16 @@ namespace COSE.Interactions
 
         [SerializeField] private List<LayerInteraction> firstHypothesisText;
         private int currentStateIndex = -1;
+        public bool isSphereOneTriggered = false;
 
         void Start()
         {
+            // Initialize each layer's relative position and rotation
+            foreach (var layer in firstHypothesisText)
+            {
+                layer.Initialize();
+            }
+
             if (movementStates.Count > 0)
             {
                 hypothesisModel.transform.position = movementStates[0].targetPosition;
@@ -43,7 +59,7 @@ namespace COSE.Interactions
 
             if (currentStateIndex >= 0)
             {
-                MoveAndRotateHypothesis();
+                //MoveAndRotateHypothesis();
             }
         }
 
@@ -52,10 +68,65 @@ namespace COSE.Interactions
             if (stateIndex >= 0 && stateIndex < movementStates.Count)
             {
                 currentStateIndex = stateIndex;
+                StartCoroutine(MoveLayersSequentially(movementStates[stateIndex], 8.0f)); // Example delay
             }
         }
 
-        // Update or a suitable method
+        public IEnumerator MoveLayersSequentially(MovementState targetState, float delayBetweenLayers)
+        {
+            // Wait before starting the sequence to ensure all initialization is complete
+            yield return new WaitForSeconds(0.1f);
+
+            // Calculate each layer's target position and rotation as if the parent had moved
+            for (int i = 1; i < firstHypothesisText.Count; i++)
+            {
+                var layer = firstHypothesisText[i];
+
+                // Calculate the new world position and rotation for the layer
+                Vector3 targetLayerWorldPosition = hypothesisModel.transform.TransformPoint(layer.initialLocalPosition);
+                Quaternion targetLayerWorldRotation = hypothesisModel.transform.rotation * layer.initialLocalRotation;
+
+                // Calculate the offset from the parent's initial position and rotation to the target state
+                Vector3 positionOffset = targetState.targetPosition - movementStates[0].targetPosition;
+                Quaternion rotationOffset = targetState.targetRotation * Quaternion.Inverse(movementStates[0].targetRotation);
+
+                // Apply the offset to the layer's target world position and rotation
+                Vector3 finalLayerPosition = targetLayerWorldPosition + positionOffset;
+                Quaternion finalLayerRotation = rotationOffset * targetLayerWorldRotation;
+
+                // Start moving the layer after a delay
+                StartCoroutine(MoveLayer(layer, finalLayerPosition, finalLayerRotation, movementSpeed, rotationSpeed));
+                yield return new WaitForSeconds(delayBetweenLayers);
+            }
+        }
+
+        private IEnumerator MoveLayer(LayerInteraction layer, Vector3 targetGlobalPosition, Quaternion targetGlobalRotation, float moveSpeed, float rotSpeed)
+        {
+            // Now move and rotate the layer towards its target global position and rotation
+            GameObject layerObject = layer.layerObject;
+            while (layerObject.transform.position != targetGlobalPosition ||
+                   layerObject.transform.rotation != targetGlobalRotation)
+            {
+                layerObject.transform.position = Vector3.MoveTowards(
+                    layerObject.transform.position,
+                    targetGlobalPosition,
+                    moveSpeed * Time.deltaTime);
+
+                layerObject.transform.rotation = Quaternion.RotateTowards(
+                    layerObject.transform.rotation,
+                    targetGlobalRotation,
+                    rotSpeed * Time.deltaTime);
+
+                // Activate the text associated with this layer
+                if (isSphereOneTriggered)
+                {
+                    textInteraction.ActivateHypothesisText(layer.textIndex);
+                }
+
+                yield return null;
+            }
+        }
+
         private void CheckHoverInteraction()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -75,7 +146,6 @@ namespace COSE.Interactions
         {
             textInteraction.ActivateHypothesisText(textIndex);
         }
-
 
         private void MoveAndRotateHypothesis()
         {
