@@ -16,6 +16,7 @@ namespace COSE.Interactions
     {
         public GameObject layerObject;
         public int textIndex;
+        public int layerIndex;
         [HideInInspector] public Vector3 initialLocalPosition;
         [HideInInspector] public Quaternion initialLocalRotation;
 
@@ -37,6 +38,7 @@ namespace COSE.Interactions
         [SerializeField] private List<LayerInteraction> firstHypothesisText;
         private int currentStateIndex = -1;
         public bool isSphereOneTriggered = false;
+        private bool coroutineStarted = false;
 
         void Start()
         {
@@ -57,6 +59,12 @@ namespace COSE.Interactions
         {
             CheckHoverInteraction();
 
+            if (isSphereOneTriggered && !coroutineStarted && Input.GetKeyDown(KeyCode.Return))
+            {
+                StartCoroutine(MoveLayersSequentially(movementStates[currentStateIndex], 20.0f)); // Example delay
+                coroutineStarted = true;
+            }
+
             if (currentStateIndex >= 0)
             {
                 //MoveAndRotateHypothesis();
@@ -68,7 +76,6 @@ namespace COSE.Interactions
             if (stateIndex >= 0 && stateIndex < movementStates.Count)
             {
                 currentStateIndex = stateIndex;
-                StartCoroutine(MoveLayersSequentially(movementStates[stateIndex], 8.0f)); // Example delay
             }
         }
 
@@ -104,6 +111,7 @@ namespace COSE.Interactions
         {
             // Now move and rotate the layer towards its target global position and rotation
             GameObject layerObject = layer.layerObject;
+            layerObject.SetActive(true);
             while (layerObject.transform.position != targetGlobalPosition ||
                    layerObject.transform.rotation != targetGlobalRotation)
             {
@@ -124,6 +132,11 @@ namespace COSE.Interactions
                 }
 
                 yield return null;
+            }
+
+            if (layer.layerIndex == 2 || layer.layerIndex == 11 || layer.layerIndex == 16)
+            {
+                layerObject.SetActive(false);
             }
         }
 
