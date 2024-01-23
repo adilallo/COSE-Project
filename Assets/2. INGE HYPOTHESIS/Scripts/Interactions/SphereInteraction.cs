@@ -8,6 +8,11 @@ namespace COSE.Interactions
         [SerializeField] private HypothesisInteraction hypothesisMovement;
         [SerializeField] private TextInteraction textInteraction;
 
+        public void HandleSphereTriggered(int index)
+        {
+                OnSphereTriggered(index);
+        }
+
         public void OnSphereTriggered(int sphereIndex)
         {
             if (sphereIndex == 1)

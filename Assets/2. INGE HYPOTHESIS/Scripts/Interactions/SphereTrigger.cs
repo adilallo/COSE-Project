@@ -1,32 +1,29 @@
 using UnityEngine;
+using System;
 
 namespace COSE.Interactions
 {
     public class SphereTrigger : MonoBehaviour
     {
-        public SphereInteraction sphereInteraction; // Reference to the SphereInteraction script
-        public int sphereIndex; // Index of the sphere
+        public enum SphereType { Hypothesis, Conclusion }
+        public SphereType type; // Set this in the inspector
+        public int sphereIndex; // Set this in the inspector
+
+        public static event Action<int, SphereType> OnSphereTriggered;
 
         private Collider sphereCollider;
 
         void Start()
         {
-            // Get the collider component attached to this sphere
             sphereCollider = GetComponent<Collider>();
         }
 
         void OnTriggerEnter(Collider other)
         {
-            // Check if the player has collided with this sphere
             if (other.CompareTag("Player"))
             {
-                sphereInteraction.OnSphereTriggered(sphereIndex);
-
-                // Disable the collider to prevent further triggers
-                if (sphereCollider != null)
-                {
-                    sphereCollider.enabled = false;
-                }
+                OnSphereTriggered?.Invoke(sphereIndex, type);
+                sphereCollider.enabled = false;
             }
         }
     }

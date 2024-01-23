@@ -40,6 +40,8 @@ namespace COSE.Interactions
         public bool isSphereOneTriggered = false;
         private bool coroutineStarted = false;
 
+        public bool IsLastLayerFinished { get; private set; } = false;
+
         void Start()
         {
             // Initialize each layer's relative position and rotation
@@ -84,6 +86,7 @@ namespace COSE.Interactions
             // Wait before starting the sequence to ensure all initialization is complete
             yield return new WaitForSeconds(0.1f);
 
+            float startTime = Time.time;
             // Calculate each layer's target position and rotation as if the parent had moved
             for (int i = 1; i < firstHypothesisText.Count; i++)
             {
@@ -103,7 +106,8 @@ namespace COSE.Interactions
 
                 // Start moving the layer after a delay
                 StartCoroutine(MoveLayer(layer, finalLayerPosition, finalLayerRotation, movementSpeed, rotationSpeed));
-                yield return new WaitForSeconds(delayBetweenLayers);
+                yield return new WaitUntil(() => Time.time >= startTime + delayBetweenLayers || Input.GetKeyDown(KeyCode.Q));
+                startTime = Time.time;
             }
         }
 
@@ -112,9 +116,19 @@ namespace COSE.Interactions
             // Now move and rotate the layer towards its target global position and rotation
             GameObject layerObject = layer.layerObject;
             layerObject.SetActive(true);
+
             while (layerObject.transform.position != targetGlobalPosition ||
                    layerObject.transform.rotation != targetGlobalRotation)
             {
+                // Check if the 'Q' key is pressed to break out of the animation
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    // Optionally, directly set the final position and rotation
+                    layerObject.transform.position = targetGlobalPosition;
+                    layerObject.transform.rotation = targetGlobalRotation;
+                    break;
+                }
+
                 layerObject.transform.position = Vector3.MoveTowards(
                     layerObject.transform.position,
                     targetGlobalPosition,
@@ -137,6 +151,11 @@ namespace COSE.Interactions
             if (layer.layerIndex == 2 || layer.layerIndex == 11 || layer.layerIndex == 16)
             {
                 layerObject.SetActive(false);
+            }
+
+            if (layer == firstHypothesisText[firstHypothesisText.Count - 1])
+            {
+                IsLastLayerFinished = true;
             }
         }
 
