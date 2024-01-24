@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-namespace COSE.Interactions
+namespace COSE.Sphere
 {
     public class SphereTrigger : MonoBehaviour
     {

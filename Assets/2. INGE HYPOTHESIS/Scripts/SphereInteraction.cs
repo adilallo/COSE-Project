@@ -1,6 +1,8 @@
+using COSE.Hypothesis;
+using COSE.Text;
 using UnityEngine;
 
-namespace COSE.Interactions
+namespace COSE.Sphere
 {
     public class SphereInteraction : MonoBehaviour
     {

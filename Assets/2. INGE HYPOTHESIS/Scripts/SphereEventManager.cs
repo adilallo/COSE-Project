@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace COSE.Interactions
+namespace COSE.Sphere
 {
     public class SphereEventManager : MonoBehaviour
     {

@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using COSE.Text;
 
-namespace COSE.Interactions
+namespace COSE.Hypothesis
 {
     [System.Serializable]
     public class MovementState
