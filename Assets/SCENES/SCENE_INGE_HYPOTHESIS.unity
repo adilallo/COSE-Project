@@ -2484,8 +2484,8 @@ MonoBehaviour:
     targetRotation: {x: 0, y: -0.38268346, z: 0, w: 0.9238795}
   - targetPosition: {x: -75, y: 10, z: -18}
     targetRotation: {x: 0, y: -0.38268346, z: 0, w: 0.9238795}
-  - targetPosition: {x: -85, y: 10, z: -10}
-    targetRotation: {x: 0, y: 0, z: 0, w: 1}
+  - targetPosition: {x: -52, y: 22.9, z: -11}
+    targetRotation: {x: 0, y: 0.9659258, z: 0, w: 0.25881907}
   - targetPosition: {x: -61, y: 10, z: -25}
     targetRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
   - targetPosition: {x: -56, y: 16, z: -14}
@@ -2593,6 +2593,7 @@ MonoBehaviour:
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   isSphereOneTriggered: 0
+  isSphereTwoTriggered: 0
 --- !u!1 &364493515
 GameObject:
   m_ObjectHideFlags: 0

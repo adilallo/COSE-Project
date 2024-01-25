@@ -33,6 +33,11 @@ namespace COSE.Sphere
                 hypothesisMovement.isSphereOneTriggered = true; // Set the flag when Sphere 1 is triggered
             }
 
+            if (sphereIndex == 2)
+            {
+                hypothesisMovement.isSphereTwoTriggered = true; // Set the flag when Sphere 1 is triggered
+            }
+
             // Activate corresponding Hypothesis movement state
             hypothesisMovement.ActivateState(sphereIndex);
             textInteraction.ActivateText(sphereIndex);

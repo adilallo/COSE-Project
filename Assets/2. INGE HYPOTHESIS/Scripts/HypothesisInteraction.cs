@@ -39,22 +39,22 @@ namespace COSE.Hypothesis
         [SerializeField] private List<LayerInteraction> firstHypothesisText;
         private int currentStateIndex = -1;
         public bool isSphereOneTriggered = false;
+        public bool isSphereTwoTriggered = false;
         private bool coroutineStarted = false;
 
         public bool IsLastLayerFinished { get; private set; } = false;
 
         void Start()
         {
-            // Initialize each layer's relative position and rotation
-            foreach (var layer in firstHypothesisText)
-            {
-                layer.Initialize();
-            }
-
             if (movementStates.Count > 0)
             {
                 hypothesisModel.transform.position = movementStates[0].targetPosition;
                 hypothesisModel.transform.rotation = movementStates[0].targetRotation;
+            }
+            // Initialize each layer's relative position and rotation
+            foreach (var layer in firstHypothesisText)
+            {
+                layer.Initialize();
             }
         }
 
@@ -68,9 +68,9 @@ namespace COSE.Hypothesis
                 coroutineStarted = true;
             }
 
-            if (currentStateIndex >= 0)
+            if (isSphereTwoTriggered)
             {
-                //MoveAndRotateHypothesis();
+                MoveAndRotateHypothesis();
             }
         }
 
@@ -81,6 +81,7 @@ namespace COSE.Hypothesis
                 currentStateIndex = stateIndex;
             }
         }
+
 
         public IEnumerator MoveLayersSequentially(MovementState targetState, float delayBetweenLayers)
         {
