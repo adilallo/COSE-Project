@@ -36,7 +36,7 @@ namespace COSE.Hypothesis
         [SerializeField] private float movementSpeed = 2f;
         [SerializeField] private float rotationSpeed = 2f;
 
-        [SerializeField] private List<LayerInteraction> firstHypothesisText;
+        [SerializeField] public List<LayerInteraction> firstHypothesisText;
         private int currentStateIndex = -1;
         public bool isSphereOneTriggered = false;
         public bool isSphereTwoTriggered = false;
@@ -60,7 +60,6 @@ namespace COSE.Hypothesis
 
         void Update()
         {
-            CheckHoverInteraction();
 
             if (isSphereOneTriggered && !coroutineStarted && Input.GetKeyDown(KeyCode.Return))
             {
@@ -150,7 +149,7 @@ namespace COSE.Hypothesis
                 yield return null;
             }
 
-            if (layer.layerIndex == 2 || layer.layerIndex == 11 || layer.layerIndex == 16)
+            if (layerObject.name == "Layer_2_GREY_FIELD_EPHEMERAL" || layerObject.name == "Layer_11_URL_colour_field" || layerObject.name == "Layer_16_search_color_field_EPHEMERAL")
             {
                 layerObject.SetActive(false);
             }
@@ -161,22 +160,7 @@ namespace COSE.Hypothesis
             }
         }
 
-        private void CheckHoverInteraction()
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            foreach (var layer in firstHypothesisText)
-            {
-                if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.gameObject == layer.layerObject)
-                {
-                    // Hover detected, notify TextInteraction script
-                    NotifyTextInteraction(layer.textIndex);
-                    break;
-                }
-            }
-        }
-
-        void NotifyTextInteraction(int textIndex)
+        public void NotifyTextInteraction(int textIndex)
         {
             textInteraction.ActivateHypothesisText(textIndex);
         }
