@@ -54,13 +54,13 @@ namespace COSE.Hypothesis
                         outlineScript.enabled = true;
 
                     // If Sphere Two is active, handle icons
-                    if (hypothesisInteraction.isSphereTwoTriggered)
+                    if (hypothesisInteraction.isSphereTwoTriggered && hypothesisInteraction.isMovementComplete)
                     {
                         ActivateIconsForLayer(layerInteraction.layerObject.name);
                     }
 
-                    // If Sphere One is active and animations are done, handle text
-                    if (hypothesisInteraction.isSphereOneTriggered && hypothesisInteraction.IsLastLayerFinished)
+                    // If Sphere One is active, animations are done, and sphere 2 isn't triggered, handle text
+                    if (hypothesisInteraction.isSphereOneTriggered && hypothesisInteraction.IsLastLayerFinished && !hypothesisInteraction.isSphereTwoTriggered)
                     {
                         hypothesisInteraction.NotifyTextInteraction(layerInteraction.textIndex);
                     }

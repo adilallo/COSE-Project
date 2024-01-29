@@ -40,7 +40,8 @@ namespace COSE.Hypothesis
         private int currentStateIndex = -1;
         public bool isSphereOneTriggered = false;
         public bool isSphereTwoTriggered = false;
-        private bool coroutineStarted = false;
+        public bool isMovementComplete = false;
+        private bool coroutineStarted = false;      
 
         public bool IsLastLayerFinished { get; private set; } = false;
 
@@ -182,6 +183,20 @@ namespace COSE.Hypothesis
                 currentState.targetRotation,
                 rotationSpeed * Time.deltaTime);
             hypothesisModel.transform.rotation = newRotation;
+
+            // Check if the hypothesis model has reached the target position and rotation
+            if (hypothesisModel.transform.position == currentState.targetPosition &&
+                hypothesisModel.transform.rotation == currentState.targetRotation)
+            {
+                if (!isMovementComplete)
+                {
+                    isMovementComplete = true;
+                }
+            }
+            else
+            {
+                isMovementComplete = false;
+            }
         }
     }
 }
