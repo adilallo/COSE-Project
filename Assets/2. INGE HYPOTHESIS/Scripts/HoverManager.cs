@@ -33,7 +33,12 @@ namespace COSE.Hypothesis
 
         void Update()
         {
-                CheckHoverInteraction();
+            CheckHoverInteraction();
+
+            if (hypothesisInteraction.isSphereTwoTriggered && hypothesisInteraction.isMovementComplete)
+            {
+                ActivateAllIcons();
+            }
         }
 
         private void CheckHoverInteraction()
@@ -43,15 +48,15 @@ namespace COSE.Hypothesis
 
             foreach (var layerInteraction in hypothesisInteraction.firstHypothesisText)
             {
-                Outline outlineScript = layerInteraction.layerObject.GetComponent<Outline>(); // Assuming Outline is the script name
+                Outline layerOutlineScript = layerInteraction.layerObject.GetComponent<Outline>(); // Assuming Outline is the script name
                 if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.gameObject == layerInteraction.layerObject)
                 {
                     // Hover detected
                     hoverDetected = true;
 
                     // Handle outline
-                    if (outlineScript != null)
-                        outlineScript.enabled = true;
+                    if (layerOutlineScript != null)
+                        layerOutlineScript.enabled = true;
 
                     // If Sphere Two is active, handle icons
                     if (hypothesisInteraction.isSphereTwoTriggered && hypothesisInteraction.isMovementComplete)
@@ -67,9 +72,9 @@ namespace COSE.Hypothesis
 
                     break;
                 }
-                else if (outlineScript != null)
+                else if (layerOutlineScript != null)
                 {
-                    outlineScript.enabled = false;
+                    layerOutlineScript.enabled = false;
                 }
             }
 
@@ -77,22 +82,34 @@ namespace COSE.Hypothesis
             if (!hoverDetected)
             {
                 ResetAllOutlines();
-                if (hypothesisInteraction.isSphereTwoTriggered)
+                if (hypothesisInteraction.isSphereTwoTriggered && hypothesisInteraction.isMovementComplete)
                 {
                     ResetAllIcons();
                 }
             }
         }
 
+        private void ActivateAllIcons()
+        {
+            // Activate all icons
+            foreach (GameObject icon in icons)
+            {
+                icon.SetActive(true);
+            }
+        }
+
         private void ActivateIconsForLayer(string layerName)
         {
-            // Activate corresponding icons
+            // Activate corresponding icon outlines
             if (layerToIconMap.TryGetValue(layerName, out List<int> iconIndices))
             {
                 foreach (int index in iconIndices)
                 {
                     if (index >= 0 && index < icons.Length)
-                        icons[index].SetActive(true);
+                    {
+                        Outline iconOutline = icons[index].GetComponent<Outline>();
+                        if (iconOutline != null) iconOutline.enabled = true;
+                    }
                 }
             }
         }
@@ -108,9 +125,10 @@ namespace COSE.Hypothesis
 
         private void ResetAllIcons()
         {
-            foreach (var icon in icons)
+            foreach (GameObject icon in icons)
             {
-                icon.SetActive(false);
+                Outline iconOutline = icon.GetComponent<Outline>();
+                if (iconOutline != null) iconOutline.enabled = false;
             }
         }
     }
