@@ -30,6 +30,9 @@ namespace COSE.Hypothesis
 
     public class HypothesisInteraction : MonoBehaviour
     {
+        public delegate void LastLayerFinishedHandler();
+        public static event LastLayerFinishedHandler OnLastLayerFinished;
+
         [SerializeField] private GameObject hypothesisModel;
         [SerializeField] private TextInteraction textInteraction;
         [SerializeField] private List<MovementState> movementStates;
@@ -41,9 +44,21 @@ namespace COSE.Hypothesis
         public bool isSphereOneTriggered = false;
         public bool isSphereTwoTriggered = false;
         public bool isMovementComplete = false;
-        private bool coroutineStarted = false;      
+        private bool coroutineStarted = false;
 
-        public bool IsLastLayerFinished { get; private set; } = false;
+        private bool _isLastLayerFinished = false;
+        public bool IsLastLayerFinished
+        {
+            get { return _isLastLayerFinished; }
+            private set
+            {
+                _isLastLayerFinished = value;
+                if (_isLastLayerFinished)
+                {
+                    OnLastLayerFinished?.Invoke();
+                }
+            }
+        }
 
         void Start()
         {

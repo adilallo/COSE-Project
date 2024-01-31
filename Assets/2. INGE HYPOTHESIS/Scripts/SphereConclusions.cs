@@ -13,6 +13,16 @@ namespace COSE.Sphere
         [SerializeField] private Button conclusionButton;
         [SerializeField] private MessageButton messageButtonScript;
 
+        void OnEnable()
+        {
+            HypothesisInteraction.OnLastLayerFinished += HandleLastLayerFinished;
+        }
+
+        void OnDisable()
+        {
+            HypothesisInteraction.OnLastLayerFinished -= HandleLastLayerFinished;
+        }
+
         public void HandleConclusionSphereTriggered(int index)
         {
             Debug.Log($"HandleSphereTriggered called with index: {index}");
@@ -32,21 +42,12 @@ namespace COSE.Sphere
         }
 
         // Method to call when the last layer finishes moving
-        public void OnLastLayerFinished()
+        private void HandleLastLayerFinished()
         {
             // Activate the first sphere in the list
             if (conclusionSpheres.Count > 0 && conclusionSpheres[0] != null)
             {
                 conclusionSpheres[1].SetActive(true);
-            }
-        }
-
-        void Update()
-        {
-            // Check if the last layer has finished its coroutine
-            if (hypothesisInteraction != null && hypothesisInteraction.IsLastLayerFinished)
-            {
-                OnLastLayerFinished();
             }
         }
     }
