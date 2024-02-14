@@ -13,15 +13,17 @@ namespace COSE.Hypothesis
         private Dictionary<string, List<int>> nameToIndexMap;
 
         private Coroutine timeoutCoroutine;
+        private GameObject currentActiveOutlineObject;
+
 
         private void OnEnable()
         {
-            LayerClickEvent.OnLayerClicked += HandleLayerClicked;
+            LayerClickEvent.OnLayerClicked += HandleHypothesisFourClicked;
         }
 
         private void OnDisable()
         {
-            LayerClickEvent.OnLayerClicked -= HandleLayerClicked;
+            LayerClickEvent.OnLayerClicked -= HandleHypothesisFourClicked;
         }
 
         void Start()
@@ -72,11 +74,11 @@ namespace COSE.Hypothesis
                 {"shrink", new List<int>{5, 9}}, // Assuming shrink maps to layers 8 => 5 and 12 => 9
                 {"multiply", new List<int>{5, 9}},
                 {"singularities", new List<int>{4, 18}},
+                {"contingent", new List<int>{3, 7, 8, 10}},
                 {"temporarily empty", new List<int>{7, 3}},
                 {"search performing complex", new List<int>{3, 7, 8, 10}}
             };
         }
-
         private void CheckHoverInteraction()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -187,30 +189,44 @@ namespace COSE.Hypothesis
             }
         }
 
-        private void HandleLayerClicked(string layerName)
+        private void HandleHypothesisFourClicked(string layerName)
         {
-            // First, deactivate all outlines
-            hypothesisInteraction.DeactivateAllOutlines();
+            // Deactivate all outlines and objects in firstHypothesisText
+            hypothesisInteraction.DeactivateAllOutlinesAndObjects();
 
+            // Find and activate the corresponding layers
             if (nameToIndexMap.TryGetValue(layerName, out List<int> indices))
             {
                 foreach (int index in indices)
                 {
-                    Debug.Log($"Found indices for {layerName}: {string.Join(", ", indices)}");
                     if (index >= 0 && index < hypothesisInteraction.firstHypothesisText.Count)
                     {
-                        var layer = hypothesisInteraction.firstHypothesisText[index];
-
-                        hypothesisInteraction.ActivateLayerByIndex(index);
-
-                        var outline = layer.layerObject.GetComponent<Outline>() ?? layer.layerObject.GetComponentInChildren<Outline>();
-                        if (outline != null)
-                        {
-                            outline.enabled = true;
-                        }
+                        hypothesisInteraction.firstHypothesisText[index].layerObject.SetActive(true);
                     }
                 }
             }
+            // Disable the currently active outline, if any
+            if (currentActiveOutlineObject != null)
+            {
+                var currentOutline = currentActiveOutlineObject.GetComponent<Outline>() ?? currentActiveOutlineObject.GetComponentInChildren<Outline>();
+                if (currentOutline != null)
+                {
+                    currentOutline.enabled = false;
+                }
+            }
+
+            // Find the new active object based on the layerName
+            GameObject newActiveObject = GameObject.Find(layerName); // Ensure your game objects are named exactly as layerName
+            if (newActiveObject != null)
+            {
+                var newOutline = newActiveObject.GetComponent<Outline>() ?? newActiveObject.GetComponentInChildren<Outline>();
+                if (newOutline != null)
+                {
+                    newOutline.enabled = true;
+                    currentActiveOutlineObject = newActiveObject; // Update reference to the new active object
+                }
+            }
+
         }
     }
 }

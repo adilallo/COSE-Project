@@ -45,6 +45,8 @@ namespace COSE.Hypothesis
         private int currentCouplingIndex = -1;
         public bool isSphereOneTriggered = false;
         public bool isSphereTwoTriggered = false;
+        public bool isSphereThreeTriggered = false;
+        public bool isSphereFourTriggered = false;
         public bool isMovementComplete = false;
         private bool coroutineStarted = false;
 
@@ -101,8 +103,11 @@ namespace COSE.Hypothesis
 
             if (isSphereTwoTriggered)
             {
-                MoveAndRotateHypothesis();
+                MoveAndRotateHypothesis(); 
+            }
 
+            if (isSphereThreeTriggered)
+            {
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     CycleCouplings(1);
@@ -111,6 +116,11 @@ namespace COSE.Hypothesis
                 {
                     CycleCouplings(-1);
                 }
+            }
+
+            if (isSphereFourTriggered)
+            {
+                //MoveAndRotateHypothesis();
             }
         }
 
@@ -140,6 +150,9 @@ namespace COSE.Hypothesis
                     layerToActivate.layerObject.SetActive(true);
                 }
             }
+
+            bool isTightlyCoupled = currentCouplingIndex != couplings.Count - 1; // Assuming the last list is loosely coupled
+            textInteraction.ActivateCouplingText(coupling, isTightlyCoupled);
         }
 
         public void ActivateState(int stateIndex)
@@ -149,7 +162,6 @@ namespace COSE.Hypothesis
                 currentStateIndex = stateIndex;
             }
         }
-
 
         public IEnumerator MoveLayersSequentially(MovementState targetState, float delayBetweenLayers)
         {
@@ -278,23 +290,18 @@ namespace COSE.Hypothesis
             }
         }
 
-        public void DeactivateAllOutlines()
+        public void DeactivateAllOutlinesAndObjects()
         {
-            foreach (var layer in firstHypothesisText)
+            foreach (var layerInteraction in firstHypothesisText)
             {
-                var outline = layer.layerObject.GetComponent<Outline>();
-                if (outline == null)
-                {
-                    // Try to get the Outline component from children if not found on the parent
-                    outline = layer.layerObject.GetComponentInChildren<Outline>();
-                }
+                layerInteraction.layerObject.SetActive(false);
 
+                var outline = layerInteraction.layerObject.GetComponent<Outline>() ?? layerInteraction.layerObject.GetComponentInChildren<Outline>();
                 if (outline != null)
                 {
                     outline.enabled = false;
                 }
             }
         }
-
     }
 }

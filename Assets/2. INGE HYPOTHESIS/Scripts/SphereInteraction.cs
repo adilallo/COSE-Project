@@ -37,6 +37,10 @@ namespace COSE.Sphere
             {
                 hypothesisMovement.isSphereTwoTriggered = true; // Set the flag when Sphere 1 is triggered
             }
+            if (sphereIndex == 3)
+            {
+                hypothesisMovement.isSphereThreeTriggered = true; // Set the flag when Sphere 1 is triggered
+            }
 
             // Activate corresponding Hypothesis movement state
             hypothesisMovement.ActivateState(sphereIndex);

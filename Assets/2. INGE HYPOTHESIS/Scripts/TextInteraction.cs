@@ -2,6 +2,10 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using COSE.Diagram;
+using System.Collections.Generic;
+using System.Linq;
+using COSE.Hypothesis;
+using System;
 
 namespace COSE.Text
 {
@@ -10,9 +14,13 @@ namespace COSE.Text
         [SerializeField] private GameObject[] textObjects;
         [SerializeField] private GameObject[] firstHypothesisTextObjects;
         [SerializeField] private GameObject[] conclusionTextObjects;
+        [SerializeField] private GameObject couplingTextObject;
+        [SerializeField] private GameObject[] hypothesisFourTextObjects;
 
         private void OnEnable()
         {
+            LayerClickEvent.OnLayerClickedByIndex += ActivateHypothesisFourTextByIndex;
+
             if (DiagramManager.Instance != null)
             {
                 DiagramManager.Instance.OnDiagramElementClicked += HandleDiagramElementClicked;
@@ -21,6 +29,8 @@ namespace COSE.Text
 
         private void OnDisable()
         {
+            LayerClickEvent.OnLayerClickedByIndex -= ActivateHypothesisFourTextByIndex;
+
             if (DiagramManager.Instance != null)
             {
                 DiagramManager.Instance.OnDiagramElementClicked -= HandleDiagramElementClicked;
@@ -75,6 +85,25 @@ namespace COSE.Text
             }
         }
 
+        public void ActivateCouplingText(List<int> coupling, bool isTightlyCoupled)
+        {
+            DeactivateAllTexts();
+
+            // Assume there's a designated text object for coupling information
+                couplingTextObject.SetActive(true);
+                TMP_Text textMeshPro = couplingTextObject.GetComponentInChildren<TMP_Text>();
+                if (textMeshPro != null)
+                {
+                    string couplingType = isTightlyCoupled ? "Tightly Coupled: " : "Loosely Coupled: ";
+                    string couplingIds = string.Join(", ", coupling);
+                    textMeshPro.text = $"{couplingType}{couplingIds}";
+                }
+                else
+                {
+                    Debug.LogWarning("TMP_Text component not found on the coupling text object!");
+                }
+        }
+
         private void DeactivateAllTexts()
         {
             foreach (GameObject textObj in textObjects)
@@ -88,6 +117,13 @@ namespace COSE.Text
             }
 
             foreach (GameObject textObj in conclusionTextObjects)
+            {
+                if (textObj != null) textObj.SetActive(false);
+            }
+
+            couplingTextObject.SetActive(false);
+
+            foreach (GameObject textObj in hypothesisFourTextObjects)
             {
                 if (textObj != null) textObj.SetActive(false);
             }
@@ -113,6 +149,15 @@ namespace COSE.Text
         {
             Debug.Log($"Diagram element clicked: {element.name}");
             DeactivateAllTexts();
+        }
+
+        private void ActivateHypothesisFourTextByIndex(int index)
+        {
+            if (index >= 0 && index < hypothesisFourTextObjects.Length)
+            {
+                DeactivateAllTexts();
+                hypothesisFourTextObjects[index].SetActive(true);
+            }
         }
     }
 }
