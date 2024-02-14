@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class FPS : MonoBehaviour
 {
+    public Texture2D customCursor;
+    public Vector2 cursorHotspot = Vector2.zero;
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
@@ -24,10 +26,14 @@ public class FPS : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        if (customCursor != null)
+        {
+            Cursor.SetCursor(customCursor, cursorHotspot, CursorMode.Auto);
+        }
 
         // Lock cursor
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void Update()
