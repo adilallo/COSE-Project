@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace COSE.Hypothesis
 {
@@ -9,10 +10,40 @@ namespace COSE.Hypothesis
         [SerializeField] private GameObject[] icons; // Array of icons to be activated
 
         private Dictionary<string, List<int>> layerToIconMap;
+        private Dictionary<string, List<int>> nameToIndexMap;
+
+        private Coroutine timeoutCoroutine;
+
+        private void OnEnable()
+        {
+            LayerClickEvent.OnLayerClicked += HandleLayerClicked;
+        }
+
+        private void OnDisable()
+        {
+            LayerClickEvent.OnLayerClicked -= HandleLayerClicked;
+        }
 
         void Start()
         {
             // Initialize the mapping between layer names and icon indices
+            InitializeLayerToIconMap();
+            InitializeLayerToTabFieldMap();
+
+        }
+
+        void Update()
+        {
+            CheckHoverInteraction();
+
+            if (hypothesisInteraction.isSphereTwoTriggered && hypothesisInteraction.isMovementComplete)
+            {
+                ActivateAllIcons();
+            }
+        }
+
+        private void InitializeLayerToIconMap()
+        {
             layerToIconMap = new Dictionary<string, List<int>>
             {
                 { "Layer_17_SCROLL_BAR", new List<int> { 9 } }, // Icon up/down arrow index 9
@@ -31,14 +62,19 @@ namespace COSE.Hypothesis
             };
         }
 
-        void Update()
+        private void InitializeLayerToTabFieldMap()
         {
-            CheckHoverInteraction();
-
-            if (hypothesisInteraction.isSphereTwoTriggered && hypothesisInteraction.isMovementComplete)
+            nameToIndexMap = new Dictionary<string, List<int>>()
             {
-                ActivateAllIcons();
-            }
+                {"tab field complex", new List<int>{1, 3, 5, 6, 7, 8, 9, 11, 14, 17}},
+                {"similarity", new List<int>{7, 10}},
+                {"identity", new List<int>{8, 3}},
+                {"shrink", new List<int>{5, 9}}, // Assuming shrink maps to layers 8 => 5 and 12 => 9
+                {"multiply", new List<int>{5, 9}},
+                {"singularities", new List<int>{4, 18}},
+                {"temporarily empty", new List<int>{7, 3}},
+                {"search performing complex", new List<int>{3, 7, 8, 10}}
+            };
         }
 
         private void CheckHoverInteraction()
@@ -100,7 +136,6 @@ namespace COSE.Hypothesis
 
         private void ActivateIconsForLayer(string layerName)
         {
-            // Activate corresponding icon outlines
             if (layerToIconMap.TryGetValue(layerName, out List<int> iconIndices))
             {
                 foreach (int index in iconIndices)
@@ -108,10 +143,30 @@ namespace COSE.Hypothesis
                     if (index >= 0 && index < icons.Length)
                     {
                         Outline iconOutline = icons[index].GetComponent<Outline>();
-                        if (iconOutline != null) iconOutline.enabled = true;
+                        if (iconOutline != null)
+                        {
+                            iconOutline.enabled = true;
+                            RestartTimeout();
+                        }
                     }
                 }
             }
+        }
+
+        private void RestartTimeout()
+        {
+            if (timeoutCoroutine != null)
+            {
+                StopCoroutine(timeoutCoroutine);
+            }
+            timeoutCoroutine = StartCoroutine(ResetAfterTimeout(20f));
+        }
+
+        private IEnumerator ResetAfterTimeout(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            ResetAllOutlines();
+            ResetAllIcons();
         }
 
         private void ResetAllOutlines()
@@ -129,6 +184,32 @@ namespace COSE.Hypothesis
             {
                 Outline iconOutline = icon.GetComponent<Outline>();
                 if (iconOutline != null) iconOutline.enabled = false;
+            }
+        }
+
+        private void HandleLayerClicked(string layerName)
+        {
+            // First, deactivate all outlines
+            hypothesisInteraction.DeactivateAllOutlines();
+
+            if (nameToIndexMap.TryGetValue(layerName, out List<int> indices))
+            {
+                foreach (int index in indices)
+                {
+                    Debug.Log($"Found indices for {layerName}: {string.Join(", ", indices)}");
+                    if (index >= 0 && index < hypothesisInteraction.firstHypothesisText.Count)
+                    {
+                        var layer = hypothesisInteraction.firstHypothesisText[index];
+
+                        hypothesisInteraction.ActivateLayerByIndex(index);
+
+                        var outline = layer.layerObject.GetComponent<Outline>() ?? layer.layerObject.GetComponentInChildren<Outline>();
+                        if (outline != null)
+                        {
+                            outline.enabled = true;
+                        }
+                    }
+                }
             }
         }
     }

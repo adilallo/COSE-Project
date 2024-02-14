@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections.Generic;
 
 namespace COSE.Diagram
@@ -8,6 +9,13 @@ namespace COSE.Diagram
         public static DiagramManager Instance { get; private set; }
 
         [SerializeField] private List<DiagramElement> diagramElements = new List<DiagramElement>();
+
+        public event Action<DiagramElement> OnDiagramElementClicked;
+
+        public void DiagramElementClicked(DiagramElement element)
+        {
+            OnDiagramElementClicked?.Invoke(element);
+        }
 
         private void Awake()
         {

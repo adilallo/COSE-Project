@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using COSE.Diagram;
 
 namespace COSE.Text
 {
@@ -9,6 +10,22 @@ namespace COSE.Text
         [SerializeField] private GameObject[] textObjects;
         [SerializeField] private GameObject[] firstHypothesisTextObjects;
         [SerializeField] private GameObject[] conclusionTextObjects;
+
+        private void OnEnable()
+        {
+            if (DiagramManager.Instance != null)
+            {
+                DiagramManager.Instance.OnDiagramElementClicked += HandleDiagramElementClicked;
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (DiagramManager.Instance != null)
+            {
+                DiagramManager.Instance.OnDiagramElementClicked -= HandleDiagramElementClicked;
+            }
+        }
 
         public void ActivateText(int sphereIndex)
         {
@@ -90,6 +107,12 @@ namespace COSE.Text
             {
                 Debug.LogWarning("TMP_Text component not found on the text object!");
             }
+        }
+
+        private void HandleDiagramElementClicked(DiagramElement element)
+        {
+            Debug.Log($"Diagram element clicked: {element.name}");
+            DeactivateAllTexts();
         }
     }
 }

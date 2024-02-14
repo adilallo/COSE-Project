@@ -40,7 +40,9 @@ namespace COSE.Hypothesis
         [SerializeField] private float rotationSpeed = 2f;
 
         [SerializeField] public List<LayerInteraction> firstHypothesisText;
+
         private int currentStateIndex = -1;
+        private int currentCouplingIndex = -1;
         public bool isSphereOneTriggered = false;
         public bool isSphereTwoTriggered = false;
         public bool isMovementComplete = false;
@@ -59,6 +61,20 @@ namespace COSE.Hypothesis
                 }
             }
         }
+
+        private List<List<int>> couplings = new List<List<int>>()
+{
+    new List<int>{2, 11, 13, 16},
+    new List<int>{1, 12, 8},
+    new List<int>{2, 3},
+    new List<int>{3, 15},
+    new List<int>{4, 13, 15},
+    new List<int>{5, 9},
+    new List<int>{5, 6, 7, 9, 14, 17},
+    new List<int>{6, 14},
+    new List<int>{10, 13},
+    new List<int>{1, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 17}
+};
 
         void Start()
         {
@@ -86,6 +102,43 @@ namespace COSE.Hypothesis
             if (isSphereTwoTriggered)
             {
                 MoveAndRotateHypothesis();
+
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    CycleCouplings(1);
+                }
+                else if (Input.GetKeyDown(KeyCode.Z))
+                {
+                    CycleCouplings(-1);
+                }
+            }
+        }
+
+        void CycleCouplings(int direction)
+        {
+            currentCouplingIndex += direction;
+            if (currentCouplingIndex >= couplings.Count) currentCouplingIndex = 0;
+            else if (currentCouplingIndex < 0) currentCouplingIndex = couplings.Count - 1;
+
+            ActivateCoupling(couplings[currentCouplingIndex]);
+        }
+
+        void ActivateCoupling(List<int> coupling)
+        {
+            // First, reset activation of all layers
+            foreach (var layer in firstHypothesisText)
+            {
+                layer.layerObject.SetActive(false); // Deactivate all first, or adjust based on your logic for visibility
+            }
+
+            // Then, activate only the layers in the current coupling
+            foreach (int id in coupling)
+            {
+                var layerToActivate = firstHypothesisText.Find(layer => layer.layerIndex == id);
+                if (layerToActivate != null)
+                {
+                    layerToActivate.layerObject.SetActive(true);
+                }
             }
         }
 
@@ -213,5 +266,35 @@ namespace COSE.Hypothesis
                 isMovementComplete = false;
             }
         }
+
+        public void ActivateLayerByIndex(int index)
+        {
+            if (index >= 0 && index < firstHypothesisText.Count)
+            {
+                var layer = firstHypothesisText[index];
+                // Activate the layer however appropriate, e.g., setting it active, highlighting, etc.
+                // For example:
+                layer.layerObject.SetActive(true);
+            }
+        }
+
+        public void DeactivateAllOutlines()
+        {
+            foreach (var layer in firstHypothesisText)
+            {
+                var outline = layer.layerObject.GetComponent<Outline>();
+                if (outline == null)
+                {
+                    // Try to get the Outline component from children if not found on the parent
+                    outline = layer.layerObject.GetComponentInChildren<Outline>();
+                }
+
+                if (outline != null)
+                {
+                    outline.enabled = false;
+                }
+            }
+        }
+
     }
 }
