@@ -39,7 +39,7 @@ namespace COSE.Hypothesis
         [SerializeField] private float movementSpeed = 2f;
         [SerializeField] private float rotationSpeed = 2f;
 
-        [SerializeField] public List<LayerInteraction> firstHypothesisText;
+        [SerializeField] public List<LayerInteraction> mainHypothesisLayers;
 
         private int currentStateIndex = -1;
         private int currentCouplingIndex = -1;
@@ -47,6 +47,7 @@ namespace COSE.Hypothesis
         public bool isSphereTwoTriggered = false;
         public bool isSphereThreeTriggered = false;
         public bool isSphereFourTriggered = false;
+        public bool isSphereFiveTriggered = false;
         public bool isMovementComplete = false;
         private bool coroutineStarted = false;
 
@@ -86,7 +87,7 @@ namespace COSE.Hypothesis
                 hypothesisModel.transform.rotation = movementStates[0].targetRotation;
             }
             // Initialize each layer's relative position and rotation
-            foreach (var layer in firstHypothesisText)
+            foreach (var layer in mainHypothesisLayers)
             {
                 layer.Initialize();
             }
@@ -118,9 +119,10 @@ namespace COSE.Hypothesis
                 }
             }
 
-            if (isSphereFourTriggered)
+            if (isSphereFiveTriggered)
             {
-                //MoveAndRotateHypothesis();
+                DeactivateAllOutlinesAndObjects();
+                ActivateLayerByIndex(3);
             }
         }
 
@@ -136,7 +138,7 @@ namespace COSE.Hypothesis
         void ActivateCoupling(List<int> coupling)
         {
             // First, reset activation of all layers
-            foreach (var layer in firstHypothesisText)
+            foreach (var layer in mainHypothesisLayers)
             {
                 layer.layerObject.SetActive(false); // Deactivate all first, or adjust based on your logic for visibility
             }
@@ -144,7 +146,7 @@ namespace COSE.Hypothesis
             // Then, activate only the layers in the current coupling
             foreach (int id in coupling)
             {
-                var layerToActivate = firstHypothesisText.Find(layer => layer.layerIndex == id);
+                var layerToActivate = mainHypothesisLayers.Find(layer => layer.layerIndex == id);
                 if (layerToActivate != null)
                 {
                     layerToActivate.layerObject.SetActive(true);
@@ -170,9 +172,9 @@ namespace COSE.Hypothesis
 
             float startTime = Time.time;
             // Calculate each layer's target position and rotation as if the parent had moved
-            for (int i = 1; i < firstHypothesisText.Count; i++)
+            for (int i = 1; i < mainHypothesisLayers.Count; i++)
             {
-                var layer = firstHypothesisText[i];
+                var layer = mainHypothesisLayers[i];
 
                 // Calculate the new world position and rotation for the layer
                 Vector3 targetLayerWorldPosition = hypothesisModel.transform.TransformPoint(layer.initialLocalPosition);
@@ -235,7 +237,7 @@ namespace COSE.Hypothesis
                 layerObject.SetActive(false);
             }
 
-            if (layer == firstHypothesisText[firstHypothesisText.Count - 1])
+            if (layer == mainHypothesisLayers[mainHypothesisLayers.Count - 1])
             {
                 IsLastLayerFinished = true;
             }
@@ -281,9 +283,9 @@ namespace COSE.Hypothesis
 
         public void ActivateLayerByIndex(int index)
         {
-            if (index >= 0 && index < firstHypothesisText.Count)
+            if (index >= 0 && index < mainHypothesisLayers.Count)
             {
-                var layer = firstHypothesisText[index];
+                var layer = mainHypothesisLayers[index];
                 // Activate the layer however appropriate, e.g., setting it active, highlighting, etc.
                 // For example:
                 layer.layerObject.SetActive(true);
@@ -292,7 +294,7 @@ namespace COSE.Hypothesis
 
         public void DeactivateAllOutlinesAndObjects()
         {
-            foreach (var layerInteraction in firstHypothesisText)
+            foreach (var layerInteraction in mainHypothesisLayers)
             {
                 layerInteraction.layerObject.SetActive(false);
 

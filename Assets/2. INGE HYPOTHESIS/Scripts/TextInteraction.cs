@@ -15,7 +15,7 @@ namespace COSE.Text
         [SerializeField] private GameObject[] firstHypothesisTextObjects;
         [SerializeField] private GameObject[] conclusionTextObjects;
         [SerializeField] private GameObject couplingTextObject;
-        [SerializeField] private GameObject[] hypothesisFourTextObjects;
+        [SerializeField] private GameObject[] fourthHypothesisTextObjects;
 
         private void OnEnable()
         {
@@ -123,7 +123,7 @@ namespace COSE.Text
 
             couplingTextObject.SetActive(false);
 
-            foreach (GameObject textObj in hypothesisFourTextObjects)
+            foreach (GameObject textObj in fourthHypothesisTextObjects)
             {
                 if (textObj != null) textObj.SetActive(false);
             }
@@ -153,10 +153,10 @@ namespace COSE.Text
 
         private void ActivateHypothesisFourTextByIndex(int index)
         {
-            if (index >= 0 && index < hypothesisFourTextObjects.Length)
+            if (index >= 0 && index < fourthHypothesisTextObjects.Length)
             {
                 DeactivateAllTexts();
-                hypothesisFourTextObjects[index].SetActive(true);
+                fourthHypothesisTextObjects[index].SetActive(true);
             }
         }
     }

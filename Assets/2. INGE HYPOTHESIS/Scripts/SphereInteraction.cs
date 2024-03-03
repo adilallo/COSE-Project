@@ -30,16 +30,24 @@ namespace COSE.Sphere
 
             if (sphereIndex == 1)
             {
-                hypothesisMovement.isSphereOneTriggered = true; // Set the flag when Sphere 1 is triggered
+                hypothesisMovement.isSphereOneTriggered = true;
             }
 
             if (sphereIndex == 2)
             {
-                hypothesisMovement.isSphereTwoTriggered = true; // Set the flag when Sphere 1 is triggered
+                hypothesisMovement.isSphereTwoTriggered = true;
             }
             if (sphereIndex == 3)
             {
-                hypothesisMovement.isSphereThreeTriggered = true; // Set the flag when Sphere 1 is triggered
+                hypothesisMovement.isSphereThreeTriggered = true;
+            }
+            if (sphereIndex == 4)
+            {
+                hypothesisMovement.isSphereFourTriggered = true;
+            }
+            if (sphereIndex == 5)
+            {
+                hypothesisMovement.isSphereFiveTriggered = true;
             }
 
             // Activate corresponding Hypothesis movement state
