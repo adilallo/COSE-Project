@@ -55,6 +55,13 @@ namespace COSE.Text
                             "But some elements have bonds, they act as a cluster. By interacting with them, we can test the linkages and affordances of the elements.",
                             20f));
                     }
+
+                    if (sphereIndex == 6)
+                    {
+                        StartCoroutine(ChangeTextAfterDelay(textObjects[sphereIndex],
+                            "In the .com browser, one website is depicted within a tab field complex. As the tab field complex is a mix of buttons, texts and colour fields, its configuration has much depth. This stretched-out three-dimensionality is an important factor as soon as further tab field complexes enter the scene.",
+                            10f));
+                    }
                 }
             }
         }

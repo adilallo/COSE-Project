@@ -6,6 +6,9 @@ namespace COSE.Sphere
 {
     public class SphereInteraction : MonoBehaviour
     {
+        public delegate void SphereTriggeredHandler(int sphereIndex);
+        public static event SphereTriggeredHandler SphereTriggered;
+
         [SerializeField] private GameObject[] inactiveSpheres;
         [SerializeField] private HypothesisInteraction hypothesisMovement;
         [SerializeField] private TextInteraction textInteraction;
@@ -49,6 +52,12 @@ namespace COSE.Sphere
             {
                 hypothesisMovement.isSphereFiveTriggered = true;
             }
+            if (sphereIndex == 6)
+            {
+                hypothesisMovement.isSphereSixTriggered = true;
+            }
+
+            SphereTriggered?.Invoke(sphereIndex);
 
             // Activate corresponding Hypothesis movement state
             hypothesisMovement.ActivateState(sphereIndex);

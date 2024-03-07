@@ -48,6 +48,7 @@ namespace COSE.Hypothesis
         public bool isSphereThreeTriggered = false;
         public bool isSphereFourTriggered = false;
         public bool isSphereFiveTriggered = false;
+        public bool isSphereSixTriggered = false;
         public bool isMovementComplete = false;
         private bool coroutineStarted = false;
 
@@ -124,7 +125,14 @@ namespace COSE.Hypothesis
                 DeactivateAllOutlinesAndObjects();
                 ActivateLayerByIndex(3);
             }
+
+            if (isSphereSixTriggered)
+            {
+                DeactivateAllOutlinesAndObjects();
+            }
         }
+
+
 
         void CycleCouplings(int direction)
         {
