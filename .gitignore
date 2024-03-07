@@ -70,6 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 
 # Video files (comment out .mp4 to see needed video files)
-*.mp4
-/[Aa]ssets/[Ss]treamingAssets/aa.meta
-/[Aa]ssets/[Ss]treamingAssets/aa/*
+#*.mp4
+#/[Aa]ssets/[Ss]treamingAssets/aa.meta
+#/[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/0. INTRO ROOM/Render_texture_video/video material/VIDEO JODI/5_minute_wrong_browser.mp4
