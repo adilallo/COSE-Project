@@ -27,5 +27,6 @@ EditorBuildSettings:
     path: Assets/SCENES/SCENE_OUTRO.unity
     guid: 280d5aac694fc744c8c7ba5df0f2bf72
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
-      type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: 9e3fabb12fd250f4598e5304d6c4786c, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: aa834afd969f5ac48a003b1823ed659c, type: 2}

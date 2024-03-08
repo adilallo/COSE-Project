@@ -111,7 +111,7 @@ namespace COSE.Text
                 }
         }
 
-        private void DeactivateAllTexts()
+        public void DeactivateAllTexts()
         {
             foreach (GameObject textObj in textObjects)
             {
