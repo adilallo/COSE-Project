@@ -14,7 +14,7 @@ namespace COSE.Hypothesis
         [SerializeField] private TextMeshProUGUI localizedTextElement;
         [SerializeField] private GameObject scrollView;
 
-        private static VideoPlayer videoPlayer;
+        [SerializeField]  private VideoPlayer videoPlayer;
 
         private readonly string[] heroTexts = new string[]
         {
@@ -44,14 +44,6 @@ And all this performed excitement has yet another effect: the long waiting time 
             SphereInteraction.SphereTriggered -= OnSphereTriggered;
             HypothesisSixClickEvent.OnHeroModelClicked -= UpdateLocalizedText;
             AnimationClickEvent.OnAnimationClicked -= PlayVideoClip;
-        }
-
-        private void Start()
-        {
-            if (videoPlayer == null)
-            {
-                videoPlayer = FindObjectOfType<VideoPlayer>();
-            }
         }
 
         private void OnSphereTriggered(int sphereIndex)
@@ -86,6 +78,7 @@ And all this performed excitement has yet another effect: the long waiting time 
         {
             if (videoPlayer != null)
             {
+                Debug.Log("video clip triggered");
                 videoPlayer.clip = clip;
                 videoPlayer.Play();
             }
