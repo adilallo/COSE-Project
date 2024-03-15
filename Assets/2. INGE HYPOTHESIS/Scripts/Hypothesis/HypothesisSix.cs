@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Video;
 using COSE.Sphere;
+using COSE.Events;
 using System.Collections;
 using TMPro;
 using COSE.Text;
@@ -11,8 +12,15 @@ namespace COSE.Hypothesis
     {
         [SerializeField] private TextInteraction textInteraction;
         [SerializeField] private GameObject heroModel1, heroModel2, heroModel3, heroModel4;
+        [SerializeField] private GameObject hypothesis7;
         [SerializeField] private TextMeshProUGUI localizedTextElement;
         [SerializeField] private GameObject scrollView;
+
+        [SerializeField] private GameObject hypothesis8Screenshot1;
+        [SerializeField] private GameObject hypothesis8Screenshot2;
+
+        [SerializeField] private GameObject hypothesis9Scheme1;
+        [SerializeField] private GameObject hypothesis9Scheme2;
 
         [SerializeField]  private VideoPlayer videoPlayer;
 
@@ -31,12 +39,19 @@ And all this performed excitement has yet another effect: the long waiting time 
 "
         };
 
+        private readonly string hypothesis7Text = "We have learnt that a tab field complex is a configuration distributed on different layers of depth. \n \n Showing all five tab field complexes simultaneously, this layered tectonic structure has an impact on how elements overlap. Until now, we have been dealing with element types. That does not mean that each type appears only once in the .com browser. In fact, most elements are present five-fold.";
+        private readonly string hypothesis8Text = "While the opaque representation allows the user to determine clearly what is in front and what behind, the transparent representation allows text to shine through. Moreover, the colours in the overlapping sections of colour-fields may change.";
+        private readonly string scheme1Text = "Here we deal with a simple subtractive colour mix with perfect filters – which means the colours as filters absorb a 100% of the opposite colour. Red absorbs 100% of green and blue, green absorbs 100% blue and red. Superpositioning a red and a green filter, for instance, then all light is absorbed, turning the result into black.";
+        private readonly string scheme2Text = "There are four exceptions that do not turn black when overlapping: Yellow and cyan together turn green, moreover, yellow ‘suffocates’ (has no effect) when overlapping with green or with red. Cyan ‘suffocates’ in blue and green.";
+
+
 
         private void OnEnable()
         {
             SphereInteraction.SphereTriggered += OnSphereTriggered;
             HypothesisSixClickEvent.OnHeroModelClicked += UpdateLocalizedText;
             AnimationClickEvent.OnAnimationClicked += PlayVideoClip;
+            ObjectClickEvent.OnObjectClicked += OnObjectClicked;
         }
 
         private void OnDisable()
@@ -44,6 +59,7 @@ And all this performed excitement has yet another effect: the long waiting time 
             SphereInteraction.SphereTriggered -= OnSphereTriggered;
             HypothesisSixClickEvent.OnHeroModelClicked -= UpdateLocalizedText;
             AnimationClickEvent.OnAnimationClicked -= PlayVideoClip;
+            ObjectClickEvent.OnObjectClicked += OnObjectClicked;
         }
 
         private void OnSphereTriggered(int sphereIndex)
@@ -51,6 +67,28 @@ And all this performed excitement has yet another effect: the long waiting time 
             if (sphereIndex == 6)
             {
                 StartCoroutine(ActivateHeroCoroutine(30f));
+            }
+
+            if (sphereIndex == 7)
+            {
+                textInteraction.DeactivateAllTexts();
+                hypothesis7.SetActive(true);
+                scrollView.SetActive(true);
+                localizedTextElement.text = hypothesis7Text;
+            }
+
+            if (sphereIndex == 8)
+            {
+                textInteraction.DeactivateAllTexts();
+                scrollView.SetActive(true);
+                localizedTextElement.text = hypothesis8Text;
+            }
+
+            if (sphereIndex == 9)
+            {
+                textInteraction.DeactivateAllTexts();
+                scrollView.SetActive(true);
+                hypothesis9Scheme1.SetActive(true);
             }
         }
 
@@ -73,7 +111,6 @@ And all this performed excitement has yet another effect: the long waiting time 
                 localizedTextElement.text = heroTexts[heroId - 1];
             }
         }
-
         private void PlayVideoClip(VideoClip clip)
         {
             if (videoPlayer != null)
@@ -84,5 +121,57 @@ And all this performed excitement has yet another effect: the long waiting time 
             }
         }
 
+        private void StartContinuousRotation(GameObject gameObjectToRotate, Vector3 rotationAxis, float speed)
+        {
+            StartCoroutine(ContinuousRotationCoroutine(gameObjectToRotate, rotationAxis, speed));
+        }
+
+        private IEnumerator ContinuousRotationCoroutine(GameObject gameObjectToRotate, Vector3 rotationAxis, float speed)
+        {
+            while (true)
+            {
+                gameObjectToRotate.transform.Rotate(rotationAxis * speed * Time.deltaTime, Space.World);
+                yield return null;
+            }
+        }
+
+        private IEnumerator ActivateAfterDelay(GameObject scheme, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            scheme.SetActive(true);
+        }
+
+        private void OnObjectClicked(string objectID)
+        {
+            switch (objectID)
+            {
+                case "Hypothesis_8_Opaque":
+                    hypothesis8Screenshot2.SetActive(false);
+                    hypothesis8Screenshot1.SetActive(true);
+                    Debug.Log("Clicked on Hypothesis_8_Opaque");
+                    break;
+                case "Hypothesis_8_Transparent":
+                    hypothesis8Screenshot1.SetActive(false);
+                    hypothesis8Screenshot2.SetActive(true);
+                    Debug.Log("Clicked on Hypothesis_8_Transparent");
+                    break;
+                case "Hypothesis_9_Scheme1":
+                    StartContinuousRotation(hypothesis9Scheme1, Vector3.up, 30);
+                    StartContinuousRotation(hypothesis9Scheme2, Vector3.up, 30); // Start rotating Scheme 2 as well
+                    hypothesis9Scheme2.SetActive(false); // Ensure Scheme 2 starts as inactive
+                    StartCoroutine(ActivateAfterDelay(hypothesis9Scheme2, 15f)); // Activate (make visible) Scheme 2 after delay
+                    localizedTextElement.text = scheme1Text;
+                    Debug.Log("Hypothesis_9_Scheme1");
+                    break;
+                case "Hypothesis_9_Scheme2":
+                    localizedTextElement.text = scheme2Text;
+                    Debug.Log("Hypothesis_9_Scheme2");
+                    break;
+                // Add more cases as needed for other object IDs
+                default:
+                    Debug.Log("Clicked on an unidentified object with ID: " + objectID);
+                    break;
+            }
+        }
     }
 }
