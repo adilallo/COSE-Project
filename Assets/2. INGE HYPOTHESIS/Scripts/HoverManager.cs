@@ -84,7 +84,7 @@ namespace COSE.Hypothesis
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             bool hoverDetected = false;
 
-            foreach (var layerInteraction in hypothesisInteraction.firstHypothesisText)
+            foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
             {
                 Outline layerOutlineScript = layerInteraction.layerObject.GetComponent<Outline>(); // Assuming Outline is the script name
                 if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.gameObject == layerInteraction.layerObject)
@@ -173,7 +173,7 @@ namespace COSE.Hypothesis
 
         private void ResetAllOutlines()
         {
-            foreach (var layerInteraction in hypothesisInteraction.firstHypothesisText)
+            foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
             {
                 Outline outlineScript = layerInteraction.layerObject.GetComponent<Outline>();
                 if (outlineScript != null) outlineScript.enabled = false;
@@ -199,9 +199,9 @@ namespace COSE.Hypothesis
             {
                 foreach (int index in indices)
                 {
-                    if (index >= 0 && index < hypothesisInteraction.firstHypothesisText.Count)
+                    if (index >= 0 && index < hypothesisInteraction.mainHypothesisLayers.Count)
                     {
-                        hypothesisInteraction.firstHypothesisText[index].layerObject.SetActive(true);
+                        hypothesisInteraction.mainHypothesisLayers[index].layerObject.SetActive(true);
                     }
                 }
             }

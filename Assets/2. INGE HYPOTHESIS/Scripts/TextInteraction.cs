@@ -15,7 +15,7 @@ namespace COSE.Text
         [SerializeField] private GameObject[] firstHypothesisTextObjects;
         [SerializeField] private GameObject[] conclusionTextObjects;
         [SerializeField] private GameObject couplingTextObject;
-        [SerializeField] private GameObject[] hypothesisFourTextObjects;
+        [SerializeField] private GameObject[] fourthHypothesisTextObjects;
 
         private void OnEnable()
         {
@@ -54,6 +54,13 @@ namespace COSE.Text
                         StartCoroutine(ChangeTextAfterDelay(textObjects[sphereIndex],
                             "But some elements have bonds, they act as a cluster. By interacting with them, we can test the linkages and affordances of the elements.",
                             20f));
+                    }
+
+                    if (sphereIndex == 6)
+                    {
+                        StartCoroutine(ChangeTextAfterDelay(textObjects[sphereIndex],
+                            "In the .com browser, one website is depicted within a tab field complex. As the tab field complex is a mix of buttons, texts and colour fields, its configuration has much depth. This stretched-out three-dimensionality is an important factor as soon as further tab field complexes enter the scene.",
+                            10f));
                     }
                 }
             }
@@ -104,7 +111,7 @@ namespace COSE.Text
                 }
         }
 
-        private void DeactivateAllTexts()
+        public void DeactivateAllTexts()
         {
             foreach (GameObject textObj in textObjects)
             {
@@ -123,7 +130,7 @@ namespace COSE.Text
 
             couplingTextObject.SetActive(false);
 
-            foreach (GameObject textObj in hypothesisFourTextObjects)
+            foreach (GameObject textObj in fourthHypothesisTextObjects)
             {
                 if (textObj != null) textObj.SetActive(false);
             }
@@ -153,10 +160,10 @@ namespace COSE.Text
 
         private void ActivateHypothesisFourTextByIndex(int index)
         {
-            if (index >= 0 && index < hypothesisFourTextObjects.Length)
+            if (index >= 0 && index < fourthHypothesisTextObjects.Length)
             {
                 DeactivateAllTexts();
-                hypothesisFourTextObjects[index].SetActive(true);
+                fourthHypothesisTextObjects[index].SetActive(true);
             }
         }
     }
