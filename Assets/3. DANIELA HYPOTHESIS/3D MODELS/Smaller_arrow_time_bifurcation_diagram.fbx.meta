@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c235c224bef88b949a6723db07e34d86
+guid: 1e6620054ad405843b152a7c25f533fc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,7 +33,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: time_bifurcation_anim
+      name: SMALLER_ARROW_TIME_DIAGRAM
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 0
