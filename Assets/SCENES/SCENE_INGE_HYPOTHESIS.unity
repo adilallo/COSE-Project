@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereText: SPHERE_HYPOTHESIS_4_LOC_ID
+  sphereText: INGE_SPHERE_HYPOTHESIS_4_LOC_ID
 --- !u!1 &118466737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,7 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereText: SPHERE_ENTRY_LOC_ID
+  sphereText: INGE_SPHERE_ENTRY_LOC_ID
 --- !u!1 &124748885
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,101 +3307,101 @@ MonoBehaviour:
   rotationSpeed: 9
   mainHypothesisLayers:
   - layerObject: {fileID: 777927213}
-    textIndex: 0
+    textKey: 
     layerIndex: 0
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 2252245433666461137}
-    textIndex: 1
+    textKey: INGE_LAYER_HYPOTHESIS_1_L1_LOC_ID
     layerIndex: 1
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 9023714831590367321}
-    textIndex: 2
+    textKey: INGE_LAYER_HYPOTHESIS_1_L2_LOC_ID
     layerIndex: 2
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 168600357911926006}
-    textIndex: 3
+    textKey: 
     layerIndex: 3
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 1751734891107484171}
-    textIndex: 4
+    textKey: 
     layerIndex: 4
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 6017977125521794700}
-    textIndex: 5
+    textKey: 
     layerIndex: 5
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 3596873547076941728}
-    textIndex: 6
+    textKey: 
     layerIndex: 6
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 3359590080355112883}
-    textIndex: 7
+    textKey: 
     layerIndex: 7
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 8993925749351078486}
-    textIndex: 8
+    textKey: 
     layerIndex: 8
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 3624699660699645440}
-    textIndex: 9
+    textKey: 
     layerIndex: 9
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 7430213430625738986}
-    textIndex: 10
+    textKey: 
     layerIndex: 10
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 53192870924617365}
-    textIndex: 11
+    textKey: 
     layerIndex: 11
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 2079455190266309646}
-    textIndex: 12
+    textKey: 
     layerIndex: 12
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 6735867168452992487}
-    textIndex: 13
+    textKey: 
     layerIndex: 13
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 7404832279621448947}
-    textIndex: 14
+    textKey: 
     layerIndex: 14
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 3688125033070547136}
-    textIndex: 15
+    textKey: 
     layerIndex: 15
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 8369389781545842035}
-    textIndex: 16
+    textKey: 
     layerIndex: 16
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 271134617373829252}
-    textIndex: 17
+    textKey: 
     layerIndex: 17
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   - layerObject: {fileID: 2393527319552827839}
-    textIndex: 18
+    textKey: 
     layerIndex: 18
     initialLocalPosition: {x: 0, y: 0, z: 0}
     initialLocalRotation: {x: 0, y: 0, z: 0, w: 0}
-  isSphereOneTriggered: 0
+  currentStateIndex: -1
   isSphereTwoTriggered: 0
   isSphereThreeTriggered: 0
   isSphereFourTriggered: 0
@@ -7922,7 +7922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &920259735
 Transform:
   m_ObjectHideFlags: 0
@@ -8179,7 +8179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereText: SPHERE_HYPOTHESIS_1_LOC_ID
+  sphereText: INGE_SPHERE_HYPOTHESIS_1_LOC_ID
 --- !u!1 &929965851
 GameObject:
   m_ObjectHideFlags: 0
@@ -9817,7 +9817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereText: SPHERE_HYPOTHESIS_2_LOC_ID
+  sphereText: INGE_SPHERE_HYPOTHESIS_2_LOC_ID
 --- !u!1 &1174385615
 GameObject:
   m_ObjectHideFlags: 0
@@ -15573,7 +15573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereText: SPHERE_HYPOTHESIS_3_LOC_ID
+  sphereText: INGE_SPHERE_HYPOTHESIS_3_LOC_ID
 --- !u!1 &1685595314
 GameObject:
   m_ObjectHideFlags: 0
@@ -15994,7 +15994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereText: SPHERE_HYPOTHESIS_5_LOC_ID
+  sphereText: INGE_SPHERE_HYPOTHESIS_5_LOC_ID
 --- !u!1 &1766851307
 GameObject:
   m_ObjectHideFlags: 0
@@ -18364,7 +18364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereText: SPHERE_HYPOTHESIS_6_LOC_ID
+  sphereText: INGE_SPHERE_HYPOTHESIS_6_LOC_ID
 --- !u!114 &2036651601
 MonoBehaviour:
   m_ObjectHideFlags: 0
