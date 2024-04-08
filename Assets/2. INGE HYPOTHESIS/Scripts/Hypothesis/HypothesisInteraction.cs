@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using COSE.Text;
+using COSE.Sphere;
+using System;
 
 namespace COSE.Hypothesis
 {
@@ -16,7 +18,7 @@ namespace COSE.Hypothesis
     public class LayerInteraction
     {
         public GameObject layerObject;
-        public int textIndex;
+        public string textKey;
         public int layerIndex;
         [HideInInspector] public Vector3 initialLocalPosition;
         [HideInInspector] public Quaternion initialLocalRotation;
@@ -25,6 +27,13 @@ namespace COSE.Hypothesis
         {
             initialLocalPosition = layerObject.transform.localPosition;
             initialLocalRotation = layerObject.transform.localRotation;
+        }
+
+        public static event Action<string> OnLayerMoved;
+
+        public static void NotifyLayerMoved(string textKey)
+        {
+            OnLayerMoved?.Invoke(textKey);
         }
     }
 
@@ -41,9 +50,8 @@ namespace COSE.Hypothesis
 
         [SerializeField] public List<LayerInteraction> mainHypothesisLayers;
 
-        private int currentStateIndex = -1;
+        public int currentStateIndex = -1;
         private int currentCouplingIndex = -1;
-        public bool isSphereOneTriggered = false;
         public bool isSphereTwoTriggered = false;
         public bool isSphereThreeTriggered = false;
         public bool isSphereFourTriggered = false;
@@ -66,19 +74,36 @@ namespace COSE.Hypothesis
             }
         }
 
+        private Dictionary<string, int> stateMap = new Dictionary<string, int>()
+        {
+            { "INGE_SPHERE_ENTRY_LOC_ID", 0 },
+            { "INGE_SPHERE_HYPOTHESIS_1_LOC_ID", 1 },
+            { "INGE_SPHERE_HYPOTHESIS_2_LOC_ID", 2 }
+        };
+
         private List<List<int>> couplings = new List<List<int>>()
-{
-    new List<int>{2, 11, 13, 16},
-    new List<int>{1, 12, 8},
-    new List<int>{2, 3},
-    new List<int>{3, 15},
-    new List<int>{4, 13, 15},
-    new List<int>{5, 9},
-    new List<int>{5, 6, 7, 9, 14, 17},
-    new List<int>{6, 14},
-    new List<int>{10, 13},
-    new List<int>{1, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 17}
-};
+        {
+                new List<int>{2, 11, 13, 16},
+                new List<int>{1, 12, 8},
+                new List<int>{2, 3},
+                new List<int>{3, 15},
+                new List<int>{4, 13, 15},
+                new List<int>{5, 9},
+                new List<int>{5, 6, 7, 9, 14, 17},
+                new List<int>{6, 14},
+                new List<int>{10, 13},
+                new List<int>{1, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 17}
+        };
+
+        private void OnEnable()
+        {
+            SphereTrigger.OnSphereTriggered += ActivateState;
+        }
+
+        private void OnDisable()
+        {
+            SphereTrigger.OnSphereTriggered -= ActivateState;
+        }
 
         void Start()
         {
@@ -97,9 +122,9 @@ namespace COSE.Hypothesis
         void Update()
         {
 
-            if (isSphereOneTriggered && !coroutineStarted && Input.GetKeyDown(KeyCode.Return))
+            if (currentStateIndex == 1 && !coroutineStarted && Input.GetKeyDown(KeyCode.Return))
             {
-                StartCoroutine(MoveLayersSequentially(movementStates[currentStateIndex], 20.0f)); // Example delay
+                StartCoroutine(MoveLayersSequentially(movementStates[currentStateIndex], 20.0f));
                 coroutineStarted = true;
             }
 
@@ -165,11 +190,18 @@ namespace COSE.Hypothesis
             textInteraction.ActivateCouplingText(coupling, isTightlyCoupled);
         }
 
-        public void ActivateState(int stateIndex)
+        public void ActivateState(string stateIdentifier)
         {
-            if (stateIndex >= 0 && stateIndex < movementStates.Count)
+            if (stateMap.TryGetValue(stateIdentifier, out int stateIndex))
             {
-                currentStateIndex = stateIndex;
+                if (stateIndex >= 0 && stateIndex < movementStates.Count)
+                {
+                    currentStateIndex = stateIndex;
+                }
+            }
+            else
+            {
+                Debug.LogError($"State identifier {stateIdentifier} not found.");
             }
         }
 
@@ -232,9 +264,9 @@ namespace COSE.Hypothesis
                     rotSpeed * Time.deltaTime);
 
                 // Activate the text associated with this layer
-                if (isSphereOneTriggered)
+                if (currentStateIndex == 1)
                 {
-                    textInteraction.ActivateHypothesisText(layer.textIndex);
+                    LayerInteraction.NotifyLayerMoved(layer.textKey);
                 }
 
                 yield return null;
@@ -249,11 +281,6 @@ namespace COSE.Hypothesis
             {
                 IsLastLayerFinished = true;
             }
-        }
-
-        public void NotifyTextInteraction(int textIndex)
-        {
-            textInteraction.ActivateHypothesisText(textIndex);
         }
 
         private void MoveAndRotateHypothesis()

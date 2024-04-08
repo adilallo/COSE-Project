@@ -5,11 +5,9 @@ namespace COSE.Sphere
 {
     public class SphereTrigger : MonoBehaviour
     {
-        public enum SphereType { Hypothesis, Conclusion }
-        public SphereType type; // Set this in the inspector
-        public int sphereIndex; // Set this in the inspector
+        public string sphereText;
 
-        public static event Action<int, SphereType> OnSphereTriggered;
+        public static event Action<string> OnSphereTriggered;
 
         private Collider sphereCollider;
 
@@ -22,7 +20,8 @@ namespace COSE.Sphere
         {
             if (other.CompareTag("Player"))
             {
-                OnSphereTriggered?.Invoke(sphereIndex, type);
+                OnSphereTriggered?.Invoke(sphereText);
+                Debug.Log("Sphere Triggered: " + sphereText);
                 sphereCollider.enabled = false;
             }
         }

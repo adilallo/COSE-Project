@@ -48,7 +48,7 @@ And all this performed excitement has yet another effect: the long waiting time 
 
         private void OnEnable()
         {
-            SphereInteraction.SphereTriggered += OnSphereTriggered;
+            SphereTrigger.OnSphereTriggered += OnSphereTriggered;
             HypothesisSixClickEvent.OnHeroModelClicked += UpdateLocalizedText;
             AnimationClickEvent.OnAnimationClicked += PlayVideoClip;
             ObjectClickEvent.OnObjectClicked += OnObjectClicked;
@@ -56,20 +56,20 @@ And all this performed excitement has yet another effect: the long waiting time 
 
         private void OnDisable()
         {
-            SphereInteraction.SphereTriggered -= OnSphereTriggered;
+            SphereTrigger.OnSphereTriggered -= OnSphereTriggered;
             HypothesisSixClickEvent.OnHeroModelClicked -= UpdateLocalizedText;
             AnimationClickEvent.OnAnimationClicked -= PlayVideoClip;
             ObjectClickEvent.OnObjectClicked += OnObjectClicked;
         }
 
-        private void OnSphereTriggered(int sphereIndex)
+        private void OnSphereTriggered(string key)
         {
-            if (sphereIndex == 6)
+            if (key == "SPHERE_HYPOTHESIS6_LOC_ID")
             {
                 StartCoroutine(ActivateHeroCoroutine(30f));
             }
 
-            if (sphereIndex == 7)
+            if (key == "SPHERE_HYPOTHESIS7_LOC_ID")
             {
                 textInteraction.DeactivateAllTexts();
                 hypothesis7.SetActive(true);
@@ -77,14 +77,14 @@ And all this performed excitement has yet another effect: the long waiting time 
                 localizedTextElement.text = hypothesis7Text;
             }
 
-            if (sphereIndex == 8)
+            if (key == "SPHERE_HYPOTHESIS8_LOC_ID")
             {
                 textInteraction.DeactivateAllTexts();
                 scrollView.SetActive(true);
                 localizedTextElement.text = hypothesis8Text;
             }
 
-            if (sphereIndex == 9)
+            if (key == "SPHERE_HYPOTHESIS9_LOC_ID")
             {
                 textInteraction.DeactivateAllTexts();
                 scrollView.SetActive(true);

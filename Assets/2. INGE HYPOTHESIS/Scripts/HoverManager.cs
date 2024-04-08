@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace COSE.Hypothesis
 {
@@ -103,9 +104,9 @@ namespace COSE.Hypothesis
                     }
 
                     // If Sphere One is active, animations are done, and sphere 2 isn't triggered, handle text
-                    if (hypothesisInteraction.isSphereOneTriggered && hypothesisInteraction.IsLastLayerFinished && !hypothesisInteraction.isSphereTwoTriggered)
+                    if (hypothesisInteraction.currentStateIndex == 1 && hypothesisInteraction.IsLastLayerFinished && !hypothesisInteraction.isSphereTwoTriggered)
                     {
-                        hypothesisInteraction.NotifyTextInteraction(layerInteraction.textIndex);
+                        LayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
                     }
 
                     break;

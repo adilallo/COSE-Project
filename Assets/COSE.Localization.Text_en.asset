@@ -17,7 +17,78 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 3fb16befcd89b2e4bbe08b7875cd111d, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 2189404659712
+    m_Localized: "This room looks analytically at the visual output of JODI\u2019s
+      .com browser. We dissect and then regroup the visual elements that are provided
+      in the viewport of the monitor. Taking everything apart first and reassembling
+      it later in different constellations, helps us to determine how or whether
+      elements cluster dynamically in terms of space and (inter)activity. This room
+      offers filters that suggest ways to see order in the browser output. These
+      filters are sorting gestures such as: taking apart, isolating, staging, counting,
+      labeling, marking, focusing, creating explanatory models as shortcuts of certain
+      underlying \u2018mechanisms\u2019. We learn about the rules of the visual layers
+      within the artwork and come to unexpected conclusions. Let\u2019s go!\r\n\r\nOur
+      argumentation is a journey. It includes nine hypotheses and four main tactical
+      moves. Within each move you can collect three take home messages. Watch out
+      for them, you might need them later. Our journey begins now!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10326936818540544
+    m_Localized: 'Clarity is useful to determine which visual elements exist in this
+      browser. The following inventory of the different types of elements that you
+      may encounter in this browser is already ordered in a specific way, namely
+      how they overlap each other. Overlapping suggests depth and we show a layering
+      structure based on the visual element types (not their size, not their time
+      of appearance; later on, their colour will play a role). Learn about the GUI
+      elements!
+
+
+      PRESS ENTER TO BEGIN ANIMATION'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327070432288768
+    m_Localized: "Some math: so far we have encountered 18 element types, and exemplified
+      them with the red tab. But there are four more tabs. Taking some singular elements
+      apart, and considering that some elements multiply over time, we have at least
+      66 elements permanently present plus some ephemeral ones. That\u2019s a lot!
+      It\u2019s easy to lose track of them. Moreover, there is a certain variance
+      in how much presents itself to the users\u2019 eye in the browser as a whole.\n\nBut
+      some elements have bonds, they act as a cluster. By interacting with them,
+      we can test the linkages and affordances of the elements."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327171980582912
+    m_Localized: "You can (cluster-)influence several elements on the screen by a
+      single move. Find out which elements like hanging out with others! We refer
+      to all elements that are simultaneously affected with one move with an umbrella
+      term: complex.\n \nPRESS X AND Z TO CYCLE THROUGH COUPLINGS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327237051015168
+    m_Localized: 'Let us do some more re-clustering work! Analyzing the behavior
+      and occurrence of the elements in our inventory, several further groupings
+      can be undertaken along specific parameters. Click on the xxx (symbol) to see
+      the highlights in the model. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327419750703104
+    m_Localized: "In .com, the formatted-text \u2013 that comes closest to a website
+      rendering \u2013 here sits at the very back. This raises the question of how
+      the websites are actually presented. Does this artwork show us the \u2018backside\u2019
+      of the websites? We\u2019ll try to find out. Let\u2019s explore this idea and
+      inspect the tectonics of a tab field complex with all its elements."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10328055108067328
+    m_Localized: "The tab field complex is one of four functional clusters consisting
+      of several elements. So let\u2019s meet these four complex protagonists in
+      their full three-dimensionality!\n\nIn the .com browser, one website is depicted
+      within a tab field complex. As the tab field complex is a mix of buttons, texts
+      and colour fields, its configuration has much depth. This stretched-out three-dimensionality
+      is an important factor as soon as further tab field complexes enter the scene."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

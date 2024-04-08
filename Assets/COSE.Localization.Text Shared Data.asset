@@ -16,7 +16,31 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: 3fb16befcd89b2e4bbe08b7875cd111d
   m_Entries:
   - m_Id: 2189404659712
-    m_Key: New Entry
+    m_Key: SPHERE_ENTRY_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10326936818540544
+    m_Key: SPHERE_HYPOTHESIS_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327070432288768
+    m_Key: SPHERE_HYPOTHESIS_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327171980582912
+    m_Key: SPHERE_HYPOTHESIS_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327237051015168
+    m_Key: SPHERE_HYPOTHESIS_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327419750703104
+    m_Key: SPHERE_HYPOTHESIS_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10328055108067328
+    m_Key: SPHERE_HYPOTHESIS_6_LOC_ID
     m_Metadata:
       m_Items: []
   m_Metadata:

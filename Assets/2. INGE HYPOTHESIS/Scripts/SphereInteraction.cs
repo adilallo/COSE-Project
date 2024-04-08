@@ -1,3 +1,4 @@
+using COSE.Diagram;
 using COSE.Hypothesis;
 using COSE.Text;
 using UnityEngine;
@@ -6,21 +7,26 @@ namespace COSE.Sphere
 {
     public class SphereInteraction : MonoBehaviour
     {
-        public delegate void SphereTriggeredHandler(int sphereIndex);
-        public static event SphereTriggeredHandler SphereTriggered;
+        //public delegate void SphereTriggeredHandler(int sphereIndex);
+       // public static event SphereTriggeredHandler SphereTriggered;
 
         [SerializeField] private GameObject[] inactiveSpheres;
-        [SerializeField] private HypothesisInteraction hypothesisMovement;
-        [SerializeField] private TextInteraction textInteraction;
+        //[SerializeField] private HypothesisInteraction hypothesisMovement;
+        //[SerializeField] private TextInteraction textInteraction;
 
-        public void HandleSphereTriggered(int index)
+        private void OnEnable()
         {
-                OnSphereTriggered(index);
+            SphereTrigger.OnSphereTriggered += ActivateSphere;
         }
 
-        public void OnSphereTriggered(int sphereIndex)
+        private void OnDisable()
         {
-            if (sphereIndex == 1)
+            SphereTrigger.OnSphereTriggered -= ActivateSphere;
+        }
+
+        public void ActivateSphere(string text)
+        {
+            if (text == "INGE_SPHERE_HYPOTHESIS_1_LOC_ID")
             {
                 foreach (GameObject sphere in inactiveSpheres)
                 {
@@ -30,7 +36,7 @@ namespace COSE.Sphere
                     }
                 }
             }
-
+/*
             if (sphereIndex == 1)
             {
                 hypothesisMovement.isSphereOneTriggered = true;
@@ -61,7 +67,7 @@ namespace COSE.Sphere
 
             // Activate corresponding Hypothesis movement state
             hypothesisMovement.ActivateState(sphereIndex);
-            textInteraction.ActivateText(sphereIndex);
+*/
         }
     }
 }

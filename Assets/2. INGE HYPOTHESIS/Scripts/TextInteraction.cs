@@ -3,9 +3,14 @@ using System.Collections;
 using TMPro;
 using COSE.Diagram;
 using System.Collections.Generic;
+using UnityEngine.Localization;
 using System.Linq;
 using COSE.Hypothesis;
 using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using COSE.Sphere;
+using UnityEngine.Localization.Settings;
 
 namespace COSE.Text
 {
@@ -17,8 +22,13 @@ namespace COSE.Text
         [SerializeField] private GameObject couplingTextObject;
         [SerializeField] private GameObject[] fourthHypothesisTextObjects;
 
+        [SerializeField] private GameObject _textUI;
+        [SerializeField] private TextMeshProUGUI _text;
+
         private void OnEnable()
         {
+            SphereTrigger.OnSphereTriggered += ActivateText;
+            LayerInteraction.OnLayerMoved += ActivateText;
             LayerClickEvent.OnLayerClickedByIndex += ActivateHypothesisFourTextByIndex;
 
             if (DiagramManager.Instance != null)
@@ -29,6 +39,8 @@ namespace COSE.Text
 
         private void OnDisable()
         {
+            SphereTrigger.OnSphereTriggered -= ActivateText;
+            LayerInteraction.OnLayerMoved -= ActivateText;
             LayerClickEvent.OnLayerClickedByIndex -= ActivateHypothesisFourTextByIndex;
 
             if (DiagramManager.Instance != null)
@@ -37,33 +49,20 @@ namespace COSE.Text
             }
         }
 
-        public void ActivateText(int sphereIndex)
+        public void Start()
         {
-            if (sphereIndex >= 0 && sphereIndex < textObjects.Length)
+            DeactivateAllTexts();
+        }
+
+        private void ActivateText(string text)
+        {
+            if (_textUI.activeSelf == false)
             {
-                DeactivateAllTexts();
-
-                // Activate the specific text object related to the sphereIndex
-                if (textObjects[sphereIndex] != null)
-                {
-                    textObjects[sphereIndex].SetActive(true);
-
-                    // If the sphere index is 2, change the text after a delay.
-                    if (sphereIndex == 2)
-                    {
-                        StartCoroutine(ChangeTextAfterDelay(textObjects[sphereIndex],
-                            "But some elements have bonds, they act as a cluster. By interacting with them, we can test the linkages and affordances of the elements.",
-                            20f));
-                    }
-
-                    if (sphereIndex == 6)
-                    {
-                        StartCoroutine(ChangeTextAfterDelay(textObjects[sphereIndex],
-                            "In the .com browser, one website is depicted within a tab field complex. As the tab field complex is a mix of buttons, texts and colour fields, its configuration has much depth. This stretched-out three-dimensionality is an important factor as soon as further tab field complexes enter the scene.",
-                            10f));
-                    }
-                }
+                _textUI.SetActive(true);
             }
+
+            this._text.text = LocalizationSettings.StringDatabase.GetLocalizedString(text);
+            Debug.Log($"Text Display: {this._text.text}");
         }
 
         public void ActivateHypothesisText(int firstHypothesisIndex)
@@ -113,7 +112,9 @@ namespace COSE.Text
 
         public void DeactivateAllTexts()
         {
-            foreach (GameObject textObj in textObjects)
+            _textUI.SetActive(false);
+            _text.text = default;
+           /* foreach (GameObject textObj in textObjects)
             {
                 if (textObj != null) textObj.SetActive(false);
             }
@@ -133,23 +134,7 @@ namespace COSE.Text
             foreach (GameObject textObj in fourthHypothesisTextObjects)
             {
                 if (textObj != null) textObj.SetActive(false);
-            }
-        }
-
-        private IEnumerator ChangeTextAfterDelay(GameObject textObject, string newText, float delay)
-        {
-            yield return new WaitForSeconds(delay);
-
-            // Change the text of the TextMeshPro component
-            TMP_Text textMeshPro = textObject.GetComponentInChildren<TMP_Text>(); // Using GetComponentInChildren in case the TMP component is not directly on the parent object
-            if (textMeshPro != null)
-            {
-                textMeshPro.text = newText;
-            }
-            else
-            {
-                Debug.LogWarning("TMP_Text component not found on the text object!");
-            }
+            }*/
         }
 
         private void HandleDiagramElementClicked(DiagramElement element)
