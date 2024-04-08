@@ -51,6 +51,7 @@ namespace COSE.Hypothesis
         [SerializeField] public List<LayerInteraction> mainHypothesisLayers;
 
         public int currentStateIndex = -1;
+        private int _currentLayerIndex = 1;
         private int currentCouplingIndex = -1;
         public bool isSphereTwoTriggered = false;
         public bool isSphereThreeTriggered = false;
@@ -158,7 +159,6 @@ namespace COSE.Hypothesis
         }
 
 
-
         void CycleCouplings(int direction)
         {
             currentCouplingIndex += direction;
@@ -211,26 +211,31 @@ namespace COSE.Hypothesis
             yield return new WaitForSeconds(0.1f);
 
             float startTime = Time.time;
+            float lastClickTime = 0f; // Track the last click time
+            float debounceTime = 0.3f; // Cool-down period to debounce clicks
+
             // Calculate each layer's target position and rotation as if the parent had moved
-            for (int i = 1; i < mainHypothesisLayers.Count; i++)
+            for (int i = _currentLayerIndex; i < mainHypothesisLayers.Count; i++)
             {
                 var layer = mainHypothesisLayers[i];
 
                 // Calculate the new world position and rotation for the layer
                 Vector3 targetLayerWorldPosition = hypothesisModel.transform.TransformPoint(layer.initialLocalPosition);
                 Quaternion targetLayerWorldRotation = hypothesisModel.transform.rotation * layer.initialLocalRotation;
-
                 // Calculate the offset from the parent's initial position and rotation to the target state
                 Vector3 positionOffset = targetState.targetPosition - movementStates[0].targetPosition;
                 Quaternion rotationOffset = targetState.targetRotation * Quaternion.Inverse(movementStates[0].targetRotation);
-
                 // Apply the offset to the layer's target world position and rotation
                 Vector3 finalLayerPosition = targetLayerWorldPosition + positionOffset;
                 Quaternion finalLayerRotation = rotationOffset * targetLayerWorldRotation;
 
-                // Start moving the layer after a delay
                 StartCoroutine(MoveLayer(layer, finalLayerPosition, finalLayerRotation, movementSpeed, rotationSpeed));
-                yield return new WaitUntil(() => Time.time >= startTime + delayBetweenLayers || Input.GetKeyDown(KeyCode.Q));
+                yield return new WaitUntil(() => Time.time >= startTime + delayBetweenLayers || (Input.GetMouseButtonDown(0) && Time.time - lastClickTime > debounceTime));
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    lastClickTime = Time.time; // Update the last click time when a click is registered
+                }
                 startTime = Time.time;
             }
         }
@@ -244,14 +249,6 @@ namespace COSE.Hypothesis
             while (layerObject.transform.position != targetGlobalPosition ||
                    layerObject.transform.rotation != targetGlobalRotation)
             {
-                // Check if the 'Q' key is pressed to break out of the animation
-                if (Input.GetKeyDown(KeyCode.Q))
-                {
-                    // Optionally, directly set the final position and rotation
-                    layerObject.transform.position = targetGlobalPosition;
-                    layerObject.transform.rotation = targetGlobalRotation;
-                    break;
-                }
 
                 layerObject.transform.position = Vector3.MoveTowards(
                     layerObject.transform.position,
@@ -272,7 +269,7 @@ namespace COSE.Hypothesis
                 yield return null;
             }
 
-            if (layerObject.name == "Layer_2_GREY_FIELD_EPHEMERAL" || layerObject.name == "Layer_11_URL_colour_field" || layerObject.name == "Layer_16_search_color_field_EPHEMERAL")
+            if (layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L2_LOC_ID" || layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L11_LOC_ID" || layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L16_LOC_ID")
             {
                 layerObject.SetActive(false);
             }

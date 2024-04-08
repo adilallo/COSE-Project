@@ -62,7 +62,6 @@ namespace COSE.Text
             }
 
             this._text.text = LocalizationSettings.StringDatabase.GetLocalizedString(text);
-            Debug.Log($"Text Display: {this._text.text}");
         }
 
         public void ActivateHypothesisText(int firstHypothesisIndex)
