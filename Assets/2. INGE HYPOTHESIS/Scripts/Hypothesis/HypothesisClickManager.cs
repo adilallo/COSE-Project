@@ -13,27 +13,25 @@ namespace COSE.Hypothesis
         private Dictionary<string, List<int>> nameToIndexMap;
 
         private Coroutine timeoutCoroutine;
-        private GameObject currentActiveOutlineObject;
+        private GameObject currentActiveOutlineObject = null;
 
 
         private void OnEnable()
         {
             LayerClickEvent.OnLayerClicked += HandleHypothesisFourClicked;
-            LayerInteraction.OnLayerClicked += HandleLayerClicked;
+            HypothesisLayerInteraction.OnLayerClicked += HandleLayerClicked;
         }
 
         private void OnDisable()
         {
             LayerClickEvent.OnLayerClicked -= HandleHypothesisFourClicked;
-            LayerInteraction.OnLayerClicked -= HandleLayerClicked;
+            HypothesisLayerInteraction.OnLayerClicked -= HandleLayerClicked;
         }
 
         void Start()
         {
-            // Initialize the mapping between layer names and icon indices
             InitializeLayerToIconMap();
             InitializeLayerToTabFieldMap();
-
         }
 
         void Update()
@@ -48,19 +46,52 @@ namespace COSE.Hypothesis
 
         private void HandleLayerClicked(string textKey)
         {
-            ResetAllOutlines();
             Debug.Log("Layer clicked: " + textKey);
             foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
             {
-                Debug.Log("Layer clicked: " + textKey);
                 if (layerInteraction.textKey == textKey)
                 {
                     if (hypothesisInteraction.currentStateIndex == 1 && hypothesisInteraction.IsLastLayerFinished)
                     {
-                        LayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
+                        HypothesisLayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
                     }
-                    ToggleOutline(layerInteraction.layerObject);
+                    ToggleOutline(layerInteraction.gameObject);
                     break;
+                }
+            }
+        }
+
+        private void ToggleOutline(GameObject layerObject)
+        {
+            if (currentActiveOutlineObject == layerObject)
+            {
+                var outline = layerObject.GetComponent<Outline>();
+                if (outline != null)
+                {
+                    outline.enabled = !outline.enabled;
+                    if (!outline.enabled) currentActiveOutlineObject = null;
+                }
+            }
+            else
+            {
+                ResetAllOutlines();
+                var outline = layerObject.GetComponent<Outline>();
+                if (outline != null)
+                {
+                    outline.enabled = true;
+                    currentActiveOutlineObject = layerObject;
+                }
+            }
+        }
+
+        private void ResetAllOutlines()
+        {
+            foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
+            {
+                var outline = layerInteraction.GetComponent<Outline>();
+                if (outline != null)
+                {
+                    outline.enabled = false;
                 }
             }
         }
@@ -108,8 +139,8 @@ namespace COSE.Hypothesis
 
             foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
             {
-                Outline layerOutlineScript = layerInteraction.layerObject.GetComponent<Outline>(); // Assuming Outline is the script name
-                if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.gameObject == layerInteraction.layerObject)
+                Outline layerOutlineScript = layerInteraction.gameObject.GetComponent<Outline>(); // Assuming Outline is the script name
+                if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.gameObject == layerInteraction.gameObject)
                 {
                     // Hover detected
                     hoverDetected = true;
@@ -121,13 +152,13 @@ namespace COSE.Hypothesis
                     // If Sphere Two is active, handle icons
                     if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
                     {
-                        ActivateIconsForLayer(layerInteraction.layerObject.name);
+                        ActivateIconsForLayer(layerInteraction.name);
                     }
 
                     // If Sphere One is active, animations are done, handle text
                     if (hypothesisInteraction.currentStateIndex == 1 && hypothesisInteraction.IsLastLayerFinished)
                     {
-                        LayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
+                        HypothesisLayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
                     }
 
                     break;
@@ -193,27 +224,6 @@ namespace COSE.Hypothesis
             ResetAllIcons();
         }
 
-        private void ResetAllOutlines()
-        {
-            foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
-            {
-                var outline = layerInteraction.layerObject.GetComponent<Outline>();
-                if (outline != null)
-                {
-                    outline.enabled = false;
-                }
-            }
-        }
-
-        private void ToggleOutline(GameObject layerObject)
-        {
-            var outline = layerObject.GetComponent<Outline>();
-            if (outline != null)
-            {
-                outline.enabled = !outline.enabled;
-            }
-        }
-
         private void ResetAllIcons()
         {
             foreach (GameObject icon in icons)
@@ -235,7 +245,7 @@ namespace COSE.Hypothesis
                 {
                     if (index >= 0 && index < hypothesisInteraction.mainHypothesisLayers.Count)
                     {
-                        hypothesisInteraction.mainHypothesisLayers[index].layerObject.SetActive(true);
+                        hypothesisInteraction.mainHypothesisLayers[index].gameObject.SetActive(true);
                     }
                 }
             }

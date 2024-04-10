@@ -14,39 +14,6 @@ namespace COSE.Hypothesis
         public Quaternion targetRotation;
     }
 
-    [System.Serializable]
-    public class LayerInteraction
-    {
-        public GameObject layerObject;
-        public string textKey;
-        public int layerIndex;
-        [HideInInspector] public Vector3 initialLocalPosition;
-        [HideInInspector] public Quaternion initialLocalRotation;
-
-        public static event Action<string> OnLayerMoved;
-        public static event Action<string> OnLayerClicked;
-        public void Initialize()
-        {
-            initialLocalPosition = layerObject.transform.localPosition;
-            initialLocalRotation = layerObject.transform.localRotation;
-        }
-
-        private void OnMouseDown()
-        {
-            NotifyLayerClicked();
-        }
-
-        public static void NotifyLayerMoved(string textKey)
-        {
-            OnLayerMoved?.Invoke(textKey);
-        }
-
-        public void NotifyLayerClicked()
-        {
-            OnLayerClicked?.Invoke(textKey);
-        }
-    }
-
     public class HypothesisInteraction : MonoBehaviour
     {
         public delegate void LastLayerFinishedHandler();
@@ -58,7 +25,7 @@ namespace COSE.Hypothesis
         [SerializeField] private float movementSpeed = 2f;
         [SerializeField] private float rotationSpeed = 2f;
 
-        [SerializeField] public List<LayerInteraction> mainHypothesisLayers;
+        [SerializeField] public List<HypothesisLayerInteraction> mainHypothesisLayers;
 
         public int currentStateIndex = -1;
         private int _currentLayerIndex = 1;
@@ -85,10 +52,10 @@ namespace COSE.Hypothesis
             { "INGE_SPHERE_ENTRY_LOC_ID", 0 },
             { "INGE_SPHERE_HYPOTHESIS_1_LOC_ID", 1 },
             { "INGE_SPHERE_HYPOTHESIS_2_LOC_ID", 2 },
-            { "INGE_SPHERE_HYPOTHESIS_3_LOC_ID", 2 },
-            { "INGE_SPHERE_HYPOTHESIS_4_LOC_ID", 2 },
-            { "INGE_SPHERE_HYPOTHESIS_5_LOC_ID", 2 },
-            { "INGE_SPHERE_HYPOTHESIS_6_LOC_ID", 2 },
+            { "INGE_SPHERE_HYPOTHESIS_3_LOC_ID", 3 },
+            { "INGE_SPHERE_HYPOTHESIS_4_LOC_ID", 4 },
+            { "INGE_SPHERE_HYPOTHESIS_5_LOC_ID", 5 },
+            { "INGE_SPHERE_HYPOTHESIS_6_LOC_ID", 6 },
         };
 
         private List<List<int>> couplings = new List<List<int>>()
@@ -182,7 +149,7 @@ namespace COSE.Hypothesis
             // First, reset activation of all layers
             foreach (var layer in mainHypothesisLayers)
             {
-                layer.layerObject.SetActive(false); // Deactivate all first, or adjust based on your logic for visibility
+                layer.gameObject.SetActive(false); // Deactivate all first, or adjust based on your logic for visibility
             }
 
             // Then, activate only the layers in the current coupling
@@ -191,7 +158,7 @@ namespace COSE.Hypothesis
                 var layerToActivate = mainHypothesisLayers.Find(layer => layer.layerIndex == id);
                 if (layerToActivate != null)
                 {
-                    layerToActivate.layerObject.SetActive(true);
+                    layerToActivate.gameObject.SetActive(true);
                 }
             }
 
@@ -249,9 +216,9 @@ namespace COSE.Hypothesis
             }
         }
 
-        private IEnumerator MoveLayer(LayerInteraction layer, Vector3 targetGlobalPosition, Quaternion targetGlobalRotation, float moveSpeed, float rotSpeed)
+        private IEnumerator MoveLayer(HypothesisLayerInteraction layer, Vector3 targetGlobalPosition, Quaternion targetGlobalRotation, float moveSpeed, float rotSpeed)
         {
-            GameObject layerObject = layer.layerObject;
+            GameObject layerObject = layer.gameObject;
             layerObject.SetActive(true);
 
             while (layerObject.transform.position != targetGlobalPosition ||
@@ -270,7 +237,7 @@ namespace COSE.Hypothesis
 
                 if (currentStateIndex == 1)
                 {
-                    LayerInteraction.NotifyLayerMoved(layer.textKey);
+                    HypothesisLayerInteraction.NotifyLayerMoved(layer.textKey);
                 }
 
                 yield return null;
@@ -327,7 +294,7 @@ namespace COSE.Hypothesis
                 var layer = mainHypothesisLayers[index];
                 // Activate the layer however appropriate, e.g., setting it active, highlighting, etc.
                 // For example:
-                layer.layerObject.SetActive(true);
+                layer.gameObject.SetActive(true);
             }
         }
 
@@ -335,9 +302,9 @@ namespace COSE.Hypothesis
         {
             foreach (var layerInteraction in mainHypothesisLayers)
             {
-                layerInteraction.layerObject.SetActive(false);
+                layerInteraction.gameObject.SetActive(false);
 
-                var outline = layerInteraction.layerObject.GetComponent<Outline>() ?? layerInteraction.layerObject.GetComponentInChildren<Outline>();
+                var outline = layerInteraction.gameObject.GetComponent<Outline>() ?? layerInteraction.gameObject.GetComponentInChildren<Outline>();
                 if (outline != null)
                 {
                     outline.enabled = false;

@@ -20,7 +20,7 @@ namespace COSE.Text
         private void OnEnable()
         {
             SphereTrigger.OnSphereTriggered += ActivateText;
-            LayerInteraction.OnLayerMoved += ActivateText;
+            HypothesisLayerInteraction.OnLayerMoved += ActivateText;
             LayerClickEvent.OnLayerClickedByIndex += ActivateHypothesisFourTextByIndex;
 
             if (DiagramManager.Instance != null)
@@ -32,7 +32,7 @@ namespace COSE.Text
         private void OnDisable()
         {
             SphereTrigger.OnSphereTriggered -= ActivateText;
-            LayerInteraction.OnLayerMoved -= ActivateText;
+            HypothesisLayerInteraction.OnLayerMoved -= ActivateText;
             LayerClickEvent.OnLayerClickedByIndex -= ActivateHypothesisFourTextByIndex;
 
             if (DiagramManager.Instance != null)
