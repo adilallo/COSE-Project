@@ -23,17 +23,27 @@ namespace COSE.Hypothesis
         [HideInInspector] public Vector3 initialLocalPosition;
         [HideInInspector] public Quaternion initialLocalRotation;
 
+        public static event Action<string> OnLayerMoved;
+        public static event Action<string> OnLayerClicked;
         public void Initialize()
         {
             initialLocalPosition = layerObject.transform.localPosition;
             initialLocalRotation = layerObject.transform.localRotation;
         }
 
-        public static event Action<string> OnLayerMoved;
+        private void OnMouseDown()
+        {
+            NotifyLayerClicked();
+        }
 
         public static void NotifyLayerMoved(string textKey)
         {
             OnLayerMoved?.Invoke(textKey);
+        }
+
+        public void NotifyLayerClicked()
+        {
+            OnLayerClicked?.Invoke(textKey);
         }
     }
 
@@ -53,12 +63,7 @@ namespace COSE.Hypothesis
         public int currentStateIndex = -1;
         private int _currentLayerIndex = 1;
         private int currentCouplingIndex = -1;
-        public bool isSphereTwoTriggered = false;
-        public bool isSphereThreeTriggered = false;
-        public bool isSphereFourTriggered = false;
-        public bool isSphereFiveTriggered = false;
-        public bool isSphereSixTriggered = false;
-        public bool isMovementComplete = false;
+        [HideInInspector] public bool isMovementComplete = false;
         private bool coroutineStarted = false;
 
         private bool _isLastLayerFinished = false;
@@ -79,7 +84,11 @@ namespace COSE.Hypothesis
         {
             { "INGE_SPHERE_ENTRY_LOC_ID", 0 },
             { "INGE_SPHERE_HYPOTHESIS_1_LOC_ID", 1 },
-            { "INGE_SPHERE_HYPOTHESIS_2_LOC_ID", 2 }
+            { "INGE_SPHERE_HYPOTHESIS_2_LOC_ID", 2 },
+            { "INGE_SPHERE_HYPOTHESIS_3_LOC_ID", 2 },
+            { "INGE_SPHERE_HYPOTHESIS_4_LOC_ID", 2 },
+            { "INGE_SPHERE_HYPOTHESIS_5_LOC_ID", 2 },
+            { "INGE_SPHERE_HYPOTHESIS_6_LOC_ID", 2 },
         };
 
         private List<List<int>> couplings = new List<List<int>>()
@@ -129,12 +138,12 @@ namespace COSE.Hypothesis
                 coroutineStarted = true;
             }
 
-            if (isSphereTwoTriggered)
+            if (currentStateIndex == 2)
             {
                 MoveAndRotateHypothesis(); 
             }
 
-            if (isSphereThreeTriggered)
+            if (currentStateIndex == 3)
             {
                 if (Input.GetKeyDown(KeyCode.X))
                 {
@@ -146,13 +155,13 @@ namespace COSE.Hypothesis
                 }
             }
 
-            if (isSphereFiveTriggered)
+            if (currentStateIndex == 5)
             {
                 DeactivateAllOutlinesAndObjects();
                 ActivateLayerByIndex(3);
             }
 
-            if (isSphereSixTriggered)
+            if (currentStateIndex == 6)
             {
                 DeactivateAllOutlinesAndObjects();
             }
@@ -230,9 +239,9 @@ namespace COSE.Hypothesis
                 Quaternion finalLayerRotation = rotationOffset * targetLayerWorldRotation;
 
                 StartCoroutine(MoveLayer(layer, finalLayerPosition, finalLayerRotation, movementSpeed, rotationSpeed));
-                yield return new WaitUntil(() => Time.time >= startTime + delayBetweenLayers || (Input.GetMouseButtonDown(0) && Time.time - lastClickTime > debounceTime));
+                yield return new WaitUntil(() => Time.time >= startTime + delayBetweenLayers || (Input.GetKeyDown(KeyCode.X) && Time.time - lastClickTime > debounceTime));
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetKeyDown(KeyCode.X))
                 {
                     lastClickTime = Time.time; // Update the last click time when a click is registered
                 }
@@ -242,7 +251,6 @@ namespace COSE.Hypothesis
 
         private IEnumerator MoveLayer(LayerInteraction layer, Vector3 targetGlobalPosition, Quaternion targetGlobalRotation, float moveSpeed, float rotSpeed)
         {
-            // Now move and rotate the layer towards its target global position and rotation
             GameObject layerObject = layer.layerObject;
             layerObject.SetActive(true);
 
@@ -260,7 +268,6 @@ namespace COSE.Hypothesis
                     targetGlobalRotation,
                     rotSpeed * Time.deltaTime);
 
-                // Activate the text associated with this layer
                 if (currentStateIndex == 1)
                 {
                     LayerInteraction.NotifyLayerMoved(layer.textKey);

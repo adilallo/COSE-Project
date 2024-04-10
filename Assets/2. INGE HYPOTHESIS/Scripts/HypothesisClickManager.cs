@@ -1,14 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace COSE.Hypothesis
 {
-    public class HoverManager : MonoBehaviour
+    public class HypothesisClickManager : MonoBehaviour
     {
         [SerializeField] private HypothesisInteraction hypothesisInteraction;
-        [SerializeField] private GameObject[] icons; // Array of icons to be activated
+        [SerializeField] private GameObject[] icons;
 
         private Dictionary<string, List<int>> layerToIconMap;
         private Dictionary<string, List<int>> nameToIndexMap;
@@ -20,11 +19,13 @@ namespace COSE.Hypothesis
         private void OnEnable()
         {
             LayerClickEvent.OnLayerClicked += HandleHypothesisFourClicked;
+            LayerInteraction.OnLayerClicked += HandleLayerClicked;
         }
 
         private void OnDisable()
         {
             LayerClickEvent.OnLayerClicked -= HandleHypothesisFourClicked;
+            LayerInteraction.OnLayerClicked -= HandleLayerClicked;
         }
 
         void Start()
@@ -37,11 +38,30 @@ namespace COSE.Hypothesis
 
         void Update()
         {
-            CheckHoverInteraction();
+            //CheckHoverInteraction();
 
-            if (hypothesisInteraction.isSphereTwoTriggered && hypothesisInteraction.isMovementComplete)
+            if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
             {
                 ActivateAllIcons();
+            }
+        }
+
+        private void HandleLayerClicked(string textKey)
+        {
+            ResetAllOutlines();
+            Debug.Log("Layer clicked: " + textKey);
+            foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
+            {
+                Debug.Log("Layer clicked: " + textKey);
+                if (layerInteraction.textKey == textKey)
+                {
+                    if (hypothesisInteraction.currentStateIndex == 1 && hypothesisInteraction.IsLastLayerFinished)
+                    {
+                        LayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
+                    }
+                    ToggleOutline(layerInteraction.layerObject);
+                    break;
+                }
             }
         }
 
@@ -80,6 +100,7 @@ namespace COSE.Hypothesis
                 {"search performing complex", new List<int>{3, 7, 8, 10}}
             };
         }
+
         private void CheckHoverInteraction()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -98,13 +119,13 @@ namespace COSE.Hypothesis
                         layerOutlineScript.enabled = true;
 
                     // If Sphere Two is active, handle icons
-                    if (hypothesisInteraction.isSphereTwoTriggered && hypothesisInteraction.isMovementComplete)
+                    if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
                     {
                         ActivateIconsForLayer(layerInteraction.layerObject.name);
                     }
 
-                    // If Sphere One is active, animations are done, and sphere 2 isn't triggered, handle text
-                    if (hypothesisInteraction.currentStateIndex == 1 && hypothesisInteraction.IsLastLayerFinished && !hypothesisInteraction.isSphereTwoTriggered)
+                    // If Sphere One is active, animations are done, handle text
+                    if (hypothesisInteraction.currentStateIndex == 1 && hypothesisInteraction.IsLastLayerFinished)
                     {
                         LayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
                     }
@@ -121,7 +142,7 @@ namespace COSE.Hypothesis
             if (!hoverDetected)
             {
                 ResetAllOutlines();
-                if (hypothesisInteraction.isSphereTwoTriggered && hypothesisInteraction.isMovementComplete)
+                if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
                 {
                     ResetAllIcons();
                 }
@@ -176,8 +197,20 @@ namespace COSE.Hypothesis
         {
             foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
             {
-                Outline outlineScript = layerInteraction.layerObject.GetComponent<Outline>();
-                if (outlineScript != null) outlineScript.enabled = false;
+                var outline = layerInteraction.layerObject.GetComponent<Outline>();
+                if (outline != null)
+                {
+                    outline.enabled = false;
+                }
+            }
+        }
+
+        private void ToggleOutline(GameObject layerObject)
+        {
+            var outline = layerObject.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = !outline.enabled;
             }
         }
 

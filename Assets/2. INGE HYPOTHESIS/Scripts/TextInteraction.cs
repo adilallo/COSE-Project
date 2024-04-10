@@ -1,14 +1,8 @@
 using UnityEngine;
-using System.Collections;
 using TMPro;
 using COSE.Diagram;
 using System.Collections.Generic;
-using UnityEngine.Localization;
-using System.Linq;
 using COSE.Hypothesis;
-using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using COSE.Sphere;
 using UnityEngine.Localization.Settings;
 
@@ -16,8 +10,6 @@ namespace COSE.Text
 {
     public class TextInteraction : MonoBehaviour
     {
-        [SerializeField] private GameObject[] textObjects;
-        [SerializeField] private GameObject[] firstHypothesisTextObjects;
         [SerializeField] private GameObject[] conclusionTextObjects;
         [SerializeField] private GameObject couplingTextObject;
         [SerializeField] private GameObject[] fourthHypothesisTextObjects;
@@ -64,20 +56,6 @@ namespace COSE.Text
             this._text.text = LocalizationSettings.StringDatabase.GetLocalizedString(text);
         }
 
-        public void ActivateHypothesisText(int firstHypothesisIndex)
-        {
-            if (firstHypothesisIndex >= 0 && firstHypothesisIndex < firstHypothesisTextObjects.Length)
-            {
-                DeactivateAllTexts();
-
-                // Activate the specific text object related to the sphereIndex
-                if (firstHypothesisTextObjects[firstHypothesisIndex] != null)
-                {
-                    firstHypothesisTextObjects[firstHypothesisIndex].SetActive(true);
-                }
-            }
-        }
-
         public void ActivateConclusionText(int conclusionIndex)
         {
             // Deactivate all text objects in all lists
@@ -113,15 +91,7 @@ namespace COSE.Text
         {
             _textUI.SetActive(false);
             _text.text = default;
-           /* foreach (GameObject textObj in textObjects)
-            {
-                if (textObj != null) textObj.SetActive(false);
-            }
-
-            foreach (GameObject textObj in firstHypothesisTextObjects)
-            {
-                if (textObj != null) textObj.SetActive(false);
-            }
+           /* 
 
             foreach (GameObject textObj in conclusionTextObjects)
             {
