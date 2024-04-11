@@ -32,12 +32,11 @@ namespace COSE.Hypothesis
         {
             InitializeLayerToIconMap();
             InitializeLayerToTabFieldMap();
+            ResetAllIcons();
         }
 
         void Update()
         {
-            //CheckHoverInteraction();
-
             if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
             {
                 ActivateAllIcons();
@@ -47,6 +46,8 @@ namespace COSE.Hypothesis
         private void HandleLayerClicked(string textKey)
         {
             Debug.Log("Layer clicked: " + textKey);
+            ResetAllIcons();
+            RestartTimeout();
             foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
             {
                 if (layerInteraction.textKey == textKey)
@@ -56,6 +57,10 @@ namespace COSE.Hypothesis
                         HypothesisLayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
                     }
                     ToggleOutline(layerInteraction.gameObject);
+                    if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
+                    {
+                        ActivateIconsForLayer(layerInteraction.name);
+                    }
                     break;
                 }
             }
@@ -96,6 +101,56 @@ namespace COSE.Hypothesis
             }
         }
 
+        private void ActivateAllIcons()
+        {
+            foreach (GameObject icon in icons)
+            {
+                icon.SetActive(true);
+            }
+        }
+        private void ActivateIconsForLayer(string layerName)
+        {
+            if (layerToIconMap.TryGetValue(layerName, out List<int> iconIndices))
+            {
+                foreach (int index in iconIndices)
+                {
+                    if (index >= 0 && index < icons.Length)
+                    {
+                        Outline iconOutline = icons[index].GetComponent<Outline>();
+                        if (iconOutline != null)
+                        {
+                            iconOutline.enabled = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void RestartTimeout()
+        {
+            if (timeoutCoroutine != null)
+            {
+                StopCoroutine(timeoutCoroutine);
+            }
+            timeoutCoroutine = StartCoroutine(ResetAfterTimeout(20f));
+        }
+
+        private IEnumerator ResetAfterTimeout(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            ResetAllOutlines();
+            ResetAllIcons();
+        }
+
+        private void ResetAllIcons()
+        {
+            foreach (GameObject icon in icons)
+            {
+                Outline iconOutline = icon.GetComponent<Outline>();
+                if (iconOutline != null) iconOutline.enabled = false;
+            }
+        }
+
         private void InitializeLayerToIconMap()
         {
             layerToIconMap = new Dictionary<string, List<int>>
@@ -130,108 +185,7 @@ namespace COSE.Hypothesis
                 {"temporarily empty", new List<int>{7, 3}},
                 {"search performing complex", new List<int>{3, 7, 8, 10}}
             };
-        }
-
-        private void CheckHoverInteraction()
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            bool hoverDetected = false;
-
-            foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
-            {
-                Outline layerOutlineScript = layerInteraction.gameObject.GetComponent<Outline>(); // Assuming Outline is the script name
-                if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.gameObject == layerInteraction.gameObject)
-                {
-                    // Hover detected
-                    hoverDetected = true;
-
-                    // Handle outline
-                    if (layerOutlineScript != null)
-                        layerOutlineScript.enabled = true;
-
-                    // If Sphere Two is active, handle icons
-                    if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
-                    {
-                        ActivateIconsForLayer(layerInteraction.name);
-                    }
-
-                    // If Sphere One is active, animations are done, handle text
-                    if (hypothesisInteraction.currentStateIndex == 1 && hypothesisInteraction.IsLastLayerFinished)
-                    {
-                        HypothesisLayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
-                    }
-
-                    break;
-                }
-                else if (layerOutlineScript != null)
-                {
-                    layerOutlineScript.enabled = false;
-                }
-            }
-
-            // If no hover detected, reset outlines and potentially icons
-            if (!hoverDetected)
-            {
-                ResetAllOutlines();
-                if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
-                {
-                    ResetAllIcons();
-                }
-            }
-        }
-
-        private void ActivateAllIcons()
-        {
-            // Activate all icons
-            foreach (GameObject icon in icons)
-            {
-                icon.SetActive(true);
-            }
-        }
-
-        private void ActivateIconsForLayer(string layerName)
-        {
-            if (layerToIconMap.TryGetValue(layerName, out List<int> iconIndices))
-            {
-                foreach (int index in iconIndices)
-                {
-                    if (index >= 0 && index < icons.Length)
-                    {
-                        Outline iconOutline = icons[index].GetComponent<Outline>();
-                        if (iconOutline != null)
-                        {
-                            iconOutline.enabled = true;
-                            RestartTimeout();
-                        }
-                    }
-                }
-            }
-        }
-
-        private void RestartTimeout()
-        {
-            if (timeoutCoroutine != null)
-            {
-                StopCoroutine(timeoutCoroutine);
-            }
-            timeoutCoroutine = StartCoroutine(ResetAfterTimeout(20f));
-        }
-
-        private IEnumerator ResetAfterTimeout(float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            ResetAllOutlines();
-            ResetAllIcons();
-        }
-
-        private void ResetAllIcons()
-        {
-            foreach (GameObject icon in icons)
-            {
-                Outline iconOutline = icon.GetComponent<Outline>();
-                if (iconOutline != null) iconOutline.enabled = false;
-            }
-        }
+        }        
 
         private void HandleHypothesisFourClicked(string layerName)
         {

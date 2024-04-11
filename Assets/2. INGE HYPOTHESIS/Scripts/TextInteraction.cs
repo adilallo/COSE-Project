@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using COSE.Diagram;
 using System.Collections.Generic;
+using System;
 using COSE.Hypothesis;
 using COSE.Sphere;
 using UnityEngine.Localization.Settings;
@@ -22,11 +23,8 @@ namespace COSE.Text
             SphereTrigger.OnSphereTriggered += ActivateText;
             HypothesisLayerInteraction.OnLayerMoved += ActivateText;
             LayerClickEvent.OnLayerClickedByIndex += ActivateHypothesisFourTextByIndex;
-
-            if (DiagramManager.Instance != null)
-            {
-                DiagramManager.Instance.OnDiagramElementClicked += HandleDiagramElementClicked;
-            }
+            DiagramManager.Instance.OnDiagramElementClicked += HandleDiagramElementClicked;
+            HypothesisInteraction.OnCouplingActivated += ActivateCouplingText;
         }
 
         private void OnDisable()
@@ -34,14 +32,11 @@ namespace COSE.Text
             SphereTrigger.OnSphereTriggered -= ActivateText;
             HypothesisLayerInteraction.OnLayerMoved -= ActivateText;
             LayerClickEvent.OnLayerClickedByIndex -= ActivateHypothesisFourTextByIndex;
-
-            if (DiagramManager.Instance != null)
-            {
-                DiagramManager.Instance.OnDiagramElementClicked -= HandleDiagramElementClicked;
-            }
+            DiagramManager.Instance.OnDiagramElementClicked -= HandleDiagramElementClicked;
+            HypothesisInteraction.OnCouplingActivated -= ActivateCouplingText;
         }
 
-        public void Start()
+        void Start()
         {
             DeactivateAllTexts();
         }
@@ -58,7 +53,6 @@ namespace COSE.Text
 
         public void ActivateConclusionText(int conclusionIndex)
         {
-            // Deactivate all text objects in all lists
             DeactivateAllTexts();
 
             // Activate the specific text object related to the conclusion index
@@ -68,23 +62,9 @@ namespace COSE.Text
             }
         }
 
-        public void ActivateCouplingText(List<int> coupling, bool isTightlyCoupled)
+        public void ActivateCouplingText(string couplingType)
         {
-            DeactivateAllTexts();
-
-            // Assume there's a designated text object for coupling information
-                couplingTextObject.SetActive(true);
-                TMP_Text textMeshPro = couplingTextObject.GetComponentInChildren<TMP_Text>();
-                if (textMeshPro != null)
-                {
-                    string couplingType = isTightlyCoupled ? "Tightly Coupled: " : "Loosely Coupled: ";
-                    string couplingIds = string.Join(", ", coupling);
-                    textMeshPro.text = $"{couplingType}{couplingIds}";
-                }
-                else
-                {
-                    Debug.LogWarning("TMP_Text component not found on the coupling text object!");
-                }
+            this._text.text = couplingType;
         }
 
         public void DeactivateAllTexts()
@@ -97,8 +77,6 @@ namespace COSE.Text
             {
                 if (textObj != null) textObj.SetActive(false);
             }
-
-            couplingTextObject.SetActive(false);
 
             foreach (GameObject textObj in fourthHypothesisTextObjects)
             {

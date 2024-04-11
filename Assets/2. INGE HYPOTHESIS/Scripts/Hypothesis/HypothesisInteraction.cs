@@ -20,12 +20,13 @@ namespace COSE.Hypothesis
         public static event LastLayerFinishedHandler OnLastLayerFinished;
 
         [SerializeField] private GameObject hypothesisModel;
-        [SerializeField] private TextInteraction textInteraction;
         [SerializeField] private List<MovementState> movementStates;
         [SerializeField] private float movementSpeed = 2f;
         [SerializeField] private float rotationSpeed = 2f;
 
         [SerializeField] public List<HypothesisLayerInteraction> mainHypothesisLayers;
+
+        public static event Action<string> OnCouplingActivated;
 
         public int currentStateIndex = -1;
         private int _currentLayerIndex = 1;
@@ -112,6 +113,8 @@ namespace COSE.Hypothesis
 
             if (currentStateIndex == 3)
             {
+                MoveAndRotateHypothesis();
+
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     CycleCouplings(1);
@@ -134,8 +137,21 @@ namespace COSE.Hypothesis
             }
         }
 
+        public void DeactivateAllOutlinesAndObjects()
+        {
+            foreach (var layerInteraction in mainHypothesisLayers)
+            {
+                layerInteraction.gameObject.SetActive(false);
 
-        void CycleCouplings(int direction)
+                var outline = layerInteraction.gameObject.GetComponent<Outline>() ?? layerInteraction.gameObject.GetComponentInChildren<Outline>();
+                if (outline != null)
+                {
+                    outline.enabled = false;
+                }
+            }
+        }
+
+        private void CycleCouplings(int direction)
         {
             currentCouplingIndex += direction;
             if (currentCouplingIndex >= couplings.Count) currentCouplingIndex = 0;
@@ -144,15 +160,13 @@ namespace COSE.Hypothesis
             ActivateCoupling(couplings[currentCouplingIndex]);
         }
 
-        void ActivateCoupling(List<int> coupling)
+        private void ActivateCoupling(List<int> coupling)
         {
-            // First, reset activation of all layers
             foreach (var layer in mainHypothesisLayers)
             {
-                layer.gameObject.SetActive(false); // Deactivate all first, or adjust based on your logic for visibility
+                layer.gameObject.SetActive(false);
             }
 
-            // Then, activate only the layers in the current coupling
             foreach (int id in coupling)
             {
                 var layerToActivate = mainHypothesisLayers.Find(layer => layer.layerIndex == id);
@@ -162,8 +176,8 @@ namespace COSE.Hypothesis
                 }
             }
 
-            bool isTightlyCoupled = currentCouplingIndex != couplings.Count - 1; // Assuming the last list is loosely coupled
-            textInteraction.ActivateCouplingText(coupling, isTightlyCoupled);
+            bool isTightlyCoupled = currentCouplingIndex != couplings.Count - 1;
+            OnCouplingActivated?.Invoke(isTightlyCoupled ? "Tightly Coupled" : "Loosely Coupled");
         }
 
         public void ActivateState(string stateIdentifier)
@@ -258,14 +272,12 @@ namespace COSE.Hypothesis
         {
             MovementState currentState = movementStates[currentStateIndex];
 
-            // Move
             Vector3 newPosition = Vector3.MoveTowards(
                 hypothesisModel.transform.position,
                 currentState.targetPosition,
                 movementSpeed * Time.deltaTime);
             hypothesisModel.transform.position = newPosition;
 
-            // Rotate
             Quaternion newRotation = Quaternion.RotateTowards(
                 hypothesisModel.transform.rotation,
                 currentState.targetRotation,
@@ -287,28 +299,12 @@ namespace COSE.Hypothesis
             }
         }
 
-        public void ActivateLayerByIndex(int index)
+        private void ActivateLayerByIndex(int index)
         {
             if (index >= 0 && index < mainHypothesisLayers.Count)
             {
                 var layer = mainHypothesisLayers[index];
-                // Activate the layer however appropriate, e.g., setting it active, highlighting, etc.
-                // For example:
                 layer.gameObject.SetActive(true);
-            }
-        }
-
-        public void DeactivateAllOutlinesAndObjects()
-        {
-            foreach (var layerInteraction in mainHypothesisLayers)
-            {
-                layerInteraction.gameObject.SetActive(false);
-
-                var outline = layerInteraction.gameObject.GetComponent<Outline>() ?? layerInteraction.gameObject.GetComponentInChildren<Outline>();
-                if (outline != null)
-                {
-                    outline.enabled = false;
-                }
             }
         }
     }
