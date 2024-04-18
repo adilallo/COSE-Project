@@ -125,15 +125,20 @@ namespace COSE.Hypothesis
                 }
             }
 
+            if (currentStateIndex == 4)
+            {
+                MoveAndRotateHypothesis();
+            }
+
             if (currentStateIndex == 5)
             {
-                DeactivateAllOutlinesAndObjects();
+               // DeactivateAllOutlinesAndObjects();
                 ActivateLayerByIndex(3);
             }
 
             if (currentStateIndex == 6)
             {
-                DeactivateAllOutlinesAndObjects();
+               // DeactivateAllOutlinesAndObjects();
             }
         }
 

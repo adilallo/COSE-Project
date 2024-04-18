@@ -254,6 +254,51 @@ MonoBehaviour:
       with the browser. "
     m_Metadata:
       m_Items: []
+  - m_Id: 14744257666473984
+    m_Localized: "tab field complex: Elements of a website-elements-cluster \u2018glued\u2019
+      together are now termed a \u2018tab field complex\u2019. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744282471587840
+    m_Localized: Some elements are more loosely connected to this tab field complex,
+      by similarity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744441314074624
+    m_Localized: ' or identity'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744499191275520
+    m_Localized: 'Some elements shrink '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744524436791296
+    m_Localized: and as miniatures, they multiply
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744550017851392
+    m_Localized: 'Some elements are singularities '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744569357787136
+    m_Localized: "Some elements may be temporarily \u2018empty\u2019, if no website
+      has been found "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744587854667776
+    m_Localized: 'Some elements have a contingent or search-dependent lifespan, they
+      are stable as long as no search result replaces them '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744596113252352
+    m_Localized: "search performing complex: Some elements are even more ephemeral.
+      They appear only in a performative manner during an active search process and
+      disappear again as soon as the search is terminated. They are not accessible
+      for the user and cause the eventfulness with each search. Together with a hectic
+      movement and generated sounds (not listed in this inventory of visual elements),
+      they form the \u2018search performing complex\u2019. "
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

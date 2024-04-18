@@ -6,12 +6,11 @@ public class HypothesisLayerInteraction: MonoBehaviour
 {
     public string textKey;
     public int layerIndex;
+    [HideInInspector] public Vector3 initialLocalPosition;
+    [HideInInspector] public Quaternion initialLocalRotation;
 
     public static event Action<string> OnLayerMoved;
     public static event Action<string> OnLayerClicked;
-
-    [HideInInspector] public Vector3 initialLocalPosition;
-    [HideInInspector] public Quaternion initialLocalRotation;
 
     public void Initialize()
     {

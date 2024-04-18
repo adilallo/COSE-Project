@@ -56,11 +56,11 @@ namespace COSE.Hypothesis
                     {
                         HypothesisLayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
                     }
-                    ToggleOutline(layerInteraction.gameObject);
                     if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
                     {
                         ActivateIconsForLayer(layerInteraction.name);
                     }
+                    ToggleOutline(layerInteraction.gameObject);
                     break;
                 }
             }
@@ -175,25 +175,25 @@ namespace COSE.Hypothesis
         {
             nameToIndexMap = new Dictionary<string, List<int>>()
             {
-                {"tab field complex", new List<int>{1, 3, 5, 6, 7, 8, 9, 11, 14, 17}},
-                {"similarity", new List<int>{7, 10}},
-                {"identity", new List<int>{8, 3}},
-                {"shrink", new List<int>{5, 9}}, // Assuming shrink maps to layers 8 => 5 and 12 => 9
-                {"multiply", new List<int>{5, 9}},
-                {"singularities", new List<int>{4, 18}},
-                {"contingent", new List<int>{3, 7, 8, 10}},
-                {"temporarily empty", new List<int>{7, 3}},
-                {"search performing complex", new List<int>{3, 7, 8, 10}}
+                {"INGE_LAYER_HYPOTHESIS_4_L1_LOC_ID", new List<int>{1, 3, 5, 6, 7, 8, 9, 11, 14, 17}},
+                {"INGE_LAYER_HYPOTHESIS_4_L2_LOC_ID", new List<int>{7, 10}},
+                {"INGE_LAYER_HYPOTHESIS_4_L3_LOC_ID", new List<int>{8, 3}},
+                {"INGE_LAYER_HYPOTHESIS_4_L4_LOC_ID", new List<int>{5, 9}}, // Assuming shrink maps to layers 8 => 5 and 12 => 9
+                {"INGE_LAYER_HYPOTHESIS_4_L5_LOC_ID", new List<int>{5, 9}},
+                {"INGE_LAYER_HYPOTHESIS_4_L6_LOC_ID", new List<int>{4, 18}},
+                {"INGE_LAYER_HYPOTHESIS_4_L8_LOC_ID", new List<int>{3, 7, 8, 10}},
+                {"INGE_LAYER_HYPOTHESIS_4_L7_LOC_ID", new List<int>{7, 3}},
+                {"INGE_LAYER_HYPOTHESIS_4_L9_LOC_ID", new List<int>{3, 7, 8, 10}}
             };
         }        
 
-        private void HandleHypothesisFourClicked(string layerName)
+        private void HandleHypothesisFourClicked(string layerKey)
         {
             // Deactivate all outlines and objects in firstHypothesisText
-            hypothesisInteraction.DeactivateAllOutlinesAndObjects();
+            //hypothesisInteraction.DeactivateAllOutlinesAndObjects();
 
             // Find and activate the corresponding layers
-            if (nameToIndexMap.TryGetValue(layerName, out List<int> indices))
+            if (nameToIndexMap.TryGetValue(layerKey, out List<int> indices))
             {
                 foreach (int index in indices)
                 {
@@ -204,7 +204,7 @@ namespace COSE.Hypothesis
                 }
             }
             // Disable the currently active outline, if any
-            if (currentActiveOutlineObject != null)
+           /* if (currentActiveOutlineObject != null)
             {
                 var currentOutline = currentActiveOutlineObject.GetComponent<Outline>() ?? currentActiveOutlineObject.GetComponentInChildren<Outline>();
                 if (currentOutline != null)
@@ -214,7 +214,7 @@ namespace COSE.Hypothesis
             }
 
             // Find the new active object based on the layerName
-            GameObject newActiveObject = GameObject.Find(layerName); // Ensure your game objects are named exactly as layerName
+            GameObject newActiveObject = GameObject.Find(layerKey); // Ensure your game objects are named exactly as layerName
             if (newActiveObject != null)
             {
                 var newOutline = newActiveObject.GetComponent<Outline>() ?? newActiveObject.GetComponentInChildren<Outline>();
@@ -223,7 +223,7 @@ namespace COSE.Hypothesis
                     newOutline.enabled = true;
                     currentActiveOutlineObject = newActiveObject; // Update reference to the new active object
                 }
-            }
+            }*/
 
         }
     }

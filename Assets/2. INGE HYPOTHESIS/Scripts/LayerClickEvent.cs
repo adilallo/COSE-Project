@@ -1,25 +1,44 @@
+using System;
 using UnityEngine;
 
 namespace COSE.Hypothesis
 {
     public class LayerClickEvent : MonoBehaviour
     {
-        public delegate void LayerClickedHandler(string layerName);
-        public static event LayerClickedHandler OnLayerClicked;
-
-        public delegate void LayerClickedByIndexHandler(int layerIndex);
-        public static event LayerClickedByIndexHandler OnLayerClickedByIndex;
+        public static event Action<string> OnLayerClicked;
+        public static event Action<int> OnLayerClickedByIndex;
 
         [SerializeField] private int layerIndex;
+        [SerializeField] private string layerKey;
+        private Outline outlineScript;
 
-        void OnMouseDown()
+        private static LayerClickEvent currentOutlined;
+
+        private void Start()
         {
-            // Invoke the event, sending this layer's name when the mouse clicks this object
-            Debug.Log($"Clicked on {gameObject.name}");
-            OnLayerClicked?.Invoke(gameObject.name);
+            outlineScript = GetComponent<Outline>();
+            if (outlineScript)
+            {
+                outlineScript.enabled = false;
+            }
+        }
 
-            Debug.Log($"Clicked on {gameObject.name} with index {layerIndex}");
+        private void OnMouseDown()
+        {
+            Debug.Log($"Clicked on {layerKey}");
+            OnLayerClicked?.Invoke(layerKey);
             OnLayerClickedByIndex?.Invoke(layerIndex);
+
+            if (currentOutlined != this)
+            {
+                if (currentOutlined != null && currentOutlined.outlineScript != null)
+                {
+                    currentOutlined.outlineScript.enabled = false;
+                }
+
+                outlineScript.enabled = true;
+                currentOutlined = this;
+            }
         }
     }
 }

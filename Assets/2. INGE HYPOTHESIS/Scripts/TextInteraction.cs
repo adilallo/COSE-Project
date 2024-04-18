@@ -22,18 +22,18 @@ namespace COSE.Text
         {
             SphereTrigger.OnSphereTriggered += ActivateText;
             HypothesisLayerInteraction.OnLayerMoved += ActivateText;
-            LayerClickEvent.OnLayerClickedByIndex += ActivateHypothesisFourTextByIndex;
             DiagramManager.Instance.OnDiagramElementClicked += HandleDiagramElementClicked;
             HypothesisInteraction.OnCouplingActivated += ActivateCouplingText;
+            LayerClickEvent.OnLayerClicked += ActivateText;
         }
 
         private void OnDisable()
         {
             SphereTrigger.OnSphereTriggered -= ActivateText;
             HypothesisLayerInteraction.OnLayerMoved -= ActivateText;
-            LayerClickEvent.OnLayerClickedByIndex -= ActivateHypothesisFourTextByIndex;
             DiagramManager.Instance.OnDiagramElementClicked -= HandleDiagramElementClicked;
             HypothesisInteraction.OnCouplingActivated -= ActivateCouplingText;
+            LayerClickEvent.OnLayerClicked -= ActivateText;
         }
 
         void Start()
@@ -76,11 +76,6 @@ namespace COSE.Text
             foreach (GameObject textObj in conclusionTextObjects)
             {
                 if (textObj != null) textObj.SetActive(false);
-            }
-
-            foreach (GameObject textObj in fourthHypothesisTextObjects)
-            {
-                if (textObj != null) textObj.SetActive(false);
             }*/
         }
 
@@ -88,15 +83,6 @@ namespace COSE.Text
         {
             Debug.Log($"Diagram element clicked: {element.name}");
             DeactivateAllTexts();
-        }
-
-        private void ActivateHypothesisFourTextByIndex(int index)
-        {
-            if (index >= 0 && index < fourthHypothesisTextObjects.Length)
-            {
-                DeactivateAllTexts();
-                fourthHypothesisTextObjects[index].SetActive(true);
-            }
         }
     }
 }
