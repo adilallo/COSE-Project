@@ -16,9 +16,6 @@ namespace COSE.Hypothesis
 
     public class HypothesisInteraction : MonoBehaviour
     {
-        public delegate void LastLayerFinishedHandler();
-        public static event LastLayerFinishedHandler OnLastLayerFinished;
-
         [SerializeField] private GameObject hypothesisModel;
         [SerializeField] private List<MovementState> movementStates;
         [SerializeField] private float movementSpeed = 2f;
@@ -27,26 +24,14 @@ namespace COSE.Hypothesis
         [SerializeField] public List<HypothesisLayerInteraction> mainHypothesisLayers;
 
         public static event Action<string> OnCouplingActivated;
+        public static event Action<bool> OnLastLayerFinished;
 
         public int currentStateIndex = -1;
-        private int _currentLayerIndex = 1;
-        private int currentCouplingIndex = -1;
         [HideInInspector] public bool isMovementComplete = false;
-        private bool coroutineStarted = false;
+        [HideInInspector] public bool isLastLayerFinished = false;
 
-        private bool _isLastLayerFinished = false;
-        public bool IsLastLayerFinished
-        {
-            get { return _isLastLayerFinished; }
-            private set
-            {
-                _isLastLayerFinished = value;
-                if (_isLastLayerFinished)
-                {
-                    OnLastLayerFinished?.Invoke();
-                }
-            }
-        }
+        private int currentCouplingIndex = -1;
+        private bool coroutineStarted = false;
 
         private Dictionary<string, int> stateMap = new Dictionary<string, int>()
         {
@@ -90,7 +75,6 @@ namespace COSE.Hypothesis
                 hypothesisModel.transform.position = movementStates[0].targetPosition;
                 hypothesisModel.transform.rotation = movementStates[0].targetRotation;
             }
-            // Initialize each layer's relative position and rotation
             foreach (var layer in mainHypothesisLayers)
             {
                 layer.Initialize();
@@ -132,17 +116,19 @@ namespace COSE.Hypothesis
 
             if (currentStateIndex == 5)
             {
-               // DeactivateAllOutlinesAndObjects();
+                MoveAndRotateHypothesis();
+                ResetAllLayers();
                 ActivateLayerByIndex(3);
             }
 
             if (currentStateIndex == 6)
             {
-               // DeactivateAllOutlinesAndObjects();
+                MoveAndRotateHypothesis();
+                ResetAllLayers();
             }
         }
 
-        public void DeactivateAllOutlinesAndObjects()
+        public void ResetAllLayers()
         {
             foreach (var layerInteraction in mainHypothesisLayers)
             {
@@ -202,15 +188,14 @@ namespace COSE.Hypothesis
 
         public IEnumerator MoveLayersSequentially(MovementState targetState, float delayBetweenLayers)
         {
-            // Wait before starting the sequence to ensure all initialization is complete
             yield return new WaitForSeconds(0.1f);
 
             float startTime = Time.time;
-            float lastClickTime = 0f; // Track the last click time
-            float debounceTime = 0.3f; // Cool-down period to debounce clicks
+            float lastKeyPressTime = 0f;
+            float debounceTime = 0.3f;
 
             // Calculate each layer's target position and rotation as if the parent had moved
-            for (int i = _currentLayerIndex; i < mainHypothesisLayers.Count; i++)
+            for (int i = 1; i < mainHypothesisLayers.Count; i++)
             {
                 var layer = mainHypothesisLayers[i];
 
@@ -225,11 +210,11 @@ namespace COSE.Hypothesis
                 Quaternion finalLayerRotation = rotationOffset * targetLayerWorldRotation;
 
                 StartCoroutine(MoveLayer(layer, finalLayerPosition, finalLayerRotation, movementSpeed, rotationSpeed));
-                yield return new WaitUntil(() => Time.time >= startTime + delayBetweenLayers || (Input.GetKeyDown(KeyCode.X) && Time.time - lastClickTime > debounceTime));
+                yield return new WaitUntil(() => Time.time >= startTime + delayBetweenLayers || (Input.GetKeyDown(KeyCode.X) && Time.time - lastKeyPressTime > debounceTime));
 
                 if (Input.GetKeyDown(KeyCode.X))
                 {
-                    lastClickTime = Time.time; // Update the last click time when a click is registered
+                    lastKeyPressTime = Time.time;
                 }
                 startTime = Time.time;
             }
@@ -269,7 +254,8 @@ namespace COSE.Hypothesis
 
             if (layer == mainHypothesisLayers[mainHypothesisLayers.Count - 1])
             {
-                IsLastLayerFinished = true;
+                isLastLayerFinished = true;
+                OnLastLayerFinished?.Invoke(isLastLayerFinished);
             }
         }
 

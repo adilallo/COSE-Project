@@ -13,18 +13,14 @@ namespace COSE.Hypothesis
         private Dictionary<string, List<int>> nameToIndexMap;
 
         private Coroutine timeoutCoroutine;
-        private GameObject currentActiveOutlineObject = null;
-
 
         private void OnEnable()
         {
-            LayerClickEvent.OnLayerClicked += HandleHypothesisFourClicked;
             HypothesisLayerInteraction.OnLayerClicked += HandleLayerClicked;
         }
 
         private void OnDisable()
         {
-            LayerClickEvent.OnLayerClicked -= HandleHypothesisFourClicked;
             HypothesisLayerInteraction.OnLayerClicked -= HandleLayerClicked;
         }
 
@@ -46,46 +42,22 @@ namespace COSE.Hypothesis
         private void HandleLayerClicked(string textKey)
         {
             Debug.Log("Layer clicked: " + textKey);
-            ResetAllIcons();
             RestartTimeout();
-            foreach (var layerInteraction in hypothesisInteraction.mainHypothesisLayers)
-            {
-                if (layerInteraction.textKey == textKey)
-                {
-                    if (hypothesisInteraction.currentStateIndex == 1 && hypothesisInteraction.IsLastLayerFinished)
-                    {
-                        HypothesisLayerInteraction.NotifyLayerMoved(layerInteraction.textKey);
-                    }
-                    if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
-                    {
-                        ActivateIconsForLayer(layerInteraction.name);
-                    }
-                    ToggleOutline(layerInteraction.gameObject);
-                    break;
-                }
-            }
-        }
 
-        private void ToggleOutline(GameObject layerObject)
-        {
-            if (currentActiveOutlineObject == layerObject)
+            if (hypothesisInteraction.currentStateIndex >= 1 && hypothesisInteraction.isLastLayerFinished)
             {
-                var outline = layerObject.GetComponent<Outline>();
-                if (outline != null)
-                {
-                    outline.enabled = !outline.enabled;
-                    if (!outline.enabled) currentActiveOutlineObject = null;
-                }
+                HypothesisLayerInteraction.NotifyTextLayer(textKey);
             }
-            else
+
+            if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
             {
-                ResetAllOutlines();
-                var outline = layerObject.GetComponent<Outline>();
-                if (outline != null)
-                {
-                    outline.enabled = true;
-                    currentActiveOutlineObject = layerObject;
-                }
+                ResetAllIcons();
+                ActivateIconsForLayer(textKey);             
+            }
+
+            if (hypothesisInteraction.currentStateIndex == 4)
+            {
+                ActivateLayersForKeywords(textKey);
             }
         }
 
@@ -108,9 +80,9 @@ namespace COSE.Hypothesis
                 icon.SetActive(true);
             }
         }
-        private void ActivateIconsForLayer(string layerName)
+        private void ActivateIconsForLayer(string textKey)
         {
-            if (layerToIconMap.TryGetValue(layerName, out List<int> iconIndices))
+            if (layerToIconMap.TryGetValue(textKey, out List<int> iconIndices))
             {
                 foreach (int index in iconIndices)
                 {
@@ -121,6 +93,22 @@ namespace COSE.Hypothesis
                         {
                             iconOutline.enabled = true;
                         }
+                    }
+                }
+            }
+        }
+
+        private void ActivateLayersForKeywords(string textKey)
+        {
+            if (nameToIndexMap.TryGetValue(textKey, out List<int> indices))
+            {
+                hypothesisInteraction.ResetAllLayers();
+
+                foreach (int index in indices)
+                {
+                    if (index >= 0 && index < hypothesisInteraction.mainHypothesisLayers.Count)
+                    {
+                        hypothesisInteraction.mainHypothesisLayers[index].gameObject.SetActive(true);
                     }
                 }
             }
@@ -155,19 +143,19 @@ namespace COSE.Hypothesis
         {
             layerToIconMap = new Dictionary<string, List<int>>
             {
-                { "Layer_17_SCROLL_BAR", new List<int> { 9 } }, // Icon up/down arrow index 9
-                { "Layer_13_middle_bar_URL_ball", new List<int> { 3 } }, // Right/left arrow index 3
-                { "Layer_15_middle_bar_formatted_text_ball", new List<int> { 3 } }, // Right/left arrow index 3
-                { "Layer_3_FORMATED_TEXT", new List<int> { 3 } }, // Right/left arrow index 3
-                { "Layer_1_HTML_COLOR_FIELD", new List<int> { 0 } }, // All direction’s arrow icon index 0
-                { "Layer_8_URL_text_field", new List<int> { 0, 8 } }, // All direction’s arrow icon index 0, Pencil with frame, spacebar, etc. index 8
-                { "Layer_12_URL_SQUARE", new List<int> { 0 } }, // All direction’s arrow icon index 0
-                { "Layer_14_PENTAGON_BALL", new List<int> { 0 } }, // All direction’s arrow icon index 0
-                { "Layer_6_PENTAGON_LINE", new List<int> { 0 } }, // All direction’s arrow icon index 0
-                { "Layer_9_HISTORY_SQUARE", new List<int> { 0 } }, // All direction’s arrow icon index 0
-                { "Layer_5_HISTORY_URL", new List<int> { 0 } }, // All direction’s arrow icon index 0
-                { "Layer_7_HTML_TEXT_FIELD", new List<int> { 6, 7 } }, // Pencil with frame index 6, highlighter index 7, and Space Bar
-                { "Layer_10_MIDDLE_BAR_URL_TEXT", new List<int> { 6, 7 } }, // Pencil with frame index 6, highlighter index 7, and Space Bar
+                { "INGE_LAYER_HYPOTHESIS_1_L17_LOC_ID", new List<int> { 9 } }, // Icon up/down arrow index 9
+                { "INGE_LAYER_HYPOTHESIS_1_L13_LOC_ID", new List<int> { 3 } }, // Right/left arrow index 3
+                { "INGE_LAYER_HYPOTHESIS_1_L15_LOC_ID", new List<int> { 3 } }, // Right/left arrow index 3
+                { "INGE_LAYER_HYPOTHESIS_1_L3_LOC_ID", new List<int> { 3 } }, // Right/left arrow index 3
+                { "INGE_LAYER_HYPOTHESIS_1_L1_LOC_ID", new List<int> { 0 } }, // All direction’s arrow icon index 0
+                { "INGE_LAYER_HYPOTHESIS_1_L8_LOC_ID", new List<int> { 0, 8 } }, // All direction’s arrow icon index 0, Pencil with frame, spacebar, etc. index 8
+                { "INGE_LAYER_HYPOTHESIS_1_L12_LOC_ID", new List<int> { 0 } }, // All direction’s arrow icon index 0
+                { "INGE_LAYER_HYPOTHESIS_1_L14_LOC_ID", new List<int> { 0 } }, // All direction’s arrow icon index 0
+                { "INGE_LAYER_HYPOTHESIS_1_L6_LOC_ID", new List<int> { 0 } }, // All direction’s arrow icon index 0
+                { "INGE_LAYER_HYPOTHESIS_1_L9_LOC_ID", new List<int> { 0 } }, // All direction’s arrow icon index 0
+                { "INGE_LAYER_HYPOTHESIS_1_L5_LOC_ID", new List<int> { 0 } }, // All direction’s arrow icon index 0
+                { "INGE_LAYER_HYPOTHESIS_1_L7_LOC_ID", new List<int> { 6, 7 } }, // Pencil with frame index 6, highlighter index 7, and Space Bar
+                { "INGE_LAYER_HYPOTHESIS_1_L10_LOC_ID", new List<int> { 6, 7 } }, // Pencil with frame index 6, highlighter index 7, and Space Bar
             };
         }
 
@@ -186,45 +174,5 @@ namespace COSE.Hypothesis
                 {"INGE_LAYER_HYPOTHESIS_4_L9_LOC_ID", new List<int>{3, 7, 8, 10}}
             };
         }        
-
-        private void HandleHypothesisFourClicked(string layerKey)
-        {
-            // Deactivate all outlines and objects in firstHypothesisText
-            //hypothesisInteraction.DeactivateAllOutlinesAndObjects();
-
-            // Find and activate the corresponding layers
-            if (nameToIndexMap.TryGetValue(layerKey, out List<int> indices))
-            {
-                foreach (int index in indices)
-                {
-                    if (index >= 0 && index < hypothesisInteraction.mainHypothesisLayers.Count)
-                    {
-                        hypothesisInteraction.mainHypothesisLayers[index].gameObject.SetActive(true);
-                    }
-                }
-            }
-            // Disable the currently active outline, if any
-           /* if (currentActiveOutlineObject != null)
-            {
-                var currentOutline = currentActiveOutlineObject.GetComponent<Outline>() ?? currentActiveOutlineObject.GetComponentInChildren<Outline>();
-                if (currentOutline != null)
-                {
-                    currentOutline.enabled = false;
-                }
-            }
-
-            // Find the new active object based on the layerName
-            GameObject newActiveObject = GameObject.Find(layerKey); // Ensure your game objects are named exactly as layerName
-            if (newActiveObject != null)
-            {
-                var newOutline = newActiveObject.GetComponent<Outline>() ?? newActiveObject.GetComponentInChildren<Outline>();
-                if (newOutline != null)
-                {
-                    newOutline.enabled = true;
-                    currentActiveOutlineObject = newActiveObject; // Update reference to the new active object
-                }
-            }*/
-
-        }
     }
 }

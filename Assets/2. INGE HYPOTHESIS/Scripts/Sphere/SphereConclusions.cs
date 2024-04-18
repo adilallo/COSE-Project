@@ -42,7 +42,7 @@ namespace COSE.Sphere
         }
 
         // Method to call when the last layer finishes moving
-        private void HandleLastLayerFinished()
+        private void HandleLastLayerFinished(bool i)
         {
             // Activate the first sphere in the list
             if (conclusionSpheres.Count > 0 && conclusionSpheres[0] != null)

@@ -63,11 +63,14 @@ namespace COSE.Diagram
             }
         }
 
-        private void ActivateDiagramElements()
+        private void ActivateDiagramElements(bool isLastLayerFinished)
         {
-            foreach (var element in diagramElements)
+            if (isLastLayerFinished)
             {
-                element.gameObject.SetActive(true);
+                foreach (var element in diagramElements)
+                {
+                    element.gameObject.SetActive(true);
+                }
             }
         }
 

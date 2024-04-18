@@ -22,18 +22,18 @@ namespace COSE.Text
         {
             SphereTrigger.OnSphereTriggered += ActivateText;
             HypothesisLayerInteraction.OnLayerMoved += ActivateText;
+            HypothesisLayerInteraction.OnTextLayerClicked += ActivateText;
             DiagramManager.Instance.OnDiagramElementClicked += HandleDiagramElementClicked;
             HypothesisInteraction.OnCouplingActivated += ActivateCouplingText;
-            LayerClickEvent.OnLayerClicked += ActivateText;
         }
 
         private void OnDisable()
         {
             SphereTrigger.OnSphereTriggered -= ActivateText;
             HypothesisLayerInteraction.OnLayerMoved -= ActivateText;
+            HypothesisLayerInteraction.OnTextLayerClicked -= ActivateText;
             DiagramManager.Instance.OnDiagramElementClicked -= HandleDiagramElementClicked;
             HypothesisInteraction.OnCouplingActivated -= ActivateCouplingText;
-            LayerClickEvent.OnLayerClicked -= ActivateText;
         }
 
         void Start()
