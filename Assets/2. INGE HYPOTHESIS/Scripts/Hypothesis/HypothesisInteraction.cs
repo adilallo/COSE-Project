@@ -18,6 +18,12 @@ namespace COSE.Hypothesis
     {
         [SerializeField] private GameObject hypothesisModel;
         [SerializeField] private List<MovementState> movementStates;
+        [SerializeField] private List<GameObject> heroModel;
+        [SerializeField] private GameObject hypothesis7;
+        [SerializeField] public GameObject hypothesis8Screenshot1;
+        [SerializeField] public GameObject hypothesis8Screenshot2;
+        [SerializeField] public GameObject hypothesis9Scheme1;
+        [SerializeField] public GameObject hypothesis9Scheme2;
         [SerializeField] private float movementSpeed = 2f;
         [SerializeField] private float rotationSpeed = 2f;
 
@@ -42,6 +48,9 @@ namespace COSE.Hypothesis
             { "INGE_SPHERE_HYPOTHESIS_4_LOC_ID", 4 },
             { "INGE_SPHERE_HYPOTHESIS_5_LOC_ID", 5 },
             { "INGE_SPHERE_HYPOTHESIS_6_LOC_ID", 6 },
+            { "INGE_SPHERE_HYPOTHESIS_7_LOC_ID", 7 },
+            { "INGE_SPHERE_HYPOTHESIS_8_LOC_ID", 8 },
+            { "INGE_SPHERE_HYPOTHESIS_9_LOC_ID", 9 },
         };
 
         private List<List<int>> couplings = new List<List<int>>()
@@ -89,12 +98,10 @@ namespace COSE.Hypothesis
                 StartCoroutine(MoveLayersSequentially(movementStates[currentStateIndex], 20.0f));
                 coroutineStarted = true;
             }
-
             if (currentStateIndex == 2)
             {
                 MoveAndRotateHypothesis(); 
             }
-
             if (currentStateIndex == 3)
             {
                 MoveAndRotateHypothesis();
@@ -108,23 +115,29 @@ namespace COSE.Hypothesis
                     CycleCouplings(-1);
                 }
             }
-
             if (currentStateIndex == 4)
             {
                 MoveAndRotateHypothesis();
             }
-
             if (currentStateIndex == 5)
             {
                 MoveAndRotateHypothesis();
                 ResetAllLayers();
                 ActivateLayerByIndex(3);
             }
-
             if (currentStateIndex == 6)
             {
                 MoveAndRotateHypothesis();
                 ResetAllLayers();
+                ActivateHeroModels();
+            }
+            if (currentStateIndex == 7)
+            {
+                hypothesis7.SetActive(true);
+            }
+            if (currentStateIndex == 9)
+            {
+                hypothesis9Scheme1.SetActive(true);
             }
         }
 
@@ -175,14 +188,24 @@ namespace COSE.Hypothesis
         {
             if (stateMap.TryGetValue(stateIdentifier, out int stateIndex))
             {
-                if (stateIndex >= 0 && stateIndex < movementStates.Count)
-                {
-                    currentStateIndex = stateIndex;
-                }
+                currentStateIndex = stateIndex;
             }
-            else
+        }
+
+        private void ActivateLayerByIndex(int index)
+        {
+            if (index >= 0 && index < mainHypothesisLayers.Count)
             {
-                Debug.LogError($"State identifier {stateIdentifier} not found.");
+                var layer = mainHypothesisLayers[index];
+                layer.gameObject.SetActive(true);
+            }
+        }
+
+        private void ActivateHeroModels()
+        {
+            foreach (var model in heroModel)
+            {
+                model.SetActive(true);
             }
         }
 
@@ -287,15 +310,6 @@ namespace COSE.Hypothesis
             else
             {
                 isMovementComplete = false;
-            }
-        }
-
-        private void ActivateLayerByIndex(int index)
-        {
-            if (index >= 0 && index < mainHypothesisLayers.Count)
-            {
-                var layer = mainHypothesisLayers[index];
-                layer.gameObject.SetActive(true);
             }
         }
     }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.Video;
 
 namespace COSE.Hypothesis
 {
@@ -8,6 +9,7 @@ namespace COSE.Hypothesis
     {
         [SerializeField] private HypothesisInteraction hypothesisInteraction;
         [SerializeField] private GameObject[] icons;
+        [SerializeField] private VideoPlayer videoPlayer;
 
         private Dictionary<string, List<int>> layerToIconMap;
         private Dictionary<string, List<int>> nameToIndexMap;
@@ -17,11 +19,13 @@ namespace COSE.Hypothesis
         private void OnEnable()
         {
             HypothesisLayerInteraction.OnLayerClicked += HandleLayerClicked;
+            AnimationClickEvent.OnAnimationClicked += PlayVideoClip;
         }
 
         private void OnDisable()
         {
             HypothesisLayerInteraction.OnLayerClicked -= HandleLayerClicked;
+            AnimationClickEvent.OnAnimationClicked -= PlayVideoClip;
         }
 
         void Start()
@@ -44,7 +48,7 @@ namespace COSE.Hypothesis
             Debug.Log("Layer clicked: " + textKey);
             RestartTimeout();
 
-            if (hypothesisInteraction.currentStateIndex >= 1 && hypothesisInteraction.isLastLayerFinished)
+            if (hypothesisInteraction.currentStateIndex >= 1 && hypothesisInteraction.isLastLayerFinished && hypothesisInteraction.currentStateIndex != 8)
             {
                 HypothesisLayerInteraction.NotifyTextLayer(textKey);
             }
@@ -58,6 +62,16 @@ namespace COSE.Hypothesis
             if (hypothesisInteraction.currentStateIndex == 4)
             {
                 ActivateLayersForKeywords(textKey);
+            }
+
+            if (hypothesisInteraction.currentStateIndex == 8)
+            {
+                ActivateHypothesis8Screenshots(textKey);
+            }
+
+            if (hypothesisInteraction.currentStateIndex == 9)
+            {
+                ActivateHypothesis9Animations(textKey);
             }
         }
 
@@ -111,6 +125,63 @@ namespace COSE.Hypothesis
                         hypothesisInteraction.mainHypothesisLayers[index].gameObject.SetActive(true);
                     }
                 }
+            }
+        }
+        
+        private void ActivateHypothesis8Screenshots(string textKey)
+        {
+            if (textKey == "Hypothesis_8_Opaque")
+            {
+                hypothesisInteraction.hypothesis8Screenshot2.SetActive(false);
+                hypothesisInteraction.hypothesis8Screenshot1.SetActive(true);
+                Debug.Log("Clicked on Hypothesis_8_Opaque");
+            }
+            else if (textKey == "Hypothesis_8_Transparent")
+            {
+                hypothesisInteraction.hypothesis8Screenshot1.SetActive(false);
+                hypothesisInteraction.hypothesis8Screenshot2.SetActive(true);
+                Debug.Log("Clicked on Hypothesis_8_Transparent");
+            }
+        }
+
+        private void ActivateHypothesis9Animations(string textKey)
+        {
+            if (textKey == "INGE_LAYER_HYPOTHESIS_9_L1_LOC_ID")
+            {
+                StartContinuousRotation(hypothesisInteraction.hypothesis9Scheme1, Vector3.up, 30);
+                StartContinuousRotation(hypothesisInteraction.hypothesis9Scheme2, Vector3.up, 30);
+                hypothesisInteraction.hypothesis9Scheme2.SetActive(false);
+                StartCoroutine(ActivateAfterDelay(hypothesisInteraction.hypothesis9Scheme2, 15f));
+            }
+        }
+
+        private void StartContinuousRotation(GameObject gameObjectToRotate, Vector3 rotationAxis, float speed)
+        {
+            StartCoroutine(ContinuousRotationCoroutine(gameObjectToRotate, rotationAxis, speed));
+        }
+
+        private IEnumerator ContinuousRotationCoroutine(GameObject gameObjectToRotate, Vector3 rotationAxis, float speed)
+        {
+            while (true)
+            {
+                gameObjectToRotate.transform.Rotate(rotationAxis * speed * Time.deltaTime, Space.World);
+                yield return null;
+            }
+        }
+
+        private IEnumerator ActivateAfterDelay(GameObject scheme, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            scheme.SetActive(true);
+        }
+
+        private void PlayVideoClip(VideoClip clip)
+        {
+            if (videoPlayer != null)
+            {
+                Debug.Log("video clip triggered");
+                videoPlayer.clip = clip;
+                videoPlayer.Play();
             }
         }
 
