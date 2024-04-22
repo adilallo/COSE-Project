@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using COSE.Hypothesis;
 
 namespace COSE.Diagram
 {
@@ -37,12 +38,12 @@ namespace COSE.Diagram
 
         private void OnEnable()
         {
-            COSE.Hypothesis.HypothesisInteraction.OnLastLayerFinished += ActivateDiagramElements;
+            HypothesisInteraction.OnLastLayerFinished += ActivateDiagramElements;
         }
 
         private void OnDisable()
         {
-            COSE.Hypothesis.HypothesisInteraction.OnLastLayerFinished -= ActivateDiagramElements;
+            HypothesisInteraction.OnLastLayerFinished -= ActivateDiagramElements;
         }
 
         public void RegisterElement(DiagramElement element)
@@ -62,18 +63,19 @@ namespace COSE.Diagram
             }
         }
 
-        private void ActivateDiagramElements()
+        private void ActivateDiagramElements(bool isLastLayerFinished)
         {
-            // This method is called when the last layer is finished moving
-            foreach (var element in diagramElements)
+            if (isLastLayerFinished)
             {
-                element.gameObject.SetActive(true);
+                foreach (var element in diagramElements)
+                {
+                    element.gameObject.SetActive(true);
+                }
             }
         }
 
         private void DeactivateAllElements()
         {
-            // Deactivate all registered elements
             foreach (var element in diagramElements)
             {
                 element.gameObject.SetActive(false);

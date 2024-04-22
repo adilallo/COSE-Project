@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SphereTrigger : MonoBehaviour
+public class SphereTrigger1 : MonoBehaviour
 {
     public string playerTag;
     public Animator animator1;
