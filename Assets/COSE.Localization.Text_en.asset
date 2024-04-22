@@ -1,0 +1,409 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: COSE.Localization.Text_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 3fb16befcd89b2e4bbe08b7875cd111d, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2189404659712
+    m_Localized: "This room looks analytically at the visual output of JODI\u2019s
+      .com browser. We dissect and then regroup the visual elements that are provided
+      in the viewport of the monitor. Taking everything apart first and reassembling
+      it later in different constellations, helps us to determine how or whether
+      elements cluster dynamically in terms of space and (inter)activity. This room
+      offers filters that suggest ways to see order in the browser output. These
+      filters are sorting gestures such as: taking apart, isolating, staging, counting,
+      labeling, marking, focusing, creating explanatory models as shortcuts of certain
+      underlying \u2018mechanisms\u2019. We learn about the rules of the visual layers
+      within the artwork and come to unexpected conclusions. Let\u2019s go!\r\n\r\nOur
+      argumentation is a journey. It includes nine hypotheses and four main tactical
+      moves. Within each move you can collect three take home messages. Watch out
+      for them, you might need them later. Our journey begins now!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10326936818540544
+    m_Localized: 'Clarity is useful to determine which visual elements exist in this
+      browser. The following inventory of the different types of elements that you
+      may encounter in this browser is already ordered in a specific way, namely
+      how they overlap each other. Overlapping suggests depth and we show a layering
+      structure based on the visual element types (not their size, not their time
+      of appearance; later on, their colour will play a role). Learn about the GUI
+      elements!
+
+
+      PRESS ENTER TO BEGIN ANIMATION'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327070432288768
+    m_Localized: "Some math: so far we have encountered 18 element types, and exemplified
+      them with the red tab. But there are four more tabs. Taking some singular elements
+      apart, and considering that some elements multiply over time, we have at least
+      66 elements permanently present plus some ephemeral ones. That\u2019s a lot!
+      It\u2019s easy to lose track of them. Moreover, there is a certain variance
+      in how much presents itself to the users\u2019 eye in the browser as a whole.\n\nBut
+      some elements have bonds, they act as a cluster. By interacting with them,
+      we can test the linkages and affordances of the elements."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327171980582912
+    m_Localized: "You can (cluster-)influence several elements on the screen by a
+      single move. Find out which elements like hanging out with others! We refer
+      to all elements that are simultaneously affected with one move with an umbrella
+      term: complex.\n \nPRESS X AND Z TO CYCLE THROUGH COUPLINGS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327237051015168
+    m_Localized: 'Let us do some more re-clustering work! Analyzing the behavior
+      and occurrence of the elements in our inventory, several further groupings
+      can be undertaken along specific parameters. Click on the xxx (symbol) to see
+      the highlights in the model. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327419750703104
+    m_Localized: "In .com, the formatted-text \u2013 that comes closest to a website
+      rendering \u2013 here sits at the very back. This raises the question of how
+      the websites are actually presented. Does this artwork show us the \u2018backside\u2019
+      of the websites? We\u2019ll try to find out. Let\u2019s explore this idea and
+      inspect the tectonics of a tab field complex with all its elements."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10328055108067328
+    m_Localized: "The tab field complex is one of four functional clusters consisting
+      of several elements. So let\u2019s meet these four complex protagonists in
+      their full three-dimensionality!\n\nIn the .com browser, one website is depicted
+      within a tab field complex. As the tab field complex is a mix of buttons, texts
+      and colour fields, its configuration has much depth. This stretched-out three-dimensionality
+      is an important factor as soon as further tab field complexes enter the scene."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11449771431550976
+    m_Localized: "HTML-colour-field (\u201Ccc1\u201D): The HTML-colour-field remains
+      \u2018empty\u2019 until one of its URLs leads to an existing website. It holds
+      the HTML code of the website currently found by the browser. The colour is
+      translucent as any text can shine through and overlapping with other HTML-colour-fields
+      leads to characteristic colour changes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450098411102208
+    m_Localized: "grey-field (\u201Cgrey\u201D): The grey-field appears when a successful
+      URL is retrieved. It seems to act as a place holder for the formatted-text
+      that will then soon appear when the search is done. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450145353752576
+    m_Localized: "formatted-text (\u201Ctt1\u201D): When the browser finds an existing
+      webpage, the text on this website (and sometimes, also the HTML code in a formatted
+      version) will be made visible and rendered in a black Times New Roman font.
+      Links can be underlined and in blue, sometimes headlines are in another colour.
+      The formatted-text takes up about half of the width of the screen and can fill
+      it from the very top to the bottom (there could be less text). "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450169500360704
+    m_Localized: "middle-bar (\u201C64\u201D): The middle-bar is a thin triple-line
+      in black-red-black along which two spheres of each colour (a total of ten spheres,
+      consisting of middle-bar-formatted-text-balls and middle-bar-URL-balls) move
+      when a search is being performed. It is unchangeable and the equivalent of
+      a throbber that indicates internet activity. You can stop an active search
+      process by clicking on this line \u2013 preferably on the left side. \r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450191373656064
+    m_Localized: "history-URL (\u201Cbook1\u201D): This small URL shows each successfully
+      retrieved website. The history-URL is black and is attached to the history-square
+      on its left. The history-URL and history-square reside underneath the bottom
+      left corner of the HTML-colour-field. Both move downwards row by row as new
+      websites are found. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450212110295040
+    m_Localized: "pentagon-line (\u201CVector Shape\u201D): The pentagon-line of
+      a certain colour sits next to a pentagon-ball of the same colour. They are
+      the edges of a distorted pentagon that can be repositioned by dragging the
+      pentagon-balls. If one of the two pentagon-balls connected by the pentagon-line
+      is repositioned, the pentagon-line will change in length and angle, according
+      to the new coordinates. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450230280019968
+    m_Localized: "HTML-text-field (\u201Caa1\u201D): When the browser succeeds in
+      finding an existing website, the HTML code of this website appears in the HTML-text-field
+      which sits inside the HTML-colour-field and dynamically adjusts to its size.
+      If the subsequent search is unsuccessful, the HTML code of the former search
+      remains in place. The HTML-text is rendered in a monospaced black font and
+      can be edited. This editing does not alter the adjunct formatted-text. The
+      HTML-text-field disappears when the adjunct pentagon-ball is positioned left
+      or above the corresponding HTML-colour-field."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450252665020416
+    m_Localized: 'URL-text-field ("getNetText One Field"): This field sits on the
+      right side of the URL-square and displays the URL that the browser is currently
+      calling for or has called (successfully or not) within the last round. The
+      URL-text has the same colour as the HTML-colour-field it is attached to, except
+      for the period of the calling itself. In this case, a correspondingly coloured
+      URL-colour-field appears behind the URL then turning black. The URL-text-field
+      vanishes when the adjunct pentagon-ball is positioned to the left of the corresponding
+      HTML-colour-field.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450274391515136
+    m_Localized: "history-square (no name): This small square sits below the bottom
+      left corner of the HTML-colour-field and shares its colour. It is connected
+      to the pentagon-ball as well, because changes in the position of the pentagon-ball
+      are immediately followed by changes to the history-elements (square and URL).
+      The HTML-colour-field is also affected although this does not adjust on the
+      fly, but rather upon releasing the mouse. The tiny history-square mimics the
+      URL-square, as it too is accompanied by a tiny URL on its right. The history-elements
+      shift downwards a row when a new URL becomes \u2018historical\u2019. This means
+      the history-square is the only element to multiply over time. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450297145614336
+    m_Localized: "middle-bar-URL-text-field (\u201CgetNetText 1 Field\u201D): The
+      middle-bar doubles the URL-text-field of each browser window. This middle-bar-URL-text
+      is the same size and colour as the URL-text-field. When you make manual changes
+      to the middle-bar-URL-text-field and press enter, these changes also become
+      effective in the twin URL text and the URL calling is initiated. You can move
+      the middle-bar-URL-text-field by horizontally dragging the middle-bar-URL-ball
+      of the same colour that sits nearby on the middle-bar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450315353088000
+    m_Localized: "URL-colour-field: During the calling process, the URL-colour-field
+      \u2013 a coloured bar such as you might see in a marking process but extended
+      to the right \u2013 appears behind the URL you are searching for. It has the
+      same colour as the tab field. As soon as the URL calling is over it disappears.
+      It is a highly ephemeral phenomenon that cannot be interacted with."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450330909761536
+    m_Localized: "URL-square (\u201CGet Button\u201D): A small square to the left
+      of the URL and on top of the HTML-colour-field allows you to change the position
+      of the HTML-colour-field and all elements around it. The URL-square has the
+      same colour as the URL-text-field or the HTML-colour-field it is attached to.
+      Double-clicking on the URL-square launches a corresponding URL calling."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450346613235712
+    m_Localized: "middle-bar-URL-ball (\u201CGet Button\u201D): This small sphere
+      is connected to the middle-bar-URL-text-field of the same colour on its (far)
+      left. Double-clicking on this ball launches the corresponding search. During
+      the URL calling, the middle-bar-URL-ball springs back and forth on the horizontal
+      line, together with the according middle-bar-URL-text-field (while keeping
+      the same distance)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450362652254208
+    m_Localized: "pentagon-ball (\u201Cbal\u201D, not numbered): The pentagon-balls
+      are the five vertices of a pentagon composed by five of these spheres and five
+      sprites which we called pentagon-lines. The pentagon that can be repositioned
+      or distorted by either dragging each pentagon-ball, or moving the colour field.
+      The balls appear in the same five colour system as the browser window they
+      are connected to. Depending on the current position of \u2018their\u2019 HTML-colour-field,
+      they are either connected to its bottom right corner (per default) or \u2013
+      when dragged around the HTML-colour-field \u2013 they can be optically detached
+      from it, but their positions continue to define the height of the HTML-colour-field,
+      the history-elements and the scrollbar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450377848217600
+    m_Localized: "middle-bar-formatted-text-ball (\u201CGet Button\u201D): This is
+      a small sphere that is restricted to the middle-bar, but can be moved horizontally
+      by picking it with the mouse. When you do this, any existing formatted-text
+      is moved with it. The middle-bar-formatted-text-ball always sits on the left
+      of the formatted-text. The middle-bar-formatted-text-ball has the same colour
+      as the HTML-colour-field which carries the HTML-text-field corresponding to
+      the formatted-text. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450394952589312
+    m_Localized: "URL-calling-colour-field: During a URL calling process, two thirds
+      or more of the width of today\u2019s screen seems to be bathed in the colour
+      of the URL being searched for. It is translucent and a highly ephemeral phenomenon
+      that cannot be interacted with."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450410953859072
+    m_Localized: 'scroll-bar: The grey scroll-bar seems to conform to the system
+      configuration of the operating system used by the computer. It is next to the
+      right side of the HTML-colour-field and fits its vertical size at any time
+      (this can be changed using the adjunct pentagon-ball). Functionally, it is
+      attached to the HTML-text-field and seems to allow you to navigate the HTML
+      code. However, when you use it, the character-cache fills up until the text
+      eventually gradually blacks out. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450426401480704
+    m_Localized: "pointer: Shaped as a white arrow, cursor, or cross (depending on
+      whether it hovers over colour fields, text fields or buttons) and part of your
+      computer\u2019s operating system interface, the mouse allows you to interact
+      with the browser. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744257666473984
+    m_Localized: "tab field complex: Elements of a website-elements-cluster \u2018glued\u2019
+      together are now termed a \u2018tab field complex\u2019. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744282471587840
+    m_Localized: Some elements are more loosely connected to this tab field complex,
+      by similarity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744441314074624
+    m_Localized: ' or identity'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744499191275520
+    m_Localized: 'Some elements shrink '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744524436791296
+    m_Localized: and as miniatures, they multiply
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744550017851392
+    m_Localized: 'Some elements are singularities '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744569357787136
+    m_Localized: "Some elements may be temporarily \u2018empty\u2019, if no website
+      has been found "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744587854667776
+    m_Localized: 'Some elements have a contingent or search-dependent lifespan, they
+      are stable as long as no search result replaces them '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744596113252352
+    m_Localized: "search performing complex: Some elements are even more ephemeral.
+      They appear only in a performative manner during an active search process and
+      disappear again as soon as the search is terminated. They are not accessible
+      for the user and cause the eventfulness with each search. Together with a hectic
+      movement and generated sounds (not listed in this inventory of visual elements),
+      they form the \u2018search performing complex\u2019. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15081753889726464
+    m_Localized: We have learnt that a tab field complex is a configuration distributed
+      on different layers of depth. \n \n Showing all five tab field complexes simultaneously,
+      this layered tectonic structure has an impact on how elements overlap. Until
+      now, we have been dealing with element types. That does not mean that each
+      type appears only once in the .com browser. In fact, most elements are present
+      five-fold.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15081801549602816
+    m_Localized: While the opaque representation allows the user to determine clearly
+      what is in front and what behind, the transparent representation allows text
+      to shine through. Moreover, the colours in the overlapping sections of colour-fields
+      may change.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15085678499979264
+    m_Localized: "The tab field complex is attributed a flipping or turning window
+      because on the one hand it is a window to the internet as it harbours the website
+      content. On the other hand, the browser seems to provide a back-side view of
+      websites in two different ways. The first of these is always provided, the
+      second can be reached by interacting with it. Normally, the HTML code of a
+      website is occluded from the users, who need to go an extra step to have it
+      displayed in their commercial browser. In .com, the HTML-code fills what the
+      users will interpret as the tab field complex in a rather large and easy to
+      read font. It seems to have been brought closer for inspection than its formatted-text
+      version.\r\n            The affordance of these two elements also underlines
+      that reversal. The user can edit the HTML code text, but cannot even mark the
+      formatted-text. Thus, JODI seem to swap surface and \u2018subface\u2019 (to
+      use Frieder Nake\u2019s expression), that is, the GUI level and the code level.
+      However, the HTML code can only be reworked if a second instance of flipping
+      hasn\u2019t turned it away from the user\u2019s sight. So, what could turn
+      the HTML-text-field \u2018away\u2019?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15085971283369984
+    m_Localized: "The pentagon complex is shown here as two elements coupled, but
+      it is optically complete only with all five pentagon complexes. As it also
+      turns or flips parts of the website, it shares the same attribute as the tab
+      field complex. coordinate value, but is position-sensitive and thus variable.
+      Drawing a horizontal and a vertical line through this point, cuts the viewport
+      plane into four sectors that have different \u2018properties\u2019 for this
+      specific tab field complex."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15086055844732928
+    m_Localized: "The search facilitating complex is depicted by the red carpet it
+      is rolling out for the users. Although not obvious at first glance, .com browser
+      offers the user four different ways to start the web search for each website
+      tab\r\nInterpretation: \r\nContrary to the general impression of bulkiness,
+      in several ways .com surpasses conventional browsers in paving a way into the
+      internet. First, each URL is present twice and both can be used to start a
+      search. A search can be initiated by typing in a URL either in the URL-text-field
+      or in the middle-bar-URL-text-field and pressing enter, or by double-clicking
+      on the URL-square or on the middle-bar-URL-ball respectively. Thus, the opportunities
+      to go and explore a website by chance or by intention are heightened/elevated."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15086191815680000
+    m_Localized: "The search performing complex symbolically waves a red flag as
+      it seeks to gather all the user\u2019s attention. Even if users may be overwhelmed
+      and have the impression that they need to fight to get to the internet content,
+      the browser is actually emphasizing the core business of any browser, namely
+      the event of the search process.\r\nHere, multiple instances indicate that
+      something is happening. The URL calling process is accompanied by a hectic
+      horizontal movement pushing around the corresponding URL, by sound, by a colour
+      change of the URL and by various fields popping up: grey and the \u2018own\u2019
+      colour, a field behind the URL. All these signals indicate that something is
+      \u2018coming\u2019 from the internet. It is reminiscent of the good old letter
+      shoot. While the website data parcel is underway, a specific sound accompanies
+      its journey and a different gong advertises its arrival. The box can contain
+      something or can be empty. In this light, the horizontal middle-bar containing
+      the balls also mimics the old medium of postal transmission. The difference
+      is only that their hectic back and forth movements symbolize the requirement
+      in the networked world that the various bits and pieces of information must
+      be gathered from different sites. The middle-bar indicates prominently that
+      a search is taking place by serving as a highway for a nervous race. This is
+      a rather different picture than the floating, orbiting and circling in outer
+      space shown by other throbber animations.\r\nAnd all this performed excitement
+      has yet another effect: the long waiting time that was a major part of the
+      early days of the internet, here, is filled with action. Users can lean back
+      and enjoy the spectacle. This kind of jingle-entertainment is performed by
+      six elements. Isn\u2019t that again contributing to an improved user experience?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15104449662935040
+    m_Localized: "Here we deal with a simple subtractive colour mix with perfect
+      filters \u2013 which means the colours as filters absorb a 100% of the opposite
+      colour. Red absorbs 100% of green and blue, green absorbs 100% blue and red.
+      Superpositioning a red and a green filter, for instance, then all light is
+      absorbed, turning the result into black."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15104581330526208
+    m_Localized: "There are four exceptions that do not turn black when overlapping:
+      Yellow and cyan together turn green, moreover, yellow \u2018suffocates\u2019
+      (has no effect) when overlapping with green or with red. Cyan \u2018suffocates\u2019
+      in blue and green."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15081846764199936
+    m_Localized: JODI reduce their palette to six colours (plus white), magenta is
+      missing.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

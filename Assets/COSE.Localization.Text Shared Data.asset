@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: COSE.Localization.Text Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: COSE.Localization.Text
+  m_TableCollectionNameGuidString: 3fb16befcd89b2e4bbe08b7875cd111d
+  m_Entries:
+  - m_Id: 2189404659712
+    m_Key: INGE_SPHERE_ENTRY_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10326936818540544
+    m_Key: INGE_SPHERE_HYPOTHESIS_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327070432288768
+    m_Key: INGE_SPHERE_HYPOTHESIS_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327171980582912
+    m_Key: INGE_SPHERE_HYPOTHESIS_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327237051015168
+    m_Key: INGE_SPHERE_HYPOTHESIS_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327419750703104
+    m_Key: INGE_SPHERE_HYPOTHESIS_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10328055108067328
+    m_Key: INGE_SPHERE_HYPOTHESIS_6_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11449771431550976
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450098411102208
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450145353752576
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450169500360704
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450191373656064
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450212110295040
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L6_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450230280019968
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L7_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450252665020416
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L8_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450274391515136
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L9_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450297145614336
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L10_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450315353088000
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L11_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450330909761536
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L12_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450346613235712
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L13_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450362652254208
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L14_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450377848217600
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L15_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450394952589312
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L16_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450410953859072
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L17_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11450426401480704
+    m_Key: INGE_LAYER_HYPOTHESIS_1_L18_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744257666473984
+    m_Key: INGE_LAYER_HYPOTHESIS_4_L1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744282471587840
+    m_Key: INGE_LAYER_HYPOTHESIS_4_L2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744441314074624
+    m_Key: INGE_LAYER_HYPOTHESIS_4_L3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744499191275520
+    m_Key: INGE_LAYER_HYPOTHESIS_4_L4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744524436791296
+    m_Key: INGE_LAYER_HYPOTHESIS_4_L5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744550017851392
+    m_Key: INGE_LAYER_HYPOTHESIS_4_L6_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744569357787136
+    m_Key: INGE_LAYER_HYPOTHESIS_4_L7_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744587854667776
+    m_Key: INGE_LAYER_HYPOTHESIS_4_L8_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14744596113252352
+    m_Key: INGE_LAYER_HYPOTHESIS_4_L9_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15081753889726464
+    m_Key: INGE_SPHERE_HYPOTHESIS_7_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15081801549602816
+    m_Key: INGE_SPHERE_HYPOTHESIS_8_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15081846764199936
+    m_Key: INGE_SPHERE_HYPOTHESIS_9_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15085678499979264
+    m_Key: INGE_LAYER_HYPOTHESIS_6_L1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15085971283369984
+    m_Key: INGE_LAYER_HYPOTHESIS_6_L2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15086055844732928
+    m_Key: INGE_LAYER_HYPOTHESIS_6_L3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15086191815680000
+    m_Key: INGE_LAYER_HYPOTHESIS_6_L4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15104449662935040
+    m_Key: INGE_LAYER_HYPOTHESIS_9_L1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15104581330526208
+    m_Key: INGE_LAYER_HYPOTHESIS_9_L2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8013235430638747672
+  references:
+    version: 2
+    RefIds:
+    - rid: 8013235430638747672
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1709870693132
