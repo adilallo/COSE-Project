@@ -12,7 +12,7 @@ namespace COSE.Messages
         public void ToggleMessage(int index)
         {
             Debug.Log($"Toggling message with index: {index}");
-            textInteraction.ActivateConclusionText(index);
+            //textInteraction.ActivateConclusionText(index);
         }
     }
 }

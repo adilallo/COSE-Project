@@ -187,6 +187,34 @@ MonoBehaviour:
     m_Key: INGE_LAYER_HYPOTHESIS_9_L2_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 16505225660588032
+    m_Key: DANIELA_SPHERE_READ_ME_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859494871982080
+    m_Key: DANIELA_SPHERE_INFO_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859693484859392
+    m_Key: DANIELA_SPHERE_INFO_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859800024375296
+    m_Key: DANIELA_SPHERE_INFO_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859907482443776
+    m_Key: DANIELA_SPHERE_INFO_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859981620961280
+    m_Key: DANIELA_SPHERE_INFO_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16867038289977344
+    m_Key: DANIELA_LAYER_STAGE_1_CLOUD_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

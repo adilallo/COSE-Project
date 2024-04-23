@@ -404,6 +404,69 @@ MonoBehaviour:
       missing.
     m_Metadata:
       m_Items: []
+  - m_Id: 16505225660588032
+    m_Localized: "From quality to quantity. Cascades of abstractions towards a \u2018disorientation
+      value\u2019 in .com \r\nThis room explores the %Wrong Browser .com in terms
+      of its dynamic and observable behaviour, independent of user interaction. The
+      objective was to establish parameters for describing the usage of this browser
+      in comparison to web browsers that follow the general convention in this category
+      of technology. The deviations observed in %Wrong Browser .com, in relation
+      to these conventions, are consolidated into a single metric termed the 'disorientation
+      value.'\r\nCentral to the %Wrong Browser series, as well as much of JODI's
+      body of work, is its deliberate departure from established norms and conventions
+      within computer environments and software. These deviations disrupt the user's
+      experience in a way that elicits emotions of frustration and overwhelm \U0001F56E.
+      By identifying and extrapolating behaviours in the work that deviate from the
+      conventional web browser experience, we can isolate a specific aspect of the
+      work - its disorientation value - and dynamically represent it through an animated
+      visualisation of the data.\r\nThe room can be approached both as an experiential
+      encounter in its own right, and as a specialised filter that reveals a qualitative
+      aspect of the artwork, grounded in quantifiable data."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859494871982080
+    m_Localized: The first stage operates on the premise that the %Wrong Browser
+      is a functional web browser, making it suitable for comparison with an integrated
+      conventional browser model. The consistency in time, in standardised functionality
+      and layout of conventional browsers make them ideal benchmarks for assessing
+      the extent and nature of interventions introduced by artistic web browsers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859693484859392
+    m_Localized: "\rThe second stage is based on the hypothesis that the primary
+      deviations from conventional browsers lie in the properties of elements and
+      program behaviours. To quantify these deviations, a runtime sample was segmented
+      into the relevant \u2018puzzle pieces\u2019 or three categories to be observed."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859800024375296
+    m_Localized: The third stage aims to generate quantitative data suitable for
+      computer-based visualisation of the hypotheses developed in the initial two
+      stages.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859907482443776
+    m_Localized: The fourth stage aims to refine the data created in the third stage,
+      in order to establish relationships between the different values and assign
+      weights to them based on their impact on the deviation from conventional browsers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16867038289977344
+    m_Localized: 'Elements found in JODI''s browser are not particularly uncommon
+      compared to those of a conventional web browser. This becomes evident when
+      these elements are imagined in a more standard layout. However, the arrangement
+      of these elements differs significantly, as do their functional affordances.
+
+      In
+      contrast to the conventional browser, which is primarily centred around a single
+      field rendering the content of a specific webpage, the %Wrong Browser .com
+      features five such fields, each distinguished by its own colour. These fields
+      function similarly to tabs within a browser window, although they behave more
+      like individual windows. They can be moved by the user, resized, stacked and
+      arranged feely. Additionally, each content field has its individual address
+      and scroll bar.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
