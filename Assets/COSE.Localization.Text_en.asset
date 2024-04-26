@@ -467,6 +467,105 @@ MonoBehaviour:
       and scroll bar.'
     m_Metadata:
       m_Items: []
+  - m_Id: 16907661189570560
+    m_Localized: 'A path that was abandoned in this argumentation was identification
+      and categorization of the perceivable elements of the program (visual elements
+      of the GUI, auditive elements, the dynamics of the elements behaviour). The
+      result will only reveal the rules underlying the dynamics, not the actual events,
+      however.  Therefore, to gain insight, the whole display would have to be considered,
+      including its behaviour in time.
+
+      A comprehensive list of elements and
+      their description can be found in the RED ROOM.                      The rules
+      underlying the dynamics are discussed in the CYAN ROOM. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17907882602258432
+    m_Localized: "In the centre of the application window, there is a triple line
+      displaying small round elements (HTML-balls) and the URL text in colours matching
+      the five content fields. During the loading process of web content for one
+      of these fields, the coloured ball and accompanying text representing the field
+      or tab move rapidly along this line, reminiscent of the loading icon commonly
+      seen in many conventional web browsers, especially in the early 2000s. However,
+      the position of the line (which is not adjustable by the user), situated in
+      the middle of the display, disrupts this analogy by centering both the loading
+      process and the erratic movement. \r\nIn the RED ROOM the loading icon is addressed
+      as well."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17909275484479488
+    m_Localized: In JODI's .com web browser, webpage content is primarily presented
+      in HTML format but split into two display fields. It allows for the concurrent
+      display of up to five pages, resulting in six fields showing varying degrees
+      of readable content, all of which is stripped of much of its original structure
+      and design. This division is akin to a feature found in conventional browsers,
+      accessible to users through the menu in the form of the developer tools view
+      of a webpage. There are no visible home, back, stop, or refresh buttons to
+      be found in the interface of the .com browser, which are typically prominent
+      part of the menu bars in conventional web browsers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17911893766168576
+    m_Localized: "A prototypical model was developed for the software visualisation
+      tool SEE developed at the university of Bremen by the team of Prof. R. Koschke.
+      It consists of a colour coded representation of each GUI element as nodes in
+      a GXL graph. On a time axis, these elements stand in a dynamic connection to
+      the categories described in the image to your right. The heights of the blocks
+      represent a translation of the specific behaviour into a numeric value; the
+      width an accumulation of the previous heights\u2019 values, to see it evolve
+      over time. However, soon it became apparent that the relationship between the
+      behaviour of the eight categories was unclear and too complex."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17912202156564480
+    m_Localized: 'Another path that was abandoned in this argumentation was the inclusion
+      of too many categories to describe the behaviour of the element system in the
+      display. The preliminary categories fullness, emptiness, layering, movement,
+      stillness, connection, organisation and time were established posed numerous
+      obstacles. Tracking the 66 elements individually regarding the chosen eight
+      categories, exploding the task into a big data problem that is practically
+      impossible to handle for a human observer.
+
+      All 66 elements are described
+      in the RED ROOM.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17917248818634752
+    m_Localized: 'This model is a first thought experiment about a three dimentional
+      object created from the values in the data set. Each slice would represent
+      the disorientation parameter value for the duration of two seconds, creating
+      a timeline on the x-axis, the disorientation value in the y-axis and leaving
+      the z-axis of a 3-dimensional environment without any meaningful value.
+
+      The
+      disorientation value would be experienceable through the decreasing of space
+      available, which was included into the final visualisation.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17954318094163968
+    m_Localized: 'We developed parameters to capture deviations from conventional
+      browser behaviour, distinguishing between major movements [image of a dark
+      blue puzzle piece] (changes in the composition of HTML fields) and minor movements
+      [image of a light blue puzzle piece] (the rapid movement of URL balls along
+      the throbber line during the loading process). Although autonomous movement
+      is not uncommon in conventional browsers (especially on early web pages where
+      GIFs and other animated elements were prevalent), the rearrangement of tabs
+      or browser windows is an intrusion into the agency that usually lies with the
+      user of an application. A third parameter, given the name clustering [image
+      of a green puzzle piece], is based on the layering of elements within the display.
+      To determine this parameter, we examined the colour distribution of the display.
+      The background colour of the display is white, and even without any user interaction,
+      the sizes of the HTML fields are constant, although they can be cropped by
+      the viewport. Considering that the HTML code is most legible within the display
+      and that the formatted text fields stack on top of each other without user
+      interaction, it was possible to draw conclusions regarding how colour distribution
+      may influence the display''s closeness to the envisioned layout, that is clearly
+      structured and organised and therefore easier accessibility.
+
+      The autonomous
+      behaviour of the movements is analysed in the CYAN ROOM.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

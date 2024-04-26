@@ -10,6 +10,16 @@ public class LayerInteraction: MonoBehaviour
     private static LayerInteraction currentOutlined;
     private Outline outlineScript;
 
+    private void OnEnable()
+    {
+        GroupLayerInteraction.OnLayerGroupClicked += GroupClicked;
+    }
+
+    private void OnDisable()
+    {
+        GroupLayerInteraction.OnLayerGroupClicked -= GroupClicked;
+    }
+
     private void Start()
     {
         outlineScript = GetComponent<Outline>();
@@ -38,5 +48,13 @@ public class LayerInteraction: MonoBehaviour
     protected virtual void NotifyLayerClicked()
     {
         OnLayerClicked?.Invoke(textKey);
+    }
+
+    private void GroupClicked(string textKey)
+    {
+        if (currentOutlined != null && currentOutlined.outlineScript != null)
+        {
+            currentOutlined.outlineScript.enabled = false;
+        }
     }
 }

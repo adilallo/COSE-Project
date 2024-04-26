@@ -215,6 +215,34 @@ MonoBehaviour:
     m_Key: DANIELA_LAYER_STAGE_1_CLOUD_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 16907661189570560
+    m_Key: DANIELA_LAYER_DEAD_END_1_IMAGE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17907882602258432
+    m_Key: DANIELA_LAYER_STAGE_2_MIDDLE_BAR_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17909275484479488
+    m_Key: DANIELA_LAYER_STAGE_2_WRONG_INTERFACE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17911893766168576
+    m_Key: DANIELA_LAYER_DEAD_END_2_IMAGE_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17912202156564480
+    m_Key: DANIELA_LAYER_DEAD_END_2_IMAGE_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17917248818634752
+    m_Key: DANIELA_LAYER_DEAD_END_3_IMAGE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17954318094163968
+    m_Key: DANIELA_LAYER_STAGE_3_HAND_PUZZLE_SELECTION_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
