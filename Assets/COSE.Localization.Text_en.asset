@@ -566,6 +566,88 @@ MonoBehaviour:
       behaviour of the movements is analysed in the CYAN ROOM.'
     m_Metadata:
       m_Items: []
+  - m_Id: 18713684137205760
+    m_Localized: 'To avoid a big data problem, we reduced the sample size to a 10-minute
+      screen recording of the application''s actions and focused exclusively on the
+      autonomous behaviour of the program in the absence of user interaction. The
+      user-independent behaviour is directly traceable in the source code. However,
+      multidimensional factors within the hardware and software environment, coupled
+      with the randomness of HTML field positioning, URL generation, and the unpredictability
+      of content associated with these URLs, prevents knowledge about the factual
+      layout the user will find displayed at any given moment.
+
+      The generation
+      of the URLs and randomness is addressed more throughly in the CYAN ROOM.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18716717835345920
+    m_Localized: The analysis of the screen recording uses seconds as its time unit.
+      When the composition of the elements changed, a screenshot was taken, including
+      the timestamp of the video editing tool, Movavi Video Editor. This process
+      resulted in 79 screenshots.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18719340261007360
+    m_Localized: To estimate the percentage distribution of colours in each uploaded
+      image, we used the online tool 'Image Color Extract.' The resulting values
+      for each screenshot were evaluated with the premise that a higher value for
+      the dominant colour corresponded to less space available for other elements.
+      For example, if white emerges as the dominant colour, it indicates a significant
+      portion of the screen is taken by the background, necessitating other elements
+      to cluster in the remaining space. Similarly, a substantial percentage of black
+      and grey was considered to indicate clustering, as black only appears when
+      elements overlap or when formatted-text fields are densely layered. The text
+      within the HTML field did not significantly influence the black ratio and,
+      therefore, had minimal impact on the value. Grey, on the other hand, mainly
+      emerges as an ephemeral field during the loading process of a new page and
+      does not convey any discernible information. In most cases, the clustering
+      factor resulted from the combination of white, black, and occasionally grey.
+      The clustering factor value was then calculated as a sum of the percentages
+      of the relevant colours for each screenshot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18723690303709184
+    m_Localized: 'First, the two types of autonomous movement are parameterised:
+      significant movements of the HTML fields, and the smaller but fast movements
+      of the URL balls along the throbber line during the loading process. The major
+      movements are counted as an event in the seconds of the recording where it
+      occurs. Minor movements, on the other hand, are not associated with individual
+      ball movements along the throbber line, but are treated as continuous and collective
+      movements of the balls, measured in seconds. To account for the greater influence
+      of major compositional movements, they are weighted by a factor of ten, while
+      minor movements of the balls are counted as one per second.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18724595774251008
+    m_Localized: The value of the third parameter, the clustering, is a percentage
+      ratio tied to the time unit in the same manner as the minor movements. The
+      clustering factor's value is converted into its decimal equivalent and then
+      multiplied by 100.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18725207236665344
+    m_Localized: "To streamline the runtime of a time-based visualisation cycle,
+      each second of the 600-second screen recording  is condensed into two-second
+      intervals. The movements for each two-second unit are then added to the clustering
+      value, resulting in the \u2018dissonance value.\u2019 The dissonance value
+      characterises the perceivable dissonance created by %WRONG Browser .com when
+      compared to a web browser conforming to the general conventions of this technology
+      category."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18731383693238272
+    m_Localized: ' Warning
+
+      The environment that you are about to enter contains
+      elements such  as flashing lights and fast movements. If you have a history
+      of photosensitive epilepsy, seizures, or other medical conditions that can
+      be triggered by rapidly changing visual stimuli, we strongly advise against
+      entering this environment.
+
+      You can exit the animation any time by pressing
+      x on your keyboard.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -6,11 +6,17 @@ public class DanielaInteractionManager : MonoBehaviour
     [SerializeField] private DanielaTextInteraction textInteraction;
     [SerializeField] private GameObject portalJiawen1;
     [SerializeField] private GameObject portalJiawen2;
+    [SerializeField] private GameObject portalJiawen3;
+    [SerializeField] private GameObject portalJiawen4;
     [SerializeField] private GameObject portalInge1;
     [SerializeField] private GameObject portalInge2;
     [SerializeField] private GameObject portalInge3;
     [SerializeField] private GameObject bookModelForCitation;
     [SerializeField] private GameObject citationDaniela;
+    [SerializeField] private GameObject coloredPuzzleBig;
+    [SerializeField] private GameObject coloredPuzzleSmall;
+    [SerializeField] private GameObject greenScissors;
+    [SerializeField] private GameObject warningBlock;
 
     private void OnEnable()
     {
@@ -73,9 +79,36 @@ public class DanielaInteractionManager : MonoBehaviour
                     break;
                 case "DANIELA_LAYER_STAGE_3_HAND_PUZZLE_SELECTION_LOC_ID":
                     textInteraction.ActivateLayerText(textKey);
+                    portalJiawen3.SetActive(true);
+                    coloredPuzzleBig.SetActive(true);
+                    greenScissors.SetActive(true);
                     break;
                 case "DANIELA_LAYER_DEAD_END_3_IMAGE_LOC_ID":
                     textInteraction.ActivateLayerText(textKey);
+                    break;
+                case "DANIELA_LAYER_STAGE_3_GREEN_SCISSORS_LOC_ID":
+                    textInteraction.ActivateLayerText(textKey);
+                    portalJiawen4.SetActive(true);
+                    coloredPuzzleSmall.SetActive(true);
+                    break;
+                case "DANIELA_LAYER_STAGE_4_FUNNEL_MOTAVI_LOC_ID":
+                    textInteraction.ActivateLayerText(textKey);
+                    break;
+                case "DANIELA_LAYER_STAGE_4_FUNNEL_GROUP_LOC_ID":
+                    textInteraction.ActivateLayerText(textKey);
+                    break;
+                case "DANIELA_LAYER_STAGE_5_BALANCE_LOC_ID":
+                    textInteraction.ActivateLayerText(textKey);
+                    break;
+                case "DANIELA_LAYER_STAGE_5_MATH_PUZZLE_LOC_ID":
+                    textInteraction.ActivateLayerText(textKey);
+                    break;
+                case "DANIELA_LAYER_STAGE_5_ARROW_DIAGRAM_LOC_ID":
+                    textInteraction.ActivateLayerText(textKey);
+                    break;
+                case " DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID":
+                    textInteraction.ActivateLayerText(textKey);
+                    warningBlock.SetActive(false);
                     break;
                 default:
                     Debug.Log("No specific action for this key: " + textKey);

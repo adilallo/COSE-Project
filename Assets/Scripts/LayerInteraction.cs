@@ -55,6 +55,7 @@ public class LayerInteraction: MonoBehaviour
         if (currentOutlined != null && currentOutlined.outlineScript != null)
         {
             currentOutlined.outlineScript.enabled = false;
+            currentOutlined = null;
         }
     }
 }

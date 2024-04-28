@@ -243,6 +243,34 @@ MonoBehaviour:
     m_Key: DANIELA_LAYER_STAGE_3_HAND_PUZZLE_SELECTION_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 18713684137205760
+    m_Key: DANIELA_LAYER_STAGE_3_GREEN_SCISSORS_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18716717835345920
+    m_Key: DANIELA_LAYER_STAGE_4_FUNNEL_MOTAVI_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18719340261007360
+    m_Key: DANIELA_LAYER_STAGE_4_FUNNEL_GROUP_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18723690303709184
+    m_Key: DANIELA_LAYER_STAGE_5_BALANCE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18724595774251008
+    m_Key: ' DANIELA_LAYER_STAGE_5_MATH_PUZZLE_LOC_ID'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18725207236665344
+    m_Key: ' DANIELA_LAYER_STAGE_5_ARROW_DIAGRAM_LOC_ID'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18731383693238272
+    m_Key: ' DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
