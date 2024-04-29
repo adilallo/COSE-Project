@@ -42,6 +42,16 @@ public class LayerInteraction: MonoBehaviour
 
             outlineScript.enabled = true;
             currentOutlined = this;
+            Invoke(nameof(DeactivateOutline), 100f);
+        }
+    }
+
+    private void DeactivateOutline()
+    {
+        if (currentOutlined != null && currentOutlined.outlineScript != null)
+        {
+            currentOutlined.outlineScript.enabled = false;
+            currentOutlined = null;
         }
     }
 
