@@ -7,4 +7,9 @@ public class DanielaTextInteraction : TextInteraction
     {
             ActivateText(textKey);
     }
+
+    public void DeactivateAllTexts()
+    {
+        base.DeactivateAllTexts();
+    }
 }

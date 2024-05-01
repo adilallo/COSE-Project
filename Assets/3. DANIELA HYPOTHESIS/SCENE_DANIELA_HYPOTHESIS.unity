@@ -3350,6 +3350,7 @@ GameObject:
   - component: {fileID: 359092636}
   - component: {fileID: 359092635}
   - component: {fileID: 359092634}
+  - component: {fileID: 359092637}
   m_Layer: 0
   m_Name: INFO_SPHERE_5
   m_TagString: Untagged
@@ -3388,9 +3389,9 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -3444,6 +3445,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359092632}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &359092637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359092632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fce9411630af2045b0cb98a3804f82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereText: DANIELA_SPHERE_INFO_5_LOC_ID
 --- !u!20 &359268765 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6531099205944325723, guid: e75053370f0600b4abbffd5290481aad, type: 3}
@@ -17175,7 +17189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1792317117
 Transform:
   m_ObjectHideFlags: 0
@@ -30283,19 +30297,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textInteraction: {fileID: 530516984}
-  portalJiawen1: {fileID: 497996474}
-  portalJiawen2: {fileID: 200954996}
-  portalJiawen3: {fileID: 2076392884}
-  portalJiawen4: {fileID: 2128553455}
-  portalInge1: {fileID: 7739650123242606368}
-  portalInge2: {fileID: 519402719}
-  portalInge3: {fileID: 1613373781}
+  portalJiawen:
+  - {fileID: 497996474}
+  - {fileID: 200954996}
+  - {fileID: 2076392884}
+  - {fileID: 2128553455}
+  portalInge:
+  - {fileID: 7739650123242606368}
+  - {fileID: 519402719}
+  - {fileID: 1613373781}
   bookModelForCitation: {fileID: 919132148375709812}
   citationDaniela: {fileID: 406586618753762097}
   coloredPuzzleBig: {fileID: 1904573148898718683}
   coloredPuzzleSmall: {fileID: 967574035456442755}
   greenScissors: {fileID: 919132148460274406}
   warningBlock: {fileID: 1743917094}
+  textBoards: {fileID: 1792317116}
 --- !u!1 &919132149464420062
 GameObject:
   m_ObjectHideFlags: 0

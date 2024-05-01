@@ -36,7 +36,7 @@ namespace COSE.Text
             Invoke(nameof(DeactivateAllTexts), 100f);
         }
 
-        protected void DeactivateAllTexts()
+        protected virtual void DeactivateAllTexts()
         {
             _textUI.SetActive(false);
             _text.text = default;
