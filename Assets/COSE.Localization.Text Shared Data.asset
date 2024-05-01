@@ -187,6 +187,90 @@ MonoBehaviour:
     m_Key: INGE_LAYER_HYPOTHESIS_9_L2_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 16505225660588032
+    m_Key: DANIELA_SPHERE_READ_ME_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859494871982080
+    m_Key: DANIELA_SPHERE_INFO_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859693484859392
+    m_Key: DANIELA_SPHERE_INFO_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859800024375296
+    m_Key: DANIELA_SPHERE_INFO_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859907482443776
+    m_Key: DANIELA_SPHERE_INFO_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859981620961280
+    m_Key: DANIELA_SPHERE_INFO_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16867038289977344
+    m_Key: DANIELA_LAYER_STAGE_1_CLOUD_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16907661189570560
+    m_Key: DANIELA_LAYER_DEAD_END_1_IMAGE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17907882602258432
+    m_Key: DANIELA_LAYER_STAGE_2_MIDDLE_BAR_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17909275484479488
+    m_Key: DANIELA_LAYER_STAGE_2_WRONG_INTERFACE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17911893766168576
+    m_Key: DANIELA_LAYER_DEAD_END_2_IMAGE_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17912202156564480
+    m_Key: DANIELA_LAYER_DEAD_END_2_IMAGE_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17917248818634752
+    m_Key: DANIELA_LAYER_DEAD_END_3_IMAGE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17954318094163968
+    m_Key: DANIELA_LAYER_STAGE_3_HAND_PUZZLE_SELECTION_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18713684137205760
+    m_Key: DANIELA_LAYER_STAGE_3_GREEN_SCISSORS_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18716717835345920
+    m_Key: DANIELA_LAYER_STAGE_4_FUNNEL_MOTAVI_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18719340261007360
+    m_Key: DANIELA_LAYER_STAGE_4_FUNNEL_GROUP_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18723690303709184
+    m_Key: DANIELA_LAYER_STAGE_5_BALANCE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18724595774251008
+    m_Key: ' DANIELA_LAYER_STAGE_5_MATH_PUZZLE_LOC_ID'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18725207236665344
+    m_Key: ' DANIELA_LAYER_STAGE_5_ARROW_DIAGRAM_LOC_ID'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18731383693238272
+    m_Key: ' DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
