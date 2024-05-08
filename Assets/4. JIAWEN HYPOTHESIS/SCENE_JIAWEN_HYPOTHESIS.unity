@@ -45981,6 +45981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9193692122759902222}
+  - component: {fileID: 9193692122759902223}
   m_Layer: 0
   m_Name: slot_machine_separated_layers_maya
   m_TagString: Untagged
@@ -47429,6 +47430,27 @@ Transform:
   - {fileID: 6573011177470720985}
   m_Father: {fileID: 1518735480}
   m_LocalEulerAnglesHint: {x: -0.138, y: 79.207, z: -182.79}
+--- !u!95 &9193692122759902223
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8420991241224285876}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce468dcd8f61b984491c7ed0cbafd52a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9218500991481112647
 GameObject:
   m_ObjectHideFlags: 0
