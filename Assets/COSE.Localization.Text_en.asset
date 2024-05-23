@@ -404,6 +404,254 @@ MonoBehaviour:
       missing.
     m_Metadata:
       m_Items: []
+  - m_Id: 16505225660588032
+    m_Localized: "From quality to quantity. Cascades of abstractions towards a \u2018disorientation
+      value\u2019 in .com \r\nThis room explores the %Wrong Browser .com in terms
+      of its dynamic and observable behaviour, independent of user interaction. The
+      objective was to establish parameters for describing the usage of this browser
+      in comparison to web browsers that follow the general convention in this category
+      of technology. The deviations observed in %Wrong Browser .com, in relation
+      to these conventions, are consolidated into a single metric termed the 'disorientation
+      value.'\r\nCentral to the %Wrong Browser series, as well as much of JODI's
+      body of work, is its deliberate departure from established norms and conventions
+      within computer environments and software. These deviations disrupt the user's
+      experience in a way that elicits emotions of frustration and overwhelm \U0001F56E.
+      By identifying and extrapolating behaviours in the work that deviate from the
+      conventional web browser experience, we can isolate a specific aspect of the
+      work - its disorientation value - and dynamically represent it through an animated
+      visualisation of the data.\r\nThe room can be approached both as an experiential
+      encounter in its own right, and as a specialised filter that reveals a qualitative
+      aspect of the artwork, grounded in quantifiable data."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859494871982080
+    m_Localized: The first stage operates on the premise that the %Wrong Browser
+      is a functional web browser, making it suitable for comparison with an integrated
+      conventional browser model. The consistency in time, in standardised functionality
+      and layout of conventional browsers make them ideal benchmarks for assessing
+      the extent and nature of interventions introduced by artistic web browsers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859693484859392
+    m_Localized: "\rThe second stage is based on the hypothesis that the primary
+      deviations from conventional browsers lie in the properties of elements and
+      program behaviours. To quantify these deviations, a runtime sample was segmented
+      into the relevant \u2018puzzle pieces\u2019 or three categories to be observed."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859800024375296
+    m_Localized: The third stage aims to generate quantitative data suitable for
+      computer-based visualisation of the hypotheses developed in the initial two
+      stages.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859907482443776
+    m_Localized: The fourth stage aims to refine the data created in the third stage,
+      in order to establish relationships between the different values and assign
+      weights to them based on their impact on the deviation from conventional browsers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16867038289977344
+    m_Localized: 'Elements found in JODI''s browser are not particularly uncommon
+      compared to those of a conventional web browser. This becomes evident when
+      these elements are imagined in a more standard layout. However, the arrangement
+      of these elements differs significantly, as do their functional affordances.
+
+      In
+      contrast to the conventional browser, which is primarily centred around a single
+      field rendering the content of a specific webpage, the %Wrong Browser .com
+      features five such fields, each distinguished by its own colour. These fields
+      function similarly to tabs within a browser window, although they behave more
+      like individual windows. They can be moved by the user, resized, stacked and
+      arranged feely. Additionally, each content field has its individual address
+      and scroll bar.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16907661189570560
+    m_Localized: 'A path that was abandoned in this argumentation was identification
+      and categorization of the perceivable elements of the program (visual elements
+      of the GUI, auditive elements, the dynamics of the elements behaviour). The
+      result will only reveal the rules underlying the dynamics, not the actual events,
+      however.  Therefore, to gain insight, the whole display would have to be considered,
+      including its behaviour in time.
+
+      A comprehensive list of elements and
+      their description can be found in the RED ROOM.                      The rules
+      underlying the dynamics are discussed in the CYAN ROOM. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17907882602258432
+    m_Localized: "In the centre of the application window, there is a triple line
+      displaying small round elements (HTML-balls) and the URL text in colours matching
+      the five content fields. During the loading process of web content for one
+      of these fields, the coloured ball and accompanying text representing the field
+      or tab move rapidly along this line, reminiscent of the loading icon commonly
+      seen in many conventional web browsers, especially in the early 2000s. However,
+      the position of the line (which is not adjustable by the user), situated in
+      the middle of the display, disrupts this analogy by centering both the loading
+      process and the erratic movement. \r\nIn the RED ROOM the loading icon is addressed
+      as well."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17909275484479488
+    m_Localized: In JODI's .com web browser, webpage content is primarily presented
+      in HTML format but split into two display fields. It allows for the concurrent
+      display of up to five pages, resulting in six fields showing varying degrees
+      of readable content, all of which is stripped of much of its original structure
+      and design. This division is akin to a feature found in conventional browsers,
+      accessible to users through the menu in the form of the developer tools view
+      of a webpage. There are no visible home, back, stop, or refresh buttons to
+      be found in the interface of the .com browser, which are typically prominent
+      part of the menu bars in conventional web browsers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17911893766168576
+    m_Localized: "A prototypical model was developed for the software visualisation
+      tool SEE developed at the university of Bremen by the team of Prof. R. Koschke.
+      It consists of a colour coded representation of each GUI element as nodes in
+      a GXL graph. On a time axis, these elements stand in a dynamic connection to
+      the categories described in the image to your right. The heights of the blocks
+      represent a translation of the specific behaviour into a numeric value; the
+      width an accumulation of the previous heights\u2019 values, to see it evolve
+      over time. However, soon it became apparent that the relationship between the
+      behaviour of the eight categories was unclear and too complex."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17912202156564480
+    m_Localized: 'Another path that was abandoned in this argumentation was the inclusion
+      of too many categories to describe the behaviour of the element system in the
+      display. The preliminary categories fullness, emptiness, layering, movement,
+      stillness, connection, organisation and time were established posed numerous
+      obstacles. Tracking the 66 elements individually regarding the chosen eight
+      categories, exploding the task into a big data problem that is practically
+      impossible to handle for a human observer.
+
+      All 66 elements are described
+      in the RED ROOM.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17917248818634752
+    m_Localized: 'This model is a first thought experiment about a three dimentional
+      object created from the values in the data set. Each slice would represent
+      the disorientation parameter value for the duration of two seconds, creating
+      a timeline on the x-axis, the disorientation value in the y-axis and leaving
+      the z-axis of a 3-dimensional environment without any meaningful value.
+
+      The
+      disorientation value would be experienceable through the decreasing of space
+      available, which was included into the final visualisation.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17954318094163968
+    m_Localized: 'We developed parameters to capture deviations from conventional
+      browser behaviour, distinguishing between major movements [image of a dark
+      blue puzzle piece] (changes in the composition of HTML fields) and minor movements
+      [image of a light blue puzzle piece] (the rapid movement of URL balls along
+      the throbber line during the loading process). Although autonomous movement
+      is not uncommon in conventional browsers (especially on early web pages where
+      GIFs and other animated elements were prevalent), the rearrangement of tabs
+      or browser windows is an intrusion into the agency that usually lies with the
+      user of an application. A third parameter, given the name clustering [image
+      of a green puzzle piece], is based on the layering of elements within the display.
+      To determine this parameter, we examined the colour distribution of the display.
+      The background colour of the display is white, and even without any user interaction,
+      the sizes of the HTML fields are constant, although they can be cropped by
+      the viewport. Considering that the HTML code is most legible within the display
+      and that the formatted text fields stack on top of each other without user
+      interaction, it was possible to draw conclusions regarding how colour distribution
+      may influence the display''s closeness to the envisioned layout, that is clearly
+      structured and organised and therefore easier accessibility.
+
+      The autonomous
+      behaviour of the movements is analysed in the CYAN ROOM.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18713684137205760
+    m_Localized: 'To avoid a big data problem, we reduced the sample size to a 10-minute
+      screen recording of the application''s actions and focused exclusively on the
+      autonomous behaviour of the program in the absence of user interaction. The
+      user-independent behaviour is directly traceable in the source code. However,
+      multidimensional factors within the hardware and software environment, coupled
+      with the randomness of HTML field positioning, URL generation, and the unpredictability
+      of content associated with these URLs, prevents knowledge about the factual
+      layout the user will find displayed at any given moment.
+
+      The generation
+      of the URLs and randomness is addressed more throughly in the CYAN ROOM.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18716717835345920
+    m_Localized: The analysis of the screen recording uses seconds as its time unit.
+      When the composition of the elements changed, a screenshot was taken, including
+      the timestamp of the video editing tool, Movavi Video Editor. This process
+      resulted in 79 screenshots.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18719340261007360
+    m_Localized: To estimate the percentage distribution of colours in each uploaded
+      image, we used the online tool 'Image Color Extract.' The resulting values
+      for each screenshot were evaluated with the premise that a higher value for
+      the dominant colour corresponded to less space available for other elements.
+      For example, if white emerges as the dominant colour, it indicates a significant
+      portion of the screen is taken by the background, necessitating other elements
+      to cluster in the remaining space. Similarly, a substantial percentage of black
+      and grey was considered to indicate clustering, as black only appears when
+      elements overlap or when formatted-text fields are densely layered. The text
+      within the HTML field did not significantly influence the black ratio and,
+      therefore, had minimal impact on the value. Grey, on the other hand, mainly
+      emerges as an ephemeral field during the loading process of a new page and
+      does not convey any discernible information. In most cases, the clustering
+      factor resulted from the combination of white, black, and occasionally grey.
+      The clustering factor value was then calculated as a sum of the percentages
+      of the relevant colours for each screenshot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18723690303709184
+    m_Localized: 'First, the two types of autonomous movement are parameterised:
+      significant movements of the HTML fields, and the smaller but fast movements
+      of the URL balls along the throbber line during the loading process. The major
+      movements are counted as an event in the seconds of the recording where it
+      occurs. Minor movements, on the other hand, are not associated with individual
+      ball movements along the throbber line, but are treated as continuous and collective
+      movements of the balls, measured in seconds. To account for the greater influence
+      of major compositional movements, they are weighted by a factor of ten, while
+      minor movements of the balls are counted as one per second.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18724595774251008
+    m_Localized: The value of the third parameter, the clustering, is a percentage
+      ratio tied to the time unit in the same manner as the minor movements. The
+      clustering factor's value is converted into its decimal equivalent and then
+      multiplied by 100.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18725207236665344
+    m_Localized: "To streamline the runtime of a time-based visualisation cycle,
+      each second of the 600-second screen recording  is condensed into two-second
+      intervals. The movements for each two-second unit are then added to the clustering
+      value, resulting in the \u2018dissonance value.\u2019 The dissonance value
+      characterises the perceivable dissonance created by %WRONG Browser .com when
+      compared to a web browser conforming to the general conventions of this technology
+      category."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18731383693238272
+    m_Localized: ' Warning
+
+      The environment that you are about to enter contains
+      elements such  as flashing lights and fast movements. If you have a history
+      of photosensitive epilepsy, seizures, or other medical conditions that can
+      be triggered by rapidly changing visual stimuli, we strongly advise against
+      entering this environment.
+
+      You can exit the animation any time by pressing
+      x on your keyboard.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16859981620961280
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
