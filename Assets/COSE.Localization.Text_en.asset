@@ -652,6 +652,124 @@ MonoBehaviour:
     m_Localized: ' '
     m_Metadata:
       m_Items: []
+  - m_Id: 29570761789267968
+    m_Localized: 'Welcome to the room of ir/regularity! This room analyses event-related
+      aspects of .com that play out in time (instances of change) and space (positionings).
+      We will analyze unpredictability from coded behaviors, which causes ambiguity
+      in user perception and turns regularity to irregularity. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29578243530022912
+    m_Localized: Randomness is often associated with uncontrollable noise and unpredictability.
+      In computational contexts, a random-function gets a pseudo-random value within
+      a certain range. Its usage to create sophisticated patterns in computer-generated
+      art can be traced back to 1962. Randomness is often associated with uncontrollable
+      noise and unpredictability. In computational environments, a random-function
+      can be assigned a pseudo-random value within a certain range. The use of pseudo-random
+      values in creating sophisticated patterns in computer-generated art can be
+      traced back to 1962. Since then, applied programmed pseudo-randomness has been
+      found in a variety of domains in the arts. Ever since applied programmed pseudo-randomness
+      can be found in a variety of domains in the arts.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29587277276504064
+    m_Localized: "In JODI\u2019s .com browser, the visual complexity comes from both,
+      coded multi-layer patterns and random-functions entangling regularity with
+      irregularity. This happens by design or in our perception. When regular patterns
+      exceed the user\u2019s ability to comprehend them visually, the border between
+      regularity and irregularity blurs and the patterns are rendered as confusion
+      and ambiguity. Join us in our analysis step by step!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29587516628656128
+    m_Localized: 'This unpredictability is classified into two types: primary and
+      secondary. The primary type occurs when a programmed determinacy is misinterpreted
+      and perceived as indeterminacy, irregularity, or confusion. The secondary type
+      lies in the fact that the browser sources internet data through cables and
+      connections. This complex physical and semantic system adds a true element
+      of chance. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29588183787233280
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29598665122242560
+    m_Localized: 'There is a strict regularity in the temporal pattern of when a
+      new URL-call is launched in .com browser. It is defined in the source code:
+      The URL-call activation function is initiated every 80 (for the red tab), 90
+      (green), 100 (blue), 110 (yellow), and 120 (cyan) seconds. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29600353975525376
+    m_Localized: You can also verify this regularity with a targeted empirical and
+      time-measurement-assisted observation. Let us check that! Start the process
+      (here sped up 5x) by clicking on the color circles and compare how that plays
+      out in the browser itself!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29684493789945856
+    m_Localized: 'One eye on the runtime, the other on measuring the time, we can
+      confirm the moment of initiating a URL-call repeats regularly for each browser
+      tab. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29924994416750592
+    m_Localized: 'However, as JODI decided to allow not just one website tab to be
+      displayed but five simultaneously, it becomes challenging to keep track of
+      the different renewal cycles. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29925287355330560
+    m_Localized: 'Special conclusion:
+
+      So, what is confusing, given the programmed
+      regularity? The interlacing of 5 regularities!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29925712620007424
+    m_Localized: 'Putting all five URL-call opportunities together, we can be sure
+      a change happens every 10 to 80 seconds. Mathematics helps determining that
+      the big cycle of all 5 tabs repeats after 660 minutes. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29926930515865600
+    m_Localized: 'Finding this regularity empirically, needs a concentrated and analytic
+      approach. On average, users will probably collect impressions more intuitively.
+      Thus, here we have the first instance of the primary type of unpredictability. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29927287832817664
+    m_Localized: "The user\u2019s instinct to interact, paradoxically, minimizes
+      the chances to grasp the programmed determinate order. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29927589696876544
+    m_Localized: 'Moreover, please note: The temporal pattern described is undisturbed
+      only if the user remains inactive. If you launch a URL-call by clicking, this
+      will add a dynamic and thus obfuscate the strict system-side pattern. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29937193902256128
+    m_Localized: 'The temporal events of URL-calls trigger a spatial re-/arrangement.
+      Thus, temporal and spatial dimensions are coupled in .com. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29937430913986560
+    m_Localized: "Let us learn about how randomness is implemented in JODI\u2019s
+      .com browser. The browser is written in the scripting language Lingo. It integrates
+      the \u201CLinear Congruential Generator\u201D which is one of the earliest
+      and best-known pseudorandom number generator algorithms. In .com, the random-function
+      generates unpredictability in the spatial arrangement and in the creation of
+      the URLs."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29939078801502208
+    m_Localized: In this section you encounter magenta filters. They are not part
+      of the browser, but help visualize the restricting framework within which the
+      programmed randomness rules.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

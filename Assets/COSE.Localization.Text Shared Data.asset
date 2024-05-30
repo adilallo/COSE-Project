@@ -271,6 +271,74 @@ MonoBehaviour:
     m_Key: ' DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID'
     m_Metadata:
       m_Items: []
+  - m_Id: 29570761789267968
+    m_Key: JIAWEN_SPHERE_READ_ME_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29578243530022912
+    m_Key: JIAWEN_LAYER_GAUSSIAN_BOARD_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29587277276504064
+    m_Key: JIAWEN_SPHERE_MOTIVATION_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29587516628656128
+    m_Key: JIAWEN_SPHERE_HYPOTHESIS_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29588183787233280
+    m_Key: JIAWEN_LAYER_ARROW_TURN_OFF_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29598665122242560
+    m_Key: JIAWEN_SPHERE_HYPOTHESIS_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29600353975525376
+    m_Key: JIAWEN_SPHERE_INTERACTION_INFO_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29684493789945856
+    m_Key: JIAWEN_COIN_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29924994416750592
+    m_Key: JIAWEN_SPHERE_HYPOTHESIS_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29925287355330560
+    m_Key: JIAWEN_BIG_COIN_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29925712620007424
+    m_Key: JIAWEN_COIN_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29926930515865600
+    m_Key: JIAWEN_COIN_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29927287832817664
+    m_Key: JIAWEN_COIN_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29927589696876544
+    m_Key: JIAWEN_SPHERE_HYPOTHESIS_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29937193902256128
+    m_Key: JIAWEN_SPHERE_HYPOTHESIS_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29937430913986560
+    m_Key: JIAWEN_SPHERE_HYPOTHESIS_6_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29939078801502208
+    m_Key: JIAWEN_LAYER_SMALL_FILTERS_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
