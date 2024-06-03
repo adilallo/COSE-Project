@@ -10,13 +10,19 @@ public class JiawenInteractionManager : MonoBehaviour
     [SerializeField] private GameObject signMap;
     [SerializeField] private GameObject[] arrow;
     [SerializeField] private GameObject[] portalGreenNonactive;
-    [SerializeField] private GameObject[] portalRedactive;
+    [SerializeField] private GameObject[] portalRedActive;
     [SerializeField] private GameObject portalYellowNonactive;
     [SerializeField] private GameObject portalYellowActive;
+    [SerializeField] private GameObject portalGreenActive;
     [SerializeField] private GameObject hyp1Video;
     [SerializeField] private GameObject hyp1Circles;
     [SerializeField] private GameObject timeMatrix;
     [SerializeField] private GameObject userClock;
+    [SerializeField] private GameObject[] filters;
+    [SerializeField] private GameObject[] screens;
+    [SerializeField] private GameObject[] undertitles;
+    [SerializeField] private GameObject[] coins;
+    [SerializeField] private GameObject slotMachine;
 
     private void OnEnable()
     {
@@ -53,7 +59,7 @@ public class JiawenInteractionManager : MonoBehaviour
                 portalYellowNonactive.SetActive(true);
                 break;
             case "JIAWEN_SPHERE_HYPOTHESIS_4_LOC_ID":
-                portalRedactive[0]?.SetActive(true);
+                portalRedActive[0]?.SetActive(true);
                 break;
             case "JIAWEN_SPHERE_HYPOTHESIS_6_LOC_ID":
                 portalYellowActive.SetActive(true);
@@ -95,6 +101,43 @@ public class JiawenInteractionManager : MonoBehaviour
                 textInteraction.ActivateLayerText(textKey);
                 portalGreenNonactive[2]?.SetActive(true);
                 break;
+            case "JIAWEN_LAYER_BIG_ROAD_A":
+                filters[0]?.SetActive(true);
+                break;
+            case "JIAWEN_LAYER_BIG_ROAD_B":
+                filters[1]?.SetActive(true);
+                break;
+            case "JIAWEN_LAYER_BIG_ROAD_C":
+                filters[2]?.SetActive(true);
+                break;
+            case "JIAWEN_LAYER_FILTER_LEFT_LOC_ID":
+                screens[3]?.SetActive(true);
+                undertitles[2]?.SetActive(true);
+                slotMachine.SetActive(true);
+                coins[2]?.SetActive(true);
+                break;
+            case "JIAWEN_LAYER_FILTER_MIDDLE_1_LOC_ID":
+                screens[0]?.SetActive(true);
+                undertitles[0]?.SetActive(true);
+                break;
+            case "JIAWEN_LAYER_FILTER_MIDDLE_2_LOC_ID":
+                coins[0]?.SetActive(true);
+                screens[1]?.SetActive(true);
+                break;
+            case "JIAWEN_LAYER_FILTER_MIDDLE_3_LOC_ID":
+                screens[2]?.SetActive(true);
+                undertitles[1]?.SetActive(true);
+                coins[1]?.SetActive(true);
+                portalRedActive[2]?.SetActive(true);
+                break;
+            case "JIAWEN_LAYER_FILTER_RIGHT_1_LOC_ID":
+                screens[4]?.SetActive(true);
+                break;
+            case "JIAWEN_LAYER_FILTER_RIGHT_2_LOC_ID":
+                screens[5]?.SetActive(true);
+                screens[6]?.SetActive(true);
+                coins[3]?.SetActive(true);
+                break;
         }
     }
 
@@ -104,6 +147,15 @@ public class JiawenInteractionManager : MonoBehaviour
         {
             case "JIAWEN_COIN_2_LOC_ID":
                 timeMatrix.SetActive(true);
+                break;
+            case "JIAWEN_COIN_6_LOC_ID":
+                portalRedActive[1]?.SetActive(true);
+                break;
+            case "JIAWEN_COIN_6_B1_LOC_ID":
+                portalRedActive[1]?.SetActive(true);
+                break;
+            case "JIAWEN_COIN_8_LOC_ID":
+                portalGreenActive.SetActive(true);
                 break;
         }
     }

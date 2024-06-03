@@ -339,6 +339,54 @@ MonoBehaviour:
     m_Key: JIAWEN_LAYER_SMALL_FILTERS_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 30046259257389056
+    m_Key: JIAWEN_COIN_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30049187519115264
+    m_Key: JIAWEN_LAYER_FILTER_MIDDLE_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30051498521899008
+    m_Key: JIAWEN_LAYER_FILTER_MIDDLE_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30052099301421056
+    m_Key: JIAWEN_COIN_6_B1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31465896264183808
+    m_Key: JIAWEN_LAYER_FILTER_MIDDLE_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31468200610607104
+    m_Key: JIAWEN_COIN_6_B2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31470809748713472
+    m_Key: JIAWEN_LAYER_FILTER_LEFT_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31482073019428864
+    m_Key: JIAWEN_LAYER_FILTER_RIGHT_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31482639120445440
+    m_Key: JIAWEN_LAYER_FILTER_RIGHT_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31483720806281216
+    m_Key: JIAWEN_COIN_6_C1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31484560011014144
+    m_Key: JIAWEN_COIN_7_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31484598984486912
+    m_Key: JIAWEN_COIN_8_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
