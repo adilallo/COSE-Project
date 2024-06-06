@@ -23,6 +23,11 @@ public class JiawenInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] undertitles;
     [SerializeField] private GameObject[] coins;
     [SerializeField] private GameObject slotMachine;
+    [SerializeField] private GameObject smallText;
+
+    private bool roadA = false;
+    private bool roadB = false;
+    private bool roadC = false;
 
     private void OnEnable()
     {
@@ -103,12 +108,18 @@ public class JiawenInteractionManager : MonoBehaviour
                 break;
             case "JIAWEN_LAYER_BIG_ROAD_A":
                 filters[0]?.SetActive(true);
+                roadA = true;
+                RoadsClicked();
                 break;
             case "JIAWEN_LAYER_BIG_ROAD_B":
                 filters[1]?.SetActive(true);
+                roadB = true;
+                RoadsClicked();
                 break;
             case "JIAWEN_LAYER_BIG_ROAD_C":
                 filters[2]?.SetActive(true);
+                roadC = true;
+                RoadsClicked();
                 break;
             case "JIAWEN_LAYER_FILTER_LEFT_LOC_ID":
                 screens[3]?.SetActive(true);
@@ -135,6 +146,8 @@ public class JiawenInteractionManager : MonoBehaviour
                 break;
             case "JIAWEN_LAYER_FILTER_RIGHT_2_LOC_ID":
                 screens[5]?.SetActive(true);
+                break;
+            case "JIAWEN_LAYER_FILTER_RIGHT_3_LOC_ID":
                 screens[6]?.SetActive(true);
                 coins[3]?.SetActive(true);
                 break;
@@ -157,6 +170,16 @@ public class JiawenInteractionManager : MonoBehaviour
             case "JIAWEN_COIN_8_LOC_ID":
                 portalGreenActive.SetActive(true);
                 break;
+            case "JIAWEN_BIG_COIN_2_LOC_ID":
+                smallText.SetActive(true);
+                break;
+        }
+    }
+
+    private void RoadsClicked()
+    {         if (roadA && roadB && roadC)
+        {
+            coins[4]?.SetActive(true);
         }
     }
 }

@@ -872,6 +872,78 @@ MonoBehaviour:
       types of unpredictability in the .com browser."
     m_Metadata:
       m_Items: []
+  - m_Id: 32853732059242496
+    m_Localized: "The position of the formatted-text (\u201Ctt1\u201D) is decided
+      by the middle-bar-URL-ball\u2019s position. While the formatted-text always
+      starts at the top of the monitor, its left border is 576 pixels to the left
+      of the corresponding coloured middle-bar-URL-ball. Interestingly, due to the
+      middle-bar-URL-balls\u2019 restricted settling area, the formatted-text is
+      also distributed on the right side of the screen. Take a full HD screen as
+      an example again, the range of the left edge of the formatted text will be
+      between 944 pixels and 1344 pixels."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32871207765270528
+    m_Localized: 'Special Conclusion:
+
+      So, what is taming the programmed randomness?
+
+      c)
+      couplings of elements
+
+      b) imposed grid structure
+
+      a) small number
+      of characters'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32873862256386048
+    m_Localized: "Do you remember what a web browser, and thus .com, too, does? The
+      .com browser retrieves HTML files from the web server and renders it on users\u2019
+      screen . If the website uses an external framework, the content will not be
+      rendered properly with .com as the library is not loaded. It is an ir/regularity
+      shaped by the technical trends and developments within the internet ecosystem
+      and made perceivable by JODI\u2019s .com."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32874010600529920
+    m_Localized: The secondary type of unpredictability lies in the fact that the
+      browser retrieves internet data with the URL-call (getNetText() function),
+      which is conducted via domain names, servers, cables, ports and hardware and
+      software environments. In this sense, the ir/regularity here is on a different
+      temporal and spatial scale, from where a complex physical and semantic system
+      comes into play adding actual chance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32874235650105344
+    m_Localized: "The secondary type of unpredictability lies outside of the .com
+      browser\u2019s coded events and users\u2019 perception."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32874391225229312
+    m_Localized: 'The impression that .com provides a clear insight of the inner
+      workings of the internet turns erroneous in other aspects, however. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32876640823402496
+    m_Localized: "When a call is made to a URL, it is documented in the history elements
+      (squares and URLs) underneath the tab-field if it successfully retrieved the
+      website data. If the website is empty and the retrieved content is nothing
+      \u2013 the web contents from the previous URL remains in the HTML-text-field,
+      leaving our observation glitched. \r\nOut of synch: We end up with an inconsistency:
+      New address \u2013 old content. For the ones who pay very close attention,
+      paradoxically, that adds confusion again!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32882177803804672
+    m_Localized: The double occurrence of chance in the secondary type of unpredictability,
+      conjoins with the programmed determinacy and perceived indeterminacy. This
+      conjunction produces a dynamic coexistence of regularity and irregularity.
+      This is apparent in the coded parameters and random-functions but mainly it
+      is created through a dialogue with user observations, interventions, and perceptions
+      and the relationships in a complex physical and semantic web condition.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
