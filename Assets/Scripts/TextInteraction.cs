@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using COSE.Sphere;
+using COSE.Coin;
 using UnityEngine.Localization.Settings;
 
 namespace COSE.Text
@@ -13,11 +14,13 @@ namespace COSE.Text
         protected virtual void OnEnable()
         {
             SphereTrigger.OnSphereTriggered += ActivateText;
+            CoinTrigger.OnCoinTriggered += ActivateText;
         }
 
         protected virtual void OnDisable()
         {
             SphereTrigger.OnSphereTriggered -= ActivateText;
+            CoinTrigger.OnCoinTriggered -= ActivateText;
         }
 
         protected void Start()
