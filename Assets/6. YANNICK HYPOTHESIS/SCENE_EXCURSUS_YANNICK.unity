@@ -763,7 +763,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de70eeb66a4479541b254090e90165ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadLevel: SCENE_YANNICK_HYPOTHESIS
+  loadLevel: SCENE_YANNICK_HYPOTHESIS
+  spawnPosition: {x: 0, y: 0, z: 0}
+  useSpawnPosition: 0
 --- !u!1 &254452320
 GameObject:
   m_ObjectHideFlags: 0
