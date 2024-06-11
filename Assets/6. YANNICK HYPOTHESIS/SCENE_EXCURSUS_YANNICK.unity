@@ -3492,7 +3492,7 @@ GameObject:
   - component: {fileID: 1465419690}
   - component: {fileID: 1465419689}
   m_Layer: 0
-  m_Name: book_model_for_citation_Y????
+  m_Name: book_model_for_citation_Y2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6910,9 +6910,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1526328826}
-  - {fileID: 1465419691}
   - {fileID: 744075755013519674}
   - {fileID: 4460243943132212493}
+  - {fileID: 1465419691}
   - {fileID: 406221900}
   - {fileID: 606103303}
   - {fileID: 1406336260}
