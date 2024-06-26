@@ -944,6 +944,177 @@ MonoBehaviour:
       and the relationships in a complex physical and semantic web condition.
     m_Metadata:
       m_Items: []
+  - m_Id: 39900343851802624
+    m_Localized: "Net.art.works come to life when \u2018executed\u2019. Combining
+      static and dynamic code analysis \r\nWelcome to the code forensics! In this
+      room of dissection, we are going to use several forensic tools to find out
+      more information about .com than what can be seen on our monitor while running
+      the browser. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39900921864642560
+    m_Localized: "Director\u2019s Slang. The programming environment, its language
+      and their key command\r\nJODI wrote their browsers in the multimedia authoring
+      software Macromedia Director with the programming language Lingo. Lingo is
+      an object-oriented scripting language native to this programming environment. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39901229202268160
+    m_Localized: "\"Anything specific about it? \nYes. The programming environment
+      Director retains many features a filmic or theatric logic would imply. Labels
+      like the \u2018Main Movie Scripts\u2019 evoke an orchestration of different
+      bits and pieces. The latter are stringed as if they were on a timeline of a
+      video editing tool, except that the linearity can be broken up by putting commands
+      with recursions on that \u2018score\u2019.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39901383095476224
+    m_Localized: "\"What was it used for? \nFrom the early 1990s, Macromedia Director
+      was mainly used to create CD-ROMs and Kiosks. It allowed simultaneous actions
+      like scrolling and typing.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39901557935038464
+    m_Localized: "\"But then \u2026 \nAt the beginning of the 2000s, for many programming
+      artists, this piece of software was the gateway or a bridge from local network
+      design on a data disk to a global multi-authored network: the Internet. The
+      magic command \u201CgetNetText\u201D was first implemented in 1999. This feature
+      was also exploited by JODI for their %WRONG Browser series.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39941072351387648
+    m_Localized: "In this contribution, we abstain from a thorough analysis of the
+      source code of .com as Martina Richter provided exemplary and extensive analyses
+      of this for JODI\u2019s .co.kr browser elsewhere. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39941432071675904
+    m_Localized: Instead, we focus our attention on the executable of the programmed
+      artwork and treat it with a broad spectrum of forensic methods. Thus we present
+      information about the adopted analytic tools as well as what they allow us
+      to reveal of the artwork.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39944282004774912
+    m_Localized: 'The %WRONG Browsers is a series! There are 11 different ones, each
+      one for Macintosh and Windows machines, and they evolved over time. We see
+      that with the Wayback Machine from the Internet Archive and the download website:
+      http://wrongbrowser.jodi.org/'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39946154052673536
+    m_Localized: Let us look into the exe file! We picked the current version of
+      .com.exe from here! http://wrongbrowser.jodi.org/wrongbrowsercom/win/com.zip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39947457097097216
+    m_Localized: "\"What can we learn from the metadata revealed by a right-click
+      on the file?\na)\_\_\_ It is 8,5 MB big\nb)\_\_\_ It was created with Adobe
+      Director 11.5\nc)\_\_\_\_ It was created on August 13, 2021\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39949391707234304
+    m_Localized: As the work is dated 2001-2005, the relatively new version reveals
+      that JODI have reworked the %WRONG Browser recently. But was this the first
+      revamp?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39950747130126336
+    m_Localized: "\"What to do with that? \nWe can do comparisons! We can compare
+      them in a synchronous way across the different browsers and in a transversal
+      way along the historical dimension.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39952315766267904
+    m_Localized: "\"And what are these comparisons good for? \nIn the literature,
+      the browser series is usually treated as a monolithic block, dated from 2001\u20132005.
+      However, the browsers are different! And wouldn\u2019t it be interesting to
+      find out how each one of them developed over time?\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39954490370285568
+    m_Localized: By extracting the time stamp of when the individual browsers were
+      made, we see that most of them have more than two versions. Have a look at
+      our table! This is what we could extract from the Wayback Machine! The browser
+      in question, com.exe, counts amongst the earliest versions that were put online.
+      In fact, it is one of the two first %WRONG Browsers!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39953458491809792
+    m_Localized: 'By using ExifTool, we found out the size of the exe file changed
+      from c. 2.5 MB to c. 4 MB to later 8 MB. We could match that with the ever-new
+      releases JODI used to bring the files up-to-date. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39959607270170624
+    m_Localized: 'Some browsers with national domain names were developed specifically
+      due to an occasion to participate in an exhibition. Have a look where the %WRONG
+      Browsers were on show in the past! What can be derived from this inquiry into
+      the historical dimension of the program versions? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39960269957619712
+    m_Localized: 'It is plausible to set 2001 as the date when JODI came up with
+      the idea of a possibly open-ended %WRONG Browser series. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39961421575086080
+    m_Localized: 'Depending on the status you decide to attribute to program updates,
+      there is some justification for not changing the date of the artwork with every
+      software update. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39961553569832960
+    m_Localized: "However, we were unable to find evidence that would support dating
+      all browsers of this series to 2001\u20132005. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39961999038472192
+    m_Localized: As can be seen, some browsers seem to have come into existence not
+      earlier than 2007 or 2012.  What to do with that? Big question mark!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39962252240216064
+    m_Localized: '"Versions and variety: Taking the series and its evolutionary dimension
+      seriously
+
+      Within the timeline of their creation and updates, a pattern
+      of when JODI returned to the %WRONG Browser series to broaden their repertoire
+      becomes discernible. Suddenly, we have a basis for drawing comparisons over
+      time and across applications. Thus, we get a certain feel for the evolution
+      of the browsers.
+
+      Whenever the exe file is available, there are two principal
+      analytic approaches that we can pursue: In a first step, this contribution
+      uses tools that work within the realm of a static approach. This means most
+      of the time, we look at the exe file characteristics, while at times we poke
+      deeper into the coded substance/fabric. In a second step, a dynamic approach
+      is pursued. In this case, we look at the processes during runtime. "'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39962602271662080
+    m_Localized: 'In the following, we look at the executable using different software
+      tools. Thus, we highlight different aspects of what it contains. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39964212720820224
+    m_Localized: When opening the exe of .com in a text editor, at first only the
+      printable bytes are displayed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39965699811303424
+    m_Localized: Using the tool Strings.exe, large parts of the original source code
+      can be seen, as well as all kinds of libraries and the system functions used.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39971338700709888
+    m_Localized: "Moreover, other artifacts are to be found that allow conclusions
+      to be drawn for example about the artists\u2019 data organization. When looking
+      through the four exe versions retrieved over the Wayback Machine. Here we see
+      how JODI saved the .com files throughout the years. It is a bit like peeking
+      into their virtual work place."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
