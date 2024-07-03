@@ -1115,6 +1115,95 @@ MonoBehaviour:
       into their virtual work place."
     m_Metadata:
       m_Items: []
+  - m_Id: 42476061354180608
+    m_Localized: 'Here we do a hack first! We alter the file type. Adding a Bitmap
+      Image header to any bytes, allows us to convert it into a bmp file. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42477544950808576
+    m_Localized: 'The added BMP header instructs image viewers to interpret the following
+      bytes as image data, that is: it interprets every byte as a pixel color value.
+      Hope is to reveal patterns in the binary code. Go!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42483242799546368
+    m_Localized: In the case of .com, we mostly see a rather random-looking collection
+      of pixels. However, there are several rough structures or horizontal bars across
+      the image. This could be different areas in the code, or different subprograms
+      that have been bundled together in the final exe file.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42484409675890688
+    m_Localized: "The last version of .com was created on a Macintosh, here we see
+      OSX paths starting with \u201CHD:\u201D. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42487075441295360
+    m_Localized: 'Due to the special nature of the Director files, it is possible
+      to recover a large part of the original source code from the compiled exe files
+      of the .com browser. For this purpose, ProjectorRays Shockwave Decompiler can
+      be used. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42495920326656000
+    m_Localized: "\"An example: Thus, it became obvious that the first version (2001)
+      allowed the launching of actions via keyboard commands. \nPressing s = beeping
+      screenshotting. \nPressing q = aborted a specific operation for all five tabs.
+      \nThese lines of code were removed from later versions of .com.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42497745423515648
+    m_Localized: 'Remember we retrieved four exe files for .com from the Wayback
+      Machine? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42503310119878656
+    m_Localized: 'With the help of the restored source code of the four different
+      .com versions, the changes to the code over time can now also be recognized. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42503337147973632
+    m_Localized: For example, entire function blocks have been removed or added while
+      some parts of the code have only minimal adaptations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42503357528096768
+    m_Localized: If you look back at center stage, you see how comparing two exe
+      versions can look like!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42506029886947328
+    m_Localized: With a text or an image viewer, non-printable bytes could be overlooked.
+      To capture all the bytes of an executable, it can be viewed in a hex editor.
+      We use 010 Hex Editor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42506695950811136
+    m_Localized: "Scrolling towards the last fifth of the exe file as viewed in a
+      hex editor, some visually organized configurations surfaced. In the 010 Hex
+      Editor we use, purple highlighting refers to the printable areas of the code
+      (ASCII range 0-9a-zA-Z). The corresponding bytes lie in the \u2018resources\u2019
+      section of the library \u201Cproj.dll\u201D which is also only a part of the
+      .com exe. In this section, resources like logos are integrated using an uncompressed
+      bitmap format."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42506963635486720
+    m_Localized: "The bitmap files look a bit different when rendered with a hex
+      editor rather than with an image viewer. The figure in the left shows part
+      of the exe code as bytes in 010 Hex Editor. The figure in the middle shows
+      the same part of the code in the same program, but in a pixel-type version.
+      The figure on your right is a screenshot from the reverse engineering tool
+      \u201CGhidra\u201D which can recognize bmp files automatically and render them
+      according to standard. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42507502402224128
+    m_Localized: "Now we recognize the logos for Director also in the hex rendering.
+      Due to the endianness \u2013 a term that describes the order in which a sequence
+      of bytes is stored in a computer memory \u2013 they are presented upside down."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

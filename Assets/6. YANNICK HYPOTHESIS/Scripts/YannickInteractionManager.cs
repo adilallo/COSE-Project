@@ -15,6 +15,10 @@ public class YannickInteractionManager : MonoBehaviour
     [SerializeField] private GameObject codeFragmentsText;
     [SerializeField] private GameObject metadataLibraiesText;
     [SerializeField] private GameObject joanSystemText;
+    [SerializeField] private GameObject[] bitmapHeader;
+    [SerializeField] private GameObject[] spheres;
+    [SerializeField] private GameObject code3D;
+    [SerializeField] private GameObject[] lids;
 
     private void OnEnable()
     {
@@ -82,6 +86,42 @@ public class YannickInteractionManager : MonoBehaviour
                 metadataLibraiesText.SetActive(true);
                 joanSystemText.SetActive(true);
                 break;
+            case "YANNICK_LAYER_TOOL_2_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                bitmapHeader[0]?.SetActive(true);
+                break;
+            case "YANNICK_LAYER_BITMAP_1_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                westphal[2]?.SetActive(true);
+                bitmapHeader[1]?.SetActive(true);
+                spheres[0]?.SetActive(true);
+                break;
+            case "YANNICK_LAYER_TOOL_3_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                westphal[3]?.SetActive(true);
+                spheres[1]?.SetActive(true);
+                break;
+            case "YANNICK_LAYER_BOX_1_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                lids[0]?.SetActive(false);
+                break;
+            case "YANNICK_LAYER_BOX_2_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                lids[1]?.SetActive(false);
+                break;
+            case "YANNICK_LAYER_BOX_3_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                lids[2]?.SetActive(false);
+                break;
+            case "YANNICK_LAYER_BOX_4_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                lids[3]?.SetActive(false);
+                break;
+            case "YANNICK_LAYER_TOOL_4_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                westphal[4]?.SetActive(true);
+                spheres[2]?.SetActive(true);
+                break;
         }
     }
 
@@ -97,6 +137,17 @@ public class YannickInteractionManager : MonoBehaviour
                 table[3]?.SetActive(true);
                 table[4]?.SetActive(true);
                 westphal[1]?.SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y09_LOC_ID":
+                code3D.SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y10_LOC_ID":
+                spheres[3]?.SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y11_LOC_ID":
+                westphal[5]?.SetActive(true);
+                westphal[6]?.SetActive(true);
+                coins[3]?.SetActive(true);
                 break;
         }
     }
