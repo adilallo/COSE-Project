@@ -9234,6 +9234,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 5
     messageOptions: 0
+  - time: 16.666666
+    functionName: OnColorChange
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 5
+    messageOptions: 0
   - time: 42.016666
     functionName: OnColorChange
     data: 
@@ -9310,13 +9317,6 @@ AnimationClip:
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 6
-    messageOptions: 0
-  - time: 100
-    functionName: OnColorChange
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 5
     messageOptions: 0
   - time: 107
     functionName: OnColorChange
