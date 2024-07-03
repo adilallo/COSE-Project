@@ -1204,6 +1204,77 @@ MonoBehaviour:
       of bytes is stored in a computer memory \u2013 they are presented upside down."
     m_Metadata:
       m_Items: []
+  - m_Id: 42519382986407936
+    m_Localized: 'It is not uncommon for pictures to be included in a compiled exe
+      file. Here are two further examples: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42521696413499392
+    m_Localized: 'These bitmap images will probably have been saved in the embedded
+      library. They then somehow come through in the last fifth of the exe file.
+      This is usually the site where the libraries are embedded. The first one shows
+      a custom cursor, the second shows probably the community mascot. If you click
+      on the picture on the left, you get revealed what it looks like. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42525973068464128
+    m_Localized: This is how the cursor looks in the application!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42527607014113280
+    m_Localized: 'Nice! But be aware: technically, this is not ASCII art! Let us
+      see what the difference is and for this we need to continue our journey!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42528202315874304
+    m_Localized: A typical ASCII art piece in an exe file has a somewhat different
+      look and feel. Here is an example!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42529401119260672
+    m_Localized: In contrast to the bitmap files, where the pixel values (from 00
+      to FF) are to be seen as patterns in the hex editors, ASCII art is always visible
+      as ASCII. In order to see that, you do not necessarily need a hex editor. Any
+      text editor would do it as well.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42529539443212288
+    m_Localized: "In order to insert ASCII motives into the executable, there needs
+      to be \u2018free space\u2019 for it. How to carve that out? Here are three
+      possible methods:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42530225912365056
+    m_Localized: 'JODI indeed foresaw a public that reads their messages on the HTML
+      code level. See their previous work wwwwwwwww.jodi.org (1995) where they famously
+      showed the principle of an atom bomb or erotica. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42532876611829760
+    m_Localized: 'You see here examples where JODI placed ASCII pictures in the HTML-code:
+      "wwwwwwwww.jodi.org" (1995) shows diagrams of an atom bomb and the other examples
+      shows twelve figures of their "girly calendar".'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42537272062066688
+    m_Localized: 'But remember: HTML code is not equal to the exe code! Nonetheless,
+      JODI *could have* found a way to insert a bitmap or to insert an ASCII figure. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42537542045220864
+    m_Localized: However, in .com JODI does not seem to have placed a visual riddle
+      on the exe file level as it is a Macromedia logo. Thus, the figurative configuration
+      in the exe originates probably from a default setting of the programming environment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42537819200634880
+    m_Localized: 'Ending this excursus, on how graphical configurations can end up
+      becoming visible in a compiled code, we return to our close analysis of .com:
+      Up to now we looked at the executable as a site where we could extract textual
+      or visual information. However, it is primarily an operative, machine actionable
+      entity. '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -575,6 +575,54 @@ MonoBehaviour:
     m_Key: YANNICK_COIN_Y8_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 42519382986407936
+    m_Key: YANNICK_SPHERE_Y12_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42521696413499392
+    m_Key: YANNICK_SPHERE_Y13_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42525973068464128
+    m_Key: YANNICK_LAYER_WESTPHAL_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42527607014113280
+    m_Key: YANNICK_LAYER_WESTPHAL_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42528202315874304
+    m_Key: YANNICK_SPHERE_Y14_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42529401119260672
+    m_Key: YANNICK_SPHERE_Y15_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42529539443212288
+    m_Key: YANNICK_SPHERE_Y16_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42530225912365056
+    m_Key: YANNICK_COIN_Y08_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42532876611829760
+    m_Key: YANNICK_SPHERE_Y16_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42537272062066688
+    m_Key: YANNICK_SPHERE_Y17_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42537542045220864
+    m_Key: YANNICK_COIN_Y09_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42537819200634880
+    m_Key: YANNICK_SPHERE_Y18_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
