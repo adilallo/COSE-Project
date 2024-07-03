@@ -47,6 +47,17 @@ public class YannickInteractionManager : MonoBehaviour
             case "YANNICK_SPHERE_Y07_LOC_ID":
                 portals[0]?.SetActive(true);
                 break;
+            case "YANNICK_SPHERE_Y09_LOC_ID":
+                code3D.SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y10_LOC_ID":
+                spheres[3]?.SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y11_LOC_ID":
+                westphal[5]?.SetActive(true);
+                westphal[6]?.SetActive(true);
+                coins[3]?.SetActive(true);
+                break;
         }
     }
 
@@ -137,17 +148,6 @@ public class YannickInteractionManager : MonoBehaviour
                 table[3]?.SetActive(true);
                 table[4]?.SetActive(true);
                 westphal[1]?.SetActive(true);
-                break;
-            case "YANNICK_SPHERE_Y09_LOC_ID":
-                code3D.SetActive(true);
-                break;
-            case "YANNICK_SPHERE_Y10_LOC_ID":
-                spheres[3]?.SetActive(true);
-                break;
-            case "YANNICK_SPHERE_Y11_LOC_ID":
-                westphal[5]?.SetActive(true);
-                westphal[6]?.SetActive(true);
-                coins[3]?.SetActive(true);
                 break;
         }
     }
