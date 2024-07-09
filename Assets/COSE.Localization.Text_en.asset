@@ -1275,6 +1275,157 @@ MonoBehaviour:
       entity. '
     m_Metadata:
       m_Items: []
+  - m_Id: 42860707840692224
+    m_Localized: "Reading static code is only half of the story! Further, we should
+      not overestimate the insights we can gain from the written source code because,
+      sometimes, the code is not fully understandable without being executed. On
+      execution, interesting artifacts may be created that would be overlooked if
+      we merely reviewed the written code. The code alone may not be very exciting,
+      if its individual parts are always considered separately from each other. We
+      only see the full picture when they are all put together. And moreover, net.art
+      artworks come to life when \u2018executed\u2019. So, let us explore \u2018the
+      other half\u2019 of the story!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861189845913600
+    m_Localized: "Thus, we are transitioning towards the dynamic code analysis! Several
+      forensic tools allow the knowledgeable user to shed light onto the interaction
+      of the browser with the websites. Dynamic analysis uses tools to see and examine
+      what is happening during the \u2018runtime\u2019 of an artwork. It can focus
+      on three different entangled levels: "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861382557405184
+    m_Localized: "\"red light the system level looks into how the program is implemented
+      in the local computer \ngreen light: the network level traces what happens
+      on the interface with the internet or a networked cluster. \norange light:
+      The level of the perceivable GUI output which shapes the human experience.
+      More on that in the GREEN ROOM! \""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861625722179584
+    m_Localized: Let us analyse the network!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861957068001280
+    m_Localized: Walk through the portal to leave this room to learn more about how
+      the dynamic dimension of .com can be experienced
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42862847694901248
+    m_Localized: Sorry, we skipped the system analysis. The green light is your path
+      forward!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42863667614224384
+    m_Localized: "Since .com is a \u201Cbrowser\u201D it should be no surprise that
+      it interacts with the internet and sends out requests to websites. To understand
+      the behavior at network level, the tool Wireshark can be used. Let us start
+      Wireshark first and run it in the background, then COM.exe can be executed.
+      Wireshark creates a recording of the network traffic. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42864720216756224
+    m_Localized: 'As expected, we find DNS requests that resolve the URL to an IP
+      and HTTP requests that query the HTML of the web pages. Some of the web pages
+      give unexpected HTTP responses. COM.exe sends only a simple HTTP GET request.
+      COM.exe regularly tries to call new pages at certain measurable intervals. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42865773020614656
+    m_Localized: Director was developed during an early age of the internet. As a
+      result, it can only handle hypertext in the original state, the first version
+      developed by Tim Berners-Lee in 1990. While it does manage to incorporate coloured
+      links (<a></a>) into the rendering, CSS is already beyond its scope. It is
+      not interpreted adequately, much less shown correctly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44672569407442944
+    m_Localized: "Let us do another hack! In order to dig a bit deeper into .com\u2019s
+      dynamic behaviour, we can intercept the network traffic. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44678323417911296
+    m_Localized: "This way we learn that .com has problems with HTTP success status
+      responses that are not \u201C200 OK\u201D, the standard response indicating
+      a successful HTTP request. For instance, if the response returned is \u201CHTTP/1.1
+      200 Service Temporarily Unavailable\u201D it shows the HTTP header and the
+      code completely as text."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44676794308890624
+    m_Localized: With the Burp Suite tool it is also possible to send arbitrary responses
+      back to the .com browser. Thus, it is possible to try out the different response
+      codes of the HTTP protocol (200, 302, 404, 500 etc.) and observe live how the
+      browser behaves.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44678545825075200
+    m_Localized: Did you notice the ghostly frames sometimes shown in .com?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44678767007502336
+    m_Localized: "\"What are these formattings? \nWe know from the artists, they
+      are not meant to show up in .com. However, almost every one of JODI\u2019s
+      eleven official %WRONG Browsers exhibits this curious leaking phenomenon. It
+      can be explained with the following review of Macromedia Director 7: \u201CAlso
+      new is the ability to import HTML files with most formatting intact. [\u2026]
+      Director 7 does a reasonably good job of retaining a page\u2019s formatting
+      tags.\u201D In other words, in the eyes of the software engineers, it is a
+      feature!\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44679748302671872
+    m_Localized: "Here\u2019s something for detectives: We have learned earlier,
+      .com cannot interpret Cascaded Style Sheets (CSS) in its operative form, that
+      is, it cannot interpret its formatting commands, it can only read it out as
+      plain text. So, whenever we encounter the ghostly frames and tables in the
+      output, it should never be done by CSS, right? It must be done with plain HTML,
+      right? That is generally correct, but: A website can have used CSS \u2013 and
+      if that is created through a JavaScript \u2013 this does not show up in what
+      .com picks. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44680022958280704
+    m_Localized: 'As a consequence, also a modern CSS based website can result in
+      .com showing formatting remnants. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44680213375488000
+    m_Localized: "With a little dedication and effort, we can learn something about
+      the making-of behind the scenes of the websites. In other words, to a certain
+      degree, JODI\u2019s .com browser can be misused as a \u2018special interest\u2019
+      forensic tool."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44680505395515392
+    m_Localized: 'Taking the last two conclusions together, we have a seeming paradox
+      at hand: The code is neat and the situation is messy.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44681174978400256
+    m_Localized: "\"Functionality first: A pragmatic dimension\nJODI\u2019s browsers
+      survived so many internet updates because they are not reliant on any online
+      platform or service beyond the artists\u2019 control. They were programmed
+      in a pragmatic way without any extra acrobatics. In their programming, JODI
+      streamlined functionality. The code worked for decades. It is neat.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44681381182967808
+    m_Localized: "\"Permeating porous parts: A leaky dimension\n.com\u2019s coded
+      fabric has porous traits. Intentionally or not, our analysis reveals a leaky
+      behaviour of code showing up in unsuspected places.\na)\_\_\_ parts of CSS
+      code of a called website are presented together with website contents in the
+      formatted-text of the browser.\nb) a short historical dimension persists in
+      the present and the contents of two websites superposition in the formatted-text
+      of a tab. \nc)\_\_\_ layout remnants of the shown website \u2013 tabs, lines,
+      coloured planes, big headlines \u2013 make it into .com whilst JODI\u2019s
+      browser supposedly supports text-only.\nd)\_\_\_\_ snippets of source code
+      commands survive the compilation of the executable and can be recovered in
+      the strings.\ne)\_\_\_ ghostly figurative configurations were retrieved in
+      the library section of the exe file as seen through a hex editor.\""
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

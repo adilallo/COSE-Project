@@ -19,6 +19,8 @@ public class YannickInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] spheres;
     [SerializeField] private GameObject code3D;
     [SerializeField] private GameObject[] lids;
+    [SerializeField] private GameObject cssObjects;
+    [SerializeField] private GameObject[] bookModels;
 
     private void OnEnable()
     {
@@ -57,6 +59,21 @@ public class YannickInteractionManager : MonoBehaviour
                 westphal[5]?.SetActive(true);
                 westphal[6]?.SetActive(true);
                 coins[3]?.SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y19_LOC_ID":
+                portals[1]?.SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y21_LOC_ID":
+                portals[3]?.SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y22_LOC_ID":
+                cssObjects.SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y23_LOC_ID":
+                westphal[9]?.SetActive(true);
+                spheres[5]?.SetActive(true);
+                coins[4]?.SetActive(true);
+                bookModels[2].SetActive(true);
                 break;
         }
     }
@@ -132,6 +149,46 @@ public class YannickInteractionManager : MonoBehaviour
                 textInteraction.ActivateLayerText(textKey);
                 westphal[4]?.SetActive(true);
                 spheres[2]?.SetActive(true);
+                break;
+            case "YANNICK_LAYER_TRAFFIC_LIGHT_1_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "YANNICK_LAYER_TRAFFIC_LIGHT_2_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                portals[2]?.SetActive(true);
+                break;
+            case "YANNICK_LAYER_TRAFFIC_LIGHT_3_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "YANNICK_LAYER_TOOL_5_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                westphal[7]?.SetActive(true);
+                break;
+            case "YANNICK_LAYER_WESTPHAL_4":
+                westphal[8]?.SetActive(true);
+                break;
+            case "YANNICK_LAYER_TOOL_6_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                spheres[4]?.SetActive(true);
+                bookModels[0].SetActive(true);
+                break;
+            case "YANNICK_LAYER_CARD_MANUAL_4":
+                bookModels[1].SetActive(true);
+                break;
+            case "YANNICK_LAYER_ANIMATION_GHOSTLY_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "YANNICK_LAYER_BOOK_CITATION_2":
+                textCitations[1]?.SetActive(true);
+                break;
+            case "YANNICK_LAYER_DETECTIVE_HAT_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "YANNICK_LAYER_NEAT_TEXT_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "YANNICK_LAYER_LEAKY_TEXT_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
                 break;
         }
     }

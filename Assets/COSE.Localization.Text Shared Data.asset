@@ -623,6 +623,86 @@ MonoBehaviour:
     m_Key: YANNICK_SPHERE_Y18_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 42860707840692224
+    m_Key: YANNICK_SPHERE_Y19_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861189845913600
+    m_Key: YANNICK_SPHERE_Y20_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861382557405184
+    m_Key: YANNICK_SPHERE_Y20A_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861625722179584
+    m_Key: YANNICK_LAYER_TRAFFIC_LIGHT_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861957068001280
+    m_Key: YANNICK_LAYER_TRAFFIC_LIGHT_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42862847694901248
+    m_Key: YANNICK_LAYER_TRAFFIC_LIGHT_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42863667614224384
+    m_Key: YANNICK_LAYER_TOOL_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42864720216756224
+    m_Key: YANNICK_SPHERE_Y21_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42865773020614656
+    m_Key: YANNICK_SPHERE_Y22_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44672569407442944
+    m_Key: YANNICK_LAYER_TOOL_6_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44676794308890624
+    m_Key: YANNICK_SPHERE_Y23_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44678323417911296
+    m_Key: YANNICK_COIN_Y10_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44678545825075200
+    m_Key: YANNICK_SPHERE_Y24_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44678767007502336
+    m_Key: YANNICK_LAYER_ANIMATION_GHOSTLY_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44679748302671872
+    m_Key: YANNICK_LAYER_DETECTIVE_HAT_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44680022958280704
+    m_Key: YANNICK_COIN_Y11_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44680213375488000
+    m_Key: YANNICK_COIN_Y12_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44680505395515392
+    m_Key: YANNICK_COIN_Y13_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44681174978400256
+    m_Key: YANNICK_LAYER_NEAT_TEXT_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44681381182967808
+    m_Key: YANNICK_LAYER_LEAKY_TEXT_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
