@@ -110,9 +110,8 @@ public class YannickInteractionManager : MonoBehaviour
                 coins[2]?.SetActive(true);
                 break;
             case "YANNICK_LAYER_WESTPHAL_2":
-                codeFragmentsText.SetActive(true);
-                metadataLibraiesText.SetActive(true);
-                joanSystemText.SetActive(true);
+                
+                
                 break;
             case "YANNICK_LAYER_TOOL_2_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
@@ -198,10 +197,13 @@ public class YannickInteractionManager : MonoBehaviour
         switch(coinText)
         {
             case "YANNICK_COIN_Y5_LOC_ID":
+                codeFragmentsText.SetActive(true);
+                metadataLibraiesText.SetActive(true);
                 table[1]?.SetActive(true);
                 table[2]?.SetActive(true);
                 break;
             case "YANNICK_COIN_Y6_LOC_ID":
+                joanSystemText.SetActive(true);
                 table[3]?.SetActive(true);
                 table[4]?.SetActive(true);
                 westphal[1]?.SetActive(true);
