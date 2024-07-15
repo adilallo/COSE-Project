@@ -1296,11 +1296,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 42861382557405184
-    m_Localized: "\"red light the system level looks into how the program is implemented
+    m_Localized: "red light the system level looks into how the program is implemented
       in the local computer \ngreen light: the network level traces what happens
       on the interface with the internet or a networked cluster. \norange light:
       The level of the perceivable GUI output which shapes the human experience.
-      More on that in the GREEN ROOM! \""
+      More on that in the GREEN ROOM!"
     m_Metadata:
       m_Items: []
   - m_Id: 42861625722179584

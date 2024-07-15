@@ -21,6 +21,7 @@ public class YannickInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] lids;
     [SerializeField] private GameObject cssObjects;
     [SerializeField] private GameObject[] bookModels;
+    [SerializeField] private GameObject ghostlyAnimation;
 
     private void OnEnable()
     {
@@ -74,6 +75,9 @@ public class YannickInteractionManager : MonoBehaviour
                 spheres[5]?.SetActive(true);
                 coins[4]?.SetActive(true);
                 bookModels[2].SetActive(true);
+                break;
+            case "YANNICK_SPHERE_Y24_LOC_ID":
+                ghostlyAnimation.SetActive(true);
                 break;
         }
     }
