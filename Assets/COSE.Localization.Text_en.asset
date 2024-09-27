@@ -944,6 +944,488 @@ MonoBehaviour:
       and the relationships in a complex physical and semantic web condition.
     m_Metadata:
       m_Items: []
+  - m_Id: 39900343851802624
+    m_Localized: "Net.art.works come to life when \u2018executed\u2019. Combining
+      static and dynamic code analysis \r\nWelcome to the code forensics! In this
+      room of dissection, we are going to use several forensic tools to find out
+      more information about .com than what can be seen on our monitor while running
+      the browser. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39900921864642560
+    m_Localized: "Director\u2019s Slang. The programming environment, its language
+      and their key command\r\nJODI wrote their browsers in the multimedia authoring
+      software Macromedia Director with the programming language Lingo. Lingo is
+      an object-oriented scripting language native to this programming environment. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39901229202268160
+    m_Localized: "\"Anything specific about it? \nYes. The programming environment
+      Director retains many features a filmic or theatric logic would imply. Labels
+      like the \u2018Main Movie Scripts\u2019 evoke an orchestration of different
+      bits and pieces. The latter are stringed as if they were on a timeline of a
+      video editing tool, except that the linearity can be broken up by putting commands
+      with recursions on that \u2018score\u2019.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39901383095476224
+    m_Localized: "\"What was it used for? \nFrom the early 1990s, Macromedia Director
+      was mainly used to create CD-ROMs and Kiosks. It allowed simultaneous actions
+      like scrolling and typing.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39901557935038464
+    m_Localized: "\"But then \u2026 \nAt the beginning of the 2000s, for many programming
+      artists, this piece of software was the gateway or a bridge from local network
+      design on a data disk to a global multi-authored network: the Internet. The
+      magic command \u201CgetNetText\u201D was first implemented in 1999. This feature
+      was also exploited by JODI for their %WRONG Browser series.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39941072351387648
+    m_Localized: "In this contribution, we abstain from a thorough analysis of the
+      source code of .com as Martina Richter provided exemplary and extensive analyses
+      of this for JODI\u2019s .co.kr browser elsewhere. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39941432071675904
+    m_Localized: Instead, we focus our attention on the executable of the programmed
+      artwork and treat it with a broad spectrum of forensic methods. Thus we present
+      information about the adopted analytic tools as well as what they allow us
+      to reveal of the artwork.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39944282004774912
+    m_Localized: 'The %WRONG Browsers is a series! There are 11 different ones, each
+      one for Macintosh and Windows machines, and they evolved over time. We see
+      that with the Wayback Machine from the Internet Archive and the download website:
+      http://wrongbrowser.jodi.org/'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39946154052673536
+    m_Localized: Let us look into the exe file! We picked the current version of
+      .com.exe from here! http://wrongbrowser.jodi.org/wrongbrowsercom/win/com.zip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39947457097097216
+    m_Localized: "\"What can we learn from the metadata revealed by a right-click
+      on the file?\na)\_\_\_ It is 8,5 MB big\nb)\_\_\_ It was created with Adobe
+      Director 11.5\nc)\_\_\_\_ It was created on August 13, 2021\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39949391707234304
+    m_Localized: As the work is dated 2001-2005, the relatively new version reveals
+      that JODI have reworked the %WRONG Browser recently. But was this the first
+      revamp?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39950747130126336
+    m_Localized: "\"What to do with that? \nWe can do comparisons! We can compare
+      them in a synchronous way across the different browsers and in a transversal
+      way along the historical dimension.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39952315766267904
+    m_Localized: "\"And what are these comparisons good for? \nIn the literature,
+      the browser series is usually treated as a monolithic block, dated from 2001\u20132005.
+      However, the browsers are different! And wouldn\u2019t it be interesting to
+      find out how each one of them developed over time?\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39954490370285568
+    m_Localized: By extracting the time stamp of when the individual browsers were
+      made, we see that most of them have more than two versions. Have a look at
+      our table! This is what we could extract from the Wayback Machine! The browser
+      in question, com.exe, counts amongst the earliest versions that were put online.
+      In fact, it is one of the two first %WRONG Browsers!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39953458491809792
+    m_Localized: 'By using ExifTool, we found out the size of the exe file changed
+      from c. 2.5 MB to c. 4 MB to later 8 MB. We could match that with the ever-new
+      releases JODI used to bring the files up-to-date. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39959607270170624
+    m_Localized: 'Some browsers with national domain names were developed specifically
+      due to an occasion to participate in an exhibition. Have a look where the %WRONG
+      Browsers were on show in the past! What can be derived from this inquiry into
+      the historical dimension of the program versions? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39960269957619712
+    m_Localized: 'It is plausible to set 2001 as the date when JODI came up with
+      the idea of a possibly open-ended %WRONG Browser series. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39961421575086080
+    m_Localized: 'Depending on the status you decide to attribute to program updates,
+      there is some justification for not changing the date of the artwork with every
+      software update. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39961553569832960
+    m_Localized: "However, we were unable to find evidence that would support dating
+      all browsers of this series to 2001\u20132005. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39961999038472192
+    m_Localized: As can be seen, some browsers seem to have come into existence not
+      earlier than 2007 or 2012.  What to do with that? Big question mark!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39962252240216064
+    m_Localized: '"Versions and variety: Taking the series and its evolutionary dimension
+      seriously
+
+      Within the timeline of their creation and updates, a pattern
+      of when JODI returned to the %WRONG Browser series to broaden their repertoire
+      becomes discernible. Suddenly, we have a basis for drawing comparisons over
+      time and across applications. Thus, we get a certain feel for the evolution
+      of the browsers.
+
+      Whenever the exe file is available, there are two principal
+      analytic approaches that we can pursue: In a first step, this contribution
+      uses tools that work within the realm of a static approach. This means most
+      of the time, we look at the exe file characteristics, while at times we poke
+      deeper into the coded substance/fabric. In a second step, a dynamic approach
+      is pursued. In this case, we look at the processes during runtime. "'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39962602271662080
+    m_Localized: 'In the following, we look at the executable using different software
+      tools. Thus, we highlight different aspects of what it contains. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39964212720820224
+    m_Localized: When opening the exe of .com in a text editor, at first only the
+      printable bytes are displayed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39965699811303424
+    m_Localized: Using the tool Strings.exe, large parts of the original source code
+      can be seen, as well as all kinds of libraries and the system functions used.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39971338700709888
+    m_Localized: "Moreover, other artifacts are to be found that allow conclusions
+      to be drawn for example about the artists\u2019 data organization. When looking
+      through the four exe versions retrieved over the Wayback Machine. Here we see
+      how JODI saved the .com files throughout the years. It is a bit like peeking
+      into their virtual work place."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42476061354180608
+    m_Localized: 'Here we do a hack first! We alter the file type. Adding a Bitmap
+      Image header to any bytes, allows us to convert it into a bmp file. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42477544950808576
+    m_Localized: 'The added BMP header instructs image viewers to interpret the following
+      bytes as image data, that is: it interprets every byte as a pixel color value.
+      Hope is to reveal patterns in the binary code. Go!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42483242799546368
+    m_Localized: In the case of .com, we mostly see a rather random-looking collection
+      of pixels. However, there are several rough structures or horizontal bars across
+      the image. This could be different areas in the code, or different subprograms
+      that have been bundled together in the final exe file.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42484409675890688
+    m_Localized: "The last version of .com was created on a Macintosh, here we see
+      OSX paths starting with \u201CHD:\u201D. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42487075441295360
+    m_Localized: 'Due to the special nature of the Director files, it is possible
+      to recover a large part of the original source code from the compiled exe files
+      of the .com browser. For this purpose, ProjectorRays Shockwave Decompiler can
+      be used. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42495920326656000
+    m_Localized: "\"An example: Thus, it became obvious that the first version (2001)
+      allowed the launching of actions via keyboard commands. \nPressing s = beeping
+      screenshotting. \nPressing q = aborted a specific operation for all five tabs.
+      \nThese lines of code were removed from later versions of .com.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42497745423515648
+    m_Localized: 'Remember we retrieved four exe files for .com from the Wayback
+      Machine? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42503310119878656
+    m_Localized: 'With the help of the restored source code of the four different
+      .com versions, the changes to the code over time can now also be recognized. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42503337147973632
+    m_Localized: For example, entire function blocks have been removed or added while
+      some parts of the code have only minimal adaptations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42503357528096768
+    m_Localized: If you look back at center stage, you see how comparing two exe
+      versions can look like!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42506029886947328
+    m_Localized: With a text or an image viewer, non-printable bytes could be overlooked.
+      To capture all the bytes of an executable, it can be viewed in a hex editor.
+      We use 010 Hex Editor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42506695950811136
+    m_Localized: "Scrolling towards the last fifth of the exe file as viewed in a
+      hex editor, some visually organized configurations surfaced. In the 010 Hex
+      Editor we use, purple highlighting refers to the printable areas of the code
+      (ASCII range 0-9a-zA-Z). The corresponding bytes lie in the \u2018resources\u2019
+      section of the library \u201Cproj.dll\u201D which is also only a part of the
+      .com exe. In this section, resources like logos are integrated using an uncompressed
+      bitmap format."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42506963635486720
+    m_Localized: "The bitmap files look a bit different when rendered with a hex
+      editor rather than with an image viewer. The figure in the left shows part
+      of the exe code as bytes in 010 Hex Editor. The figure in the middle shows
+      the same part of the code in the same program, but in a pixel-type version.
+      The figure on your right is a screenshot from the reverse engineering tool
+      \u201CGhidra\u201D which can recognize bmp files automatically and render them
+      according to standard. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42507502402224128
+    m_Localized: "Now we recognize the logos for Director also in the hex rendering.
+      Due to the endianness \u2013 a term that describes the order in which a sequence
+      of bytes is stored in a computer memory \u2013 they are presented upside down."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42519382986407936
+    m_Localized: 'It is not uncommon for pictures to be included in a compiled exe
+      file. Here are two further examples: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42521696413499392
+    m_Localized: 'These bitmap images will probably have been saved in the embedded
+      library. They then somehow come through in the last fifth of the exe file.
+      This is usually the site where the libraries are embedded. The first one shows
+      a custom cursor, the second shows probably the community mascot. If you click
+      on the picture on the left, you get revealed what it looks like. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42525973068464128
+    m_Localized: This is how the cursor looks in the application!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42527607014113280
+    m_Localized: 'Nice! But be aware: technically, this is not ASCII art! Let us
+      see what the difference is and for this we need to continue our journey!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42528202315874304
+    m_Localized: A typical ASCII art piece in an exe file has a somewhat different
+      look and feel. Here is an example!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42529401119260672
+    m_Localized: In contrast to the bitmap files, where the pixel values (from 00
+      to FF) are to be seen as patterns in the hex editors, ASCII art is always visible
+      as ASCII. In order to see that, you do not necessarily need a hex editor. Any
+      text editor would do it as well.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42529539443212288
+    m_Localized: "In order to insert ASCII motives into the executable, there needs
+      to be \u2018free space\u2019 for it. How to carve that out? Here are three
+      possible methods:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42530225912365056
+    m_Localized: 'JODI indeed foresaw a public that reads their messages on the HTML
+      code level. See their previous work wwwwwwwww.jodi.org (1995) where they famously
+      showed the principle of an atom bomb or erotica. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42532876611829760
+    m_Localized: 'You see here examples where JODI placed ASCII pictures in the HTML-code:
+      "wwwwwwwww.jodi.org" (1995) shows diagrams of an atom bomb and the other examples
+      shows twelve figures of their "girly calendar".'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42537272062066688
+    m_Localized: 'But remember: HTML code is not equal to the exe code! Nonetheless,
+      JODI *could have* found a way to insert a bitmap or to insert an ASCII figure. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42537542045220864
+    m_Localized: However, in .com JODI does not seem to have placed a visual riddle
+      on the exe file level as it is a Macromedia logo. Thus, the figurative configuration
+      in the exe originates probably from a default setting of the programming environment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42537819200634880
+    m_Localized: 'Ending this excursus, on how graphical configurations can end up
+      becoming visible in a compiled code, we return to our close analysis of .com:
+      Up to now we looked at the executable as a site where we could extract textual
+      or visual information. However, it is primarily an operative, machine actionable
+      entity. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42860707840692224
+    m_Localized: "Reading static code is only half of the story! Further, we should
+      not overestimate the insights we can gain from the written source code because,
+      sometimes, the code is not fully understandable without being executed. On
+      execution, interesting artifacts may be created that would be overlooked if
+      we merely reviewed the written code. The code alone may not be very exciting,
+      if its individual parts are always considered separately from each other. We
+      only see the full picture when they are all put together. And moreover, net.art
+      artworks come to life when \u2018executed\u2019. So, let us explore \u2018the
+      other half\u2019 of the story!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861189845913600
+    m_Localized: "Thus, we are transitioning towards the dynamic code analysis! Several
+      forensic tools allow the knowledgeable user to shed light onto the interaction
+      of the browser with the websites. Dynamic analysis uses tools to see and examine
+      what is happening during the \u2018runtime\u2019 of an artwork. It can focus
+      on three different entangled levels: "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861382557405184
+    m_Localized: "red light the system level looks into how the program is implemented
+      in the local computer \ngreen light: the network level traces what happens
+      on the interface with the internet or a networked cluster. \norange light:
+      The level of the perceivable GUI output which shapes the human experience.
+      More on that in the GREEN ROOM!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861625722179584
+    m_Localized: Let us analyse the network!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42861957068001280
+    m_Localized: Walk through the portal to leave this room to learn more about how
+      the dynamic dimension of .com can be experienced
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42862847694901248
+    m_Localized: Sorry, we skipped the system analysis. The green light is your path
+      forward!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42863667614224384
+    m_Localized: "Since .com is a \u201Cbrowser\u201D it should be no surprise that
+      it interacts with the internet and sends out requests to websites. To understand
+      the behavior at network level, the tool Wireshark can be used. Let us start
+      Wireshark first and run it in the background, then COM.exe can be executed.
+      Wireshark creates a recording of the network traffic. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42864720216756224
+    m_Localized: 'As expected, we find DNS requests that resolve the URL to an IP
+      and HTTP requests that query the HTML of the web pages. Some of the web pages
+      give unexpected HTTP responses. COM.exe sends only a simple HTTP GET request.
+      COM.exe regularly tries to call new pages at certain measurable intervals. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42865773020614656
+    m_Localized: Director was developed during an early age of the internet. As a
+      result, it can only handle hypertext in the original state, the first version
+      developed by Tim Berners-Lee in 1990. While it does manage to incorporate coloured
+      links (<a></a>) into the rendering, CSS is already beyond its scope. It is
+      not interpreted adequately, much less shown correctly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44672569407442944
+    m_Localized: "Let us do another hack! In order to dig a bit deeper into .com\u2019s
+      dynamic behaviour, we can intercept the network traffic. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44678323417911296
+    m_Localized: "This way we learn that .com has problems with HTTP success status
+      responses that are not \u201C200 OK\u201D, the standard response indicating
+      a successful HTTP request. For instance, if the response returned is \u201CHTTP/1.1
+      200 Service Temporarily Unavailable\u201D it shows the HTTP header and the
+      code completely as text."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44676794308890624
+    m_Localized: With the Burp Suite tool it is also possible to send arbitrary responses
+      back to the .com browser. Thus, it is possible to try out the different response
+      codes of the HTTP protocol (200, 302, 404, 500 etc.) and observe live how the
+      browser behaves.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44678545825075200
+    m_Localized: Did you notice the ghostly frames sometimes shown in .com?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44678767007502336
+    m_Localized: "\"What are these formattings? \nWe know from the artists, they
+      are not meant to show up in .com. However, almost every one of JODI\u2019s
+      eleven official %WRONG Browsers exhibits this curious leaking phenomenon. It
+      can be explained with the following review of Macromedia Director 7: \u201CAlso
+      new is the ability to import HTML files with most formatting intact. [\u2026]
+      Director 7 does a reasonably good job of retaining a page\u2019s formatting
+      tags.\u201D In other words, in the eyes of the software engineers, it is a
+      feature!\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44679748302671872
+    m_Localized: "Here\u2019s something for detectives: We have learned earlier,
+      .com cannot interpret Cascaded Style Sheets (CSS) in its operative form, that
+      is, it cannot interpret its formatting commands, it can only read it out as
+      plain text. So, whenever we encounter the ghostly frames and tables in the
+      output, it should never be done by CSS, right? It must be done with plain HTML,
+      right? That is generally correct, but: A website can have used CSS \u2013 and
+      if that is created through a JavaScript \u2013 this does not show up in what
+      .com picks. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44680022958280704
+    m_Localized: 'As a consequence, also a modern CSS based website can result in
+      .com showing formatting remnants. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44680213375488000
+    m_Localized: "With a little dedication and effort, we can learn something about
+      the making-of behind the scenes of the websites. In other words, to a certain
+      degree, JODI\u2019s .com browser can be misused as a \u2018special interest\u2019
+      forensic tool."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44680505395515392
+    m_Localized: 'Taking the last two conclusions together, we have a seeming paradox
+      at hand: The code is neat and the situation is messy.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44681174978400256
+    m_Localized: "\"Functionality first: A pragmatic dimension\nJODI\u2019s browsers
+      survived so many internet updates because they are not reliant on any online
+      platform or service beyond the artists\u2019 control. They were programmed
+      in a pragmatic way without any extra acrobatics. In their programming, JODI
+      streamlined functionality. The code worked for decades. It is neat.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44681381182967808
+    m_Localized: "\"Permeating porous parts: A leaky dimension\n.com\u2019s coded
+      fabric has porous traits. Intentionally or not, our analysis reveals a leaky
+      behaviour of code showing up in unsuspected places.\na)\_\_\_ parts of CSS
+      code of a called website are presented together with website contents in the
+      formatted-text of the browser.\nb) a short historical dimension persists in
+      the present and the contents of two websites superposition in the formatted-text
+      of a tab. \nc)\_\_\_ layout remnants of the shown website \u2013 tabs, lines,
+      coloured planes, big headlines \u2013 make it into .com whilst JODI\u2019s
+      browser supposedly supports text-only.\nd)\_\_\_\_ snippets of source code
+      commands survive the compilation of the executable and can be recovered in
+      the strings.\ne)\_\_\_ ghostly figurative configurations were retrieved in
+      the library section of the exe file as seen through a hex editor.\""
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
