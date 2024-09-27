@@ -20,18 +20,16 @@ MonoBehaviour:
   m_TableData:
   - m_Id: 2189404659712
     m_Localized: "This room looks analytically at the visual output of JODI\u2019s
-      .com browser. We dissect and then regroup the visual elements that are provided
-      in the viewport of the monitor. Taking everything apart first and reassembling
-      it later in different constellations, helps us to determine how or whether
-      elements cluster dynamically in terms of space and (inter)activity. This room
-      offers filters that suggest ways to see order in the browser output. These
-      filters are sorting gestures such as: taking apart, isolating, staging, counting,
-      labeling, marking, focusing, creating explanatory models as shortcuts of certain
-      underlying \u2018mechanisms\u2019. We learn about the rules of the visual layers
-      within the artwork and come to unexpected conclusions. Let\u2019s go!\r\n\r\nOur
-      argumentation is a journey. It includes nine hypotheses and four main tactical
-      moves. Within each move you can collect three take home messages. Watch out
-      for them, you might need them later. Our journey begins now!\r"
+      .com browser. Our argumentation includes hypotheses tactical moves. We dissect
+      and then regroup the visual elements that are provided in the viewport of the
+      monitor. Taking everything apart first and reassembling it later in different
+      constellations, helps us to determine how or whether elements cluster dynamically
+      in terms of space and (inter)activity. This room offers filters that suggest
+      ways to see order in the browser output. These filters are sorting gestures
+      such as: taking apart, isolating, staging, counting, labeling, marking, focusing,
+      creating explanatory models as shortcuts of certain underlying \u2018mechanisms\u2019.
+      We learn about the rules of the visual layers within the artwork and come to
+      unexpected conclusions. Let\u2019s go!"
     m_Metadata:
       m_Items: []
   - m_Id: 10326936818540544
@@ -1424,6 +1422,12 @@ MonoBehaviour:
       commands survive the compilation of the executable and can be recovered in
       the strings.\ne)\_\_\_ ghostly figurative configurations were retrieved in
       the library section of the exe file as seen through a hex editor.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72819823479730176
+    m_Localized: 'Artistic Composition
+
+      Niki de Saint Phalle: Volleyball, 1993.'
     m_Metadata:
       m_Items: []
   references:

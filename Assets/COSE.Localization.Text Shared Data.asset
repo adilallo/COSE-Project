@@ -16,7 +16,7 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: 3fb16befcd89b2e4bbe08b7875cd111d
   m_Entries:
   - m_Id: 2189404659712
-    m_Key: INGE_SPHERE_ENTRY_LOC_ID
+    m_Key: INGE_SPHERE_READ_ME_LOC_ID
     m_Metadata:
       m_Items: []
   - m_Id: 10326936818540544
@@ -701,6 +701,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 44681381182967808
     m_Key: YANNICK_LAYER_LEAKY_TEXT_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72819823479730176
+    m_Key: INGE_LAYER_ENTRY_IMAGE_1_LOC_ID
     m_Metadata:
       m_Items: []
   m_Metadata:

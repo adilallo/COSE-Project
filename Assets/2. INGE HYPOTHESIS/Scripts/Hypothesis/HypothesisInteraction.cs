@@ -69,12 +69,12 @@ namespace COSE.Hypothesis
 
         private void OnEnable()
         {
-            SphereTrigger.OnSphereTriggered += ActivateState;
+            //SphereTrigger.OnSphereTriggered += ActivateState;
         }
 
         private void OnDisable()
         {
-            SphereTrigger.OnSphereTriggered -= ActivateState;
+            //SphereTrigger.OnSphereTriggered -= ActivateState;
         }
 
         void Start()
