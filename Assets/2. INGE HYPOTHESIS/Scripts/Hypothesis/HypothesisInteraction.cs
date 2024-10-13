@@ -26,7 +26,6 @@ namespace COSE.Hypothesis
         
 
         public static event Action<string> OnCouplingActivated;
-        //public static event Action<bool> OnLastLayerFinished;
 
         // currently used fields
         [SerializeField] private IngeTextInteraction textInteraction;
@@ -49,25 +48,9 @@ namespace COSE.Hypothesis
 
 
         private bool isMovementComplete = false;
-        //private bool isLastLayerFinished = false;
 
         private int currentCouplingIndex = -1;
         
-
-        private Dictionary<string, int> stateMap = new Dictionary<string, int>()
-        {
-            { "INGE_SPHERE_ENTRY_LOC_ID", 0 },
-            { "INGE_SPHERE_HYPOTHESIS_1_LOC_ID", 1 },
-            { "INGE_SPHERE_HYPOTHESIS_2_LOC_ID", 2 },
-            { "INGE_SPHERE_HYPOTHESIS_3_LOC_ID", 3 },
-            { "INGE_SPHERE_HYPOTHESIS_4_LOC_ID", 4 },
-            { "INGE_SPHERE_HYPOTHESIS_5_LOC_ID", 5 },
-            { "INGE_SPHERE_HYPOTHESIS_6_LOC_ID", 6 },
-            { "INGE_SPHERE_HYPOTHESIS_7_LOC_ID", 7 },
-            { "INGE_SPHERE_HYPOTHESIS_8_LOC_ID", 8 },
-            { "INGE_SPHERE_HYPOTHESIS_9_LOC_ID", 9 },
-        };
-
         private List<List<int>> couplings = new List<List<int>>()
         {
                 new List<int>{2, 11, 13, 16},
@@ -81,16 +64,6 @@ namespace COSE.Hypothesis
                 new List<int>{10, 13},
                 new List<int>{1, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 17}
         };
-
-        private void OnEnable()
-        {
-            //SphereTrigger.OnSphereTriggered += ActivateState;
-        }
-
-        private void OnDisable()
-        {
-            //SphereTrigger.OnSphereTriggered -= ActivateState;
-        }
 
         void Start()
         {
@@ -226,9 +199,6 @@ namespace COSE.Hypothesis
             {
                 invisibleWall.SetActive(false);
                 diagram.SetActive(true);
-                //isLastLayerFinished = true;
-                //OnLastLayerFinished?.Invoke(isLastLayerFinished);
-
             }
         }
 
@@ -304,14 +274,6 @@ namespace COSE.Hypothesis
 
             bool isTightlyCoupled = currentCouplingIndex != couplings.Count - 1;
             OnCouplingActivated?.Invoke(isTightlyCoupled ? "Tightly Coupled" : "Loosely Coupled");
-        }
-
-        public void ActivateState(string stateIdentifier)
-        {
-            if (stateMap.TryGetValue(stateIdentifier, out int stateIndex))
-            {
-                currentStateIndex = stateIndex;
-            }
         }
 
         private void ActivateLayerByIndex(int index)

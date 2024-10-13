@@ -48,9 +48,7 @@ MonoBehaviour:
       apart, and considering that some elements multiply over time, we have at least
       66 elements permanently present plus some ephemeral ones. That\u2019s a lot!
       It\u2019s easy to lose track of them. Moreover, there is a certain variance
-      in how much presents itself to the users\u2019 eye in the browser as a whole.\n\nBut
-      some elements have bonds, they act as a cluster. By interacting with them,
-      we can test the linkages and affordances of the elements."
+      in how much presents itself to the users\u2019 eye in the browser as a whole."
     m_Metadata:
       m_Items: []
   - m_Id: 10327171980582912
@@ -1449,6 +1447,112 @@ MonoBehaviour:
       print on the left: We start with the artistic composition, we disassemble its
       parts and order them our parameters, and finally, we reduce these ordered elements
       to come up with an element typology.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79335692033843200
+    m_Localized: 'You have just encountered all 18 discernible types of elements
+      in this browser. However, even a brief initial characterization reveals that
+      they have different properties: some are reliably there, others are not.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79337827907657728
+    m_Localized: "Having learnt about all the element types \u2026 the picture becomes
+      more complicated when we look at the history of the .com browser. The current
+      version of .com browser evolved over time. Thus, in older screenshots we can
+      detect differences. Do you notice some?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79340629966970880
+    m_Localized: "We will learn about JODI\u2019s colour scheme later, but what is
+      striking here is how colours deviate from the primary and secondary colours.
+      And the scrollbars look different from those in the screenshot on the left."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79348843651522560
+    m_Localized: Here we have black history-squares. However, the lists of the histories
+      are topped by a black circle that has no URL on its right side. And the scroll-bars
+      are missing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79354385899970560
+    m_Localized: Do you see the black square frames surrounding the pentagon-balls?
+      They also appear around the URL-squares. The history-squares are always in
+      black and not yet in the colour of the website-tab they are attached to.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79359950143348736
+    m_Localized: Users who know only these three screenshots will notice a lot of
+      differences between them. They may even doubt it is the same artwork.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79360918557810688
+    m_Localized: "These differences mean that the description of the inventory of
+      elements provided in the first move: dissect and present, introduced above,
+      is contingent as it is specific for our version of .com of 2023. The artists
+      may have incorporated elements of the used operating systems. They may have
+      reprogrammed the work for aesthetic reasons. Were there also functional changes?
+      Why don\u2019t we know that?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79366728696455168
+    m_Localized: Two elements allow to move them - and with them comes a whole entourage
+      - in all directions. In each case a resizing happens in some of the elements.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79367986845048832
+    m_Localized: 'When pressing the ENTER key, different things can happen: When
+      used in the context of URL texts, this triggers the URL call. When used in
+      the HTML-text-field it causes a break line.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79375581114785792
+    m_Localized: The two balls on the middle-bar can be moved horizontally by the
+      user. However, whenever a URL call is active one of the balls hurries hectically
+      left to right and vice versa. In this case (blue rendering) the user can just
+      watch.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79376633356607488
+    m_Localized: The two balls on the middle-bar can be moved horizontally by the
+      user. However, whenever a URL call is active one of the balls hurries hectically
+      left to right and vice versa. In this case (blue rendering) the user can just
+      watch.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79377251878035456
+    m_Localized: The users can mark all the texts they can edit. In such a case,
+      the background colour changes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79377666635980800
+    m_Localized: This loudspeaker symbolises sound events. It is rendered in blue
+      as this is something that cannot be triggered directly by the user. It gets
+      started by the system and happens during every URL call process, independently
+      of how this URL call was initiated. The four scenarios show how a user can
+      actively work towards a sound event.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79379025816969216
+    m_Localized: The users have several possibilities to edit (write, delete) the
+      available text fields. These fields can also be marked.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79379588893892608
+    m_Localized: The button of the scroll-bar can be moved up and down. The HTML
+      text then moves in the opposite direction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79381329773322240
+    m_Localized: Double-clicking on the two buttons indicated, triggers a URL call
+      with the URL attached to the button.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79383010284134400
+    m_Localized: The two buttons that allow to reposition themselves directly, do
+      also resize some elements. For instance, the pentagon-line is always impacted
+      in its length when any of its pentagon-balls attached to its ends move. The
+      complex case of the variant with the URL square is discussed later, upstairs,
+      immediately after encountering 'protagonist 2'.
     m_Metadata:
       m_Items: []
   references:

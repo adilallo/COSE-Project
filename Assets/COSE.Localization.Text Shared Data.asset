@@ -719,6 +719,74 @@ MonoBehaviour:
     m_Key: INGE_SPHERE_FIRST_MOVE_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 79335692033843200
+    m_Key: INGE_COIN_01_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79337827907657728
+    m_Key: INGE_SPHERE_SMALL_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79340629966970880
+    m_Key: INGE_LAYER_DIAGRAM_SCREENSHOT_RIGHT_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79348843651522560
+    m_Key: INGE_LAYER_DIAGRAM_SCREENSHOT_MIDDLE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79354385899970560
+    m_Key: INGE_LAYER_DIAGRAM_SCREENSHOT_LEFT_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79359950143348736
+    m_Key: INGE_COIN_02_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79360918557810688
+    m_Key: INGE_COIN_03_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79366728696455168
+    m_Key: INGE_LAYER_ALL_DIRECTIONS_ARROW_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79367986845048832
+    m_Key: INGE_LAYER_ALL_ARROW_IN_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79375581114785792
+    m_Key: INGE_LAYER_LATERAL_ARROW_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79376633356607488
+    m_Key: INGE_LAYER_MAGNIFYING_GLASS_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79377251878035456
+    m_Key: INGE_LAYER_MARKER_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79377666635980800
+    m_Key: INGE_LAYER_MEGAPHONE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79379025816969216
+    m_Key: INGE_LAYER_PENCIL_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79379588893892608
+    m_Key: INGE_LAYER_UP_DOWN_ARROW_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79381329773322240
+    m_Key: INGE_LAYER_DOUBLE_CLICK_ARROW_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79383010284134400
+    m_Key: INGE_LAYER_RESIZE_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
