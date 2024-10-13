@@ -22013,6 +22013,7 @@ MonoBehaviour:
   - {fileID: 832028704}
   - {fileID: 326621535}
   - {fileID: 545763444}
+  - {fileID: 688975864}
   - {fileID: 1653086536}
   - {fileID: 1639777402}
   - {fileID: 534156997}
@@ -51011,7 +51012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f7397cf2031424ea363495963d893c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textKey: INGE_LAYER_LATERAL_ARROW_IN_LOC_ID
+  textKey: INGE_LAYER_LATERAL_ARROW_LOC_ID
 --- !u!64 &3866448871727258666
 MeshCollider:
   m_ObjectHideFlags: 0
