@@ -33,13 +33,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10326936818540544
-    m_Localized: 'Clarity is useful to determine which visual elements exist in this
-      browser. The following inventory of the different types of elements that you
-      may encounter in this browser is already ordered in a specific way, namely
-      how they overlap each other. Overlapping suggests depth and we show a layering
-      structure based on the visual element types (not their size, not their time
-      of appearance; later on, their colour will play a role). Learn about the GUI
-      elements!
+    m_Localized: 'Overlapping suggests depth and we show a layering structure based
+      on the visual element types (not their size, not their time of appearance;
+      later on, their colour will play a role). Learn about the GUI elements! They
+      enter the scene on your left.
 
 
       PRESS ENTER TO BEGIN ANIMATION'
@@ -92,13 +89,13 @@ MonoBehaviour:
       \u2018empty\u2019 until one of its URLs leads to an existing website. It holds
       the HTML code of the website currently found by the browser. The colour is
       translucent as any text can shine through and overlapping with other HTML-colour-fields
-      leads to characteristic colour changes."
+      leads to characteristic colour changes.\n\n1/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450098411102208
     m_Localized: "grey-field (\u201Cgrey\u201D): The grey-field appears when a successful
       URL is retrieved. It seems to act as a place holder for the formatted-text
-      that will then soon appear when the search is done. "
+      that will then soon appear when the search is done. \n\n2/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450145353752576
@@ -107,7 +104,7 @@ MonoBehaviour:
       version) will be made visible and rendered in a black Times New Roman font.
       Links can be underlined and in blue, sometimes headlines are in another colour.
       The formatted-text takes up about half of the width of the screen and can fill
-      it from the very top to the bottom (there could be less text). "
+      it from the very top to the bottom (there could be less text). \n\n3/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450169500360704
@@ -116,7 +113,7 @@ MonoBehaviour:
       consisting of middle-bar-formatted-text-balls and middle-bar-URL-balls) move
       when a search is being performed. It is unchangeable and the equivalent of
       a throbber that indicates internet activity. You can stop an active search
-      process by clicking on this line \u2013 preferably on the left side. \r"
+      process by clicking on this line \u2013 preferably on the left side. \r\n\n4/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450191373656064
@@ -124,7 +121,7 @@ MonoBehaviour:
       retrieved website. The history-URL is black and is attached to the history-square
       on its left. The history-URL and history-square reside underneath the bottom
       left corner of the HTML-colour-field. Both move downwards row by row as new
-      websites are found. "
+      websites are found. \n\n5/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450212110295040
@@ -133,7 +130,7 @@ MonoBehaviour:
       the edges of a distorted pentagon that can be repositioned by dragging the
       pentagon-balls. If one of the two pentagon-balls connected by the pentagon-line
       is repositioned, the pentagon-line will change in length and angle, according
-      to the new coordinates. "
+      to the new coordinates. \n\n6/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450230280019968
@@ -144,7 +141,7 @@ MonoBehaviour:
       remains in place. The HTML-text is rendered in a monospaced black font and
       can be edited. This editing does not alter the adjunct formatted-text. The
       HTML-text-field disappears when the adjunct pentagon-ball is positioned left
-      or above the corresponding HTML-colour-field."
+      or above the corresponding HTML-colour-field.\n\n7/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450252665020416
@@ -155,7 +152,10 @@ MonoBehaviour:
       for the period of the calling itself. In this case, a correspondingly coloured
       URL-colour-field appears behind the URL then turning black. The URL-text-field
       vanishes when the adjunct pentagon-ball is positioned to the left of the corresponding
-      HTML-colour-field.'
+      HTML-colour-field.
+
+
+      8/18'
     m_Metadata:
       m_Items: []
   - m_Id: 11450274391515136
@@ -167,7 +167,7 @@ MonoBehaviour:
       fly, but rather upon releasing the mouse. The tiny history-square mimics the
       URL-square, as it too is accompanied by a tiny URL on its right. The history-elements
       shift downwards a row when a new URL becomes \u2018historical\u2019. This means
-      the history-square is the only element to multiply over time. "
+      the history-square is the only element to multiply over time. \n\n9/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450297145614336
@@ -177,7 +177,7 @@ MonoBehaviour:
       to the middle-bar-URL-text-field and press enter, these changes also become
       effective in the twin URL text and the URL calling is initiated. You can move
       the middle-bar-URL-text-field by horizontally dragging the middle-bar-URL-ball
-      of the same colour that sits nearby on the middle-bar."
+      of the same colour that sits nearby on the middle-bar.\n\n10/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450315353088000
@@ -185,7 +185,7 @@ MonoBehaviour:
       \u2013 a coloured bar such as you might see in a marking process but extended
       to the right \u2013 appears behind the URL you are searching for. It has the
       same colour as the tab field. As soon as the URL calling is over it disappears.
-      It is a highly ephemeral phenomenon that cannot be interacted with."
+      It is a highly ephemeral phenomenon that cannot be interacted with.\n\n11/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450330909761536
@@ -193,7 +193,7 @@ MonoBehaviour:
       of the URL and on top of the HTML-colour-field allows you to change the position
       of the HTML-colour-field and all elements around it. The URL-square has the
       same colour as the URL-text-field or the HTML-colour-field it is attached to.
-      Double-clicking on the URL-square launches a corresponding URL calling."
+      Double-clicking on the URL-square launches a corresponding URL calling.\n\n12/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450346613235712
@@ -202,7 +202,7 @@ MonoBehaviour:
       left. Double-clicking on this ball launches the corresponding search. During
       the URL calling, the middle-bar-URL-ball springs back and forth on the horizontal
       line, together with the according middle-bar-URL-text-field (while keeping
-      the same distance)."
+      the same distance).\n\n13/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450362652254208
@@ -215,7 +215,7 @@ MonoBehaviour:
       they are either connected to its bottom right corner (per default) or \u2013
       when dragged around the HTML-colour-field \u2013 they can be optically detached
       from it, but their positions continue to define the height of the HTML-colour-field,
-      the history-elements and the scrollbar."
+      the history-elements and the scrollbar.\n\n14/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450377848217600
@@ -225,31 +225,31 @@ MonoBehaviour:
       is moved with it. The middle-bar-formatted-text-ball always sits on the left
       of the formatted-text. The middle-bar-formatted-text-ball has the same colour
       as the HTML-colour-field which carries the HTML-text-field corresponding to
-      the formatted-text. "
+      the formatted-text. \n\n15/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450394952589312
     m_Localized: "URL-calling-colour-field: During a URL calling process, two thirds
       or more of the width of today\u2019s screen seems to be bathed in the colour
       of the URL being searched for. It is translucent and a highly ephemeral phenomenon
-      that cannot be interacted with."
+      that cannot be interacted with.\n\n16/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450410953859072
-    m_Localized: 'scroll-bar: The grey scroll-bar seems to conform to the system
+    m_Localized: "scroll-bar: The grey scroll-bar seems to conform to the system
       configuration of the operating system used by the computer. It is next to the
       right side of the HTML-colour-field and fits its vertical size at any time
       (this can be changed using the adjunct pentagon-ball). Functionally, it is
       attached to the HTML-text-field and seems to allow you to navigate the HTML
       code. However, when you use it, the character-cache fills up until the text
-      eventually gradually blacks out. '
+      eventually gradually blacks out. \n\n17/18"
     m_Metadata:
       m_Items: []
   - m_Id: 11450426401480704
     m_Localized: "pointer: Shaped as a white arrow, cursor, or cross (depending on
       whether it hovers over colour fields, text fields or buttons) and part of your
       computer\u2019s operating system interface, the mouse allows you to interact
-      with the browser. "
+      with the browser. \n\n18/18"
     m_Metadata:
       m_Items: []
   - m_Id: 14744257666473984
@@ -1428,6 +1428,27 @@ MonoBehaviour:
     m_Localized: 'Artistic Composition
 
       Niki de Saint Phalle: Volleyball, 1993.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78623294325895168
+    m_Localized: 'analytic decomposition
+
+      Ursus Wehrli: ''tidied up''-version
+      of Volleyball, 2002.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78623739740008448
+    m_Localized: 'derived typology
+
+      This is what we are now going to do. You
+      can witness it on your left.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78627881954947072
+    m_Localized: 'The dissecting involves two steps, as shown with the colourful
+      print on the left: We start with the artistic composition, we disassemble its
+      parts and order them our parameters, and finally, we reduce these ordered elements
+      to come up with an element typology.'
     m_Metadata:
       m_Items: []
   references:

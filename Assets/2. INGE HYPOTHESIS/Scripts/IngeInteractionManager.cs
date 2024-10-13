@@ -1,4 +1,5 @@
 using COSE.Coin;
+using COSE.Hypothesis;
 using COSE.Sphere;
 using COSE.Text;
 using UnityEngine;
@@ -6,6 +7,10 @@ using UnityEngine;
 public class IngeInteractionManager : MonoBehaviour
 {
     [SerializeField] private IngeTextInteraction textInteraction;
+    [SerializeField] private HypothesisInteraction hypothesisInteraction;
+    [SerializeField] private GameObject citation;
+
+
     private void OnEnable()
     {
         LayerInteraction.OnLayerClicked += ActivateLayerObjects;
@@ -26,7 +31,9 @@ public class IngeInteractionManager : MonoBehaviour
     {
         switch(sphereId)
         {
-
+            case "INGE_SPHERE_HYPOTHESIS_1_LOC_ID":
+                hypothesisInteraction.CurrentStateIndex = 1;
+                break;
         }
     }
 
@@ -36,6 +43,15 @@ public class IngeInteractionManager : MonoBehaviour
         {
             case "INGE_LAYER_ENTRY_IMAGE_1_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
+                break;
+            case "INGE_LAYER_ENTRY_IMAGE_2_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "INGE_LAYER_ENTRY_IMAGE_3_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "INGE_LAYER_CITATION_1_LOC_ID":
+                citation.SetActive(true);
                 break;
         }
     }

@@ -9,8 +9,8 @@ public class HypothesisLayerInteraction: LayerInteraction
     [HideInInspector] public Quaternion initialLocalRotation;
 
     public static event Action<string> OnLayerMoved;
-    public static event Action<string> OnTextLayerClicked;
-    public static event Action<int> OnLayerClickedByIndex;
+    //public static event Action<string> OnTextLayerClicked;
+    //public static event Action<int> OnLayerClickedByIndex;
 
     public void Initialize()
     {
@@ -18,19 +18,19 @@ public class HypothesisLayerInteraction: LayerInteraction
         initialLocalRotation = transform.localRotation;
     }
 
-    protected override void OnMouseDown()
+   /* protected override void OnMouseDown()
     {
         base.OnMouseDown();;
         OnLayerClickedByIndex?.Invoke(layerIndex);
-    }
+    }*/
 
     public static void NotifyLayerMoved(string textKey)
     {
         OnLayerMoved?.Invoke(textKey);
     }
 
-    public static void NotifyTextLayer(string textKey)
+   /* public static void NotifyTextLayer(string textKey)
     {
         OnTextLayerClicked?.Invoke(textKey);
-    }
+    }*/
 }

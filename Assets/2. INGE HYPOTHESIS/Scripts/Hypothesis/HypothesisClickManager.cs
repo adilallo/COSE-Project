@@ -37,10 +37,10 @@ namespace COSE.Hypothesis
 
         void Update()
         {
-            if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
+          /*  if (hypothesisInteraction.CurrentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
             {
                 ActivateAllIcons();
-            }
+            }*/
         }
 
         private void HandleLayerClicked(string textKey)
@@ -48,28 +48,28 @@ namespace COSE.Hypothesis
             Debug.Log("Layer clicked: " + textKey);
             RestartTimeout();
 
-            if (hypothesisInteraction.currentStateIndex >= 1 && hypothesisInteraction.isLastLayerFinished && hypothesisInteraction.currentStateIndex != 8)
+          /*  if (hypothesisInteraction.CurrentStateIndex >= 1 && hypothesisInteraction.isLastLayerFinished && hypothesisInteraction.CurrentStateIndex != 8)
             {
-                HypothesisLayerInteraction.NotifyTextLayer(textKey);
+               // HypothesisLayerInteraction.NotifyTextLayer(textKey);
             }
 
-            if (hypothesisInteraction.currentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
+            if (hypothesisInteraction.CurrentStateIndex == 2 && hypothesisInteraction.isMovementComplete)
             {
                 ResetAllIcons();
                 ActivateIconsForLayer(textKey);             
-            }
+            }*/
 
-            if (hypothesisInteraction.currentStateIndex == 4)
+            if (hypothesisInteraction.CurrentStateIndex == 4)
             {
                 ActivateLayersForKeywords(textKey);
             }
 
-            if (hypothesisInteraction.currentStateIndex == 8)
+            if (hypothesisInteraction.CurrentStateIndex == 8)
             {
                 ActivateHypothesis8Screenshots(textKey);
             }
 
-            if (hypothesisInteraction.currentStateIndex == 9)
+            if (hypothesisInteraction.CurrentStateIndex == 9)
             {
                 ActivateHypothesis9Animations(textKey);
             }

@@ -15,12 +15,12 @@ namespace COSE.Sphere
 
         void OnEnable()
         {
-            HypothesisInteraction.OnLastLayerFinished += HandleLastLayerFinished;
+            //HypothesisInteraction.OnLastLayerFinished += HandleLastLayerFinished;
         }
 
         void OnDisable()
         {
-            HypothesisInteraction.OnLastLayerFinished -= HandleLastLayerFinished;
+            //HypothesisInteraction.OnLastLayerFinished -= HandleLastLayerFinished;
         }
 
         public void HandleConclusionSphereTriggered(int index)

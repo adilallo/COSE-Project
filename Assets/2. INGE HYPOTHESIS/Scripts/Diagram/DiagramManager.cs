@@ -38,12 +38,12 @@ namespace COSE.Diagram
 
         private void OnEnable()
         {
-            HypothesisInteraction.OnLastLayerFinished += ActivateDiagramElements;
+           // HypothesisInteraction.OnLastLayerFinished += ActivateDiagramElements;
         }
 
         private void OnDisable()
         {
-            HypothesisInteraction.OnLastLayerFinished -= ActivateDiagramElements;
+           // HypothesisInteraction.OnLastLayerFinished -= ActivateDiagramElements;
         }
 
         public void RegisterElement(DiagramElement element)
