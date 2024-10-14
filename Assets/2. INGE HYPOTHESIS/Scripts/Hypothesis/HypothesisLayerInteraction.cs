@@ -10,10 +10,6 @@ public class HypothesisLayerInteraction: MonoBehaviour
 
     private Outline layerOutlineScript;
 
-    //public static event Action<string> OnLayerMoved;
-    //public static event Action<string> OnTextLayerClicked;
-    //public static event Action<int> OnLayerClickedByIndex;
-
     public void Initialize()
     {
         initialLocalPosition = transform.localPosition;
@@ -33,19 +29,4 @@ public class HypothesisLayerInteraction: MonoBehaviour
             layerOutlineScript.enabled = enable;
         }
     }
-
-   /* protected override void OnMouseDown()
-    {
-        base.OnMouseDown();;
-        OnLayerClickedByIndex?.Invoke(layerIndex);
-    }*/
-
-   /* public static void NotifyLayerMoved(string textKey)
-    {
-        OnLayerMoved?.Invoke(textKey);
-    }
- public static void NotifyTextLayer(string textKey)
-    {
-        OnTextLayerClicked?.Invoke(textKey);
-    }*/
 }

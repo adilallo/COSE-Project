@@ -34,6 +34,9 @@ namespace COSE.Hypothesis
         [SerializeField] private GameObject diagram;
         private int currentStateIndex = -1;
         private bool coroutineStarted = false;
+        private bool isMovementComplete = false;
+
+        public static event Action<int> OnHypothesisMovementComplete;
 
         // currently used properties
         public int CurrentStateIndex
@@ -41,9 +44,11 @@ namespace COSE.Hypothesis
             get { return currentStateIndex; }
             set { currentStateIndex = value; }
         }
-
-
-        private bool isMovementComplete = false;
+        public bool IsMovementComplete
+        {
+            get { return isMovementComplete; }
+            set { isMovementComplete = value; }
+        }
 
         void Start()
         {
@@ -205,12 +210,13 @@ namespace COSE.Hypothesis
             {
                 if (!isMovementComplete)
                 {
-                    isMovementComplete = true;
+                    IsMovementComplete = true;
+                    OnHypothesisMovementComplete?.Invoke(CurrentStateIndex);
                 }
             }
             else
             {
-                isMovementComplete = false;
+                IsMovementComplete = false;
             }
         }
 

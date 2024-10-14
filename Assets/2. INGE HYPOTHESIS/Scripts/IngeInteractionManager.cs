@@ -12,7 +12,6 @@ public class IngeInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] ingameTxt;
     [SerializeField] private GameObject[] citations;
     [SerializeField] private GameObject[] coins;
-    [SerializeField] private GameObject icons;
     [SerializeField] private GameObject[] animations;
     [SerializeField] private GameObject hypothesis1Model;
     [SerializeField] private GameObject hypothesis2Model;
@@ -27,6 +26,7 @@ public class IngeInteractionManager : MonoBehaviour
         GroupLayerInteraction.OnLayerGroupClicked += ActivateLayerObjects;
         SphereTrigger.OnSphereTriggered += ActivateSphereObjects;
         CoinTrigger.OnCoinTriggered += ActivateCoinObjects;
+        HypothesisInteraction.OnHypothesisMovementComplete += ActivateHypothesisObjects;
     }
 
     private void OnDisable()
@@ -35,6 +35,7 @@ public class IngeInteractionManager : MonoBehaviour
         GroupLayerInteraction.OnLayerGroupClicked -= ActivateLayerObjects;
         SphereTrigger.OnSphereTriggered -= ActivateSphereObjects;
         CoinTrigger.OnCoinTriggered -= ActivateCoinObjects;
+        HypothesisInteraction.OnHypothesisMovementComplete -= ActivateHypothesisObjects;
     }
 
     private void ActivateSphereObjects(string sphereId)
@@ -46,13 +47,10 @@ public class IngeInteractionManager : MonoBehaviour
                 break;
             case "INGE_SPHERE_HYPOTHESIS_2_LOC_ID":
                 hypothesisInteraction.CurrentStateIndex = 2;
-                icons.SetActive(true);
                 break;
             case "INGE_SPHERE_HYPOTHESIS_3_LOC_ID":
-                hypothesis1Model.SetActive(false);
+                hypothesisInteraction.CurrentStateIndex = 3;
                 hypothesis2Model.SetActive(false);
-                hypothesis3Model.SetActive(true);
-                hypothesis3Couplings.SetActive(true);  
                 break;
         }
     }
@@ -201,6 +199,21 @@ public class IngeInteractionManager : MonoBehaviour
         {
             case "INGE_COIN_02_LOC_ID":
                 coins[1].SetActive(true);
+                break;
+        }
+    }
+
+    private void ActivateHypothesisObjects(int currentIndex)
+    {
+        switch(currentIndex)
+        {
+            case 2:
+                hypothesis2Model.SetActive(true);
+                break;
+            case 3:
+                hypothesis1Model.SetActive(false);
+                hypothesis3Model.SetActive(true);
+                hypothesis3Couplings.SetActive(true);
                 break;
         }
     }
