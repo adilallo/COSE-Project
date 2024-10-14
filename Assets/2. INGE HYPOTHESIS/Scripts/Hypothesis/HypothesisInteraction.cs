@@ -34,7 +34,6 @@ namespace COSE.Hypothesis
         [SerializeField] private GameObject diagram;
         private int currentStateIndex = -1;
         private bool coroutineStarted = false;
-        private bool isMovementComplete = false;
 
         public static event Action<int> OnHypothesisMovementComplete;
 
@@ -43,11 +42,6 @@ namespace COSE.Hypothesis
         {
             get { return currentStateIndex; }
             set { currentStateIndex = value; }
-        }
-        public bool IsMovementComplete
-        {
-            get { return isMovementComplete; }
-            set { isMovementComplete = value; }
         }
 
         void Start()
@@ -71,27 +65,15 @@ namespace COSE.Hypothesis
                 StartCoroutine(MoveLayersSequentially(movementStates[currentStateIndex], 20.0f));
                 coroutineStarted = true;
             }
-            if (currentStateIndex == 2)
-            {
-                MoveAndRotateHypothesis(); 
-            }
-            if (currentStateIndex == 3)
-            {
-                MoveAndRotateHypothesis();
-            }
-            if (currentStateIndex == 4)
-            {
-                MoveAndRotateHypothesis();
-            }
             if (currentStateIndex == 5)
             {
-                MoveAndRotateHypothesis();
+               // MoveAndRotateHypothesis();
                // ResetAllLayers();
                 //ActivateLayerByIndex(3);
             }
             if (currentStateIndex == 6)
             {
-                MoveAndRotateHypothesis();
+                //MoveAndRotateHypothesis();
                // ResetAllLayers();
                 //ActivateHeroModels();
             }
@@ -188,69 +170,33 @@ namespace COSE.Hypothesis
             }
         }
 
-        private void MoveAndRotateHypothesis()
+        public void MoveModel(GameObject model)
+        {
+            StartCoroutine(MoveAndRotateModelCoroutine(model));
+        }
+
+        private IEnumerator MoveAndRotateModelCoroutine(GameObject model)
         {
             MovementState currentState = movementStates[currentStateIndex];
 
-            Vector3 newPosition = Vector3.MoveTowards(
-                hypothesisModel.transform.position,
-                currentState.targetPosition,
-                movementSpeed * Time.deltaTime);
-            hypothesisModel.transform.position = newPosition;
-
-            Quaternion newRotation = Quaternion.RotateTowards(
-                hypothesisModel.transform.rotation,
-                currentState.targetRotation,
-                rotationSpeed * Time.deltaTime);
-            hypothesisModel.transform.rotation = newRotation;
-
-            // Check if the hypothesis model has reached the target position and rotation
-            if (hypothesisModel.transform.position == currentState.targetPosition &&
-                hypothesisModel.transform.rotation == currentState.targetRotation)
+            while (model.transform.position != currentState.targetPosition || model.transform.rotation != currentState.targetRotation)
             {
-                if (!isMovementComplete)
-                {
-                    IsMovementComplete = true;
-                    OnHypothesisMovementComplete?.Invoke(CurrentStateIndex);
-                }
+                Vector3 newPosition = Vector3.MoveTowards(
+                    model.transform.position,
+                    currentState.targetPosition,
+                    movementSpeed * Time.deltaTime);
+                model.transform.position = newPosition;
+
+                Quaternion newRotation = Quaternion.RotateTowards(
+                    model.transform.rotation,
+                    currentState.targetRotation,
+                    rotationSpeed * Time.deltaTime);
+                model.transform.rotation = newRotation;
+
+                yield return null;
             }
-            else
-            {
-                IsMovementComplete = false;
-            }
+
+            OnHypothesisMovementComplete?.Invoke(CurrentStateIndex);
         }
-
-      /*  public void ResetAllLayers()
-        {
-            foreach (var layerInteraction in mainHypothesisLayers)
-            {
-                layerInteraction.gameObject.SetActive(false);
-
-                var outline = layerInteraction.gameObject.GetComponent<Outline>() ?? layerInteraction.gameObject.GetComponentInChildren<Outline>();
-                if (outline != null)
-                {
-                    outline.enabled = false;
-                }
-            }
-        }
-
-        private void ActivateLayerByIndex(int index)
-        {
-            if (index >= 0 && index < mainHypothesisLayers.Count)
-            {
-                var layer = mainHypothesisLayers[index];
-                layer.gameObject.SetActive(true);
-            }
-        }
-
-        private void ActivateHeroModels()
-        {
-            foreach (var model in heroModel)
-            {
-                model.SetActive(true);
-            }
-        }*/
-
-        
     }
 }

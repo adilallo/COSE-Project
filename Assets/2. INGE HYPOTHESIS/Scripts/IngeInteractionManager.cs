@@ -1,7 +1,7 @@
 using COSE.Coin;
 using COSE.Hypothesis;
 using COSE.Sphere;
-using COSE.Text;
+using System;
 using UnityEngine;
 
 public class IngeInteractionManager : MonoBehaviour
@@ -47,10 +47,16 @@ public class IngeInteractionManager : MonoBehaviour
                 break;
             case "INGE_SPHERE_HYPOTHESIS_2_LOC_ID":
                 hypothesisInteraction.CurrentStateIndex = 2;
+                hypothesisInteraction.MoveModel(hypothesis1Model);
                 break;
             case "INGE_SPHERE_HYPOTHESIS_3_LOC_ID":
                 hypothesisInteraction.CurrentStateIndex = 3;
                 hypothesis2Model.SetActive(false);
+                hypothesisInteraction.MoveModel(hypothesis1Model);
+                break;
+            case "INGE_SPHERE_HYPOTHESIS_4_LOC_ID":
+                hypothesisInteraction.CurrentStateIndex = 4;
+                hypothesisInteraction.MoveModel(hypothesis3Model);
                 break;
         }
     }
