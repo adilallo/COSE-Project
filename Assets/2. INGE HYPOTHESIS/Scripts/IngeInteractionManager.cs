@@ -190,10 +190,7 @@ public class IngeInteractionManager : MonoBehaviour
                 break;
             case "INGE_LAYER_COUPLING_9_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
-                foreach (GameObject couplingNumber in couplingNumbers)
-                {
-                    couplingNumber.SetActive(true);
-                }
+                Hypothesis3("INGE_LAYER_COUPLING_9_LOC_ID");
                 break;
         }
     }
@@ -324,6 +321,13 @@ public class IngeInteractionManager : MonoBehaviour
                 couplingNumbers[0].SetActive(true);
                 couplingNumbers[6].SetActive(true);
                 couplingAnimations[7].SetActive(true);
+                break;
+            case "INGE_LAYER_COUPLING_9_LOC_ID":
+                foreach (GameObject couplingNumber in couplingNumbers)
+                {
+                    couplingNumber.SetActive(true);
+                }
+                couplingAnimations[8].SetActive(true);
                 break;
         }
     }
