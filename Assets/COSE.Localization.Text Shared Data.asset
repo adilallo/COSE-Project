@@ -787,6 +787,46 @@ MonoBehaviour:
     m_Key: INGE_LAYER_RESIZE_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 79684098999562240
+    m_Key: INGE_LAYER_COUPLING_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79690546479476736
+    m_Key: INGE_LAYER_COUPLING_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79691491758157824
+    m_Key: INGE_LAYER_COUPLING_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79692081728958464
+    m_Key: INGE_LAYER_COUPLING_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79692611507302400
+    m_Key: INGE_LAYER_COUPLING_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79693097283203072
+    m_Key: INGE_LAYER_COUPLING_6_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79693668132171776
+    m_Key: INGE_LAYER_COUPLING_7_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79694131263025152
+    m_Key: INGE_LAYER_COUPLING_8_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79695533456601088
+    m_Key: INGE_LAYER_COUPLING_9_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79699664556634112
+    m_Key: INGE_COIN_04_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

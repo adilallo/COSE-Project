@@ -52,10 +52,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10327171980582912
-    m_Localized: "You can (cluster-)influence several elements on the screen by a
+    m_Localized: 'You can (cluster-)influence several elements on the screen by a
       single move. Find out which elements like hanging out with others! We refer
       to all elements that are simultaneously affected with one move with an umbrella
-      term: complex.\n \nPRESS X AND Z TO CYCLE THROUGH COUPLINGS"
+      term: complex.'
     m_Metadata:
       m_Items: []
   - m_Id: 10327237051015168
@@ -1553,6 +1553,61 @@ MonoBehaviour:
       in its length when any of its pentagon-balls attached to its ends move. The
       complex case of the variant with the URL square is discussed later, upstairs,
       immediately after encountering 'protagonist 2'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79684098999562240
+    m_Localized: 1, 5, 6, 7, 8, 9, 12, 14, 17 move together stiffly if 12 (URL-square)
+      takes the lead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79690546479476736
+    m_Localized: 1, 5, 6, 7, 8, 9, 14, 17 move together flexibly if 14 (pentagon-ball)
+      takes the lead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79691491758157824
+    m_Localized: 7, 17 move in opposite directions if 17 (scroll-bar) takes the lead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79692081728958464
+    m_Localized: '2, 10, 11, 13, 16 happen simultaneously: they all perform the URL
+      call process. You can learn more about it one level higher: watch out for the
+      label ''entertainment program''.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79692611507302400
+    m_Localized: '2, 3 happen consecutively: 2 (grey-field) foreshadows 3 (formatted-text).'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79693097283203072
+    m_Localized: (3, 15) (5, 9) (10, 13) stick together stiffly, they cannot be separated,
+      they keep the exact distance and position to each other.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79693668132171776
+    m_Localized: 6, 14 stick together flexibly, they cannot be separated, but the
+      angle of their position to each other changes with each movement.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79694131263025152
+    m_Localized: '(4, 13) (4, 15) (1, 7) one contains the other: 4 (middle-bar) is
+      the environment for the two balls. The balls can move within/along the middle-bar,
+      but cannot leave it, thus it could be seen as a variant of ''stick together
+      flexibly''. The same holds for the HTML-text-field that sits always inside
+      or on top of the HTML-colour-field.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79695533456601088
+    m_Localized: All elements are at least loosely entangled with each other, with
+      the exception of the potentially decoupled cursor the user navigates with,
+      the static middle-bar, and the highly ephemeral elements.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79699664556634112
+    m_Localized: 'Have you found all nine instances of tight coupling? As well as
+      the one big loose coupling complex? This complex includes all elements except
+      for the middle-bar and the highly ephemeral fields that appear only in the
+      search process. '
     m_Metadata:
       m_Items: []
   references:

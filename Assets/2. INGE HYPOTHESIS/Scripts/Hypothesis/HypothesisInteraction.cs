@@ -23,10 +23,6 @@ namespace COSE.Hypothesis
         [SerializeField] public GameObject hypothesis9Scheme1;
         [SerializeField] public GameObject hypothesis9Scheme2;
 
-        
-
-        public static event Action<string> OnCouplingActivated;
-
         // currently used fields
         [SerializeField] private IngeTextInteraction textInteraction;
         [SerializeField] private GameObject hypothesisModel;
@@ -48,22 +44,6 @@ namespace COSE.Hypothesis
 
 
         private bool isMovementComplete = false;
-
-        private int currentCouplingIndex = -1;
-        
-        private List<List<int>> couplings = new List<List<int>>()
-        {
-                new List<int>{2, 11, 13, 16},
-                new List<int>{1, 12, 8},
-                new List<int>{2, 3},
-                new List<int>{3, 15},
-                new List<int>{4, 13, 15},
-                new List<int>{5, 9},
-                new List<int>{5, 6, 7, 9, 14, 17},
-                new List<int>{6, 14},
-                new List<int>{10, 13},
-                new List<int>{1, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 17}
-        };
 
         void Start()
         {
@@ -93,15 +73,6 @@ namespace COSE.Hypothesis
             if (currentStateIndex == 3)
             {
                 MoveAndRotateHypothesis();
-
-                if (Input.GetKeyDown(KeyCode.X))
-                {
-                    CycleCouplings(1);
-                }
-                else if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    CycleCouplings(-1);
-                }
             }
             if (currentStateIndex == 4)
             {
@@ -245,35 +216,6 @@ namespace COSE.Hypothesis
                     outline.enabled = false;
                 }
             }
-        }
-
-        private void CycleCouplings(int direction)
-        {
-            currentCouplingIndex += direction;
-            if (currentCouplingIndex >= couplings.Count) currentCouplingIndex = 0;
-            else if (currentCouplingIndex < 0) currentCouplingIndex = couplings.Count - 1;
-
-            ActivateCoupling(couplings[currentCouplingIndex]);
-        }
-
-        private void ActivateCoupling(List<int> coupling)
-        {
-            foreach (var layer in mainHypothesisLayers)
-            {
-                layer.gameObject.SetActive(false);
-            }
-
-            foreach (int id in coupling)
-            {
-                var layerToActivate = mainHypothesisLayers.Find(layer => layer.layerIndex == id);
-                if (layerToActivate != null)
-                {
-                    layerToActivate.gameObject.SetActive(true);
-                }
-            }
-
-            bool isTightlyCoupled = currentCouplingIndex != couplings.Count - 1;
-            OnCouplingActivated?.Invoke(isTightlyCoupled ? "Tightly Coupled" : "Loosely Coupled");
         }
 
         private void ActivateLayerByIndex(int index)
