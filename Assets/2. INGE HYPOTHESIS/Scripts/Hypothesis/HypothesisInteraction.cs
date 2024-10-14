@@ -81,14 +81,14 @@ namespace COSE.Hypothesis
             if (currentStateIndex == 5)
             {
                 MoveAndRotateHypothesis();
-                ResetAllLayers();
-                ActivateLayerByIndex(3);
+               // ResetAllLayers();
+                //ActivateLayerByIndex(3);
             }
             if (currentStateIndex == 6)
             {
                 MoveAndRotateHypothesis();
-                ResetAllLayers();
-                ActivateHeroModels();
+               // ResetAllLayers();
+                //ActivateHeroModels();
             }
             if (currentStateIndex == 7)
             {
@@ -123,6 +123,8 @@ namespace COSE.Hypothesis
                 Vector3 finalLayerPosition = targetLayerWorldPosition + positionOffset;
                 Quaternion finalLayerRotation = rotationOffset * targetLayerWorldRotation;
 
+                DisableAllOutlines();
+
                 StartCoroutine(MoveLayer(layer, finalLayerPosition, finalLayerRotation, movementSpeed, rotationSpeed));
                 yield return new WaitUntil(() => Time.time >= startTime + delayBetweenLayers || (Input.GetKeyDown(KeyCode.Return) && Time.time - lastKeyPressTime > debounceTime));
 
@@ -134,10 +136,19 @@ namespace COSE.Hypothesis
             }
         }
 
+        private void DisableAllOutlines()
+        {
+            foreach (HypothesisLayerInteraction layer in mainHypothesisLayers)
+            {
+                layer.OutlineLayer(false);
+            }
+        }
+
         private IEnumerator MoveLayer(HypothesisLayerInteraction layer, Vector3 targetGlobalPosition, Quaternion targetGlobalRotation, float moveSpeed, float rotSpeed)
         {
             GameObject layerObject = layer.gameObject;
             layerObject.SetActive(true);
+            layer.OutlineLayer(true);
 
             while (layerObject.transform.position != targetGlobalPosition ||
                    layerObject.transform.rotation != targetGlobalRotation)
@@ -152,14 +163,13 @@ namespace COSE.Hypothesis
                     layerObject.transform.rotation,
                     targetGlobalRotation,
                     rotSpeed * Time.deltaTime);
+                textInteraction.ActivateLayerText(layer.textKey);
 
-                if (currentStateIndex == 1)
-                {
-                    textInteraction.ActivateLayerText(layer.textKey);
-                }
 
                 yield return null;
             }
+
+            layer.OutlineLayer(false);
 
             if (layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L2_LOC_ID" || layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L11_LOC_ID" || layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L16_LOC_ID")
             {
@@ -204,7 +214,7 @@ namespace COSE.Hypothesis
             }
         }
 
-        public void ResetAllLayers()
+      /*  public void ResetAllLayers()
         {
             foreach (var layerInteraction in mainHypothesisLayers)
             {
@@ -233,7 +243,7 @@ namespace COSE.Hypothesis
             {
                 model.SetActive(true);
             }
-        }
+        }*/
 
         
     }

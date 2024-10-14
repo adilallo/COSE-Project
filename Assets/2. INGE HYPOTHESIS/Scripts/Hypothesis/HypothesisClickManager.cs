@@ -18,14 +18,14 @@ namespace COSE.Hypothesis
 
         private void OnEnable()
         {
-            HypothesisLayerInteraction.OnLayerClicked += HandleLayerClicked;
-            AnimationClickEvent.OnAnimationClicked += PlayVideoClip;
+            //HypothesisLayerInteraction.OnLayerClicked += HandleLayerClicked;
+           // AnimationClickEvent.OnAnimationClicked += PlayVideoClip;
         }
 
         private void OnDisable()
         {
-            HypothesisLayerInteraction.OnLayerClicked -= HandleLayerClicked;
-            AnimationClickEvent.OnAnimationClicked -= PlayVideoClip;
+            //HypothesisLayerInteraction.OnLayerClicked -= HandleLayerClicked;
+          // AnimationClickEvent.OnAnimationClicked -= PlayVideoClip;
         }
 
         void Start()
@@ -61,7 +61,7 @@ namespace COSE.Hypothesis
 
             if (hypothesisInteraction.CurrentStateIndex == 4)
             {
-                ActivateLayersForKeywords(textKey);
+               // ActivateLayersForKeywords(textKey);
             }
 
             if (hypothesisInteraction.CurrentStateIndex == 8)
@@ -112,7 +112,7 @@ namespace COSE.Hypothesis
             }
         }
 
-        private void ActivateLayersForKeywords(string textKey)
+      /*  private void ActivateLayersForKeywords(string textKey)
         {
             if (nameToIndexMap.TryGetValue(textKey, out List<int> indices))
             {
@@ -126,7 +126,7 @@ namespace COSE.Hypothesis
                     }
                 }
             }
-        }
+        }*/
         
         private void ActivateHypothesis8Screenshots(string textKey)
         {
