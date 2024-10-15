@@ -21,6 +21,8 @@ public class IngeInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] hypothesis3Numbers;
     [SerializeField] private GameObject hypothesis4Buzzwords;
     [SerializeField] private GameObject[] hypothesis4Animations;
+    [SerializeField] private GameObject[] hypothesis6Animations;
+    [SerializeField] private GameObject[] hypothesis6Figures;
 
     private void OnEnable()
     {
@@ -59,6 +61,18 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_SPHERE_HYPOTHESIS_4_LOC_ID":
                 hypothesisInteraction.CurrentStateIndex = 4;
                 hypothesisInteraction.MoveModel(hypothesis3Model);
+                break;
+            case "INGE_SPHERE_11_LOC_ID":
+                hypothesis6Animations[0].SetActive(true);
+                break;
+            case "INGE_SPHERE_12_LOC_ID":
+                hypothesis6Animations[1].SetActive(true);
+                break;
+            case "INGE_SPHERE_13_LOC_ID":
+                hypothesis6Animations[2].SetActive(true);
+                break;
+            case "INGE_SPHERE_15_LOC_ID":
+                hypothesis6Figures[0].SetActive(true);
                 break;
         }
     }
@@ -234,6 +248,22 @@ public class IngeInteractionManager : MonoBehaviour
                 textInteraction.ActivateLayerText(textKey);
                 Hypothesis4("INGE_LAYER_HYPOTHESIS_4_L9_LOC_ID");
                 break;
+            case "INGE_LAYER_HERO_1_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "INGE_LAYER_HERO_2_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "INGE_LAYER_TOOL_1":
+                hypothesis6Figures[1].SetActive(true);
+                hypothesis6Figures[0].SetActive(false);
+                break;
+            case "INGE_LAYER_HERO_3_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
+            case "INGE_LAYER_HERO_4_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
         }
     }
 
@@ -243,6 +273,9 @@ public class IngeInteractionManager : MonoBehaviour
         {
             case "INGE_COIN_02_LOC_ID":
                 coins[1].SetActive(true);
+                break;
+            case "INGE_COIN_07_LOC_ID":
+                hypothesis6Animations[3].SetActive(true);
                 break;
         }
     }

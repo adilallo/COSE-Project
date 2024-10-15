@@ -75,10 +75,7 @@ MonoBehaviour:
   - m_Id: 10328055108067328
     m_Localized: "The tab field complex is one of four functional clusters consisting
       of several elements. So let\u2019s meet these four complex protagonists in
-      their full three-dimensionality!\n\nIn the .com browser, one website is depicted
-      within a tab field complex. As the tab field complex is a mix of buttons, texts
-      and colour fields, its configuration has much depth. This stretched-out three-dimensionality
-      is an important factor as soon as further tab field complexes enter the scene."
+      their full three-dimensionality!"
     m_Metadata:
       m_Items: []
   - m_Id: 11449771431550976
@@ -1626,6 +1623,187 @@ MonoBehaviour:
     m_Localized: Some of the complexes are quite spread out in depth on layers that
       are a considerable distance apart. Obviously, this functional clustering was
       not the guiding principle when defining what element sits on which layer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80306080598306816
+    m_Localized: In the .com browser, one website is depicted within a tab field
+      complex. As the tab field complex is a mix of buttons, texts and colour fields,
+      its configuration has much depth. This stretched-out three-dimensionality is
+      an important factor as soon as further tab field complexes enter the scene.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80306458001780736
+    m_Localized: 'Turning the website around and turning around the website
+
+      The
+      tab field complex is attributed a flipping or turning window because on the
+      one hand it is a window to the internet as it harbours the website content.
+      On the other hand, the browser seems to provide a back-side view of websites
+      in two different ways. The first of these is always provided, the second can
+      be reached by interacting with it. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80306665934401536
+    m_Localized: Normally, the HTML code of a website is occluded from the users,
+      who need to go an extra step to have it displayed in their commercial browser.
+      In .com, the HTML-code fills what the users will interpret as the tab field
+      complex in a rather large and easy to read font. It seems to have been brought
+      closer for inspection than its formatted-text version.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80308841431805952
+    m_Localized: "The affordance of these two elements also underlines that reversal.
+      The user can edit the HTML code text, but cannot even mark the formatted-text.
+      Thus, JODI seem to swap surface and \u2018subface\u2019 (to use Frieder Nake\u2019s
+      expression), that is, the GUI level and the code level. However, the HTML code
+      can only be reworked if a second instance of flipping hasn\u2019t turned it
+      away from the user\u2019s sight. So, what could turn the HTML-text-field \u2018away\u2019? "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80311102912442368
+    m_Localized: 'Our next protagonist is the pentagon complex:
+
+      It is shown
+      here as two elements coupled, but it is optically complete only with all five
+      pentagon complexes. As it also turns or flips parts of the website, it shares
+      the same attribute as the tab field complex. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80312640040972288
+    m_Localized: "This second instance of flipping the displayed website is associated
+      with the upper left corner of the HTML-colour-field. As the HTML-colour-field
+      can sit anywhere in the viewport, its upper left corner is not a fixed coordinate
+      value, but is position-sensitive and thus variable. Drawing a horizontal and
+      a vertical line through this point, cuts the viewport plane into four sectors
+      that have different \u2018properties\u2019 for this specific tab field complex. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80313335821479936
+    m_Localized: 'The operator with which the differences in the sectors can be performed
+      and shown is the corresponding pentagon-ball. When you move the pentagon-ball
+      with the mouse (here shown as a circular movement), the HTML-colour-field will
+      follow the movement by adjusting its size. At the moment, when this movement
+      touches the left and/or the top side of the HTML-colour-field, it seems to
+      flip around a mirroring hinge. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80313553841401856
+    m_Localized: "The horizontal distance of the pentagon-ball to the left border
+      of the HTML-colour-field determines the width of the latter. It does not matter
+      whether the pentagon-ball is left or right of the left HTML-colour-field edge,
+      the HTML-colour-field will always stretch sideward to the right. The same holds
+      for the top edge. No matter whether the pentagon-ball is below or above it,
+      its distance is rendered as the height of the HTML-colour-field and is always
+      oriented downwards. As a consequence, the URL-square always sits on the left
+      top of the HTML-colour-field and is never superposed by the HTML-colour-field,
+      no matter from where the pentagon-ball determines the latter\u2019s size. This
+      also conveys the impression that there is one \u2018frontal\u2019 rendering
+      (only when the pentagon-ball is in the bottom right quarter) and all three
+      other quarters reverse the situation so that the HTML code disappears. This
+      is the second kind of flipping that withdraws the HTML code. This second instance
+      of withdrawing the HTML code is only due to user interventions. One could thus
+      say that the user interventions are augmenting the variance of possible situations
+      because they can make the HTML code disappear. Thus, it turns out it is actually
+      the users who are causing the \u2018disorder\u2019 by rendering the situation
+      less legible. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80313905068224512
+    m_Localized: "A comparison with a runtime analysis without user interaction helps
+      to explain the reasons. This comparison is possible as the browser has an autopilot
+      mode, it runs the URL calling autonomously. But there are some actions it doesn\u2019t
+      do by itself. In the autopilot mode the browser will never resize the HTML-colour-fields,
+      the pentagon complex always hovers in the lower right corner of the tab field
+      complex. That is, per default, the pentagon complex seems to support or span
+      open the HTML-(colour/text)-fields from below. Left by itself, .com always
+      shows the HTML code if there is one to show. Moreover, the pentagon complex
+      will occupy only the lower right sector of the browser display. This fact has
+      to do with the distribution of the URL-squares on the viewport and the default
+      size of their HTML-colour-fields. If a URL-square sits on the top left corner,
+      the position of the pentagon-ball of the same colour is somewhere in the middle
+      of the monitor (which then is its utmost left and upper border in the viewport
+      a pentagon-ball can ever reach in an autopilot run of the browser)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80314557307662336
+    m_Localized: 'As the HTML-colour-fields may extend beyond the viewport on the
+      left and bottom, but the corresponding pentagon-balls cannot follow it into
+      the realm of the unseen, all positions of the pentagon-balls beyond the viewport
+      are indicated as being within the outer edge. Thus there is a certain accumulation
+      of pentagon-balls on the bottom right. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80319115639500800
+    m_Localized: The search facilitating complex is depicted by the red carpet it
+      is rolling out for the users. Although not obvious at first glance, .com browser
+      offers the user four different ways to start the web search for each website
+      tab.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80319904290287616
+    m_Localized: 'Contrary to the general impression of bulkiness, in several ways
+      .com surpasses conventional browsers in paving a way into the internet. First,
+      each URL is present twice and both can be used to start a search. A search
+      can be initiated by typing in a URL either in the URL-text-field or in the
+      middle-bar-URL-text-field and pressing enter, or by double-clicking on the
+      URL-square or on the middle-bar-URL-ball respectively. Thus, the opportunities
+      to go and explore a website by chance or by intention are heightened. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80320639350452224
+    m_Localized: 'A visual statistic accumulating the positions of all the pentagon-balls
+      over 20 minutes of run-time without user interventions, reveals this implicit
+      rule. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80320978619314176
+    m_Localized: .com offers user friendliness through multiple entry points.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80324776716775424
+    m_Localized: "The search performing complex symbolically waves a red flag as
+      it seeks to gather all the user\u2019s attention. Even if users may be overwhelmed
+      and have the impression that they need to fight to get to the internet content,
+      the browser is actually emphasizing the core business of any browser, namely
+      the event of the search process."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80325171367227392
+    m_Localized: "Here, multiple instances indicate that something is happening.
+      The URL calling process is accompanied by a hectic horizontal movement pushing
+      around the corresponding URL, by sound, by a colour change of the URL and by
+      various fields popping up: grey and the \u2018own\u2019 colour, a field behind
+      the URL. All these signals indicate that something is \u2018coming\u2019 from
+      the internet. It is reminiscent of the good old letter shoot. While the website
+      data parcel is underway, a specific sound accompanies its journey and a different
+      gong advertises its arrival. The box can contain something or can be empty.
+      In this light, the horizontal middle-bar containing the balls also mimics the
+      old medium of postal transmission. The difference is only that their hectic
+      back and forth movements symbolize the requirement in the networked world that
+      the various bits and pieces of information must be gathered from different
+      sites. The middle-bar indicates prominently that a search is taking place by
+      serving as a highway for a nervous race. This is a rather different picture
+      than the floating, orbiting and circling in outer space shown by other throbber
+      animations. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80325768032137216
+    m_Localized: "And all this performed excitement has yet another effect: the long
+      waiting time that was a major part of the early days of the internet, here,
+      is filled with action. Users can lean back and enjoy the spectacle. This kind
+      of jingle-entertainment is performed by six elements. Isn\u2019t that again
+      contributing to an improved user experience?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80325996600733696
+    m_Localized: ".com provides jingles and suspense \u2013 and thus emphasizes search
+      and delivery."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80326208547303424
+    m_Localized: Each of the protagonists is attributed a symbol signaling their
+      main gesture, for which they are regarded as playing a crucial role in this
+      browser. These gestures respectively are already the result of an interpretation.
     m_Metadata:
       m_Items: []
   references:
