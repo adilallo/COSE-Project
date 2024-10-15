@@ -4482,9 +4482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf37e3465b6b02409199d772b850448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: 305d7316d019bd14ca3d9a892c9c8b0b, type: 3}
-  animationId: 3
-  outline: {fileID: 0}
 --- !u!64 &296007332
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13270,9 +13267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf37e3465b6b02409199d772b850448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: 992233b71277ebc468e5fa446e7aa4a1, type: 3}
-  animationId: 2
-  outline: {fileID: 0}
 --- !u!64 &836391531
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14073,6 +14067,8 @@ GameObject:
   - component: {fileID: 899358027}
   - component: {fileID: 899358026}
   - component: {fileID: 899358025}
+  - component: {fileID: 899358029}
+  - component: {fileID: 899358028}
   m_Layer: 0
   m_Name: coin_i06
   m_TagString: Untagged
@@ -14148,6 +14144,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1132204680}
   m_LocalEulerAnglesHint: {x: -4.679, y: -181.164, z: 178.566}
+--- !u!114 &899358028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899358024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d512f944f3bcb1641a215caf2032863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: INGE_COIN_06_LOC_ID
+--- !u!64 &899358029
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899358024}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
 --- !u!1 &902285240
 GameObject:
   m_ObjectHideFlags: 0
@@ -16306,6 +16337,8 @@ GameObject:
   - component: {fileID: 1117895953}
   - component: {fileID: 1117895952}
   - component: {fileID: 1117895951}
+  - component: {fileID: 1117895955}
+  - component: {fileID: 1117895954}
   m_Layer: 0
   m_Name: coin_i05
   m_TagString: Untagged
@@ -16381,6 +16414,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1132204680}
   m_LocalEulerAnglesHint: {x: -1.929, y: -184.481, z: 184.498}
+--- !u!114 &1117895954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117895950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d512f944f3bcb1641a215caf2032863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: INGE_COIN_05_LOC_ID
+--- !u!64 &1117895955
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117895950}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
 --- !u!1 &1132204679
 GameObject:
   m_ObjectHideFlags: 0
@@ -20518,9 +20586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf37e3465b6b02409199d772b850448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: 1b8cb872d2e58e84890078ff8b53178a, type: 3}
-  animationId: 1
-  outline: {fileID: 0}
 --- !u!64 &1423468846
 MeshCollider:
   m_ObjectHideFlags: 0

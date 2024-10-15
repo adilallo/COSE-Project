@@ -827,6 +827,14 @@ MonoBehaviour:
     m_Key: INGE_LAYER_SHRINK_MULTIPLY_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 80287259607019520
+    m_Key: INGE_COIN_05_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80287451580313600
+    m_Key: INGE_COIN_06_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

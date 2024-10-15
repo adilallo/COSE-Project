@@ -1613,6 +1613,21 @@ MonoBehaviour:
       (5, 9)
     m_Metadata:
       m_Items: []
+  - m_Id: 80287259607019520
+    m_Localized: "Have you noticed an overall tendency? The elements situated in
+      the background are monochromatic colour-fields, the middle ground is populated
+      by text-fields and the foreground is where buttons of various kinds reside.
+      Thus, there is order in the layering of types of elements along subtypes: points,
+      texts fields, lines and colour fields are each in their layer sectors \u2013
+      with some exceptions."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80287451580313600
+    m_Localized: Some of the complexes are quite spread out in depth on layers that
+      are a considerable distance apart. Obviously, this functional clustering was
+      not the guiding principle when defining what element sits on which layer.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
