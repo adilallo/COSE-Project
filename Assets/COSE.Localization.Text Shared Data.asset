@@ -911,6 +911,26 @@ MonoBehaviour:
     m_Key: INGE_COIN_10_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 80381285899284480
+    m_Key: INGE_COIN_11_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80382549815046144
+    m_Key: INGE_COIN_12_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80383003483549696
+    m_Key: INGE_SPHERE_22_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80383128666746880
+    m_Key: INGE_SPHERE_23_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80383401078403072
+    m_Key: INGE_COIN_BIG_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

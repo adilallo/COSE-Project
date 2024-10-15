@@ -294,10 +294,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15081801549602816
-    m_Localized: While the opaque representation allows the user to determine clearly
-      what is in front and what behind, the transparent representation allows text
-      to shine through. Moreover, the colours in the overlapping sections of colour-fields
-      may change.
+    m_Localized: 'What contributes much to the overall impression of inextricable
+      complexity is the fact that the elements either overlap in an opaque manner
+      or in a transparent manner. '
     m_Metadata:
       m_Items: []
   - m_Id: 15085678499979264
@@ -1804,6 +1803,49 @@ MonoBehaviour:
     m_Localized: Each of the protagonists is attributed a symbol signaling their
       main gesture, for which they are regarded as playing a crucial role in this
       browser. These gestures respectively are already the result of an interpretation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80381285899284480
+    m_Localized: "Inserting all the elements that are displayed simultaneously, shows
+      that the layering order first follows the element types, and that within an
+      element type there is a strict colour order: Red is always 1, green 2, blue
+      3, yellow 4, cyan 5. These layers build from the back towards the front. According
+      to JODI\u2019s numbering, 1 is always at the very back while 5 is at the front. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80382549815046144
+    m_Localized: "While the opaque representation allows the user to determine clearly
+      what is in front and what behind, the transparent representation allows text
+      to shine through. Moreover, the colours in the overlapping sections of colour-fields
+      may change. \r\nWhat does \u2018may change\u2019 mean? Where is the rule?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80383003483549696
+    m_Localized: "Here we deal with a simple subtractive colour mix with perfect
+      filters \u2013 which means the colours as filters absorb a 100% of the opposite
+      colour. Red absorbs 100% of green and blue, green absorbs 100% blue and red.
+      Superposing a red and a green filter, for instance, then all light is absorbed,
+      turning the result into black."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80383128666746880
+    m_Localized: "There are four exceptions that do not turn black when overlapping:
+      Yellow and cyan together turn green, moreover, yellow \u2018suffocates\u2019
+      (has no effect) when overlapping with green or with red. Cyan \u2018suffocates\u2019
+      in blue and green."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80383401078403072
+    m_Localized: "The browser is so complex that even when the user attempts to put
+      on \u2018order\u2019 filter on it incorporating all the 4-5 measures, it always
+      offers the performative eventfulness and visual complexity. This room spoke
+      to an analytic-cognitive mindset favouring rules for prediction and explanation
+      over enchantment. The sum of insights is, in short, that things appear different
+      at second glance. Apparently irregular and arbitrary positions and processes
+      actually follow rules. Aspects that seem to be utterly different from familiar
+      browsers or the embodiment of user-un-friendliness, turn out to indeed emphasize
+      the browser functions in a multimodal firework display that provides users
+      with more entry points for launching a URL calling than any other browser. "
     m_Metadata:
       m_Items: []
   references:
