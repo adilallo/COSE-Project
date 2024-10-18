@@ -62,28 +62,8 @@ namespace COSE.Hypothesis
 
             if (currentStateIndex == 1 && !coroutineStarted && Input.GetKeyDown(KeyCode.Return))
             {
-                StartCoroutine(MoveLayersSequentially(movementStates[currentStateIndex], 20.0f));
+                StartCoroutine(MoveLayersSequentially(movementStates[currentStateIndex], 16.0f));
                 coroutineStarted = true;
-            }
-            if (currentStateIndex == 5)
-            {
-               // MoveAndRotateHypothesis();
-               // ResetAllLayers();
-                //ActivateLayerByIndex(3);
-            }
-            if (currentStateIndex == 6)
-            {
-                //MoveAndRotateHypothesis();
-               // ResetAllLayers();
-                //ActivateHeroModels();
-            }
-            if (currentStateIndex == 7)
-            {
-                hypothesis7.SetActive(true);
-            }
-            if (currentStateIndex == 9)
-            {
-                hypothesis9Scheme1.SetActive(true);
             }
         }
 

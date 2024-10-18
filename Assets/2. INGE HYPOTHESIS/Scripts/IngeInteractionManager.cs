@@ -23,6 +23,7 @@ public class IngeInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] hypothesis4Animations;
     [SerializeField] private GameObject[] hypothesis6Animations;
     [SerializeField] private GameObject[] hypothesis6Figures;
+    [SerializeField] private GameObject[] colorSchemes;
 
     private void OnEnable()
     {
@@ -78,6 +79,9 @@ public class IngeInteractionManager : MonoBehaviour
                 hypothesis1Model.SetActive(true);
                 hypothesisInteraction.CurrentStateIndex = 5;
                 hypothesisInteraction.MoveModel(hypothesis1Model);
+                break;
+            case "INGE_SPHERE_HYPOTHESIS_9_LOC_ID":
+                colorSchemes[0].SetActive(true);
                 break;
         }
     }
@@ -269,6 +273,14 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_HERO_4_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 break;
+            case "INGE_LAYER_COLOR_SCHEME_1":
+                colorSchemes[0].SetActive(false);
+                colorSchemes[1].SetActive(true);
+                break;
+            case "INGE_LAYER_COLOR_SCHEME_2":
+                colorSchemes[1].SetActive(false);
+                colorSchemes[0].SetActive(true);
+                break;
         }
     }
 
@@ -281,6 +293,10 @@ public class IngeInteractionManager : MonoBehaviour
                 break;
             case "INGE_COIN_07_LOC_ID":
                 hypothesis6Animations[3].SetActive(true);
+                break;
+            case "INGE_COIN_13_LOC_ID":
+                hypothesisInteraction.CurrentStateIndex = 6;
+                hypothesisInteraction.MoveModel(hypothesis1Model);
                 break;
         }
     }

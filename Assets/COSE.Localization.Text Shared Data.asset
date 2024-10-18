@@ -171,10 +171,6 @@ MonoBehaviour:
     m_Key: INGE_LAYER_HYPOTHESIS_6_L4_LOC_ID
     m_Metadata:
       m_Items: []
-  - m_Id: 15104449662935040
-    m_Key: INGE_LAYER_HYPOTHESIS_9_L1_LOC_ID
-    m_Metadata:
-      m_Items: []
   - m_Id: 15104581330526208
     m_Key: INGE_LAYER_HYPOTHESIS_9_L2_LOC_ID
     m_Metadata:
@@ -929,6 +925,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 80383401078403072
     m_Key: INGE_COIN_BIG_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81171591377969152
+    m_Key: INGE_COIN_13_LOC_ID
     m_Metadata:
       m_Items: []
   m_Metadata:
