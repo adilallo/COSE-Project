@@ -26,6 +26,7 @@ public class IngeInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] hypothesis6Figures;
     [SerializeField] private GameObject[] colorSchemes;
     [SerializeField] private GameObject[] diagramHighlights;
+    [SerializeField] private GameObject[] hypothesis8Screenshots;
 
     private void OnEnable()
     {
@@ -311,6 +312,14 @@ public class IngeInteractionManager : MonoBehaviour
                 break;
             case "INGE_LAYER_GREY_FIELD":
                 DiagramHighlights("INGE_LAYER_GREY_FIELD");
+                break;
+            case "Hypothesis_8_Opaque":
+                hypothesis8Screenshots[0].SetActive(true);
+                hypothesis8Screenshots[1].SetActive(true);
+                break;
+            case "Hypothesis_8_Transparent":
+                hypothesis8Screenshots[2].SetActive(true);
+                hypothesis8Screenshots[3].SetActive(true);
                 break;
         }
     }
