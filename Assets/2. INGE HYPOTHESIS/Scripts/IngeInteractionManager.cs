@@ -74,6 +74,11 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_SPHERE_15_LOC_ID":
                 hypothesis6Figures[0].SetActive(true);
                 break;
+            case "INGE_SPHERE_HYPOTHESIS_7_LOC_ID":
+                hypothesis1Model.SetActive(true);
+                hypothesisInteraction.CurrentStateIndex = 5;
+                hypothesisInteraction.MoveModel(hypothesis1Model);
+                break;
         }
     }
 
