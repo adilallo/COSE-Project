@@ -24,6 +24,7 @@ public class IngeInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] hypothesis6Animations;
     [SerializeField] private GameObject[] hypothesis6Figures;
     [SerializeField] private GameObject[] colorSchemes;
+    [SerializeField] private GameObject[] diagramHighlights;
 
     private void OnEnable()
     {
@@ -281,6 +282,27 @@ public class IngeInteractionManager : MonoBehaviour
                 colorSchemes[1].SetActive(false);
                 colorSchemes[0].SetActive(true);
                 break;
+            case "INGE_LAYER_DIAGRAM_SCROLLBAR":
+                DiagramHighlights("INGE_LAYER_DIAGRAM_SCROLLBAR");
+                break;
+            case "INGE_LAYER_DIAGRAM_FORMATTED_TEXT":
+                DiagramHighlights("INGE_LAYER_DIAGRAM_FORMATTED_TEXT");
+                break;
+            case "INGE_LAYER_DIAGRAM_PENTAGON_BALL":
+                DiagramHighlights("INGE_LAYER_DIAGRAM_PENTAGON_BALL");
+                break;
+            case "INGE_LAYER_DIAGRAM_HISTORY_URL":
+                DiagramHighlights("INGE_LAYER_DIAGRAM_HISTORY_URL");
+                break;
+            case "INGE_LAYER_DIAGRAM_WHAT_IS_THIS":
+                DiagramHighlights("INGE_LAYER_DIAGRAM_WHAT_IS_THIS");
+                break;
+            case "INGE_LAYER_DIAGRAM_COLOR_CHANGE":
+                DiagramHighlights("INGE_LAYER_DIAGRAM_COLOR_CHANGE");
+                break;
+            case "INGE_LAYER_GREY_FIELD":
+                DiagramHighlights("INGE_LAYER_GREY_FIELD");
+                break;
         }
     }
 
@@ -315,6 +337,35 @@ public class IngeInteractionManager : MonoBehaviour
                 break;
             case 4:
                 hypothesis4Buzzwords.SetActive(true);
+                break;
+        }
+    }
+
+    private void DiagramHighlights(string diagramLayer)
+    {
+        foreach (GameObject diagramHighlight in diagramHighlights)
+        {
+            diagramHighlight.SetActive(false);
+        }
+        switch (diagramLayer)
+        {
+            case "INGE_LAYER_DIAGRAM_SCROLLBAR":
+                diagramHighlights[0].SetActive(true);
+                break;
+            case "INGE_LAYER_DIAGRAM_FORMATTED_TEXT":
+                diagramHighlights[1].SetActive(true);
+                break;
+            case "INGE_LAYER_DIAGRAM_PENTAGON_BALL":
+                diagramHighlights[2].SetActive(true);
+                break;
+            case "INGE_LAYER_DIAGRAM_HISTORY_URL":
+                diagramHighlights[3].SetActive(true);
+                break;
+            case "INGE_LAYER_DIAGRAM_WHAT_IS_THIS":
+                diagramHighlights[4].SetActive(true);
+                break;
+            case "INGE_LAYER_DIAGRAM_COLOR_CHANGE":
+                diagramHighlights[5].SetActive(true);
                 break;
         }
     }
