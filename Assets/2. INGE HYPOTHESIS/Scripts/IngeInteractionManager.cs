@@ -19,6 +19,7 @@ public class IngeInteractionManager : MonoBehaviour
     [SerializeField] private GameObject hypothesis3Couplings;
     [SerializeField] private GameObject[] hypothesis3Animations;
     [SerializeField] private GameObject[] hypothesis3Numbers;
+    [SerializeField] private Outline[] hypothesis3Layers;
     [SerializeField] private GameObject hypothesis4Buzzwords;
     [SerializeField] private GameObject[] hypothesis4Animations;
     [SerializeField] private GameObject[] hypothesis6Animations;
@@ -421,70 +422,114 @@ public class IngeInteractionManager : MonoBehaviour
         {
             couplingAnimation.SetActive(false);
         }
+        foreach (Outline couplingLayer in hypothesis3Layers)
+        {
+            couplingLayer.enabled = false;
+        }
         switch(layerText)
         {
             case "INGE_LAYER_COUPLING_1_LOC_ID":
                 hypothesis3Numbers[0].SetActive(true);
+                hypothesis3Layers[0].enabled = true;
                 hypothesis3Numbers[4].SetActive(true);
+                hypothesis3Layers[4].enabled = true;
                 hypothesis3Numbers[5].SetActive(true);
+                hypothesis3Layers[5].enabled = true;
                 hypothesis3Numbers[6].SetActive(true);
+                hypothesis3Layers[6].enabled = true;
                 hypothesis3Numbers[7].SetActive(true);
+                hypothesis3Layers[7].enabled = true;
                 hypothesis3Numbers[8].SetActive(true);
+                hypothesis3Layers[8].enabled = true;
                 hypothesis3Numbers[11].SetActive(true);
+                hypothesis3Layers[11].enabled = true;
                 hypothesis3Numbers[13].SetActive(true);
+                hypothesis3Layers[13].enabled = true;
                 hypothesis3Numbers[16].SetActive(true);
+                hypothesis3Layers[16].enabled = true;
                 hypothesis3Animations[0].SetActive(true);
                 break;
             case "INGE_LAYER_COUPLING_2_LOC_ID":
                 hypothesis3Numbers[0].SetActive(true);
+                hypothesis3Layers[0].enabled = true;
                 hypothesis3Numbers[4].SetActive(true);
+                hypothesis3Layers[4].enabled = true;
                 hypothesis3Numbers[5].SetActive(true);
+                hypothesis3Layers[5].enabled = true;
                 hypothesis3Numbers[6].SetActive(true);
+                hypothesis3Layers[6].enabled = true;
                 hypothesis3Numbers[7].SetActive(true);
+                hypothesis3Layers[7].enabled = true;
                 hypothesis3Numbers[8].SetActive(true);
+                hypothesis3Layers[8].enabled = true;
                 hypothesis3Numbers[11].SetActive(true);
+                hypothesis3Layers[11].enabled = true;
                 hypothesis3Numbers[13].SetActive(true);
+                hypothesis3Layers[13].enabled = true;
                 hypothesis3Numbers[16].SetActive(true);
+                hypothesis3Layers[16].enabled = true;
                 hypothesis3Animations[1].SetActive(true);
                 break;
             case "INGE_LAYER_COUPLING_3_LOC_ID":
                 hypothesis3Numbers[6].SetActive(true);
+                hypothesis3Layers[6].enabled = true;
                 hypothesis3Numbers[16].SetActive(true);
+                hypothesis3Layers[16].enabled = true;
                 hypothesis3Animations[2].SetActive(true);
                 break;
             case "INGE_LAYER_COUPLING_4_LOC_ID":
                 hypothesis3Numbers[1].SetActive(true);
+                hypothesis3Layers[1].enabled = true;
                 hypothesis3Numbers[9].SetActive(true);
+                hypothesis3Layers[9].enabled = true;
                 hypothesis3Numbers[10].SetActive(true);
+                hypothesis3Layers[10].enabled = true;
                 hypothesis3Numbers[12].SetActive(true);
+                hypothesis3Layers[12].enabled = true;
                 hypothesis3Numbers[15].SetActive(true);
+                hypothesis3Layers[15].enabled = true;
                 hypothesis3Animations[3].SetActive(true);
                 break;
             case "INGE_LAYER_COUPLING_5_LOC_ID":
                 hypothesis3Numbers[1].SetActive(true);
+                hypothesis3Layers[1].enabled = true;
                 hypothesis3Numbers[2].SetActive(true);
+                hypothesis3Layers[2].enabled = true;
                 hypothesis3Animations[4].SetActive(true);
                 break;
             case "INGE_LAYER_COUPLING_6_LOC_ID":
                 hypothesis3Numbers[2].SetActive(true);
+                hypothesis3Layers[2].enabled = true;
                 hypothesis3Numbers[14].SetActive(true);
+                hypothesis3Layers[14].enabled = true;
                 hypothesis3Numbers[4].SetActive(true);
+                hypothesis3Layers[4].enabled = true;
                 hypothesis3Numbers[8].SetActive(true);
+                hypothesis3Layers[8].enabled = true;
                 hypothesis3Numbers[9].SetActive(true);
+                hypothesis3Layers[9].enabled = true;
                 hypothesis3Numbers[13].SetActive(true);
+                hypothesis3Layers[13].enabled = true;
                 hypothesis3Animations[5].SetActive(true);
                 break;
             case "INGE_LAYER_COUPLING_7_LOC_ID":
                 hypothesis3Numbers[5].SetActive(true);
+                hypothesis3Layers[5].enabled = true;
                 hypothesis3Numbers[13].SetActive(true);
+                hypothesis3Layers[13].enabled = true;
                 hypothesis3Animations[6].SetActive(true);
                 break;
             case "INGE_LAYER_COUPLING_8_LOC_ID":
                 hypothesis3Numbers[3].SetActive(true);
+                hypothesis3Layers[3].enabled = true;
                 hypothesis3Numbers[12].SetActive(true);
+                hypothesis3Layers[12].enabled = true;
                 hypothesis3Numbers[14].SetActive(true);
+                hypothesis3Layers[14].enabled = true;
                 hypothesis3Numbers[0].SetActive(true);
+                hypothesis3Layers[0].enabled = true;
                 hypothesis3Numbers[6].SetActive(true);
+                hypothesis3Layers[6].enabled = true;
                 hypothesis3Animations[7].SetActive(true);
                 break;
             case "INGE_LAYER_COUPLING_9_LOC_ID":
