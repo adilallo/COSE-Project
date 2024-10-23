@@ -16,14 +16,6 @@ namespace COSE.Hypothesis
 
     public class HypothesisInteraction : MonoBehaviour
     {
-        [SerializeField] private List<GameObject> heroModel;
-        [SerializeField] private GameObject hypothesis7;
-        [SerializeField] public GameObject hypothesis8Screenshot1;
-        [SerializeField] public GameObject hypothesis8Screenshot2;
-        [SerializeField] public GameObject hypothesis9Scheme1;
-        [SerializeField] public GameObject hypothesis9Scheme2;
-
-        // currently used fields
         [SerializeField] private IngeTextInteraction textInteraction;
         [SerializeField] private GameObject hypothesisModel;
         [SerializeField] private List<MovementState> movementStates;
@@ -31,13 +23,14 @@ namespace COSE.Hypothesis
         [SerializeField] private float rotationSpeed = 2f;
         [SerializeField] public List<HypothesisLayerInteraction> mainHypothesisLayers;
         [SerializeField] private GameObject invisibleWall;
+        [SerializeField] private List<GameObject> heroModel;
+        [SerializeField] private List<MovementState> heroMovementStates;
         [SerializeField] private GameObject diagram;
         private int currentStateIndex = -1;
         private bool coroutineStarted = false;
 
         public static event Action<int> OnHypothesisMovementComplete;
 
-        // currently used properties
         public int CurrentStateIndex
         {
             get { return currentStateIndex; }
@@ -177,6 +170,78 @@ namespace COSE.Hypothesis
             }
 
             OnHypothesisMovementComplete?.Invoke(CurrentStateIndex);
+        }
+
+        public void MoveMultipleModels()
+        {
+            StartCoroutine(MoveAndRotateMultipleModelsCoroutine(heroModel.ToArray(), heroMovementStates.ToArray()));
+        }
+
+        private IEnumerator MoveAndRotateMultipleModelsCoroutine(GameObject[] models, MovementState[] targetStates)
+        {
+            if (models.Length != targetStates.Length)
+            {
+                Debug.LogError("Number of models and target states must match.");
+                yield break;
+            }
+
+            bool[] isMovementComplete = new bool[models.Length];
+            for (int i = 0; i < isMovementComplete.Length; i++)
+            {
+                isMovementComplete[i] = false;
+            }
+
+            while (true)
+            {
+                bool allModelsReachedTarget = true;
+
+                for (int i = 0; i < models.Length; i++)
+                {
+                    if (!isMovementComplete[i])
+                    {
+                        GameObject model = models[i];
+                        MovementState targetState = targetStates[i];
+
+                        // If the target state position is in local space, transform it to world space
+                        Vector3 targetWorldPosition = model.transform.parent != null
+                            ? model.transform.parent.TransformPoint(targetState.targetPosition)
+                            : targetState.targetPosition;
+
+                        // Move model
+                        Vector3 newPosition = Vector3.MoveTowards(
+                            model.transform.position,
+                            targetWorldPosition,
+                            movementSpeed * Time.deltaTime);
+                        model.transform.position = newPosition;
+
+                        // Rotate model
+                        Quaternion newRotation = Quaternion.RotateTowards(
+                            model.transform.rotation,
+                            targetState.targetRotation,
+                            rotationSpeed * Time.deltaTime);
+                        model.transform.rotation = newRotation;
+
+                        // Check if model reached target position and rotation
+                        if (Vector3.Distance(model.transform.position, targetWorldPosition) < 0.01f &&
+                            Quaternion.Angle(model.transform.rotation, targetState.targetRotation) < 0.01f)
+                        {
+                            isMovementComplete[i] = true;
+                        }
+                        else
+                        {
+                            allModelsReachedTarget = false;
+                        }
+                    }
+                }
+
+                // Break loop if all models have reached their target positions
+                if (allModelsReachedTarget)
+                {
+                    break;
+                }
+
+                yield return null;
+            }
         }
     }
 }

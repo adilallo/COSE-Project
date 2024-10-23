@@ -335,6 +335,9 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_COIN_07_LOC_ID":
                 hypothesis6Animations[3].SetActive(true);
                 break;
+            case "INGE_COIN_10_LOC_ID":
+                hypothesisInteraction.MoveMultipleModels();
+                break;
             case "INGE_COIN_13_LOC_ID":
                 hypothesisInteraction.CurrentStateIndex = 6;
                 hypothesisInteraction.MoveModel(hypothesis7Model);
