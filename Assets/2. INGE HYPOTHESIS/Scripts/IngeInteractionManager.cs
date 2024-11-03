@@ -117,10 +117,7 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_DIAGRAM_SCREENSHOT_RIGHT_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 bookModelCitation[0].SetActive(true);
-                foreach (GameObject ingameTxt in ingameTxt)
-                {
-                    ingameTxt.SetActive(false);
-                }
+                DiagramScreenshots();
                 ingameTxt[0].SetActive(true);
                 ingameTxt[5].SetActive(true);
                 break;
@@ -130,10 +127,7 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_DIAGRAM_SCREENSHOT_MIDDLE_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 bookModelCitation[1].SetActive(true);
-                foreach (GameObject ingameTxt in ingameTxt)
-                {
-                    ingameTxt.SetActive(false);
-                }
+                DiagramScreenshots();
                 ingameTxt[0].SetActive(true);
                 ingameTxt[1].SetActive(true);
                 ingameTxt[3].SetActive(true);
@@ -144,10 +138,7 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_DIAGRAM_SCREENSHOT_LEFT_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 bookModelCitation[2].SetActive(true);
-                foreach (GameObject ingameTxt in ingameTxt)
-                {
-                    ingameTxt.SetActive(false);
-                }
+                DiagramScreenshots();
                 ingameTxt[1].SetActive(true);
                 ingameTxt[2].SetActive(true);
                 ingameTxt[4].SetActive(true);
@@ -361,6 +352,16 @@ public class IngeInteractionManager : MonoBehaviour
                 hypothesis4Buzzwords.SetActive(true);
                 break;
         }
+    }
+
+    private void DiagramScreenshots()
+    {
+        foreach (GameObject ingameTxt in ingameTxt)
+        {
+            ingameTxt.SetActive(false);
+        }
+
+        DiagramHighlights("NONE");
     }
 
     private void DiagramHighlights(string diagramLayer)
