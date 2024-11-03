@@ -16,7 +16,7 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: 3fb16befcd89b2e4bbe08b7875cd111d
   m_Entries:
   - m_Id: 2189404659712
-    m_Key: INGE_SPHERE_ENTRY_LOC_ID
+    m_Key: INGE_SPHERE_READ_ME_LOC_ID
     m_Metadata:
       m_Items: []
   - m_Id: 10326936818540544
@@ -127,14 +127,6 @@ MonoBehaviour:
     m_Key: INGE_LAYER_HYPOTHESIS_4_L3_LOC_ID
     m_Metadata:
       m_Items: []
-  - m_Id: 14744499191275520
-    m_Key: INGE_LAYER_HYPOTHESIS_4_L4_LOC_ID
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14744524436791296
-    m_Key: INGE_LAYER_HYPOTHESIS_4_L5_LOC_ID
-    m_Metadata:
-      m_Items: []
   - m_Id: 14744550017851392
     m_Key: INGE_LAYER_HYPOTHESIS_4_L6_LOC_ID
     m_Metadata:
@@ -177,10 +169,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 15086191815680000
     m_Key: INGE_LAYER_HYPOTHESIS_6_L4_LOC_ID
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15104449662935040
-    m_Key: INGE_LAYER_HYPOTHESIS_9_L1_LOC_ID
     m_Metadata:
       m_Items: []
   - m_Id: 15104581330526208
@@ -701,6 +689,246 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 44681381182967808
     m_Key: YANNICK_LAYER_LEAKY_TEXT_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72819823479730176
+    m_Key: INGE_LAYER_ENTRY_IMAGE_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78623294325895168
+    m_Key: INGE_LAYER_ENTRY_IMAGE_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78623739740008448
+    m_Key: INGE_LAYER_ENTRY_IMAGE_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78627881954947072
+    m_Key: INGE_SPHERE_FIRST_MOVE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79335692033843200
+    m_Key: INGE_COIN_01_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79337827907657728
+    m_Key: INGE_SPHERE_SMALL_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79340629966970880
+    m_Key: INGE_LAYER_DIAGRAM_SCREENSHOT_RIGHT_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79348843651522560
+    m_Key: INGE_LAYER_DIAGRAM_SCREENSHOT_MIDDLE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79354385899970560
+    m_Key: INGE_LAYER_DIAGRAM_SCREENSHOT_LEFT_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79359950143348736
+    m_Key: INGE_COIN_02_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79360918557810688
+    m_Key: INGE_COIN_03_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79366728696455168
+    m_Key: INGE_LAYER_ALL_DIRECTIONS_ARROW_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79367986845048832
+    m_Key: INGE_LAYER_ALL_ARROW_IN_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79375581114785792
+    m_Key: INGE_LAYER_LATERAL_ARROW_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79376633356607488
+    m_Key: INGE_LAYER_MAGNIFYING_GLASS_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79377251878035456
+    m_Key: INGE_LAYER_MARKER_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79377666635980800
+    m_Key: INGE_LAYER_MEGAPHONE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79379025816969216
+    m_Key: INGE_LAYER_PENCIL_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79379588893892608
+    m_Key: INGE_LAYER_UP_DOWN_ARROW_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79381329773322240
+    m_Key: INGE_LAYER_DOUBLE_CLICK_ARROW_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79383010284134400
+    m_Key: INGE_LAYER_RESIZE_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79684098999562240
+    m_Key: INGE_LAYER_COUPLING_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79690546479476736
+    m_Key: INGE_LAYER_COUPLING_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79691491758157824
+    m_Key: INGE_LAYER_COUPLING_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79692081728958464
+    m_Key: INGE_LAYER_COUPLING_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79692611507302400
+    m_Key: INGE_LAYER_COUPLING_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79693097283203072
+    m_Key: INGE_LAYER_COUPLING_6_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79693668132171776
+    m_Key: INGE_LAYER_COUPLING_7_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79694131263025152
+    m_Key: INGE_LAYER_COUPLING_8_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79695533456601088
+    m_Key: INGE_LAYER_COUPLING_9_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79699664556634112
+    m_Key: INGE_COIN_04_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80239983022944256
+    m_Key: INGE_LAYER_BACKGROUND_ELEMENTS_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80244113942622208
+    m_Key: INGE_LAYER_SHRINK_MULTIPLY_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80287259607019520
+    m_Key: INGE_COIN_05_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80287451580313600
+    m_Key: INGE_COIN_06_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80306080598306816
+    m_Key: INGE_LAYER_HERO_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80306458001780736
+    m_Key: INGE_SPHERE_08_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80306665934401536
+    m_Key: INGE_SPHERE_09_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80308841431805952
+    m_Key: INGE_SPHERE_10_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80311102912442368
+    m_Key: INGE_LAYER_HERO_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80312640040972288
+    m_Key: INGE_SPHERE_11_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80313335821479936
+    m_Key: INGE_SPHERE_12_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80313553841401856
+    m_Key: INGE_SPHERE_13_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80313905068224512
+    m_Key: INGE_SPHERE_14_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80314557307662336
+    m_Key: INGE_SPHERE_15_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80319115639500800
+    m_Key: INGE_LAYER_HERO_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80319904290287616
+    m_Key: INGE_SPHERE_16_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80320639350452224
+    m_Key: INGE_COIN_07_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80320978619314176
+    m_Key: INGE_COIN_08_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80324776716775424
+    m_Key: INGE_LAYER_HERO_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80325171367227392
+    m_Key: INGE_SPHERE_17_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80325768032137216
+    m_Key: INGE_SPHERE_18_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80325996600733696
+    m_Key: INGE_COIN_09_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80326208547303424
+    m_Key: INGE_COIN_10_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80381285899284480
+    m_Key: INGE_COIN_11_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80382549815046144
+    m_Key: INGE_COIN_12_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80383003483549696
+    m_Key: INGE_SPHERE_22_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80383128666746880
+    m_Key: INGE_SPHERE_23_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80383401078403072
+    m_Key: INGE_COIN_BIG_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81171591377969152
+    m_Key: INGE_COIN_13_LOC_ID
     m_Metadata:
       m_Items: []
   m_Metadata:

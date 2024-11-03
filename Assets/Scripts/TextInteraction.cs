@@ -36,7 +36,7 @@ namespace COSE.Text
             }
 
             this._text.text = LocalizationSettings.StringDatabase.GetLocalizedString(text);
-            Invoke(nameof(DeactivateAllTexts), 100f);
+           // Invoke(nameof(DeactivateAllTexts), 100f);
         }
 
         protected virtual void DeactivateAllTexts()
