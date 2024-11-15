@@ -1907,11 +1907,11 @@ GameObject:
   - component: {fileID: 919480165}
   m_Layer: 0
   m_Name: ACTIVE_OUTRO_ROOM
-  m_TagString: Untagged
+  m_TagString: FinalRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &919480160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3469,7 +3469,7 @@ GameObject:
   - component: {fileID: 1508515135}
   - component: {fileID: 1508515134}
   m_Layer: 0
-  m_Name: CoinManager
+  m_Name: PersistenceManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

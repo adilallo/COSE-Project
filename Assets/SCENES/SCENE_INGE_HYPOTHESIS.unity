@@ -3773,7 +3773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de70eeb66a4479541b254090e90165ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadLevel: 
+  loadLevel: SCENE_INTRO
   spawnPosition: {x: 0, y: 0, z: 0}
   useSpawnPosition: 0
 --- !u!1 &251261402
@@ -42203,6 +42203,10 @@ PrefabInstance:
     - target: {fileID: 4837894352301443432, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726745683524617828, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7187398970568454247, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
       propertyPath: m_AnchorMax.x
