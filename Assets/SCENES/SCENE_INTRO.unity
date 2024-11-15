@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999905, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2081,7 +2081,6 @@ GameObject:
   - component: {fileID: 982692450}
   - component: {fileID: 982692449}
   - component: {fileID: 982692448}
-  - component: {fileID: 982692447}
   - component: {fileID: 982692452}
   m_Layer: 0
   m_Name: GREEN_ROOM
@@ -2090,21 +2089,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &982692447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982692446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de70eeb66a4479541b254090e90165ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadLevel: 
-  spawnPosition: {x: 0, y: 0, z: 0}
-  useSpawnPosition: 0
 --- !u!135 &982692448
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4168,7 +4152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de70eeb66a4479541b254090e90165ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadLevel: 
+  loadLevel: SCENE_INGE_HYPOTHESIS
   spawnPosition: {x: 0, y: 0, z: 0}
   useSpawnPosition: 0
 --- !u!135 &2107737708

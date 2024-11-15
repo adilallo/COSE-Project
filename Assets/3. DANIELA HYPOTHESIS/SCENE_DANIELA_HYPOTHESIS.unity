@@ -30665,7 +30665,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148701102629}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b7c4388d191ada24f98e4d60b43b86e3, type: 2}
   m_CullingMode: 0
@@ -59638,8 +59638,8 @@ GameObject:
   - component: {fileID: 4490765551232396836}
   - component: {fileID: 7760875086389106616}
   - component: {fileID: 7760875086389106619}
-  - component: {fileID: 7760875086389106618}
   - component: {fileID: 7760875086389106617}
+  - component: {fileID: 7760875086389106620}
   m_Layer: 0
   m_Name: balance_3_Mesh
   m_TagString: Untagged
@@ -101164,8 +101164,21 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!64 &7760875086389106618
-MeshCollider:
+--- !u!114 &7760875086389106619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3974104075481415956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f7397cf2031424ea363495963d893c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textKey: DANIELA_LAYER_STAGE_5_BALANCE_LOC_ID
+--- !u!65 &7760875086389106620
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -101182,23 +101195,9 @@ MeshCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8418615119226188619, guid: f5cb3bd53627d8a4a90a03616d675067, type: 3}
---- !u!114 &7760875086389106619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3974104075481415956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f7397cf2031424ea363495963d893c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textKey: DANIELA_LAYER_STAGE_5_BALANCE_LOC_ID
+  serializedVersion: 3
+  m_Size: {x: 5.0087047, y: 4.0940213, z: 1.7460004}
+  m_Center: {x: 0.000098586104, y: 2.0470111, z: 0.0000076293945}
 --- !u!1 &7760876798257917605
 GameObject:
   m_ObjectHideFlags: 0
