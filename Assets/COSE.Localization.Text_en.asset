@@ -381,13 +381,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16505225660588032
-    m_Localized: "From quality to quantity. Cascades of abstractions towards a \u2018disorientation
+    m_Localized: "From quality to quantity. Cascades of abstractions towards a \u2018dissonance
       value\u2019 in .com \r\nThis room explores the %Wrong Browser .com in terms
       of its dynamic and observable behaviour, independent of user interaction. The
       objective was to establish parameters for describing the usage of this browser
       in comparison to web browsers that follow the general convention in this category
       of technology. The deviations observed in %Wrong Browser .com, in relation
-      to these conventions, are consolidated into a single metric termed the 'disorientation
+      to these conventions, are consolidated into a single metric termed the 'dissonance
       value.'\r\nCentral to the %Wrong Browser series, as well as much of JODI's
       body of work, is its deliberate departure from established norms and conventions
       within computer environments and software. These deviations disrupt the user's
@@ -395,9 +395,7 @@ MonoBehaviour:
       By identifying and extrapolating behaviours in the work that deviate from the
       conventional web browser experience, we can isolate a specific aspect of the
       work - its disorientation value - and dynamically represent it through an animated
-      visualisation of the data.\r\nThe room can be approached both as an experiential
-      encounter in its own right, and as a specialised filter that reveals a qualitative
-      aspect of the artwork, grounded in quantifiable data."
+      visualisation of the data.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 16859494871982080
@@ -428,19 +426,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16867038289977344
-    m_Localized: 'Elements found in JODI''s browser are not particularly uncommon
-      compared to those of a conventional web browser. This becomes evident when
-      these elements are imagined in a more standard layout. However, the arrangement
-      of these elements differs significantly, as do their functional affordances.
-
-      In
-      contrast to the conventional browser, which is primarily centred around a single
-      field rendering the content of a specific webpage, the %Wrong Browser .com
-      features five such fields, each distinguished by its own colour. These fields
-      function similarly to tabs within a browser window, although they behave more
-      like individual windows. They can be moved by the user, resized, stacked and
-      arranged feely. Additionally, each content field has its individual address
-      and scroll bar.'
+    m_Localized: In contrast to the conventional browser, which is primarily centred
+      around a single field rendering the content of a specific webpage, the %Wrong
+      Browser .com features five such fields, each distinguished by its own colour.
+      These fields function similarly to tabs within a browser window, although they
+      behave more like individual windows. They can be moved by the user, resized,
+      stacked and arranged feely. Additionally, each content field has its individual
+      address and scroll bar.
     m_Metadata:
       m_Items: []
   - m_Id: 16907661189570560
@@ -1843,6 +1835,47 @@ MonoBehaviour:
   - m_Id: 81171591377969152
     m_Localized: In terms of the used colour scheme, we deal with a simple subtractive
       color mix.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91543032749350912
+    m_Localized: The room can be approached both as an experiential encounter in
+      its own right, and as a specialised filter that reveals a qualitative aspect
+      of the artwork, grounded in quantifiable data.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91543734750011392
+    m_Localized: Elements found in JODI's browser are not particularly uncommon compared
+      to those of a conventional web browser. This becomes evident when these elements
+      are imagined in a more standard layout. However, the arrangement of these elements
+      differs significantly, as do their functional affordances.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91543988857724928
+    m_Localized: By segmenting runtime samples into major movements, minor movements,
+      and clustering, and analysing a focused 10-minute screen recording of autonomous
+      browser behaviour, we can gain valuable insights into deviations from conventional
+      browser norms and their effects on layout clarity and accessibility.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91544972874997760
+    m_Localized: By analysing samples of changing screen compositions and using colour
+      distribution data, we can quantitatively visualise how dominant colours impact
+      element clustering and available space, revealing how layout changes affect
+      overall screen organisation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91545084367986688
+    m_Localized: "By refining the data from the third stage to establish relationships
+      and assign weights, we can better understand the impact of significant and
+      minor movements, clustering, and time-based intervals on deviations from conventional
+      browsers, ultimately deriving a \u2018dissonance value\u2019 that characterises
+      how %WRONG Browser .com compares to standard web browser conventions."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91545122867503104
+    m_Localized: The dynamic model provides an immersive exploration of the .com
+      browser's deviation from conventional browsers through its observable runtime
+      events.
     m_Metadata:
       m_Items: []
   references:
