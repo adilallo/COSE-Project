@@ -2225,7 +2225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de70eeb66a4479541b254090e90165ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadLevel: 
+  loadLevel: SCENE_INTRO
   spawnPosition: {x: 0, y: 0, z: 0}
   useSpawnPosition: 0
 --- !u!1 &254522208
@@ -7846,6 +7846,8 @@ GameObject:
   - component: {fileID: 752495089}
   - component: {fileID: 752495091}
   - component: {fileID: 752495090}
+  - component: {fileID: 752495093}
+  - component: {fileID: 752495092}
   m_Layer: 0
   m_Name: COIN_4
   m_TagString: Untagged
@@ -7920,6 +7922,41 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752495088}
+  m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
+--- !u!114 &752495092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752495088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d512f944f3bcb1641a215caf2032863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: DANIELA_COIN_4_LOC_ID
+--- !u!64 &752495093
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752495088}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
 --- !u!1 &764410805
 GameObject:
@@ -9006,6 +9043,8 @@ GameObject:
   - component: {fileID: 917656577}
   - component: {fileID: 917656579}
   - component: {fileID: 917656578}
+  - component: {fileID: 917656581}
+  - component: {fileID: 917656580}
   m_Layer: 0
   m_Name: COIN_2
   m_TagString: Untagged
@@ -9080,6 +9119,41 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917656576}
+  m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
+--- !u!114 &917656580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917656576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d512f944f3bcb1641a215caf2032863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: DANIELA_COIN_2_LOC_ID
+--- !u!64 &917656581
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917656576}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
 --- !u!1 &925938773
 GameObject:
@@ -10095,6 +10169,8 @@ GameObject:
   - component: {fileID: 1025601926}
   - component: {fileID: 1025601928}
   - component: {fileID: 1025601927}
+  - component: {fileID: 1025601930}
+  - component: {fileID: 1025601929}
   m_Layer: 0
   m_Name: COIN_6
   m_TagString: Untagged
@@ -10111,9 +10187,9 @@ Transform:
   m_GameObject: {fileID: 1025601925}
   serializedVersion: 2
   m_LocalRotation: {x: 0.02688863, y: -0.013051562, z: 0.99929965, w: -0.02251505}
-  m_LocalPosition: {x: 85.23, y: -0.109999985, z: -14.52}
-  m_LocalScale: {x: 82.45154, y: 82.45154, z: 82.451546}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 87.46, y: 0.04, z: -10.93}
+  m_LocalScale: {x: 159.3, y: 159.3, z: 159.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 925938774}
   m_LocalEulerAnglesHint: {x: 1.425, y: 3.115, z: 182.62}
@@ -10169,6 +10245,41 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025601925}
+  m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
+--- !u!114 &1025601929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025601925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d512f944f3bcb1641a215caf2032863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: DANIELA_COIN_6_LOC_ID
+--- !u!64 &1025601930
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025601925}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
 --- !u!1 &1026397567
 GameObject:
@@ -13315,7 +13426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1398824757
 Transform:
   m_ObjectHideFlags: 0
@@ -13739,6 +13850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6726745683524617828, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7187398970568454247, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13749,6 +13864,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7187398970568454247, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647192995762106358, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647192995762106358, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
+      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7911962363241439645, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
@@ -13778,6 +13901,10 @@ PrefabInstance:
     - target: {fileID: 8376979213282971702, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8376979213282971702, guid: ea84dc4fa9ef5254b8f814c63e05333e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00007203221
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16813,6 +16940,8 @@ GameObject:
   - component: {fileID: 1730372393}
   - component: {fileID: 1730372395}
   - component: {fileID: 1730372394}
+  - component: {fileID: 1730372397}
+  - component: {fileID: 1730372396}
   m_Layer: 0
   m_Name: COIN_3
   m_TagString: Untagged
@@ -16887,6 +17016,41 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730372392}
+  m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
+--- !u!114 &1730372396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730372392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d512f944f3bcb1641a215caf2032863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: DANIELA_COIN_3_LOC_ID
+--- !u!64 &1730372397
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730372392}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
 --- !u!1 &1743917094
 GameObject:
@@ -17660,7 +17824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1792317117
 Transform:
   m_ObjectHideFlags: 0
@@ -20563,6 +20727,8 @@ GameObject:
   - component: {fileID: 2097828112}
   - component: {fileID: 2097828114}
   - component: {fileID: 2097828113}
+  - component: {fileID: 2097828116}
+  - component: {fileID: 2097828115}
   m_Layer: 0
   m_Name: COIN_5
   m_TagString: Untagged
@@ -20637,6 +20803,41 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097828111}
+  m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
+--- !u!114 &2097828115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097828111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d512f944f3bcb1641a215caf2032863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: DANIELA_COIN_5_LOC_ID
+--- !u!64 &2097828116
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097828111}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
 --- !u!1 &2104412301
 GameObject:
@@ -102661,6 +102862,8 @@ GameObject:
   - component: {fileID: 7417181979925647272}
   - component: {fileID: 5854895171223322637}
   - component: {fileID: 8549014526639109319}
+  - component: {fileID: 8549014526639109321}
+  - component: {fileID: 8549014526639109320}
   m_Layer: 0
   m_Name: COIN_1
   m_TagString: Untagged
@@ -111299,6 +111502,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8549014526639109320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900667360671290642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d512f944f3bcb1641a215caf2032863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: DANIELA_COIN_1_LOC_ID
+--- !u!64 &8549014526639109321
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900667360671290642}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1095465504710709571, guid: 07359c590079ec64c8ee85d49be8c4ec, type: 3}
 --- !u!23 &8550177524706875472
 MeshRenderer:
   m_ObjectHideFlags: 0

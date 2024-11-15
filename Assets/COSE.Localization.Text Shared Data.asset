@@ -931,6 +931,30 @@ MonoBehaviour:
     m_Key: INGE_COIN_13_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 91543032749350912
+    m_Key: DANIELA_COIN_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91543734750011392
+    m_Key: DANIELA_COIN_2_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91543988857724928
+    m_Key: DANIELA_COIN_3_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91544972874997760
+    m_Key: DANIELA_COIN_4_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91545084367986688
+    m_Key: DANIELA_COIN_5_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91545122867503104
+    m_Key: DANIELA_COIN_6_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
