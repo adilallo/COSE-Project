@@ -215,11 +215,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "THIS IS THE END OF OUR JOURNEY TOGETHER. \n\nEACH OF THE RESERACHERS OF
-    THR GROUP TOOK A DIFFERENT ROUTE TO EXPLORE THE BROWSER, BUT OUR APPROACHES HAD
-    MANY MEETING SPOTS, AND WORK TOGETHER AS A TOOL SET TO TACKLE THIS COMPLEX OBJECT
-    OF STUDY FROM DIFFERENT PERSPECTIVES. \n\nTHANKS FOR JOINING US AND WALKING THROUGH
-    OUR TRAINS OF THOUGHT - LITERALLY!\n"
+  m_text: "This is the end of our journey together. \r\n\r\nEach of the researchers
+    of the group took a different route to explore the .COM browser, but our approaches
+    have many meeting points, and work together as a tool set to tackle this very
+    complex object of study from different perspectives. \r\n\r\nThanks for joining
+    us and - literally - walking through our trains of thought! \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
