@@ -6468,6 +6468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 583942272}
+  - component: {fileID: 583942273}
   m_Layer: 0
   m_Name: NEW_ANIMATION_THROBBER
   m_TagString: Untagged
@@ -6491,6 +6492,27 @@ Transform:
   - {fileID: 7937705849566173406}
   m_Father: {fileID: 1976353138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &583942273
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583942271}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de409f159fc88204d92b285554d667dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &588176680
 GameObject:
   m_ObjectHideFlags: 0
@@ -48927,6 +48949,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1192272906418822622}
+  - component: {fileID: 2685524503990286533}
   m_Layer: 0
   m_Name: net_throbber_middle_bar_group
   m_TagString: Untagged
@@ -48934,6 +48957,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &2685524503990286533
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685524503990286532}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b82ba55491d9ce4daed333d3deaf2d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!33 &2690590637041802470
 MeshFilter:
   m_ObjectHideFlags: 0
