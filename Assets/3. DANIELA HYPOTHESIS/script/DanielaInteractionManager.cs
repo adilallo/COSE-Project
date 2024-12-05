@@ -59,6 +59,12 @@ public class DanielaInteractionManager : MonoBehaviour
                 case "DANIELA_LAYER_STAGE_1_CLOUD_LOC_ID":
                     textInteraction.ActivateLayerText(textKey);
                     break;
+                case "DANIELA_LAYER_LAPTOP_RIGHT":
+                    textInteraction.ActivateLayerText(textKey);
+                    break;
+                case "DANIELA_LAYER_LAPTOP_LEFT":
+                    textInteraction.ActivateLayerText(textKey);
+                    break;
                 case "DANIELA_LAYER_DEAD_END_1_IMAGE_LOC_ID":
                     textInteraction.ActivateLayerText(textKey);
                     portalJiawen[1]?.SetActive(true);
@@ -107,7 +113,7 @@ public class DanielaInteractionManager : MonoBehaviour
                 case "DANIELA_LAYER_STAGE_5_ARROW_DIAGRAM_LOC_ID":
                     textInteraction.ActivateLayerText(textKey);
                     break;
-                case " DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID":
+                case "DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID":
                     textInteraction.ActivateLayerText(textKey);
                     warningBlock.SetActive(false);
                     break;

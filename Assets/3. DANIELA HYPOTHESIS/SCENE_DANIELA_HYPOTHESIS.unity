@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2125065235}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999905, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4112,7 +4112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d512f944f3bcb1641a215caf2032863d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: DANIELA_COIN_3_LOC_ID
+  coinText: DANIELA_COIN_3_1_LOC_ID
 --- !u!64 &419736923
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7822,6 +7822,9 @@ GameObject:
   - component: {fileID: 752312616}
   - component: {fileID: 752312618}
   - component: {fileID: 752312617}
+  - component: {fileID: 752312620}
+  - component: {fileID: 752312619}
+  - component: {fileID: 752312621}
   m_Layer: 0
   m_Name: LAPTOP_right
   m_TagString: Untagged
@@ -7895,6 +7898,58 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752312615}
   m_Mesh: {fileID: -1782967744118973445, guid: 37c039f1e411074409470d50ae8d2e7d, type: 3}
+--- !u!114 &752312619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752312615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f7397cf2031424ea363495963d893c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textKey: DANIELA_LAYER_LAPTOP_RIGHT
+--- !u!65 &752312620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752312615}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.14009601, y: 0.1469141, z: 0.17978431}
+  m_Center: {x: -0.015376115, y: 0.0015283511, z: 0.0044043157}
+--- !u!114 &752312621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752312615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &752495088
 GameObject:
   m_ObjectHideFlags: 0
@@ -19862,7 +19917,7 @@ MonoBehaviour:
   - {fileID: 8059734093059206435}
   - {fileID: 1672887359762736541}
   - {fileID: 5030558987600739317}
-  textKeys: 
+  textKeys: DANIELA_LAYER_STAGE_4_FUNNEL_GROUP_LOC_ID
 --- !u!65 &1965575941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29290,6 +29345,7 @@ GameObject:
   - component: {fileID: 2278287794225608517}
   - component: {fileID: 5661570951927963389}
   - component: {fileID: 5661570951927963390}
+  - component: {fileID: 5661570951927963391}
   m_Layer: 0
   m_Name: IMAGE_THROBBER_NET
   m_TagString: Untagged
@@ -37483,7 +37539,7 @@ Transform:
   m_GameObject: {fileID: 26272544766252124}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7343818, z: 0, w: 0.6787367}
-  m_LocalPosition: {x: 19.69, y: -1.02, z: 100.11}
+  m_LocalPosition: {x: -92.5, y: -1.02, z: 65.2}
   m_LocalScale: {x: 1.7012842, y: 1.7012842, z: 1.7012842}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47942,6 +47998,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1192272906418822622}
   - component: {fileID: 2685524503990286533}
+  - component: {fileID: 2685524503990286535}
+  - component: {fileID: 2685524503990286534}
   m_Layer: 0
   m_Name: net_throbber_middle_bar_group
   m_TagString: Untagged
@@ -47970,6 +48028,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &2685524503990286534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685524503990286532}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5173012, y: 0.19476835, z: 0.32362825}
+  m_Center: {x: -0.08057392, y: -0.003114508, z: -0.018406974}
+--- !u!114 &2685524503990286535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685524503990286532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e330907e64ee04a90929abdcf83196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - {fileID: 709814051674929828}
+  - {fileID: 4408262549843269816}
+  textKeys: DANIELA_LAYER_STAGE_2_MIDDLE_BAR_LOC_ID
 --- !u!33 &2690590637041802470
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -63284,8 +63379,6 @@ GameObject:
   - component: {fileID: 4923588793253708956}
   - component: {fileID: 8308459910065089437}
   - component: {fileID: 8308459910065089439}
-  - component: {fileID: 8308459910065089438}
-  - component: {fileID: 8308459910065089440}
   m_Layer: 0
   m_Name: IMAGE_LATERAL_UPPER_RIGHT1
   m_TagString: Untagged
@@ -75935,6 +76028,24 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &5661570951927963391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709814051674929828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &5668545503217872275
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98387,6 +98498,9 @@ GameObject:
   - component: {fileID: 9035349620559301066}
   - component: {fileID: 3535370337600599698}
   - component: {fileID: 365938634120510614}
+  - component: {fileID: 9035349620559301067}
+  - component: {fileID: 9035349620559301069}
+  - component: {fileID: 9035349620559301068}
   m_Layer: 0
   m_Name: LAPTOP_left
   m_TagString: Untagged
@@ -100867,7 +100981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f7397cf2031424ea363495963d893c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textKey: ' DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID'
+  textKey: DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID
 --- !u!23 &7897049949001295922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -106522,19 +106636,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8308459910065089438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4408262549843269816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f7397cf2031424ea363495963d893c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textKey: DANIELA_LAYER_STAGE_2_MIDDLE_BAR_LOC_ID
 --- !u!114 &8308459910065089439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106553,28 +106654,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!64 &8308459910065089440
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4408262549843269816}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6952254876469384049, guid: 15eee27e4ce86e14a8e3f5c150403687, type: 3}
 --- !u!4 &8316096574462885821
 Transform:
   m_ObjectHideFlags: 0
@@ -115280,6 +115359,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1762416309553108697}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &9035349620559301067
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673222924121234558}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.140096, y: 0.14691406, z: 0.17978427}
+  m_Center: {x: -0.015374685, y: 0.0015286391, z: 0.0044043134}
+--- !u!114 &9035349620559301068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673222924121234558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &9035349620559301069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673222924121234558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f7397cf2031424ea363495963d893c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textKey: DANIELA_LAYER_LAPTOP_LEFT
 --- !u!1 &9038026127444730747
 GameObject:
   m_ObjectHideFlags: 0
