@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 47
+  controlID: 55
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 487.19995
     height: 708.4
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 48
+  controlID: 56
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 49
+  controlID: 57
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -722,7 +722,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_SearchFilter:
-    m_NameFilter: anima
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -730,26 +730,26 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 3
+    m_SearchArea: 1
     m_Folders:
-    - Assets/2. INGE HYPOTHESIS
+    - Assets/6. OUTRO ROOM
     m_Globs: []
-    m_OriginalText: anima
+    m_OriginalText: 
     m_ImportLogFlags: 0
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/2. INGE HYPOTHESIS
+  - Assets/6. OUTRO ROOM
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\mgome\OneDrive\Documentos\GitHub\COSE-Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 24e80000
-    m_LastClickedID: 59428
-    m_ExpandedIDs: 00000000ece70000eee70000f0e70000f2e70000f4e70000f6e70000f8e70000
+    m_SelectedIDs: b8940000
+    m_LastClickedID: 38072
+    m_ExpandedIDs: 000000004e94000050940000529400005494000056940000589400005a9400005c9400005e9400006294000064940000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -777,7 +777,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ece70000eee70000f0e70000f2e70000f4e70000f6e70000f8e70000
+    m_ExpandedIDs: 000000004e94000050940000529400005494000056940000589400005a9400005c9400005e940000609400006294000064940000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -804,7 +804,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c8700000d86d00001c7f00003ea6000040f1000074fb0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -917,9 +917,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 36e90000
-      m_LastClickedID: 59702
-      m_ExpandedIDs: b4ebffff32f9ffff06e90000
+      m_SelectedIDs: c4950000
+      m_LastClickedID: 38340
+      m_ExpandedIDs: 0ea8ffff20f6ffff08f9ffff469500009495000040960000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1351,9 +1351,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 126.59505, y: -8.656971, z: 14.3169365}
+    m_Target: {x: 12.45443, y: 9.344271, z: 55.25608}
     speed: 2
-    m_Value: {x: 126.59505, y: -8.656971, z: 14.3169365}
+    m_Value: {x: 12.45443, y: 9.344271, z: 55.25608}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1399,13 +1399,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.15194933, y: -0.67488325, z: 0.14451697, w: -0.70793235}
+    m_Target: {x: 0.011341268, y: 0.101824865, z: -0.0011433888, w: 0.99479246}
     speed: 2
-    m_Value: {x: -0.15190305, y: -0.67467767, z: 0.14447296, w: -0.7077167}
+    m_Value: {x: 0.011339263, y: 0.10301285, z: -0.0011569336, w: 0.9946148}
   m_Size:
-    m_Target: 103.42695
+    m_Target: 48.834637
     speed: 2
-    m_Value: 103.42695
+    m_Value: 46.73171
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1494,10 +1494,10 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
+    m_HSlider: 1
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
