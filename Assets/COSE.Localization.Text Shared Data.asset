@@ -248,15 +248,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18724595774251008
-    m_Key: ' DANIELA_LAYER_STAGE_5_MATH_PUZZLE_LOC_ID'
+    m_Key: DANIELA_LAYER_STAGE_5_MATH_PUZZLE_LOC_ID
     m_Metadata:
       m_Items: []
   - m_Id: 18725207236665344
-    m_Key: ' DANIELA_LAYER_STAGE_5_ARROW_DIAGRAM_LOC_ID'
+    m_Key: DANIELA_LAYER_STAGE_5_ARROW_DIAGRAM_LOC_ID
     m_Metadata:
       m_Items: []
   - m_Id: 18731383693238272
-    m_Key: ' DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID'
+    m_Key: DANIELA_LAYER_STAGE_6_WARNING_SIGN_LOC_ID
     m_Metadata:
       m_Items: []
   - m_Id: 29570761789267968
@@ -953,6 +953,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 91545122867503104
     m_Key: DANIELA_COIN_6_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98777627471372288
+    m_Key: DANIELA_LAYER_LAPTOP_RIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98778107555602432
+    m_Key: DANIELA_LAYER_LAPTOP_LEFT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98801395681976320
+    m_Key: DANIELA_COIN_3_1_LOC_ID
     m_Metadata:
       m_Items: []
   m_Metadata:

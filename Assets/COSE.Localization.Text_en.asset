@@ -382,20 +382,20 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 16505225660588032
     m_Localized: "From quality to quantity. Cascades of abstractions towards a \u2018dissonance
-      value\u2019 in .com \r\nThis room explores the %Wrong Browser .com in terms
+      value\u2019 in .com \r\nThis room explores the %WRONG Browser .com in terms
       of its dynamic and observable behaviour, independent of user interaction. The
       objective was to establish parameters for describing the usage of this browser
       in comparison to web browsers that follow the general convention in this category
-      of technology. The deviations observed in %Wrong Browser .com, in relation
+      of technology. The deviations observed in %WRONG Browser .com, in relation
       to these conventions, are consolidated into a single metric termed the 'dissonance
-      value.'\r\nCentral to the %Wrong Browser series, as well as much of JODI's
+      value.'\r\nCentral to the %WRONG Browser series, as well as much of JODI's
       body of work, is its deliberate departure from established norms and conventions
       within computer environments and software. These deviations disrupt the user's
-      experience in a way that elicits emotions of frustration and overwhelm \U0001F56E.
-      By identifying and extrapolating behaviours in the work that deviate from the
-      conventional web browser experience, we can isolate a specific aspect of the
-      work - its disorientation value - and dynamically represent it through an animated
-      visualisation of the data.\r"
+      experience in a way that elicits emotions of frustration and overwhelm (Hinterwaldner
+      et al. 2022)\U0001F56E. By identifying and extrapolating behaviours in the
+      work that deviate from the conventional web browser experience, we can isolate
+      a specific aspect of the work - its disorientation value - and dynamically
+      represent it through an animated visualisation of the data.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 16859494871982080
@@ -426,26 +426,22 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16867038289977344
-    m_Localized: In contrast to the conventional browser, which is primarily centred
-      around a single field rendering the content of a specific webpage, the %Wrong
-      Browser .com features five such fields, each distinguished by its own colour.
-      These fields function similarly to tabs within a browser window, although they
-      behave more like individual windows. They can be moved by the user, resized,
-      stacked and arranged feely. Additionally, each content field has its individual
-      address and scroll bar.
+    m_Localized: This model rearranges the elements of the %WRONG Browser .com along
+      a more conventional display logic. This arrangement allows for a clearer comparison
+      with the standardised structure of traditional browsers. It demonstrates that,
+      while the arrangement and behaviour of the elements differ significantly, the
+      fundamental elements are not themselves unusual.
     m_Metadata:
       m_Items: []
   - m_Id: 16907661189570560
-    m_Localized: 'A path that was abandoned in this argumentation was identification
-      and categorization of the perceivable elements of the program (visual elements
-      of the GUI, auditive elements, the dynamics of the elements behaviour). The
-      result will only reveal the rules underlying the dynamics, not the actual events,
-      however.  Therefore, to gain insight, the whole display would have to be considered,
-      including its behaviour in time.
-
-      A comprehensive list of elements and
-      their description can be found in the RED ROOM.                      The rules
-      underlying the dynamics are discussed in the CYAN ROOM. '
+    m_Localized: We pursued an approach that focused on identifying and categorizing
+      the perceivable elements of the program (such as the visual elements of the
+      GUI, auditory elements, and the dynamics of their behaviour). However, this
+      approach could only reveal the rules underlying the dynamics, not the actual
+      events themselves. To gain meaningful insight, the entire display, including
+      its behaviour over time, would need to be considered. Therefore, we decided
+      to abandon this path. The individual elements are described in the RED ROOM,
+      and the rules underlying the dynamics are discussed in the CYAN ROOM.
     m_Metadata:
       m_Items: []
   - m_Id: 17907882602258432
@@ -475,39 +471,37 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 17911893766168576
     m_Localized: "A prototypical model was developed for the software visualisation
-      tool SEE developed at the university of Bremen by the team of Prof. R. Koschke.
-      It consists of a colour coded representation of each GUI element as nodes in
-      a GXL graph. On a time axis, these elements stand in a dynamic connection to
-      the categories described in the image to your right. The heights of the blocks
-      represent a translation of the specific behaviour into a numeric value; the
-      width an accumulation of the previous heights\u2019 values, to see it evolve
-      over time. However, soon it became apparent that the relationship between the
-      behaviour of the eight categories was unclear and too complex."
+      tool SEE developed at the university of Bremen by Rainer Koschke's team 'Software
+      Technology.' It consists of a colour coded representation of each GUI element
+      as nodes in a GXL graph. On a time axis, these elements stand in a dynamic
+      connection to the categories described in the image to your right. The heights
+      of the blocks represent a translation of the specific behaviour into a numeric
+      value; the width an accumulation of the previous heights\u2019 values, to see
+      it evolve over time. However, soon it became apparent that the relationship
+      between the behaviour of the eight categories was unclear and too complex."
     m_Metadata:
       m_Items: []
   - m_Id: 17912202156564480
-    m_Localized: 'Another path that was abandoned in this argumentation was the inclusion
-      of too many categories to describe the behaviour of the element system in the
-      display. The preliminary categories fullness, emptiness, layering, movement,
-      stillness, connection, organisation and time were established posed numerous
-      obstacles. Tracking the 66 elements individually regarding the chosen eight
-      categories, exploding the task into a big data problem that is practically
-      impossible to handle for a human observer.
-
-      All 66 elements are described
-      in the RED ROOM.'
+    m_Localized: 'We established preliminary categories to describe the behaviour
+      of the element system in the display: fullness, emptiness, layering, movement,
+      stillness, connection, organization, and time. However, this approach posed
+      numerous obstacles, including accurately defining and applying the categories,
+      as well as the challenge of tracking all 66 elements individually across them.
+      The task quickly escalated into a big data problem, making it practically impossible
+      to handle for a human observer. Therefore, we decided to abandon this path.
+      All 66 elements are described in the RED ROOM.'
     m_Metadata:
       m_Items: []
   - m_Id: 17917248818634752
-    m_Localized: 'This model is a first thought experiment about a three dimentional
+    m_Localized: 'This model is a first thought experiment about a three dimensional
       object created from the values in the data set. Each slice would represent
-      the disorientation parameter value for the duration of two seconds, creating
-      a timeline on the x-axis, the disorientation value in the y-axis and leaving
-      the z-axis of a 3-dimensional environment without any meaningful value.
+      the dissonance parameter value for the duration of two seconds, creating a
+      timeline on the x-axis, the dissonance value in the y-axis and leaving the
+      z-axis of a 3-dimensional environment without any meaningful value.
 
       The
-      disorientation value would be experienceable through the decreasing of space
-      available, which was included into the final visualisation.'
+      dissonance value would be experienceable through the decreasing of space available,
+      which was included into the final visualisation.'
     m_Metadata:
       m_Items: []
   - m_Id: 17954318094163968
@@ -520,18 +514,7 @@ MonoBehaviour:
       GIFs and other animated elements were prevalent), the rearrangement of tabs
       or browser windows is an intrusion into the agency that usually lies with the
       user of an application. A third parameter, given the name clustering [image
-      of a green puzzle piece], is based on the layering of elements within the display.
-      To determine this parameter, we examined the colour distribution of the display.
-      The background colour of the display is white, and even without any user interaction,
-      the sizes of the HTML fields are constant, although they can be cropped by
-      the viewport. Considering that the HTML code is most legible within the display
-      and that the formatted text fields stack on top of each other without user
-      interaction, it was possible to draw conclusions regarding how colour distribution
-      may influence the display''s closeness to the envisioned layout, that is clearly
-      structured and organised and therefore easier accessibility.
-
-      The autonomous
-      behaviour of the movements is analysed in the CYAN ROOM.'
+      of a green puzzle piece], is based on the layering of elements within the display. '
     m_Metadata:
       m_Items: []
   - m_Id: 18713684137205760
@@ -604,7 +587,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18731383693238272
-    m_Localized: ' Warning
+    m_Localized: 'Warning!
 
       The environment that you are about to enter contains
       elements such  as flashing lights and fast movements. If you have a history
@@ -1876,6 +1859,37 @@ MonoBehaviour:
     m_Localized: The dynamic model provides an immersive exploration of the .com
       browser's deviation from conventional browsers through its observable runtime
       events.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98777627471372288
+    m_Localized: Here we see an integrated commercial browser model. The collage
+      of Netscape 6 for Windows (2000), Internet Explorer 8 for Windows (2009), Chrome
+      for Macintosh (2022), and Firefox 123.0.1 for Windows (2024) displaying different
+      Wikipedia pages represents the consistency over time in the standardised functionality
+      and layout of conventional browsers. These are primarily centred around a single
+      field rendering the content of a specific webpage, with the option to have
+      multiple tabs open or not.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98778107555602432
+    m_Localized: In contrast to the integrated commercial browser model, the %WRONG
+      Browser .com features five web pages displayed in 10 fields at all times. While
+      their function is similar to tabs within a browser window, they behave more
+      like individual windows. The color-coded HTML field can be moved by the user,
+      resized, stacked, and arranged freely. Additionally, each of them has its own
+      address and scroll bar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98801395681976320
+    m_Localized: To determine this parameter, we examined the colour distribution
+      of the display. The background colour of the display is white, and even without
+      any user interaction, the sizes of the HTML fields are constant, although they
+      can be cropped by the viewport. Considering that the HTML code is most legible
+      within the display and that the formatted text fields stack on top of each
+      other without user interaction, it was possible to draw conclusions regarding
+      how colour distribution may influence the display's closeness to the envisioned
+      layout, that is clearly structured and organised and therefore easier accessibility.
+      The autonomous behaviour of the movements is analysed in the CYAN ROOM.
     m_Metadata:
       m_Items: []
   references:

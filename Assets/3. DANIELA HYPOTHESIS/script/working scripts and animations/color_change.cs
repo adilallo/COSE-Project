@@ -1,29 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public class color_change : MonoBehaviour
 {
-    public Color[] colors; // Array of colors to be applied
-    public Renderer renderer; // Reference to the Renderer component of the object
+    public Color[] colors;
+    private Material material;
 
     void Start()
     {
-        renderer = GetComponent<Renderer>();
-        // Set initial color
-        if (colors.Length > 0)
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer != null)
         {
-            renderer.material.color = colors[0];
+            // Create a unique material instance for this object
+            material = renderer.material;
+
+            if (colors.Length > 0)
+            {
+                // Set initial color
+                material.SetColor("_BaseColor", colors[0]);
+                material.SetFloat("_Alpha", 0.5f);
+            }
         }
     }
 
-    // Animation Event callback
-    void OnColorChange(int colorIndex)
+    // Animation Event callback to change color
+    public void OnColorChange(int colorIndex)
     {
-        if (colorIndex >= 0 && colorIndex < colors.Length)
+        if (material != null && colorIndex >= 0 && colorIndex < colors.Length)
         {
-            renderer.material.color = colors[colorIndex];
+            material.SetColor("_BaseColor", colors[colorIndex]);
+        }
+    }
+
+    // Adjust the Alpha property for visibility
+    public void SetVisibility(bool isVisible)
+    {
+        if (material != null)
+        {
+            float alphaValue = isVisible ? 0.5f : 0f;
+            material.SetFloat("_Alpha", alphaValue);
+        }
+        else
+        {
+            Debug.LogWarning($"{gameObject.name}: Material not found!");
         }
     }
 }
