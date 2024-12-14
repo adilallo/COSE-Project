@@ -108,46 +108,57 @@ public class JiawenInteractionManager : MonoBehaviour
                 break;
             case "JIAWEN_LAYER_BIG_ROAD_A":
                 filters[0]?.SetActive(true);
+                textInteraction.DeactivateAllTexts();
                 roadA = true;
                 RoadsClicked();
                 break;
             case "JIAWEN_LAYER_BIG_ROAD_B":
                 filters[1]?.SetActive(true);
+                undertitles[1]?.SetActive(true);
+                textInteraction.DeactivateAllTexts();
                 roadB = true;
                 RoadsClicked();
                 break;
             case "JIAWEN_LAYER_BIG_ROAD_C":
                 filters[2]?.SetActive(true);
+                undertitles[0]?.SetActive(true);
+                textInteraction.DeactivateAllTexts();
                 roadC = true;
                 RoadsClicked();
                 break;
             case "JIAWEN_LAYER_FILTER_LEFT_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
                 screens[3]?.SetActive(true);
                 undertitles[2]?.SetActive(true);
                 slotMachine.SetActive(true);
                 coins[2]?.SetActive(true);
                 break;
             case "JIAWEN_LAYER_FILTER_MIDDLE_1_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
                 screens[0]?.SetActive(true);
-                undertitles[0]?.SetActive(true);
                 break;
             case "JIAWEN_LAYER_FILTER_MIDDLE_2_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
                 coins[0]?.SetActive(true);
                 screens[1]?.SetActive(true);
                 break;
             case "JIAWEN_LAYER_FILTER_MIDDLE_3_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
                 screens[2]?.SetActive(true);
                 undertitles[1]?.SetActive(true);
                 coins[1]?.SetActive(true);
                 portalRedActive[2]?.SetActive(true);
                 break;
             case "JIAWEN_LAYER_FILTER_RIGHT_1_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
                 screens[4]?.SetActive(true);
                 break;
             case "JIAWEN_LAYER_FILTER_RIGHT_2_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
                 screens[5]?.SetActive(true);
                 break;
             case "JIAWEN_LAYER_FILTER_RIGHT_3_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
                 screens[6]?.SetActive(true);
                 coins[3]?.SetActive(true);
                 break;
