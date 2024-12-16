@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/6. YANNICK HYPOTHESIS/POSTER TOOLS.meta
 guid: 9dad9a79ed07e034982757f0f6aca6d2
 folderAsset: yes
 DefaultImporter:
+========
+guid: 4ecce2d6ecaed8c49b888ca32ceb8099
+TextScriptImporter:
+>>>>>>>> main:Assets/HologramShader/README.txt.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
