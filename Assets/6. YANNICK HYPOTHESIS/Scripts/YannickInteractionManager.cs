@@ -11,6 +11,7 @@ public class YannickInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] portals;
     [SerializeField] private GameObject[] table;
     [SerializeField] private GameObject[] westphal;
+    [SerializeField] private GameObject smallClosedBoxes;
     [SerializeField] private GameObject[] coins;
     [SerializeField] private GameObject codeFragmentsText;
     [SerializeField] private GameObject metadataLibraiesText;
@@ -20,7 +21,9 @@ public class YannickInteractionManager : MonoBehaviour
     [SerializeField] private GameObject code3D;
     [SerializeField] private GameObject[] lids;
     [SerializeField] private GameObject cssObjects;
+    [SerializeField] private GameObject[] trafficLights;
     [SerializeField] private GameObject[] bookModels;
+    [SerializeField] private GameObject deviationModel;
     [SerializeField] private GameObject ghostlyAnimation;
 
     private void OnEnable()
@@ -51,6 +54,7 @@ public class YannickInteractionManager : MonoBehaviour
                 portals[0]?.SetActive(true);
                 break;
             case "YANNICK_SPHERE_Y09_LOC_ID":
+                smallClosedBoxes.SetActive(true);
                 code3D.SetActive(true);
                 break;
             case "YANNICK_SPHERE_Y10_LOC_ID":
@@ -63,6 +67,8 @@ public class YannickInteractionManager : MonoBehaviour
                 break;
             case "YANNICK_SPHERE_Y19_LOC_ID":
                 portals[1]?.SetActive(true);
+                trafficLights[0].GetComponent<BoxCollider>().enabled = true;
+                trafficLights[1].GetComponent<BoxCollider>().enabled = true;
                 break;
             case "YANNICK_SPHERE_Y21_LOC_ID":
                 portals[3]?.SetActive(true);
@@ -106,6 +112,9 @@ public class YannickInteractionManager : MonoBehaviour
                 textInteraction.ActivateLayerText(textKey);
                 table[0]?.SetActive(false);
                 break;
+            case "YANNICK_LAYER_TABLE_1B":
+                table[5]?.SetActive(true);
+                break;
             case "YANNICK_LAYER_TOOL_1_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 westphal[0]?.SetActive(true);
@@ -129,7 +138,6 @@ public class YannickInteractionManager : MonoBehaviour
                 break;
             case "YANNICK_LAYER_TOOL_3_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
-                westphal[3]?.SetActive(true);
                 spheres[1]?.SetActive(true);
                 break;
             case "YANNICK_LAYER_BOX_1_LOC_ID":
@@ -146,6 +154,7 @@ public class YannickInteractionManager : MonoBehaviour
                 break;
             case "YANNICK_LAYER_BOX_4_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
+                westphal[3]?.SetActive(true);
                 lids[3]?.SetActive(false);
                 break;
             case "YANNICK_LAYER_TOOL_4_LOC_ID":
@@ -174,6 +183,8 @@ public class YannickInteractionManager : MonoBehaviour
                 textInteraction.ActivateLayerText(textKey);
                 spheres[4]?.SetActive(true);
                 bookModels[0].SetActive(true);
+                bookModels[2].SetActive(true);
+                deviationModel.SetActive(true);
                 break;
             case "YANNICK_LAYER_CARD_MANUAL_4":
                 bookModels[1].SetActive(true);
