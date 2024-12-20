@@ -33,7 +33,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10326936818540544
-    m_Localized: 'Overlapping suggests depth and we show a layering structure based
+    m_Localized: 'The following inventory of the different types of elements that
+      you may encounter in this browser is already ordered in the way how they overlap
+      each other. Overlapping suggests depth and we show a layering structure based
       on the visual element types (not their size, not their time of appearance;
       later on, their colour will play a role). Learn about the GUI elements! They
       enter the scene on your left.
@@ -1382,17 +1384,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 78623294325895168
-    m_Localized: 'analytic decomposition
+    m_Localized: 'Analytic Decomposition
 
       Ursus Wehrli: ''tidied up''-version
       of Volleyball, 2002.'
     m_Metadata:
       m_Items: []
   - m_Id: 78623739740008448
-    m_Localized: 'derived typology
+    m_Localized: 'Derived Typology
 
       This is what we are now going to do. You
-      can witness it on your left.'
+      can witness it upstairs.'
     m_Metadata:
       m_Items: []
   - m_Id: 78627881954947072
@@ -1466,10 +1468,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 79376633356607488
-    m_Localized: The two balls on the middle-bar can be moved horizontally by the
-      user. However, whenever a URL call is active one of the balls hurries hectically
-      left to right and vice versa. In this case (blue rendering) the user can just
-      watch.
+    m_Localized: The whole point of a web browser is launching a URL call and retrieving
+      the website. The user can choose four different paths towards that URL call.
+      If the user decides not to do anything, the browser will regularly/irregularly
+      anyway start a call.
     m_Metadata:
       m_Items: []
   - m_Id: 79377251878035456
