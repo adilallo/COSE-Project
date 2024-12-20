@@ -2,6 +2,7 @@ using COSE.Coin;
 using COSE.Hypothesis;
 using COSE.Sphere;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class IngeInteractionManager : MonoBehaviour
@@ -14,20 +15,34 @@ public class IngeInteractionManager : MonoBehaviour
     [SerializeField] private GameObject[] coins;
     [SerializeField] private GameObject hypothesis1Model;
     [SerializeField] private GameObject hypothesis2Icons;
+    [SerializeField] private GameObject hypothesis2barrier;
     [SerializeField] private GameObject[] hypothesis2Animations;
     [SerializeField] private GameObject hypothesis3Model;
     [SerializeField] private GameObject hypothesis3Couplings;
     [SerializeField] private GameObject[] hypothesis3Animations;
     [SerializeField] private GameObject[] hypothesis3Numbers;
+    [SerializeField] private Outline[] hypothesis3Rectangles;
     [SerializeField] private Outline[] hypothesis3Layers;
     [SerializeField] private GameObject hypothesis4Buzzwords;
     [SerializeField] private GameObject[] hypothesis4Animations;
     [SerializeField] private GameObject[] hypothesis6Animations;
     [SerializeField] private GameObject[] hypothesis6Figures;
     [SerializeField] private GameObject hypothesis7Model;
+    [SerializeField] private GameObject hypothesis7RedModel;
     [SerializeField] private GameObject[] colorSchemes;
     [SerializeField] private GameObject[] diagramHighlights;
     [SerializeField] private GameObject[] hypothesis8Screenshots;
+
+    private Dictionary<string, int> diagramHighlightIndices = new Dictionary<string, int>
+    {
+        { "INGE_LAYER_DIAGRAM_SCROLLBAR",       0 },
+        { "INGE_LAYER_DIAGRAM_FORMATTED_TEXT",  1 },
+        { "INGE_LAYER_DIAGRAM_PENTAGON_BALL",   2 },
+        { "INGE_LAYER_DIAGRAM_HISTORY_URL",     3 },
+        { "INGE_LAYER_DIAGRAM_WHAT_IS_THIS",    4 },
+        { "INGE_LAYER_DIAGRAM_COLOR_CHANGE",    5 },
+        { "INGE_LAYER_GREY_FIELD",              6 },
+    };
 
     private void OnEnable()
     {
@@ -70,6 +85,10 @@ public class IngeInteractionManager : MonoBehaviour
                 {
                     couplingNumber.SetActive(true);
                 }
+                foreach (Outline couplingRect in hypothesis3Rectangles)
+                {
+                    couplingRect.enabled = false;
+                }
                 foreach (Outline couplingLayer in hypothesis3Layers)
                 {
                     couplingLayer.enabled = false;
@@ -89,6 +108,7 @@ public class IngeInteractionManager : MonoBehaviour
                 break;
             case "INGE_SPHERE_HYPOTHESIS_7_LOC_ID":
                 hypothesis7Model.SetActive(true);
+                hypothesis7RedModel.SetActive(true);
                 hypothesisInteraction.CurrentStateIndex = 5;
                 hypothesisInteraction.MoveModel(hypothesis7Model);
                 break;
@@ -117,9 +137,8 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_DIAGRAM_SCREENSHOT_RIGHT_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 bookModelCitation[0].SetActive(true);
-                DiagramScreenshots();
-                ingameTxt[0].SetActive(true);
-                ingameTxt[5].SetActive(true);
+                ToggleGameObject(ingameTxt[0]);
+                ToggleGameObject(ingameTxt[5]);
                 break;
             case "INGE_LAYER_CITATION_1":
                 citations[1].SetActive(true);
@@ -127,10 +146,9 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_DIAGRAM_SCREENSHOT_MIDDLE_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 bookModelCitation[1].SetActive(true);
-                DiagramScreenshots();
-                ingameTxt[0].SetActive(true);
-                ingameTxt[1].SetActive(true);
-                ingameTxt[3].SetActive(true);
+                ToggleGameObject(ingameTxt[0]);
+                ToggleGameObject(ingameTxt[1]);
+                ToggleGameObject(ingameTxt[3]);
                 break;
             case "INGE_LAYER_CITATION_2":
                 citations[2].SetActive(true);
@@ -138,11 +156,10 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_DIAGRAM_SCREENSHOT_LEFT_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 bookModelCitation[2].SetActive(true);
-                DiagramScreenshots();
-                ingameTxt[1].SetActive(true);
-                ingameTxt[2].SetActive(true);
-                ingameTxt[4].SetActive(true);
-                ingameTxt[6].SetActive(true);
+                ToggleGameObject(ingameTxt[1]);
+                ToggleGameObject(ingameTxt[2]);
+                ToggleGameObject(ingameTxt[4]);
+                ToggleGameObject(ingameTxt[6]);
                 break;
             case "INGE_LAYER_CITATION_3":
                 citations[3].SetActive(true);
@@ -267,8 +284,9 @@ public class IngeInteractionManager : MonoBehaviour
                 textInteraction.ActivateLayerText(textKey);
                 break;
             case "INGE_LAYER_TOOL_1":
-                hypothesis6Figures[1].SetActive(true);
-                hypothesis6Figures[0].SetActive(false);
+                bool isFirstActive = hypothesis6Figures[0].activeSelf;
+                hypothesis6Figures[0].SetActive(!isFirstActive);
+                hypothesis6Figures[1].SetActive(isFirstActive);
                 break;
             case "INGE_LAYER_HERO_3_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
@@ -285,26 +303,15 @@ public class IngeInteractionManager : MonoBehaviour
                 colorSchemes[0].SetActive(true);
                 break;
             case "INGE_LAYER_DIAGRAM_SCROLLBAR":
-                DiagramHighlights("INGE_LAYER_DIAGRAM_SCROLLBAR");
-                break;
             case "INGE_LAYER_DIAGRAM_FORMATTED_TEXT":
-                DiagramHighlights("INGE_LAYER_DIAGRAM_FORMATTED_TEXT");
-                break;
             case "INGE_LAYER_DIAGRAM_PENTAGON_BALL":
-                DiagramHighlights("INGE_LAYER_DIAGRAM_PENTAGON_BALL");
-                break;
             case "INGE_LAYER_DIAGRAM_HISTORY_URL":
-                DiagramHighlights("INGE_LAYER_DIAGRAM_HISTORY_URL");
-                break;
             case "INGE_LAYER_DIAGRAM_WHAT_IS_THIS":
-                DiagramHighlights("INGE_LAYER_DIAGRAM_WHAT_IS_THIS");
-                break;
             case "INGE_LAYER_DIAGRAM_COLOR_CHANGE":
-                DiagramHighlights("INGE_LAYER_DIAGRAM_COLOR_CHANGE");
-                break;
             case "INGE_LAYER_GREY_FIELD":
-                DiagramHighlights("INGE_LAYER_GREY_FIELD");
+                ToggleDiagramHighlight(textKey);
                 break;
+            
             case "Hypothesis_8_Opaque":
                 hypothesis8Screenshots[0].SetActive(true);
                 hypothesis8Screenshots[1].SetActive(true);
@@ -332,6 +339,7 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_COIN_13_LOC_ID":
                 hypothesisInteraction.CurrentStateIndex = 6;
                 hypothesisInteraction.MoveModel(hypothesis7Model);
+                hypothesisInteraction.MoveModel(hypothesis7RedModel);
                 break;
         }
     }
@@ -342,6 +350,7 @@ public class IngeInteractionManager : MonoBehaviour
         {
             case 2:
                 hypothesis2Icons.SetActive(true);
+                hypothesis2barrier.SetActive(false);
                 break;
             case 3:
                 hypothesis1Model.SetActive(false);
@@ -354,42 +363,19 @@ public class IngeInteractionManager : MonoBehaviour
         }
     }
 
-    private void DiagramScreenshots()
+    private void ToggleGameObject(GameObject obj)
     {
-        foreach (GameObject ingameTxt in ingameTxt)
+        if (obj != null)
         {
-            ingameTxt.SetActive(false);
+            obj.SetActive(!obj.activeSelf);
         }
-
-        DiagramHighlights("NONE");
     }
 
-    private void DiagramHighlights(string diagramLayer)
+    private void ToggleDiagramHighlight(string diagramLayer)
     {
-        foreach (GameObject diagramHighlight in diagramHighlights)
+        if (diagramHighlightIndices.TryGetValue(diagramLayer, out int index) && index >= 0 && index < diagramHighlights.Length)
         {
-            diagramHighlight.SetActive(false);
-        }
-        switch (diagramLayer)
-        {
-            case "INGE_LAYER_DIAGRAM_SCROLLBAR":
-                diagramHighlights[0].SetActive(true);
-                break;
-            case "INGE_LAYER_DIAGRAM_FORMATTED_TEXT":
-                diagramHighlights[1].SetActive(true);
-                break;
-            case "INGE_LAYER_DIAGRAM_PENTAGON_BALL":
-                diagramHighlights[2].SetActive(true);
-                break;
-            case "INGE_LAYER_DIAGRAM_HISTORY_URL":
-                diagramHighlights[3].SetActive(true);
-                break;
-            case "INGE_LAYER_DIAGRAM_WHAT_IS_THIS":
-                diagramHighlights[4].SetActive(true);
-                break;
-            case "INGE_LAYER_DIAGRAM_COLOR_CHANGE":
-                diagramHighlights[5].SetActive(true);
-                break;
+            ToggleGameObject(diagramHighlights[index]);
         }
     }
 
@@ -448,123 +434,178 @@ public class IngeInteractionManager : MonoBehaviour
         {
             couplingLayer.enabled = false;
         }
-        switch(layerText)
+        foreach (Outline couplingRectangle in hypothesis3Rectangles)
+        {
+            couplingRectangle.enabled = false;
+        }
+        switch (layerText)
         {
             case "INGE_LAYER_COUPLING_1_LOC_ID":
                 hypothesis3Numbers[0].SetActive(true);
                 hypothesis3Layers[0].enabled = true;
+                hypothesis3Rectangles[0].enabled = true;
                 hypothesis3Numbers[4].SetActive(true);
                 hypothesis3Layers[4].enabled = true;
+                hypothesis3Rectangles[4].enabled = true;
                 hypothesis3Numbers[5].SetActive(true);
                 hypothesis3Layers[5].enabled = true;
+                hypothesis3Rectangles[5].enabled = true;
                 hypothesis3Numbers[6].SetActive(true);
                 hypothesis3Layers[6].enabled = true;
+                hypothesis3Rectangles[6].enabled = true;
                 hypothesis3Numbers[7].SetActive(true);
                 hypothesis3Layers[7].enabled = true;
+                hypothesis3Rectangles[7].enabled = true;
                 hypothesis3Numbers[8].SetActive(true);
                 hypothesis3Layers[8].enabled = true;
+                hypothesis3Rectangles[8].enabled = true;
                 hypothesis3Numbers[11].SetActive(true);
                 hypothesis3Layers[11].enabled = true;
+                hypothesis3Rectangles[11].enabled = true;
                 hypothesis3Numbers[13].SetActive(true);
                 hypothesis3Layers[13].enabled = true;
+                hypothesis3Rectangles[13].enabled = true;
                 hypothesis3Numbers[16].SetActive(true);
                 hypothesis3Layers[16].enabled = true;
+                hypothesis3Rectangles[16].enabled = true;
                 hypothesis3Animations[0].SetActive(true);
                 break;
+
             case "INGE_LAYER_COUPLING_2_LOC_ID":
                 hypothesis3Numbers[0].SetActive(true);
                 hypothesis3Layers[0].enabled = true;
+                hypothesis3Rectangles[0].enabled = true;
                 hypothesis3Numbers[4].SetActive(true);
                 hypothesis3Layers[4].enabled = true;
+                hypothesis3Rectangles[4].enabled = true;
                 hypothesis3Numbers[5].SetActive(true);
                 hypothesis3Layers[5].enabled = true;
+                hypothesis3Rectangles[5].enabled = true;
                 hypothesis3Numbers[6].SetActive(true);
                 hypothesis3Layers[6].enabled = true;
+                hypothesis3Rectangles[6].enabled = true;
                 hypothesis3Numbers[7].SetActive(true);
                 hypothesis3Layers[7].enabled = true;
+                hypothesis3Rectangles[7].enabled = true;
                 hypothesis3Numbers[8].SetActive(true);
                 hypothesis3Layers[8].enabled = true;
+                hypothesis3Rectangles[8].enabled = true;
                 hypothesis3Numbers[11].SetActive(true);
                 hypothesis3Layers[11].enabled = true;
+                hypothesis3Rectangles[11].enabled = true;
                 hypothesis3Numbers[13].SetActive(true);
                 hypothesis3Layers[13].enabled = true;
+                hypothesis3Rectangles[13].enabled = true;
                 hypothesis3Numbers[16].SetActive(true);
                 hypothesis3Layers[16].enabled = true;
+                hypothesis3Rectangles[16].enabled = true;
                 hypothesis3Animations[1].SetActive(true);
                 break;
+
             case "INGE_LAYER_COUPLING_3_LOC_ID":
                 hypothesis3Numbers[6].SetActive(true);
                 hypothesis3Layers[6].enabled = true;
+                hypothesis3Rectangles[6].enabled = true;
                 hypothesis3Numbers[16].SetActive(true);
                 hypothesis3Layers[16].enabled = true;
+                hypothesis3Rectangles[16].enabled = true;
                 hypothesis3Animations[2].SetActive(true);
                 break;
+
             case "INGE_LAYER_COUPLING_4_LOC_ID":
                 hypothesis3Numbers[1].SetActive(true);
                 hypothesis3Layers[1].enabled = true;
+                hypothesis3Rectangles[1].enabled = true;
                 hypothesis3Numbers[9].SetActive(true);
                 hypothesis3Layers[9].enabled = true;
+                hypothesis3Rectangles[9].enabled = true;
                 hypothesis3Numbers[10].SetActive(true);
                 hypothesis3Layers[10].enabled = true;
+                hypothesis3Rectangles[10].enabled = true;
                 hypothesis3Numbers[12].SetActive(true);
                 hypothesis3Layers[12].enabled = true;
+                hypothesis3Rectangles[12].enabled = true;
                 hypothesis3Numbers[15].SetActive(true);
                 hypothesis3Layers[15].enabled = true;
+                hypothesis3Rectangles[15].enabled = true;
                 hypothesis3Animations[3].SetActive(true);
                 break;
+
             case "INGE_LAYER_COUPLING_5_LOC_ID":
                 hypothesis3Numbers[1].SetActive(true);
                 hypothesis3Layers[1].enabled = true;
+                hypothesis3Rectangles[1].enabled = true;
                 hypothesis3Numbers[2].SetActive(true);
                 hypothesis3Layers[2].enabled = true;
+                hypothesis3Rectangles[2].enabled = true;
                 hypothesis3Animations[4].SetActive(true);
                 break;
+
             case "INGE_LAYER_COUPLING_6_LOC_ID":
                 hypothesis3Numbers[2].SetActive(true);
                 hypothesis3Layers[2].enabled = true;
+                hypothesis3Rectangles[2].enabled = true;
                 hypothesis3Numbers[14].SetActive(true);
                 hypothesis3Layers[14].enabled = true;
+                hypothesis3Rectangles[14].enabled = true;
                 hypothesis3Numbers[4].SetActive(true);
                 hypothesis3Layers[4].enabled = true;
+                hypothesis3Rectangles[4].enabled = true;
                 hypothesis3Numbers[8].SetActive(true);
                 hypothesis3Layers[8].enabled = true;
+                hypothesis3Rectangles[8].enabled = true;
                 hypothesis3Numbers[9].SetActive(true);
                 hypothesis3Layers[9].enabled = true;
+                hypothesis3Rectangles[9].enabled = true;
                 hypothesis3Numbers[13].SetActive(true);
                 hypothesis3Layers[13].enabled = true;
+                hypothesis3Rectangles[13].enabled = true;
                 hypothesis3Animations[5].SetActive(true);
                 break;
+
             case "INGE_LAYER_COUPLING_7_LOC_ID":
                 hypothesis3Numbers[5].SetActive(true);
                 hypothesis3Layers[5].enabled = true;
+                hypothesis3Rectangles[5].enabled = true;
                 hypothesis3Numbers[13].SetActive(true);
                 hypothesis3Layers[13].enabled = true;
+                hypothesis3Rectangles[13].enabled = true;
                 hypothesis3Animations[6].SetActive(true);
                 break;
+
             case "INGE_LAYER_COUPLING_8_LOC_ID":
                 hypothesis3Numbers[3].SetActive(true);
                 hypothesis3Layers[3].enabled = true;
+                hypothesis3Rectangles[3].enabled = true;
                 hypothesis3Numbers[12].SetActive(true);
                 hypothesis3Layers[12].enabled = true;
+                hypothesis3Rectangles[12].enabled = true;
                 hypothesis3Numbers[14].SetActive(true);
                 hypothesis3Layers[14].enabled = true;
+                hypothesis3Rectangles[14].enabled = true;
                 hypothesis3Numbers[0].SetActive(true);
                 hypothesis3Layers[0].enabled = true;
+                hypothesis3Rectangles[0].enabled = true;
                 hypothesis3Numbers[6].SetActive(true);
                 hypothesis3Layers[6].enabled = true;
+                hypothesis3Rectangles[6].enabled = true;
                 hypothesis3Animations[7].SetActive(true);
                 break;
+
             case "INGE_LAYER_COUPLING_9_LOC_ID":
-                foreach (GameObject couplingNumber in hypothesis3Numbers)
+                for (int i = 0; i < hypothesis3Numbers.Length; i++)
                 {
-                    couplingNumber.SetActive(true);
+                    hypothesis3Numbers[i].SetActive(true);
+                    hypothesis3Layers[i].enabled = true;
+                    hypothesis3Rectangles[i].enabled = true;
                 }
                 hypothesis3Animations[8].SetActive(true);
                 break;
         }
     }
 
-    private void Hypothesis4(string layerText)
+
+        private void Hypothesis4(string layerText)
     {
         foreach (GameObject couplingNumber in hypothesis3Numbers)
         {
@@ -635,22 +676,10 @@ public class IngeInteractionManager : MonoBehaviour
                 hypothesis4Animations[3].SetActive(true);
                 break;
             case "INGE_LAYER_SHRINK_MULTIPLY_LOC_ID":
-                hypothesis3Numbers[7].SetActive(true);
-                hypothesis3Layers[7].enabled = true;
-                hypothesis3Numbers[6].SetActive(true);
-                hypothesis3Layers[6].enabled = true;
                 hypothesis3Numbers[5].SetActive(true);
                 hypothesis3Layers[5].enabled = true;
-                hypothesis3Numbers[4].SetActive(true);
-                hypothesis3Layers[4].enabled = true;
-                hypothesis3Numbers[11].SetActive(true);
-                hypothesis3Layers[11].enabled = true;
-                hypothesis3Numbers[10].SetActive(true);
-                hypothesis3Layers[10].enabled = true;
                 hypothesis3Numbers[9].SetActive(true);
                 hypothesis3Layers[9].enabled = true;
-                hypothesis3Numbers[8].SetActive(true);
-                hypothesis3Layers[8].enabled = true;
                 hypothesis4Animations[4].SetActive(true);
                 break;
             case "INGE_LAYER_HYPOTHESIS_4_L6_LOC_ID":
