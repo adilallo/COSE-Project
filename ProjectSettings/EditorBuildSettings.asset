@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/6. YANNICK HYPOTHESIS/SCENE_EXCURSUS_YANNICK.unity
     guid: f9cfc47cd8d8f724198a83f3d7e8c1e8
-  - enabled: 1
+  - enabled: 0
     path: Assets/SCENES/SCENE_OUTRO.unity
     guid: 280d5aac694fc744c8c7ba5df0f2bf72
   m_configObjects:
