@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SCENES/SCENE_HYPOTHESIS_ROOM.unity
     guid: dc3ab84c9e760f6499e6af7ae1ca95ba
-  - enabled: 1
+  - enabled: 0
     path: Assets/SCENES/SCENE_INGE_HYPOTHESIS.unity
     guid: 41d0f18c48b226d49aa32d1f30c75745
   - enabled: 0

@@ -1892,6 +1892,22 @@ MonoBehaviour:
       The autonomous behaviour of the movements is analysed in the CYAN ROOM.
     m_Metadata:
       m_Items: []
+  - m_Id: 104223992892612608
+    m_Localized: "Congratulations!\n\nYou have completed the journey through our
+      findings about \u201C.com\u201D! Each of the researchers of the group took
+      a different route to explore the \u201C.com\u201D.COM browser, but our approaches
+      have many meeting points and work together as a toolset to tackle this very
+      complex object of study from different perspectives. You accomplished the equivalent
+      of reading a book. By the way, this study also exists as a  book \u2026 and
+      as an extended poster version of this game. Just in case, you want to hold
+      something in your hands!\n\nThere is a last coin for you to collect \u2026\n\nThanks
+      for joining us and - literally - walking through our trains of thought!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104224980672176128
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

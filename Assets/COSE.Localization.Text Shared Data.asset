@@ -967,6 +967,14 @@ MonoBehaviour:
     m_Key: DANIELA_COIN_3_1_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 104223992892612608
+    m_Key: OUTRO_COIN_1_LOC_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104224980672176128
+    m_Key: OUTRO_COIN_2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
