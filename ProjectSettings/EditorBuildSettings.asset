@@ -11,25 +11,25 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SCENES/SCENE_HYPOTHESIS_ROOM.unity
     guid: dc3ab84c9e760f6499e6af7ae1ca95ba
-  - enabled: 0
+  - enabled: 1
     path: Assets/SCENES/SCENE_INGE_HYPOTHESIS.unity
     guid: 41d0f18c48b226d49aa32d1f30c75745
   - enabled: 1
     path: Assets/3. DANIELA HYPOTHESIS/SCENE_DANIELA_HYPOTHESIS.unity
     guid: 7ab2ae64d7fd9a14c80d445ee843eac4
-  - enabled: 0
+  - enabled: 1
     path: Assets/4. JIAWEN HYPOTHESIS/SCENE_JIAWEN_HYPOTHESIS.unity
     guid: 167f32877c9490641a00d5c2528618fc
-  - enabled: 0
+  - enabled: 1
     path: Assets/4. JIAWEN HYPOTHESIS/SCENE_EXTRA_JIAWEN_SERVER_ROOM.unity
     guid: ae888963fa0705647902f1668c632c97
-  - enabled: 0
+  - enabled: 1
     path: Assets/6. YANNICK HYPOTHESIS/SCENE_YANNICK_HYPOTHESIS.unity
     guid: 6fb5bcfb94f912640bb90b876f3b7dd7
-  - enabled: 0
+  - enabled: 1
     path: Assets/6. YANNICK HYPOTHESIS/SCENE_EXCURSUS_YANNICK.unity
     guid: f9cfc47cd8d8f724198a83f3d7e8c1e8
-  - enabled: 0
+  - enabled: 1
     path: Assets/SCENES/SCENE_OUTRO.unity
     guid: 280d5aac694fc744c8c7ba5df0f2bf72
   m_configObjects:

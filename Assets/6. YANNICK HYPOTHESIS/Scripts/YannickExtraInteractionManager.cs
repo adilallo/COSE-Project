@@ -1,6 +1,7 @@
 using COSE.Coin;
 using COSE.Sphere;
 using UnityEngine;
+using UnityStandardAssets.Vehicles.Car;
 
 public class YannickExtraInteractionManager : MonoBehaviour
 {
@@ -52,6 +53,10 @@ public class YannickExtraInteractionManager : MonoBehaviour
             case "YANNICK_LAYER_WESTPHAL_3_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 westphal[1]?.SetActive(true);
+                break;
+            case "YANNICK_LAYER_WESTPHAL_8":
+                westphal[2]?.SetActive(false);
+                westphal[3]?.SetActive(true);
                 break;
             case "YANNICK_LAYER_BOOK_CITATION_4":
                 textCitations[2]?.SetActive(true);

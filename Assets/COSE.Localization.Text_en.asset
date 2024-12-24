@@ -702,7 +702,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 29937193902256128
-    m_Localized: 'The temporal events of URL-calls trigger a spatial re-/arrangement.
+    m_Localized: 'The temporal events of URL-calls trigger a spatial re-arrangement.
       Thus, temporal and spatial dimensions are coupled in .com. '
     m_Metadata:
       m_Items: []
@@ -796,11 +796,7 @@ MonoBehaviour:
   - m_Id: 31483720806281216
     m_Localized: "The hard coded restriction makes the browser elements mass on the
       right side of the browser when we run it on today\u2019s modern monitor. This
-      is another regularity we can observe without knowing the mechanism behind.
-      middle-bar-URL-ball. Interestingly, due to the middle-bar-URL-balls\u2019 restricted
-      settling area, the formatted-text is also distributed on the right side of
-      the screen. Take a full HD screen as an example again, the range of the left
-      edge of the formatted text will be between 944 pixels and 1344 pixels."
+      is another regularity we can observe without knowing the mechanism behind."
     m_Metadata:
       m_Items: []
   - m_Id: 31484560011014144
@@ -839,12 +835,12 @@ MonoBehaviour:
 
       So, what is taming the programmed randomness?
 
-      c)
-      couplings of elements
+      C:
+      Couplings of elements
 
-      b) imposed grid structure
+      B: Imposed grid structure
 
-      a) small number
+      A: Small number
       of characters'
     m_Metadata:
       m_Items: []
@@ -911,26 +907,26 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 39901229202268160
-    m_Localized: "\"Anything specific about it? \nYes. The programming environment
+    m_Localized: "Anything specific about it? \nYes. The programming environment
       Director retains many features a filmic or theatric logic would imply. Labels
       like the \u2018Main Movie Scripts\u2019 evoke an orchestration of different
       bits and pieces. The latter are stringed as if they were on a timeline of a
       video editing tool, except that the linearity can be broken up by putting commands
-      with recursions on that \u2018score\u2019.\""
+      with recursions on that \u2018score\u2019."
     m_Metadata:
       m_Items: []
   - m_Id: 39901383095476224
-    m_Localized: "\"What was it used for? \nFrom the early 1990s, Macromedia Director
+    m_Localized: "What was it used for? \nFrom the early 1990s, Macromedia Director
       was mainly used to create CD-ROMs and Kiosks. It allowed simultaneous actions
-      like scrolling and typing.\""
+      like scrolling and typing."
     m_Metadata:
       m_Items: []
   - m_Id: 39901557935038464
-    m_Localized: "\"But then \u2026 \nAt the beginning of the 2000s, for many programming
+    m_Localized: "But then \u2026 \nAt the beginning of the 2000s, for many programming
       artists, this piece of software was the gateway or a bridge from local network
       design on a data disk to a global multi-authored network: the Internet. The
       magic command \u201CgetNetText\u201D was first implemented in 1999. This feature
-      was also exploited by JODI for their %WRONG Browser series.\""
+      was also exploited by JODI for their %WRONG Browser series."
     m_Metadata:
       m_Items: []
   - m_Id: 39941072351387648
@@ -959,9 +955,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 39947457097097216
-    m_Localized: "\"What can we learn from the metadata revealed by a right-click
-      on the file?\na)\_\_\_ It is 8,5 MB big\nb)\_\_\_ It was created with Adobe
-      Director 11.5\nc)\_\_\_\_ It was created on August 13, 2021\""
+    m_Localized: "What can we learn from the metadata revealed by a right-click on
+      the file?\na)\_\_\_ It is 8,5 MB big\nb)\_\_\_ It was created with Adobe Director
+      11.5\nc)\_\_\_\_ It was created on August 13, 2021"
     m_Metadata:
       m_Items: []
   - m_Id: 39949391707234304
@@ -971,16 +967,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 39950747130126336
-    m_Localized: "\"What to do with that? \nWe can do comparisons! We can compare
-      them in a synchronous way across the different browsers and in a transversal
-      way along the historical dimension.\""
+    m_Localized: "A look into the past reveals: it was not the first revamp.\r\nWhat
+      to do with that? \nWe can do comparisons! We can compare them in a synchronous
+      way across the different browsers and in a transversal way along the historical
+      dimension."
     m_Metadata:
       m_Items: []
   - m_Id: 39952315766267904
-    m_Localized: "\"And what are these comparisons good for? \nIn the literature,
-      the browser series is usually treated as a monolithic block, dated from 2001\u20132005.
+    m_Localized: "And what are these comparisons good for? \nIn the literature, the
+      browser series is usually treated as a monolithic block, dated from 2001\u20132005.
       However, the browsers are different! And wouldn\u2019t it be interesting to
-      find out how each one of them developed over time?\""
+      find out how each one of them developed over time?"
     m_Metadata:
       m_Items: []
   - m_Id: 39954490370285568
@@ -1026,7 +1023,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 39962252240216064
-    m_Localized: '"Versions and variety: Taking the series and its evolutionary dimension
+    m_Localized: 'Versions and variety: Taking the series and its evolutionary dimension
       seriously
 
       Within the timeline of their creation and updates, a pattern
@@ -1040,7 +1037,7 @@ MonoBehaviour:
       uses tools that work within the realm of a static approach. This means most
       of the time, we look at the exe file characteristics, while at times we poke
       deeper into the coded substance/fabric. In a second step, a dynamic approach
-      is pursued. In this case, we look at the processes during runtime. "'
+      is pursued. In this case, we look at the processes during runtime.'
     m_Metadata:
       m_Items: []
   - m_Id: 39962602271662080
@@ -1067,14 +1064,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 42476061354180608
-    m_Localized: 'Here we do a hack first! We alter the file type. Adding a Bitmap
-      Image header to any bytes, allows us to convert it into a bmp file. '
+    m_Localized: First we use an image viewer capable of opening a bitmap picture.
+      Why? Aren't we about to analyze code = text? Go downstairs to find out!
     m_Metadata:
       m_Items: []
   - m_Id: 42477544950808576
-    m_Localized: 'The added BMP header instructs image viewers to interpret the following
-      bytes as image data, that is: it interprets every byte as a pixel color value.
-      Hope is to reveal patterns in the binary code. Go!'
+    m_Localized: 'Here we do a hack first! We alter the file type. Adding a Bitmap
+      Image header to any bytes, allows us to convert it into a bmp file. The added
+      BMP header instructs image viewers to interpret the following bytes as image
+      data, that is: it interprets every byte as a pixel color value. Hope is to
+      reveal patterns in the binary code. Go!'
     m_Metadata:
       m_Items: []
   - m_Id: 42483242799546368
@@ -1247,11 +1246,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 42861382557405184
-    m_Localized: "red light the system level looks into how the program is implemented
-      in the local computer \ngreen light: the network level traces what happens
-      on the interface with the internet or a networked cluster. \norange light:
-      The level of the perceivable GUI output which shapes the human experience.
-      More on that in the GREEN ROOM!"
+    m_Localized: "red light: the system level looks into how the program is implemented
+      in the local computer \norange light: The level of the perceivable GUI output
+      which shapes the human experience. More on that in the GREEN ROOM! \ngreen
+      light: the network level traces what happens on the interface with the internet
+      or a networked cluster."
     m_Metadata:
       m_Items: []
   - m_Id: 42861625722179584
@@ -1259,8 +1258,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 42861957068001280
-    m_Localized: Walk through the portal to leave this room to learn more about how
-      the dynamic dimension of .com can be experienced
+    m_Localized: Look through the portal into the green room to learn more about
+      how the dynamic dimension of .com can be experienced.
     m_Metadata:
       m_Items: []
   - m_Id: 42862847694901248
@@ -1316,14 +1315,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 44678767007502336
-    m_Localized: "\"What are these formattings? \nWe know from the artists, they
-      are not meant to show up in .com. However, almost every one of JODI\u2019s
-      eleven official %WRONG Browsers exhibits this curious leaking phenomenon. It
-      can be explained with the following review of Macromedia Director 7: \u201CAlso
-      new is the ability to import HTML files with most formatting intact. [\u2026]
-      Director 7 does a reasonably good job of retaining a page\u2019s formatting
-      tags.\u201D In other words, in the eyes of the software engineers, it is a
-      feature!\""
+    m_Localized: "What are these formattings? \nWe know from the artists, they are
+      not meant to show up in .com. However, almost every one of JODI\u2019s eleven
+      official %WRONG Browsers exhibits this curious leaking phenomenon. It can be
+      explained with the following review of Macromedia Director 7: \u201CAlso new
+      is the ability to import HTML files with most formatting intact. [\u2026] Director
+      7 does a reasonably good job of retaining a page\u2019s formatting tags.\u201D
+      In other words, in the eyes of the software engineers, it is a feature!"
     m_Metadata:
       m_Items: []
   - m_Id: 44679748302671872
@@ -1355,26 +1353,26 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 44681174978400256
-    m_Localized: "\"Functionality first: A pragmatic dimension\nJODI\u2019s browsers
+    m_Localized: "Functionality first: A pragmatic dimension\nJODI\u2019s browsers
       survived so many internet updates because they are not reliant on any online
       platform or service beyond the artists\u2019 control. They were programmed
       in a pragmatic way without any extra acrobatics. In their programming, JODI
-      streamlined functionality. The code worked for decades. It is neat.\""
+      streamlined functionality. The code worked for decades. It is neat."
     m_Metadata:
       m_Items: []
   - m_Id: 44681381182967808
-    m_Localized: "\"Permeating porous parts: A leaky dimension\n.com\u2019s coded
-      fabric has porous traits. Intentionally or not, our analysis reveals a leaky
-      behaviour of code showing up in unsuspected places.\na)\_\_\_ parts of CSS
-      code of a called website are presented together with website contents in the
-      formatted-text of the browser.\nb) a short historical dimension persists in
-      the present and the contents of two websites superposition in the formatted-text
-      of a tab. \nc)\_\_\_ layout remnants of the shown website \u2013 tabs, lines,
-      coloured planes, big headlines \u2013 make it into .com whilst JODI\u2019s
-      browser supposedly supports text-only.\nd)\_\_\_\_ snippets of source code
-      commands survive the compilation of the executable and can be recovered in
-      the strings.\ne)\_\_\_ ghostly figurative configurations were retrieved in
-      the library section of the exe file as seen through a hex editor.\""
+    m_Localized: "Permeating porous parts: A leaky dimension\n.com\u2019s coded fabric
+      has porous traits. Intentionally or not, our analysis reveals a leaky behaviour
+      of code showing up in unsuspected places.\na)\_\_\_ parts of CSS code of a
+      called website are presented together with website contents in the formatted-text
+      of the browser.\nb) a short historical dimension persists in the present and
+      the contents of two websites superposition in the formatted-text of a tab.
+      \nc)\_\_\_ layout remnants of the shown website \u2013 tabs, lines, coloured
+      planes, big headlines \u2013 make it into .com whilst JODI\u2019s browser supposedly
+      supports text-only.\nd)\_\_\_\_ snippets of source code commands survive the
+      compilation of the executable and can be recovered in the strings.\ne)\_\_\_
+      ghostly figurative configurations were retrieved in the library section of
+      the exe file as seen through a hex editor."
     m_Metadata:
       m_Items: []
   - m_Id: 72819823479730176
