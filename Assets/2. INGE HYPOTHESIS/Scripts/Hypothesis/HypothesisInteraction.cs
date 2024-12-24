@@ -4,6 +4,7 @@ using System.Collections;
 using COSE.Text;
 using COSE.Sphere;
 using System;
+using System.Threading.Tasks;
 
 namespace COSE.Hypothesis
 {
@@ -26,8 +27,12 @@ namespace COSE.Hypothesis
         [SerializeField] private List<GameObject> heroModel;
         [SerializeField] private List<MovementState> heroMovementStates;
         [SerializeField] private GameObject diagram;
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip vanishClip;
+
         private int currentStateIndex = -1;
         private bool coroutineStarted = false;
+        private string currentActiveTextKey;
 
         public static event Action<int> OnHypothesisMovementComplete;
 
@@ -58,6 +63,11 @@ namespace COSE.Hypothesis
                 StartCoroutine(MoveLayersSequentially(movementStates[currentStateIndex], 16.0f));
                 coroutineStarted = true;
             }
+        }
+
+        private void SetCurrentActiveTextKey(string key)
+        {
+            currentActiveTextKey = key;
         }
 
         private IEnumerator MoveLayersSequentially(MovementState targetState, float delayBetweenLayers)
@@ -110,10 +120,12 @@ namespace COSE.Hypothesis
             layerObject.SetActive(true);
             layer.OutlineLayer(true);
 
+            string initialTextKey = layer.textKey;
+            SetCurrentActiveTextKey(initialTextKey);
+
             while (layerObject.transform.position != targetGlobalPosition ||
                    layerObject.transform.rotation != targetGlobalRotation)
             {
-
                 layerObject.transform.position = Vector3.MoveTowards(
                     layerObject.transform.position,
                     targetGlobalPosition,
@@ -123,17 +135,27 @@ namespace COSE.Hypothesis
                     layerObject.transform.rotation,
                     targetGlobalRotation,
                     rotSpeed * Time.deltaTime);
-                textInteraction.ActivateLayerText(layer.textKey);
 
+                textInteraction.ActivateLayerText(layer.textKey);
 
                 yield return null;
             }
 
             layer.OutlineLayer(false);
 
-            if (layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L2_LOC_ID" || layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L11_LOC_ID" || layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L16_LOC_ID")
+            if (layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L2_LOC_ID" ||
+                layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L11_LOC_ID" ||
+                layer.textKey == "INGE_LAYER_HYPOTHESIS_1_L16_LOC_ID")
             {
+                audioSource.clip = vanishClip;
+                audioSource.Play();
                 layerObject.SetActive(false);
+                yield return new WaitForSeconds(2.0f);
+
+                if (layer.textKey == initialTextKey && currentActiveTextKey == initialTextKey)
+                {
+                    textInteraction.DeactivateAllTexts();
+                }
             }
 
             if (layer == mainHypothesisLayers[mainHypothesisLayers.Count - 1])
