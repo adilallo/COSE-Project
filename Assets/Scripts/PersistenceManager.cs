@@ -51,6 +51,12 @@ public class PersistenceManager : MonoBehaviour
     {
         // 1) Find coin triggers in this new scene
         var rootObjects = scene.GetRootGameObjects();
+        var allTransforms = rootObjects
+        .SelectMany(root => root.GetComponentsInChildren<Transform>(true));
+
+        var finalRoomTransform = allTransforms
+            .FirstOrDefault(t => t.CompareTag("FinalRoom"));
+
         var coinsInScene = rootObjects
             .SelectMany(obj => obj.GetComponentsInChildren<CoinTrigger>(true))
             .ToArray();
@@ -84,7 +90,11 @@ public class PersistenceManager : MonoBehaviour
         // 3) Reassign the final room object when intro scene is loaded
         if (scene.name == "SCENE_INTRO")
         {
-            finalRoomObject = GameObject.FindWithTag("FinalRoom");
+            if (finalRoomTransform != null)
+            {
+                finalRoomObject = finalRoomTransform.gameObject;
+                Debug.Log($"Final room object reassigned: {finalRoomObject}");
+            }
             if (finalRoomObject != null && visitedRooms.Count == 4)
             {
                 finalRoomObject.SetActive(true);
