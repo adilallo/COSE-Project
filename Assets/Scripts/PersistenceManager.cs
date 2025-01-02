@@ -1,4 +1,4 @@
-using System;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -9,12 +9,17 @@ public class PersistenceManager : MonoBehaviour
 {
     public static PersistenceManager Instance { get; private set; }
 
+    // --- New Fields ---
+    // If you already stored this in an array, you can remove the old array/list approach.
+    private HashSet<string> collectedCoins = new HashSet<string>();
+    private HashSet<string> allCoins = new HashSet<string>();
+
     private int totalCoinsCollected = 0;
-    [SerializeField] private int totalCoinsAvailable = 48;
+    [SerializeField] private int totalCoinsAvailable = 0; // We will recalc this dynamically
     private TextMeshProUGUI textMeshPro;
 
     private HashSet<string> visitedRooms = new HashSet<string>();
-    private GameObject finalRoomObject; // Removed [SerializeField] to handle dynamically
+    private GameObject finalRoomObject;
 
     private void Awake()
     {
@@ -31,6 +36,7 @@ public class PersistenceManager : MonoBehaviour
 
     private void OnEnable()
     {
+        // Subscribe to coin events
         CoinTrigger.OnCoinTriggered += UpdateCoinCount;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -43,7 +49,37 @@ public class PersistenceManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Update the TextMeshPro UI in the new scene
+        // 1) Find coin triggers in this new scene
+        var rootObjects = scene.GetRootGameObjects();
+        var allTransforms = rootObjects
+        .SelectMany(root => root.GetComponentsInChildren<Transform>(true));
+
+        var finalRoomTransform = allTransforms
+            .FirstOrDefault(t => t.CompareTag("FinalRoom"));
+
+        var coinsInScene = rootObjects
+            .SelectMany(obj => obj.GetComponentsInChildren<CoinTrigger>(true))
+            .ToArray();
+
+        foreach (var coin in coinsInScene)
+        {
+            string coinUniqueID = GetCoinID(coin); // or just coin.coinText if public
+            if (!allCoins.Contains(coinUniqueID))
+            {
+                allCoins.Add(coinUniqueID);
+            }
+
+            // If we already collected this coin in a previous scene, deactivate it
+            if (collectedCoins.Contains(coinUniqueID))
+            {
+                coin.gameObject.SetActive(false);
+            }
+        }
+
+        // Update total coins available based on discovered coins so far
+        totalCoinsAvailable = allCoins.Count;
+
+        // 2) Update the TextMeshPro UI in the new scene
         GameObject coinTextObject = GameObject.FindWithTag("CoinCounterText");
         if (coinTextObject != null)
         {
@@ -51,18 +87,21 @@ public class PersistenceManager : MonoBehaviour
             UpdateCoinUIText();
         }
 
-        // Reassign the final room object when intro scene is loaded
+        // 3) Reassign the final room object when intro scene is loaded
         if (scene.name == "SCENE_INTRO")
         {
-            finalRoomObject = GameObject.FindWithTag("FinalRoom");
+            if (finalRoomTransform != null)
+            {
+                finalRoomObject = finalRoomTransform.gameObject;
+                Debug.Log($"Final room object reassigned: {finalRoomObject}");
+            }
             if (finalRoomObject != null && visitedRooms.Count == 4)
             {
-                // If all rooms have already been visited, make sure the final room is activated
                 finalRoomObject.SetActive(true);
             }
         }
 
-        // Track room visits
+        // 4) Track room visits
         if (IsRoomScene(scene.name) && !visitedRooms.Contains(scene.name))
         {
             visitedRooms.Add(scene.name);
@@ -71,9 +110,15 @@ public class PersistenceManager : MonoBehaviour
         }
     }
 
-    private void UpdateCoinCount(string coinText)
+    private void UpdateCoinCount(string coinTextOrID)
     {
-        totalCoinsCollected++;
+        // If coin is not already in collectedCoins, add it
+        if (!collectedCoins.Contains(coinTextOrID))
+        {
+            collectedCoins.Add(coinTextOrID);
+            totalCoinsCollected++;
+        }
+
         Debug.Log($"Total Coins Collected: {totalCoinsCollected}/{totalCoinsAvailable}");
         UpdateCoinUIText();
     }
@@ -89,7 +134,10 @@ public class PersistenceManager : MonoBehaviour
     private bool IsRoomScene(string sceneName)
     {
         // Define the list of room names
-        return sceneName == "SCENE_JIAWEN_HYPOTHESIS" || sceneName == "SCENE_INGE_HYPOTHESIS" || sceneName == "SCENE_DANIELA_HYPOTHESIS" || sceneName == "SCENE_YANNICK_HYPOTHESIS";
+        return sceneName == "SCENE_JIAWEN_HYPOTHESIS"
+            || sceneName == "SCENE_INGE_HYPOTHESIS"
+            || sceneName == "SCENE_DANIELA_HYPOTHESIS"
+            || sceneName == "SCENE_YANNICK_HYPOTHESIS";
     }
 
     private void CheckAllRoomsVisited()
@@ -104,7 +152,6 @@ public class PersistenceManager : MonoBehaviour
     {
         if (finalRoomObject == null)
         {
-            // Try to find the final room object if not already assigned
             finalRoomObject = GameObject.FindWithTag("FinalRoom");
         }
 
@@ -115,8 +162,28 @@ public class PersistenceManager : MonoBehaviour
         }
     }
 
+    // Helper to get the coin's unique ID (replace with coin.coinID if that's your unique property)
+    private string GetCoinID(CoinTrigger coin)
+    {
+        return coin.GetType()
+                   .GetField("coinText",
+                             System.Reflection.BindingFlags.NonPublic
+                           | System.Reflection.BindingFlags.Instance)
+                   ?.GetValue(coin) as string;
+    }
+
+    // Optionally provide a getter if you need the total count externally
     public int GetTotalCoinsCollected()
     {
         return totalCoinsCollected;
+    }
+
+    // Optional: If you want a Reset method that clears progress
+    public void ResetCoins()
+    {
+        collectedCoins.Clear();
+        totalCoinsCollected = 0;
+        // If you reload the scenes, all coins reappear
+        UpdateCoinUIText();
     }
 }
