@@ -889,6 +889,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99030244}
   m_Mesh: {fileID: 6349497404779363362, guid: d7b7bbe1b0147004390e572f7e2e449d, type: 3}
+--- !u!20 &117083412 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6531099205944325723, guid: e75053370f0600b4abbffd5290481aad, type: 3}
+  m_PrefabInstance: {fileID: 1056818348}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &118659358
 GameObject:
   m_ObjectHideFlags: 0
@@ -3332,7 +3337,7 @@ MonoBehaviour:
   cubeSoundWave: {fileID: 919132147993591204}
   cubeSoundSpikes: {fileID: 919132147999078489}
   animationCamera: {fileID: 1290816267}
-  fpsCamera: {fileID: 0}
+  fpsCamera: {fileID: 117083412}
   lookSpeed: 2
 --- !u!1 &327473647
 GameObject:
