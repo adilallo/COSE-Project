@@ -23,7 +23,7 @@ public class JiawenExtraInteractionManager : MonoBehaviour
                 annotatedScreen.SetActive(true);
                 break;
             case "JIAWEN_COIN_11_LOC_ID":
-                yellowRoomActive.SetActive(false);
+                yellowRoomActive.SetActive(true);
                 break;
         }
         
