@@ -18,6 +18,7 @@ public class IngeInteractionManager : MonoBehaviour
     [SerializeField] private GameObject hypothesis2Icons;
     [SerializeField] private GameObject hypothesis2barrier;
     [SerializeField] private GameObject[] hypothesis2Animations;
+    [SerializeField] private GameObject hypothesis3barrier;
     [SerializeField] private GameObject hypothesis3Model;
     [SerializeField] private GameObject hypothesis3Couplings;
     [SerializeField] private GameObject[] hypothesis3Animations;
@@ -357,6 +358,7 @@ public class IngeInteractionManager : MonoBehaviour
                 hypothesis1Model.SetActive(false);
                 hypothesis3Model.SetActive(true);
                 hypothesis3Couplings.SetActive(true);
+                hypothesis3barrier.SetActive(false);
                 break;
             case 4:
                 hypothesis4Buzzwords.SetActive(true);

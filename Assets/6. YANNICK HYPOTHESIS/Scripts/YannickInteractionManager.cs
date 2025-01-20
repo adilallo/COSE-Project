@@ -50,9 +50,6 @@ public class YannickInteractionManager : MonoBehaviour
                 invisibleCollider[0]?.SetActive(false);
                 invisibleCollider[1]?.SetActive(true);
                 break;
-            case "YANNICK_SPHERE_Y07_LOC_ID":
-                portals[0]?.SetActive(true);
-                break;
             case "YANNICK_SPHERE_Y09_LOC_ID":
                 smallClosedBoxes.SetActive(true);
                 code3D.SetActive(true);
@@ -66,12 +63,12 @@ public class YannickInteractionManager : MonoBehaviour
                 coins[3]?.SetActive(true);
                 break;
             case "YANNICK_SPHERE_Y19_LOC_ID":
-                portals[1]?.SetActive(true);
+                portals[0]?.SetActive(true);
                 trafficLights[0].GetComponent<BoxCollider>().enabled = true;
                 trafficLights[1].GetComponent<BoxCollider>().enabled = true;
                 break;
             case "YANNICK_SPHERE_Y21_LOC_ID":
-                portals[3]?.SetActive(true);
+                portals[2]?.SetActive(true);
                 break;
             case "YANNICK_SPHERE_Y22_LOC_ID":
                 cssObjects.SetActive(true);
@@ -167,7 +164,7 @@ public class YannickInteractionManager : MonoBehaviour
                 break;
             case "YANNICK_LAYER_TRAFFIC_LIGHT_2_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
-                portals[2]?.SetActive(true);
+                portals[1]?.SetActive(true);
                 break;
             case "YANNICK_LAYER_TRAFFIC_LIGHT_3_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);

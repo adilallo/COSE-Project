@@ -11,6 +11,7 @@ public class OutroReplay : MonoBehaviour
             if (PersistenceManager.Instance != null)
             {
                 PersistenceManager.Instance.ResetCoins();
+                PersistenceManager.Instance.ResetVisitedRooms();
             }
         }
     }

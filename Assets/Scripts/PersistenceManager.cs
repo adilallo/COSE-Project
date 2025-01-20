@@ -187,4 +187,18 @@ public class PersistenceManager : MonoBehaviour
         UpdateCoinUIText();
         Debug.Log("Coins reset.");
     }
+
+    public void ResetVisitedRooms()
+    {
+        // Clear the visited rooms list
+        visitedRooms.Clear();
+
+        // Deactivate the final room if it's currently active
+        if (finalRoomObject != null)
+        {
+            finalRoomObject.SetActive(false);
+        }
+
+        Debug.Log("Visited rooms reset and final room deactivated.");
+    }
 }
