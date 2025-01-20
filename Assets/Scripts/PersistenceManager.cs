@@ -185,5 +185,6 @@ public class PersistenceManager : MonoBehaviour
         totalCoinsCollected = 0;
         // If you reload the scenes, all coins reappear
         UpdateCoinUIText();
+        Debug.Log("Coins reset.");
     }
 }

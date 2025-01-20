@@ -1,9 +1,14 @@
 using COSE.Coin;
 using COSE.Sphere;
+using System.Linq;
 using UnityEngine;
 public class OutroInteractionManager : MonoBehaviour
 {
     [SerializeField] private OutroTextInteraction textInteraction;
+    [SerializeField] private GameObject UI;
+    [SerializeField] private GameObject backPortal;
+    [SerializeField] private GameObject exitPortal;
+    [SerializeField] private GameObject replayPortal;
     [SerializeField] private GameObject outroCoin2;
     [SerializeField] private GameObject animatedObjects;
     [SerializeField] private GameObject finalBoards;
@@ -26,6 +31,10 @@ public class OutroInteractionManager : MonoBehaviour
         {
             case "OUTRO_COIN_1_LOC_ID":
                 outroCoin2.SetActive(true);
+                if (!UI.activeSelf)
+                {
+                    UI.SetActive(true);
+                }
                 break;
             case "OUTRO_COIN_2":
                 animatedObjects.SetActive(true);
@@ -38,7 +47,11 @@ public class OutroInteractionManager : MonoBehaviour
                 {
                     wall.SetActive(true);
                 }
+                UI.SetActive(false);
                 textInteraction.DeactivateAllTexts();
+                backPortal.SetActive(true);
+                exitPortal.SetActive(true);
+                replayPortal.SetActive(true);
                 break;
         }
     }
