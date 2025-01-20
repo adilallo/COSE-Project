@@ -35,9 +35,6 @@ public class OutroInteractionManager : MonoBehaviour
                 {
                     UI.SetActive(true);
                 }
-                break;
-            case "OUTRO_COIN_2":
-                animatedObjects.SetActive(true);
                 finalBoards.SetActive(true);
                 foreach (var wall in greyWalls)
                 {
@@ -47,11 +44,22 @@ public class OutroInteractionManager : MonoBehaviour
                 {
                     wall.SetActive(true);
                 }
-                UI.SetActive(false);
-                textInteraction.DeactivateAllTexts();
                 backPortal.SetActive(true);
                 exitPortal.SetActive(true);
                 replayPortal.SetActive(true);
+                break;
+            case "OUTRO_COIN_2_LOC_ID":
+                if (PersistenceManager.Instance.GetTotalCoinsCollected() == PersistenceManager.Instance.GetTotalCoinsAvailable())
+                {
+                    animatedObjects.SetActive(true);
+                    UI.SetActive(false);
+                    textInteraction.DeactivateAllTexts();
+                }
+                else
+                {
+                    textInteraction.ActivateLayerText(coinId);
+                }
+                
                 break;
         }
     }
