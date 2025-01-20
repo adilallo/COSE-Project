@@ -3135,10 +3135,10 @@ MonoBehaviour:
     to this piece in the \nbidimensionality of the screen, it is actually built by
     a layer system that allows us to interact with some objects while we cannot touch
     others. \n\nYou can come close to our \"hypothesis\" by pressing WASD of your
-    keyboard (_W_ TAKES YOU FORWARD, _A_ WILL TAKE YOU LEFT LEFT, _D_  IS FOR GOING 
-    RIGHT AND _S_ IS TO GO BACKWARDS) YOU CAN ALSO MOVE YOUR VIRTUAL HEAD AROUND
-    BY USING YOUR MOUSE. To exit the game at any time, press your ESCAPE KEY.\n\nhAVE
-    FUN!"
+    keyboard:\n_W_ TAKES YOU FORWARD\n_A_ WILL TAKE YOU LEFT LEFT\n_D_  IS FOR GOING 
+    RIGHT\n_S_ IS TO GO BACKWARDS\n_Q_ WILL TOGGLE THE TEXT DISPLAY ON/OFF \nMOVE
+    YOUR VIRTUAL HEAD AROUND BY USING YOUR MOUSE\nTo exit the game at any time, press
+    your ESCAPE KEY\n\nHAVE FUN!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3268,7 +3268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.86, y: 2.087967}
+  m_AnchoredPosition: {x: 11.86, y: 2.54}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1391201655
