@@ -69,8 +69,12 @@ public class PersistenceManager : MonoBehaviour
                 allCoins.Add(coinUniqueID);
             }
 
-            // If we already collected this coin in a previous scene, deactivate it
-            if (collectedCoins.Contains(coinUniqueID))
+            if (scene.name == "SCENE_OUTRO")
+            {
+                coin.gameObject.SetActive(true);
+            }
+            // Otherwise, deactivate collected coins
+            else if (collectedCoins.Contains(coinUniqueID))
             {
                 coin.gameObject.SetActive(false);
             }
@@ -172,10 +176,15 @@ public class PersistenceManager : MonoBehaviour
                    ?.GetValue(coin) as string;
     }
 
-    // Optionally provide a getter if you need the total count externally
     public int GetTotalCoinsCollected()
     {
         return totalCoinsCollected;
+    }
+
+    public int GetTotalCoinsAvailable()
+    {
+        Debug.Log($"Total Coins Available: {totalCoinsAvailable}");
+        return totalCoinsAvailable;
     }
 
     // Optional: If you want a Reset method that clears progress
@@ -187,23 +196,6 @@ public class PersistenceManager : MonoBehaviour
         UpdateCoinUIText();
         Debug.Log("Coins reset.");
     }
-
-    public void ReactivateOutroCoins()
-    {
-        // Find all coins in the current scene
-        var rootObjects = SceneManager.GetActiveScene().GetRootGameObjects();
-        var coinsInScene = rootObjects
-            .SelectMany(obj => obj.GetComponentsInChildren<CoinTrigger>(true));
-
-        // Reactivate each coin without affecting collectedCoins
-        foreach (var coin in coinsInScene)
-        {
-            coin.gameObject.SetActive(true);
-        }
-
-        Debug.Log("All coins in the outro scene have been reactivated.");
-    }
-
 
     public void ResetVisitedRooms()
     {

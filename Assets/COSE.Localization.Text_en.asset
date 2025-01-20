@@ -1905,7 +1905,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104224980672176128
-    m_Localized: ' '
+    m_Localized: You have missed some coins. If you go back to collect them, there
+      will be a surprise waiting for you when you come back here...
     m_Metadata:
       m_Items: []
   references:
