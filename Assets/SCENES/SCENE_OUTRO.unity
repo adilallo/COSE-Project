@@ -3286,6 +3286,7 @@ GameObject:
   - component: {fileID: 1404026300}
   - component: {fileID: 1404026299}
   - component: {fileID: 1404026303}
+  - component: {fileID: 1404026304}
   m_Layer: 0
   m_Name: PORTAL_HYPOTHESIS_ROOM
   m_TagString: Untagged
@@ -3397,6 +3398,18 @@ MonoBehaviour:
   loadLevel: SCENE_INTRO
   spawnPosition: {x: 0, y: 0, z: 0}
   useSpawnPosition: 0
+--- !u!114 &1404026304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404026298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6664c43967bb07d4d894f92e3c9c5a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1426992394
 GameObject:
   m_ObjectHideFlags: 0
