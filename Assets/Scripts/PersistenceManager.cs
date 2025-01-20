@@ -185,5 +185,37 @@ public class PersistenceManager : MonoBehaviour
         totalCoinsCollected = 0;
         // If you reload the scenes, all coins reappear
         UpdateCoinUIText();
+        Debug.Log("Coins reset.");
+    }
+
+    public void ReactivateOutroCoins()
+    {
+        // Find all coins in the current scene
+        var rootObjects = SceneManager.GetActiveScene().GetRootGameObjects();
+        var coinsInScene = rootObjects
+            .SelectMany(obj => obj.GetComponentsInChildren<CoinTrigger>(true));
+
+        // Reactivate each coin without affecting collectedCoins
+        foreach (var coin in coinsInScene)
+        {
+            coin.gameObject.SetActive(true);
+        }
+
+        Debug.Log("All coins in the outro scene have been reactivated.");
+    }
+
+
+    public void ResetVisitedRooms()
+    {
+        // Clear the visited rooms list
+        visitedRooms.Clear();
+
+        // Deactivate the final room if it's currently active
+        if (finalRoomObject != null)
+        {
+            finalRoomObject.SetActive(false);
+        }
+
+        Debug.Log("Visited rooms reset and final room deactivated.");
     }
 }
