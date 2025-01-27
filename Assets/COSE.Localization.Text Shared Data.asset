@@ -975,6 +975,10 @@ MonoBehaviour:
     m_Key: OUTRO_COIN_2_LOC_ID
     m_Metadata:
       m_Items: []
+  - m_Id: 118025289164906496
+    m_Key: JIAWEN_LAYER_ROAD_SIGN_LOC_ID
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

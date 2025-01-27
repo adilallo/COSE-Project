@@ -162,6 +162,9 @@ public class JiawenInteractionManager : MonoBehaviour
                 screens[6]?.SetActive(true);
                 coins[3]?.SetActive(true);
                 break;
+            case "JIAWEN_LAYER_ROAD_SIGN_LOC_ID":
+                textInteraction.ActivateLayerText(textKey);
+                break;
         }
     }
 
