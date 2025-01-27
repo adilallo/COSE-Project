@@ -1909,6 +1909,13 @@ MonoBehaviour:
       will be a surprise waiting for you when you come back here...
     m_Metadata:
       m_Items: []
+  - m_Id: 118025289164906496
+    m_Localized: "In this spatial realm, you will see three instances with a mix
+      of programmed randomness and regularity. \nWhat would you like to look at first?
+      \na) Combinations of three characters for the URL\nb) Positions of URL-squares\nc)
+      Positions of middle-bar-URL-balls\nChoose your path!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

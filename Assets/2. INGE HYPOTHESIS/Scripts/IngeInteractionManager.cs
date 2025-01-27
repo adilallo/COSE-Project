@@ -139,8 +139,8 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_DIAGRAM_SCREENSHOT_RIGHT_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 bookModelCitation[0].SetActive(true);
-                ToggleGameObject(ingameTxt[0]);
-                ToggleGameObject(ingameTxt[5]);
+                ingameTxt[0].SetActive(true);
+                ingameTxt[5].SetActive(true);
                 break;
             case "INGE_LAYER_CITATION_1":
                 citations[1].SetActive(true);
@@ -148,9 +148,8 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_DIAGRAM_SCREENSHOT_MIDDLE_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 bookModelCitation[1].SetActive(true);
-                ToggleGameObject(ingameTxt[0]);
-                ToggleGameObject(ingameTxt[1]);
-                ToggleGameObject(ingameTxt[3]);
+                ingameTxt[1].SetActive(true);
+                ingameTxt[3].SetActive(true);
                 break;
             case "INGE_LAYER_CITATION_2":
                 citations[2].SetActive(true);
@@ -158,10 +157,9 @@ public class IngeInteractionManager : MonoBehaviour
             case "INGE_LAYER_DIAGRAM_SCREENSHOT_LEFT_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
                 bookModelCitation[2].SetActive(true);
-                ToggleGameObject(ingameTxt[1]);
-                ToggleGameObject(ingameTxt[2]);
-                ToggleGameObject(ingameTxt[4]);
-                ToggleGameObject(ingameTxt[6]);
+                ingameTxt[2].SetActive(true);
+                ingameTxt[4].SetActive(true);
+                ingameTxt[6].SetActive(true);
                 break;
             case "INGE_LAYER_CITATION_3":
                 citations[3].SetActive(true);

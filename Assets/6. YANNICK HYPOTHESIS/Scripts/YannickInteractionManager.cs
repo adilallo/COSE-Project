@@ -107,9 +107,7 @@ public class YannickInteractionManager : MonoBehaviour
                 break;
             case "YANNIC_LAYER_TABLE_1_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
-                table[0]?.SetActive(false);
-                break;
-            case "YANNICK_LAYER_TABLE_1B":
+                table[0]?.SetActive(true);
                 table[5]?.SetActive(true);
                 break;
             case "YANNICK_LAYER_TOOL_1_LOC_ID":
@@ -120,8 +118,6 @@ public class YannickInteractionManager : MonoBehaviour
                 coins[2]?.SetActive(true);
                 break;
             case "YANNICK_LAYER_WESTPHAL_2":
-                
-                
                 break;
             case "YANNICK_LAYER_TOOL_2_LOC_ID":
                 textInteraction.ActivateLayerText(textKey);
