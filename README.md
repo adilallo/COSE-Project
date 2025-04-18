@@ -10,7 +10,7 @@ The COSE Project is a Unity-based interactive experience structured around modul
 
 All user-facing text is stored using Unity Localization Tables. Text triggers use localization keys, not raw strings, allowing for flexible multi-language support.
 
-- Scripts like `TextInteraction.cs` (and its subclass `IngeTextInteraction.cs`) dynamically fetch and render localized content from a key.
+- Scripts like `TextInteraction.cs` (and its subclass scripts) dynamically fetch and render localized content from a key.
 - Text appears on user interaction (e.g., collision, click), then optionally disappears.
 
 ### 2. Event-Based Scene Interaction
@@ -54,7 +54,7 @@ Features:
 
 Scene-specific logic extends base behaviors:
 
-- `TextInteraction` is extended by `IngeTextInteraction` for contextual text logic
+- `TextInteraction` is extended by each scene's subclass script for contextual text logic
 - Each scene defines its own `InteractionManager` to control animations, model logic, and UI based on events
 
 ### 6. Scene and Flow Structure
@@ -117,6 +117,6 @@ These can be hooked to UI buttons or debug tools for development.
 
 ## Notes
 
-This documentation outlines the functional foundation for working with the project. Scene-specific logic (e.g., Inge) should extend this base framework using the same architectural conventions.
+This documentation outlines the functional foundation for working with the project. Scene-specific logic should extend this base framework using the same architectural conventions.
 
 For detailed per-scene interaction logic, refer to that scene's `InteractionManager` implementation.
