@@ -1,4 +1,4 @@
-# COSE Project - Developer Manual
+# ROAMING.COM - Developer Manual
 
 ## Overview
 
